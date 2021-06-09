@@ -1,0 +1,6 @@
+---
+pl:
+  decidim:
+    components:
+      meetings_extended:
+        name: Spotkania

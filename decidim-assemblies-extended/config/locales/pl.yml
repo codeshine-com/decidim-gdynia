@@ -1,0 +1,52 @@
+pl:
+  activemodel:
+    attributes:
+      assembly:
+        contact_address: Adres kontaktowy
+        duration_text: Data zakończenia - inne
+        next_meeting_date: Najbliższe posiedzenie
+        team_service: Obsługa zespołu
+      assembly_member:
+        affiliation: Afiliacja
+        avatar: Awatar (Zdjęcie)
+        representation: Reprezentacja
+  decidim:
+    assemblies:
+      admin:
+        assemblies:
+          form:
+            contact_address: Adres kontaktowy
+            # description: Podstawa prawna
+            description_help: Opis czym zajmuje się zespół, jakie są jego cele i zadania.
+            # duration_other: Data zakończenia - inne
+            # duration: Data zakończenia
+            duration_title: Okres działalności
+            hashtag_help: "Należy wpisać tylko jeden hashtag bez znaku # np. dialoggdynia"
+            next_meeting_date: Najbliższe posiedzenie
+            next_meeting_date_help: Nie wyświetli się, gdy data będzie w przeszłości
+            private_help: Widoczny tylko dla Prywatnych Użytkowników zespołu
+            select_a_duration_text: Wybierz inną wartość
+            short_description_help: Ten opis pojawi się jako krótka zapowiedź na stronie głównej całego modułu Zespoły oraz na górze zakładki O zespole. Powinien być krótki i nie przekraczać 250 znaków.
+            social_handlers_help: Do adresu z mediów społecznościowych należy wpisać tylko końcówkę nazwy (to, co ma znaleźć się na końcu po znaku „/”). System automatycznie zaciąga jego początek.
+            duration_help: Jeśli czas trwania tego zespołu jest ograniczony, wybierz datę końcową. W przeciwnym razie zaznacz pole poniżej i wybierz jedną z opcji.
+            team_service: Obsługa zespołu
+            transparent_help: Tylko przy zaznaczonej opcji Prywatny - zespół jest widoczny dla innych użytkowników, ale są zablokowane aktywności 
+        assembly_members:
+          form:
+            affiliation: Afiliacja
+            representation: Reprezentacja
+      duration_text:
+        indefinitely: Bezterminowo
+        until_further_notice: Do odwołania
+      created_by:
+        city_council: Rada Miasta Gdyni
+        city_mayor: Prezydent Miasta Gdyni
+      show:
+        # composition: Skład
+        contact_address: Adres kontaktowy
+        # description: Podstawa prawna
+        # creation_date: Data powołania
+        # duration: Data zakończenia
+        # internal_organisation: Organizacja prac
+        next_meeting_date: Najbliższe posiedzenie
+        team_service: Obsługa zespołu

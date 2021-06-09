@@ -1,0 +1,6 @@
+---
+en:
+  decidim:
+    components:
+      meetings_extended:
+        name: MeetingsExtended

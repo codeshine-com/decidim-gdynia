@@ -1,0 +1,386 @@
+pl:
+  admin:
+    moderated_users:
+      index:
+        nickname: Nazwa konta
+    officializations:
+      index:
+        nickname: Nazwa konta
+  devise:
+    confirmations:
+      new:
+        email: Podaj swój adres e-mail użyty przy rejestracji
+    invitations:
+      edit:
+        nickname: Nazwa konta
+        nickname_help: To systemowa, unikalna nazwa Twojego konta na platformie. Będzie wyświetlać się tylko na Twojej stronie profilowej. Po niej inni użytkownicy będą mogli Cię wyszukać, dlatego dobrze, aby była łatwa do zapamiętania np. pierwsza litera imienia i nazwisko (j_kowalski). Może zawierać tylko litery, cyfry, '-' i '_'.
+        subtitle: Jeśli akceptujesz zaproszenie, ustaw swoją nazwę konta i hasło.
+    mailer:
+      invitation_instructions:
+        ignore: |-
+          Jeśli nie chcesz zaakceptować zaproszenia, zignoruj ​​ten e-mail.<br />
+          Twoje konto nie zostanie utworzone, dopóki nie klikniesz w powyższy link i nie ustawisz nazwy konta i hasła.
+    passwords:
+      edit:
+        password_help: "Minimalna liczba znaków: %{minimun_characters}; nie może być zbyt powszechny (np. 123456) i musi różnić się od Twojej nazwy konta i adresu e-mail."
+    user_activities_info: Tu wyświetlają się informacje o wszystkich dzianiach podjętych przez Ciebie na Platformie.
+    user_following_info: Tu wyświetlają się informacje o wszystkich zmianach w działaniach na Platformie, o których otrzymujesz powiadomienia.
+  activemodel:
+    attributes:
+      address:
+        full_address: Pełen adres do korespondencji
+      assembly:
+        composition: Skład
+        description: Zakres działania
+        created_by: Utworzony przez
+        created_by_other: Utworzony przez - inny
+        creation_date: Data powołania
+        duration_other: Data zakończenia - inne
+        duration: Data zakończenia
+        internal_organisation: Organizacja prac
+        private_space: Prywatny
+        scopes_enabled: Włącz zakresy
+        title: Nazwa zespołu
+        is_transparent: Transparentny
+      assembly_member:
+        ceased_date: Czas trwania kadencji
+        designation_date: Data powołania
+        position: Funkcja
+        position_other: Inna funkcja
+        weight: Kolejność na stronie
+      assembly_user_role:
+        name: Imię i nazwisko
+      attachment:
+        weight: Kolejność na stronie
+      attachment_collection:
+        weight: Kolejność na stronie
+      area:
+        area_type_id: Typ kategorii
+      close_meeting:
+        attending_organizations: Uczestniczyli
+        proposals: Propozycje
+      decidim/user:
+        name: Nazwa konta
+      group:
+        avatar: Awatar (zdjęcie)
+        about: Krótki opis grupy
+        name: Nazwa grupy
+        nickname: Pseudonim
+      help_section:
+        content: Treść
+      invite:
+        nickname: Nazwa konta
+      meeting:
+        registration_type: Typ rejestracji
+        reserved_slots: Zarezerowane miejsca
+      meeting_registration_invite:
+        name: Imię i nazwisko
+        email: E-mail
+        user_id: Użytkownik
+      organization:
+        admin_terms_of_use_body: Warunki korzystania z plaformy dla administratora
+      participatory_process:
+        developer_group: Inicjator
+        local_area: Jednostka odpowiedzialna
+        meta_scope: Zakres
+        private_space: Przestrzeń prywatna
+        target: Kto może wziąć udział
+      participatory_process_user_role:
+        name: Imię i nazwisko
+      participatory_space_private_user:
+        name: Imię i nazwisko
+        email: Adres e-mail
+      question:
+        participatory_scope: Zakres tematyczny
+      questionnaire:
+        title: Tytuł
+      revocations_before_date:
+        before_date: Sprzed daty
+        impersonated_only: Tylko konflikty weryfikacji
+      user:
+        about: Kilka słów o Tobie
+        avatar: Awatar (zdjęcie)
+        name: Twoje imię i nazwisko
+        nickname: Nazwa konta
+        personal_url: Adres strony internetowej
+      validate_registration_code:
+        code: Kod
+
+    # events
+    models:
+      decidim/amendment_created_event: Dodano poprawkę
+      decidim/meeting_registration_notification_event: Rejestracja na spotkanie
+      decidim/user_group_created_event: Utworzono grupę
+
+  activerecord:
+    attributes:
+      decidim/user:
+        nickname: Nazwa konta
+
+  hello: "Witaj"
+
+  decidim:
+    admin:
+      actions:
+        participatory_space_private_user:
+          new: Nowy uzytkownik prywatny
+        user:
+          new: Nowy administrator
+      assembly_user_roles:
+        new:
+          title: Nowy administrator zespołu
+      filters:
+        moderations:
+          reportable_type_string_eq:
+            values:
+              Decidim::Comments::Comment: Komentarze
+              Decidim::Debates::Debate: Debaty
+              Decidim::Proposals::Proposal: Propozycje
+        search_placeholder:
+          name_or_email_or_nickname_or_presided_station_title_or_managed_station_title_cont: Przeszukaj %{collection} według nazwy/adresu e-mail/nazwy konta lub lokalu wyborczego.
+          reported_id_string_or_reported_content_cont: Przeszukaj moderacje według identyfikatora lub treści zgłoszenia.
+        state_eq:
+          label: Status
+      impersonations:
+        form:
+          name: Imię i nazwisko
+      impersonatable_users:
+        index:
+          name: Imię i nazwisko
+      menu:
+        assemblies_submenu:
+          categories: Dodatkowe kategorie
+        participatory_processes_submenu:
+          categories: Dodatkowe kategorie
+      models:
+        assembly:
+          fields:
+            title: Nazwa zespołu
+        assembly_user_role:
+          fields:
+            name: Imię i nazwisko
+        area:
+          fields:
+            area_type_id: Typ kategorii
+        assembly_member:
+          fields:
+            ceased_date: Czas trwania kadencji
+            position: Funkcja
+            # position_other: Inna funkcja
+            # weight: Kolejność na stronie
+        participatory_process_user_role:
+          fields:
+            name: Imię i nazwisko
+        participatory_space_private_user:
+          fields:
+            name: Imię i nazwisko
+        user:
+          fields:
+            name: Imię i nazwisko
+      moderations:
+        report:
+          reasons:
+            does_not_belong: Nie powinna znaleźć się na Platformie
+            offensive: Niestosowna
+      officializations:
+        index:
+          badge: Funkcja
+          name: Imię i nazwisko
+          nickname: Nazwa konta
+          reports: Zgłoszenia
+        new:
+          badge: Funkcja
+      organization:
+        edit:
+          title: Edytuj podstawowe informacje o platformie
+          update: Zapisz zmiany
+        form:
+          social_handlers_help: Należy wpisać tylko końcówkę nazwy (to, co ma znaleźć się na końcu po znaku „/”). System automatycznie zaciąga jego początek.
+
+      participatory_space_private_users:
+        new:
+          title: Nowy prywatny użytkownik
+        index:
+          title: Użytkownicy prywatni
+      users:
+        form:
+          name: Imię i nazwisko
+
+    assemblies:
+      admin:
+        assemblies:
+          form:
+            # contact_address: Adres kontaktowy
+            created_by: Utworzony przez
+            description: Zakres działania
+            duration_other: Data zakończenia - inne
+            duration: Data zakończenia
+            other: Inne
+            # next_meeting_date: Najbliższe posiedzenie
+            # next_meeting_date_help: Nie wyświetli się, gdy data będzie w przeszłości
+            # select_a_duration_text: Wybierz inną wartość
+            # duration_help: Jeśli czas trwania tego zespołu jest ograniczony, wybierz datę końcową. W przeciwnym razie zaznacz pole poniżej i wybierz jedną z opcji.
+            # team_service: Obsługa zespołu
+      # duration_text:
+        # indefinitely: Bezterminowo
+        # until_further_notice: Do odwołania
+      created_by:
+        city_council: Rada Miasta Gdyni
+        city_mayor: Prezydent Miasta Gdyni
+        others: Inny
+      show:
+        composition: Skład
+        # contact_address: Adres kontaktowy
+        description: Zakres działania
+        created_by: Utworzony przez
+        creation_date: Data powołania
+        duration: Data zakończenia
+        internal_organisation: Organizacja prac
+        # next_meeting_date: Najbliższe posiedzenie
+        # team_service: Obsługa zespołu
+        private_space: To przestrzeń prywatna zespołu. Działania ograniczone są tylko do jej użytkowników.
+    assembly_members:
+      assembly_member:
+        designated_on: Powołany
+    components:
+      blogs:
+        actions:
+          amend: Dodawanie poprawek
+          create: Tworzenie wpisów
+          endorse: Rekomendacje
+          vote: Wspieranie
+          withdraw: Wycofywanie
+      comment:
+        report:
+          description: Dlaczego ta treść jest nieodpowiednia?
+          reasons:
+            does_not_belong: Zawiera informacje, które według Ciebie nie powinny pojawić się na Gdyńskiej Platformie Dialogu. Jeśli zaznaczyłeś tę opcję wyjaśnij poniżej.
+            offensive: Promuje rasizm, seksizm,  ataki osobiste, groźby śmierci lub inną formę mowy nienawiści
+            spam: Zawiera reklamy, oszustwa, próby wyłudzenia danych itp.
+      comment_order_selector:
+        order:
+          most_discussed: Najpopularniejsze
+      meetings:
+        actions:
+          join: Pozwól dołączyć tylko osobom autoryzowanym przez
+    debates:
+      debates:
+        filters:
+          citizens: Mieszkańcy/Użytkownicy
+          official: Jednostka miejska
+          origin: Inicjator
+
+    devise:
+      omniauth_registrations:
+        new:
+          nickname_help: To systemowa, unikalna nazwa Twojego konta na platformie. Będzie wyświetlać się tylko na Twojej stronie profilowej. Po niej inni użytkownicy będą mogli Cię wyszukać, dlatego dobrze, aby była łatwa do zapamiętania np. pierwsza litera imienia i nazwisko (j_kowalski). Może zawierać tylko litery, cyfry, '-' i '_'.
+          username_help: Imię i nazwisko będzie wyświetlać się przy Twoich wpisach na platformie.
+      registrations:
+        new:
+          newsletter: Wyrażam zgodę na otrzymywanie newsletteru z istotnymi informacjami dotyczącymi Platformy oraz najważniejszych wydarzeń umieszczanych na niej.
+          nickname_help: To systemowa, unikalna nazwa Twojego konta na platformie. Będzie wyświetlać się tylko na Twojej stronie profilowej. Po niej inni użytkownicy będą mogli Cię wyszukać, dlatego dobrze, aby była łatwa do zapamiętania np. pierwsza litera imienia i nazwisko (j_kowalski). Może zawierać tylko litery, cyfry, '-' i '_'.
+          password_help: "Minimalna liczba znaków: %{minimun_characters}; nie może być zbyt powszechny (np. 123456) i musi różnić się od Twojej nazwy konta i adresu e-mail."
+          subtitle: Zarejestruj się, aby brać  udział w dyskusjach, spotkaniach i być na bieżąco ze wszystkimi procesami partycypacyjnymi w Gdyni.
+          terms: regulamin korzystania
+          tos_title: Warunki korzystania z Gdyńskiej Platformy Dialogu
+          username_help: Imię i nazwisko będzie wyświetlać się przy Twoich wpisach na platformie.
+    doorkeeper:
+      authorizations:
+        new:
+          see_username: Zobacz swoją nazwę konta
+    events:
+      debates:
+        create_debate_event:
+          space_followers:
+            email_intro: |-
+              Nowa debata "%{resource_title}" została utworzona w %{space_title}, sprawdź ją i przyłącz się:
+            email_outro: Otrzymałeś to powiadomienie, ponieważ obserwujesz %{space_title}. Możesz przestać otrzymywać powiadomienia po kliknięciu w poprzedni link.
+      resource_hidden:
+        email_intro: Administrator usunął %{resource_type}, ponieważ treść została zgłoszona jako %{report_reasons}.
+        mail_outro: Otrzymałeś to powiadomienie, ponieważ jesteś autorem usuniętej treści.
+        notification_title: |-
+            Administrator usunął %{resource_type}, ponieważ treść została zgłoszona jako %{report_reasons}.</br>
+            <i>%{resource_content}</i>
+    forms:
+      file_help:
+        image:
+          message_1: Preferowany obraz lub zdjęcie, które nie zawiera żadnego tekstu.
+    meetings:
+      admin:
+        invite_join_meeting_mailer:
+          invite:
+            invited_you_to_join_a_meeting: "%{invited_by} zaprosił(a) Cię do udziału w spotkaniu %{meeting_name} %{space_name} poprzez Gdyńską Platformę Dialogu. Więcej informacji o spotkaniu możesz zobaczyć %{meeting_link}.<br>Aby zaakceptować lub odrzucić zaproszenie użyj poniższego linku:"
+        invites:
+          form:
+            invite_explanation: Użytkownik zostanie zaproszony do udziału w spotkaniu i do rejestracji na platformie
+        meetings:
+          form:
+            location_hints_help: "Dodatkowe informacje. Na przykład: piętro budynku lub platforma komunikacyjna"
+      meetings:
+        filters:
+          type_values:
+             hybrid: Łączony
+             in_person: Stacjonarny
+        form:
+          location_hints_help: "Dodatkowe informacje. Na przykład: piętro budynku lub platforma komunikacyjna"
+    moderations:
+      models:
+        moderation:
+          fields:
+            reports: Zgłoszenia
+    pages:
+      home:
+        extended:
+          more_info: Więcej informacji
+    participatory_processes:
+      show:
+        local_area: Jednostka odpowiedzialna
+        developer_group: Inicjator
+        target: Kto może wziąć udział
+    proposals:
+      proposals:
+        placeholder:
+          address: 'ul. Żeromskiego 31, 81-346 Gdynia'
+    scopes:
+      global: Zakres ogólny
+    shared:
+      flag_modal:
+        description: Dlaczego ta treść jest nieodpowiednia?
+        does_not_belong: Zawiera informacje, które według Ciebie nie powinny pojawić się na Gdyńskiej Platformie Dialogu. Jeśli zaznaczyłeś tę opcję wyjaśnij poniżej.
+        offensive: Promuje rasizm, seksizm,  ataki osobiste, groźby śmierci lub inną formę mowy nienawiści
+        spam: Zawiera reklamy, oszustwa, próby wyłudzenia danych itp.
+        title: Zgłoś nieodpowiednią treść
+      flag_user_modal:
+        does_not_belong: Zawiera informacje, które według Ciebie nie powinny pojawić się na Gdyńskiej Platformie Dialogu. Jeśli zaznaczyłeś tę opcję wyjaśnij poniżej.
+        offensive: Promuje rasizm, seksizm,  ataki osobiste, groźby śmierci lub inną formę mowy nienawiści
+        spam: Zawiera reklamy, oszustwa, próby wyłudzenia danych itp.
+    user_interests:
+      show:
+        select_your_interests: "Wybierz tematy, które Cię interesują, aby otrzymywać związane z nimi wydarzenia na swojej stronie profilowej w zakładce <a href = %{href}>Oś czasu</a>."
+    verifications:
+      postal_letter:
+        admin:
+          pending_authorizations:
+            index:
+              username: Nazwa konta
+
+  layouts:
+    decidim:
+      assembly_navigation:
+        assembly_menu_item: O zespole
+      assembly_widgets:
+        show:
+          take_part: Dowiedz się więcej
+      assemblies:
+        assembly:
+          take_part: Zobacz
+        promoted_assembly:
+          take_part: Dowiedz się więcej
+      cookie_warning:
+        description_html: Uprzejmie informujemy, że od 25 maja 2018 r. obowiązuje tzw. RODO, czyli Rozporządzenie Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE. Nowe prawo wprowadza zmiany w zasadach regulujących przetwarzanie danych osobowych. <br>Nasza strona internetowa używa plików cookies (tzw. ciasteczka) w celach statystycznych, reklamowych oraz funkcjonalnych. Dzięki nim możemy indywidualnie dostosować stronę do twoich potrzeb. Każdy może zaakceptować pliki cookies albo ma możliwość wyłączenia ich w przeglądarce, dzięki czemu nie będą zbierane żadne informacje. <br>Szczegółowe zapisy znajdziesz w %{link}. Jednocześnie informujemy, że Państwa dane są przetwarzane w sposób bezpieczny, z należytą starannością i zgodnie z obowiązującymi przepisami.
+        link_label: nowej polityce prywatności portalu internetowego www.dialog.gdynia.pl
+      process_navigation:
+        process_menu_item: O procesie
+
+  locale:
+    name: "Polski"

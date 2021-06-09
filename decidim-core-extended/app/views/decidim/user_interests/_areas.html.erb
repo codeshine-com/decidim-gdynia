@@ -1,0 +1,16 @@
+<ul class="no-bullet-indented">
+  <% areas.each do |area| %>
+    <li>
+      <div class="switch tiny switch-with-label">
+        <%= f.fields_for "areas[]", area do |form| %>
+          <%= form.label "checked" do %>
+            <%= form.check_box "checked", label: false, class: "switch-input" %>
+            <span class="switch-paddle"></span>
+            <span class="switch-label"><%= translated_attribute area.name %></span>
+          <% end %>
+          <%= form.hidden_field "id", value: area.id %>
+        <% end %>
+      </div>
+    </li>
+  <% end %>
+</ul>

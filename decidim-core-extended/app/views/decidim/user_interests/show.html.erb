@@ -1,0 +1,28 @@
+<% add_decidim_page_title(t("my_interests", scope: "layouts.decidim.user_profile")) %>
+<% content_for(:subtitle) { t("my_interests", scope: "layouts.decidim.user_profile") } %>
+
+<div class="row">
+  <p><%= t(".select_your_interests", href: profile_timeline_path(current_user.nickname)).html_safe %></p>
+  <%= form_for(@user_interests, url: user_interests_path, method: :put, class: "user-form") do |f| %>
+    <p><strong><%= t(".my_interests") %></strong></p>
+    <% if @user_interests.scopes.any? || @user_interests.areas.any? %>
+      <div class="clearfix m-bottom">
+        <% if @user_interests.scopes.any? %>
+          <div class='interests-col'>
+            <p><strong><%= t(".scopes") %></strong></p>
+            <%= render partial: "scopes", locals: { scopes: @user_interests.scopes, f: f } %>
+          </div>
+        <% end %>
+        <% if @user_interests.areas.any? %>
+          <div class='interests-col'>
+            <p><strong><%= t(".areas") %></strong></p>
+            <%= render partial: "areas", locals: { areas: @user_interests.areas, f: f } %>
+          </div>
+        <% end %>
+      </div>
+      <%= f.submit t(".update_my_interests") %>
+    <% else %>
+      <p><%= t(".no_scopes") %></p>
+    <% end %>
+  <% end %>
+</div>

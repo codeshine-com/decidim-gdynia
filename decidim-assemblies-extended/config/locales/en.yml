@@ -1,0 +1,74 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  activemodel:
+    attributes:
+      assembly:
+        contact_address: Contact address
+        duration_text: Closing date - other
+        duration_title: Timetable
+        next_meeting_date: Next meeting
+        team_service: Team service
+      assembly_member:
+        affiliation: Affiliation
+        representation: Representation
+  decidim:
+    assemblies:
+      admin:
+        assemblies:
+          form:
+            contact_address: Contact address
+            description_help: Description what assembly doeas and what are its goals and tasks
+            hashtag_help: "You can provide only one hastag without # sign, example: dialoggdynia"
+            next_meeting_date: Next meeting
+            next_meeting_date_help: It wont be shown if date is in the past
+            private_help: Visible only for Private Users
+            select_a_duration_text: Select closed at other text
+            short_description_help: This description will be shown on Assembles Module site as a lead.
+            social_handlers_help: You only need to enter last part of social media URL (part that is after the „/” sign). System Will automatically handle whole URL.
+            duration_help: If assembly has limited duration time, please pick cloding date. In other case check field below and pick one of the options.
+            team_service: Team service
+            transparent_help: Only when assembly is private - it is visible for other users, but they can not perform actions
+        assembly_members:
+          form:
+            affiliation: Affiliation
+            representation: Representation
+      duration_text:
+        indefinitely: Indefinitely
+        until_further_notice: Until further notice
+      created_by:
+        city_council: Gdynia's City Council
+        city_mayor: Gdynia's City Mayor
+      show:
+        contact_address: Contact address
+        next_meeting_date: Next meeting
+        team_service: Team service

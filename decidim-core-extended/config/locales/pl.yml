@@ -1,0 +1,30 @@
+pl:
+  decidim:
+    account:
+      update_password: Zaktualizuj hasło
+      about_hint: Ten opis będzie się wyświetlał w Twoim profilu publicznym i będzie widoczny dla innych użytkowników platformy.
+      about_group_hint: Ten opis będzie się wyświetlał na profilu publicznym grupy i będzie widoczny dla innych użytkowników.
+    devise:
+      invitations:
+        edit:
+          password_help: "Minimalna liczba znaków: %{minimun_characters}; nie może być zbyt powszechny (np. 123456) i musi różnić się od Twojej nazwy konta i adresu e-mail."
+          required_fields_info: Pola tekstowe oraz zgoda na Warunki korzystania z Platformy oraz zapoznanie się z wymaganiami RODO są wymagane
+      registrations:
+        new:
+          rodo_agreements: |-
+            Zapoznałem/am się z zasadami przetwarzania moich danych osobowych.<br>
+            Na podstawie art. 6 ust. 1 lit. a) Rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 roku w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia Dyrektywy 95/46/WE (Ogólne Rozporządzenie o Ochronie Danych) z dnia 27 kwietnia 2016 roku, (Dz.Urz.UE.L Nr 119, strona 1) wyrażam zgodę na przetwarzanie moich danych osobowych przez Laboratorium Innowacji Społecznych w celu realizacji Budżetu Obywatelskiego 2020 w Gdyni w zakresie imienia i nazwiska, nazwy konta oraz adresu e-mail.<br>
+            Więcej na temat przetwarzania Twoich danych osobowych znajdziesz %{link}.
+          rodo_link: tutaj
+    user_interests:
+      show:
+        areas: Kategorie
+        scopes: Zakresy
+  devise:
+    contact_for_help_info: "Jeśli potrzebujesz pomocy skontaktuj się z nami pisząc na adres e-mail: %{email}."
+  layouts:
+    decidim:
+      user_profile:
+        change_password: Zmień hasło
+      footer:
+        ue_logotypes: Logotypy UE

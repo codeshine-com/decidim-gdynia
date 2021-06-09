@@ -1,0 +1,29 @@
+en:
+  decidim:
+    account:
+      update_password: Update password
+      about_hint: This description will be seen on your public profile and will be seen by other users.
+      about_group_hint: This description will be seen on group's public profile and will be seen by other users.
+    devise:
+      invitations:
+        edit:
+          password_help: "%{minimun_characters} characters minimum, must not be too common (e.g. 123456) and must be different from your nickname and your email."
+          required_fields_info: All text firlds and Terms of agrement and RODO checkboxes are rquired
+      registrations:
+        new:
+          rodo_agreements: |-
+            I am aware of the RODO regulations of this page.<br>
+            More informations on the RODO is availabe %{link}.
+          rodo_link: here
+    user_interests:
+      show:
+        areas: Areas
+        scopes: Scopes
+  devise:
+    contact_for_help_info: "If you need help, contact us via mail: %{email}."
+  layouts:
+    decidim:
+      user_profile:
+        change_password: Change password
+      footer:
+        ue_logotypes: UE Logotypes
