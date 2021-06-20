@@ -3,7 +3,7 @@
 # Install the pg driver:
 #   gem install pg
 # On OS X with Homebrew:
-#   gem install pg -- --with-pg-config=/usr/local/bin/pg_config
+#   gem install pg -- --with-pg-config=/usr/local/bin/pg_config/var/app/current/db/migrate/20200818094807_move_signature_type_to_initative_type.decidim_initiatives.rb
 # On OS X with MacPorts:
 #   gem install pg -- --with-pg-config=/opt/local/lib/postgresql84/bin/pg_config
 # On Windows:
