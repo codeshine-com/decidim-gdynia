@@ -401,7 +401,7 @@ pl:
         title: Ostatnia aktywność
         view_all: Pokaż wszystkie
       metrics:
-        name: Dane organizacji
+        name: Partycypacja w liczbach
       stats:
         name: Statystyki organizacji
       sub_hero:
@@ -1478,7 +1478,7 @@ pl:
       public: Twoje informacje publiczne.
   errors:
     messages:
-      already_confirmed: zostało już potwierdzone, spróbuj się zalogować
+      already_confirmed: już potwierdzono
       confirmation_period_expired: musi być potwierdzone w ciągu %{period}, proszę poprosić o nowy
       content_type_whitelist_error: typ pliku jest nieprawidłowy
       cycle_detected: zakres podrzędny nie może być jednocześnie zakresem nadrzędnym

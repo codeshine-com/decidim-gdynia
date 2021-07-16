@@ -68,6 +68,10 @@ pl:
         nickname: Pseudonim
       help_section:
         content: Treść
+      import_participatory_text:
+        title: Tytuł
+        description: Opis
+        document: Dokument
       invite:
         nickname: Nazwa konta
       meeting:
@@ -85,11 +89,15 @@ pl:
         meta_scope: Zakres
         private_space: Przestrzeń prywatna
         target: Kto może wziąć udział
+      participatory_process_group:
+        promoted: Wyróżniona
       participatory_process_user_role:
         name: Imię i nazwisko
       participatory_space_private_user:
         name: Imię i nazwisko
         email: Adres e-mail
+      static_page:
+        topic_id: Temat
       question:
         participatory_scope: Zakres tematyczny
       questionnaire:
@@ -109,8 +117,9 @@ pl:
     # events
     models:
       decidim/amendment_created_event: Dodano poprawkę
-      decidim/meeting_registration_notification_event: Rejestracja na spotkanie
+      decidim/meetings/meeting_registration_notification_event: Rejestracja na spotkanie
       decidim/user_group_created_event: Utworzono grupę
+      decidim/welcome_notification_event: Wiadomość powitalna
 
   activerecord:
     attributes:
@@ -136,6 +145,13 @@ pl:
               Decidim::Comments::Comment: Komentarze
               Decidim::Debates::Debate: Debaty
               Decidim::Proposals::Proposal: Propozycje
+        proposals:
+          state_eq:
+            values:
+              accepted: Przyjęta
+              evaluating: Weryfikacja
+              not_answered: Zgłoszona
+              rejected: Odrzucona
         search_placeholder:
           name_or_email_or_nickname_or_presided_station_title_or_managed_station_title_cont: Przeszukaj %{collection} według nazwy/adresu e-mail/nazwy konta lub lokalu wyborczego.
           reported_id_string_or_reported_content_cont: Przeszukaj moderacje według identyfikatora lub treści zgłoszenia.
@@ -202,6 +218,8 @@ pl:
           title: Nowy prywatny użytkownik
         index:
           title: Użytkownicy prywatni
+      titles:
+        statistics: Użytkownicy
       users:
         form:
           name: Imię i nazwisko
@@ -263,12 +281,19 @@ pl:
       meetings:
         actions:
           join: Pozwól dołączyć tylko osobom autoryzowanym przez
+      proposals:
+        settings:
+          step:
+            automatic_hashtags_help: Wpisz same wyrazy oddzielając je spacją, np. gdynia dialog konsultacje
+            suggested_hashtags_help: Wpisz same wyrazy oddzielając je spacją, np. gdynia dialog konsultacje
     debates:
       debates:
         filters:
           citizens: Mieszkańcy/Użytkownicy
           official: Jednostka miejska
           origin: Inicjator
+        show:
+          open: Otwarta
 
     devise:
       omniauth_registrations:
@@ -289,12 +314,48 @@ pl:
         new:
           see_username: Zobacz swoją nazwę konta
     events:
+      attachments:
+        attachment_created:
+          email_intro: 'Nowy dokument został dodany do %{resource_title}:'
+      blogs:
+        post_created:
+          email_outro: Otrzymałeś to powiadomienie, ponieważ obserwujesz "%{participatory_space_title}". Aby przestać otrzymywać powiadomienia kliknij w powyższy link, a następnie na stronie wpisu kliknij w przycisk obserwowania.
+      conferences:
+        conference_updated:
+          email_outro: Otrzymałeś to powiadomienie, ponieważ obserwujesz konferencję "%{resource_title}". Aby przestać otrzymywać powiadomienia kliknij w powyższy link, a następnie na stronie konferencji kliknij w przycisk obserwowania.
+        registrations_enabled:
+          email_outro: Otrzymałeś to powiadomienie, ponieważ obserwujesz konferencję "%{resource_title}". Aby przestać otrzymywać powiadomienia kliknij w powyższy link, a następnie na stronie konferencji kliknij w przycisk obserwowania.
+        upcoming_conference:
+          email_outro: Otrzymałeś to powiadomienie, ponieważ obserwujesz konferencję "%{resource_title}". Aby przestać otrzymywać powiadomienia kliknij w powyższy link, a następnie na stronie konferencji kliknij w przycisk obserwowania.
       debates:
         create_debate_event:
           space_followers:
             email_intro: |-
               Nowa debata "%{resource_title}" została utworzona w %{space_title}, sprawdź ją i przyłącz się:
-            email_outro: Otrzymałeś to powiadomienie, ponieważ obserwujesz %{space_title}. Możesz przestać otrzymywać powiadomienia po kliknięciu w poprzedni link.
+            email_outro: Otrzymałeś to powiadomienie, ponieważ obserwujesz %{space_title}. Aby przestać otrzymywać powiadomienia kliknij w powyższy link, a następnie na stronie debaty kliknij w przycisk obserwowania..
+      email_event:
+        email_outro: Otrzymałeś to powiadomienie, ponieważ obserwujesz konferencję "%{resource_title}". Aby przestać otrzymywać powiadomienia kliknij w powyższy link, a następnie na stronie kliknij w przycisk obserwowania.
+      meetings:
+        meeting_created:
+          email_outro: Otrzymałeś to powiadomienie, ponieważ obserwujesz przestrzeń "%{participatory_space_title}". Aby przestać otrzymywać powiadomienia kliknij w powyższy link, a następnie na stronie kliknij w przycisk obserwowania.
+        meeting_updated:
+          email_outro: Otrzymałeś to powiadomienie, ponieważ obserwujesz spotkanie "%{resource_title}". Aby przestać otrzymywać powiadomienia kliknij w powyższy link, a następnie na stronie spotkania kliknij w przycisk obserwowania.
+        registrations_enabled:
+          email_outro: Otrzymałeś to powiadomienie, ponieważ obserwujesz spotkanie "%{resource_title}". Aby przestać otrzymywać powiadomienia kliknij w powyższy link, a następnie na stronie spotkania kliknij w przycisk obserwowania.
+        upcoming_meeting:
+          email_outro: Otrzymałeś to powiadomienie, ponieważ obserwujesz spotkanie "%{resource_title}". Aby przestać otrzymywać powiadomienia kliknij w powyższy link, a następnie na stronie spotkania kliknij w przycisk obserwowania.
+      proposals:
+        proposal_accepted:
+          follower:
+            email_outro: Otrzymałeś to powiadomienie, ponieważ obserwujesz "%{resource_title}". Aby przestać otrzymywać powiadomienia kliknij w powyższy link, a następnie na stronie propozycji kliknij w przycisk obserwowania.
+        proposal_evaluating:
+          follower:
+            email_outro: Otrzymałeś to powiadomienie, ponieważ obserwujesz "%{resource_title}". Aby przestać otrzymywać powiadomienia kliknij w powyższy link, a następnie na stronie propozycji kliknij w przycisk obserwowania.
+        proposal_rejected:
+          follower:
+            email_outro: Otrzymałeś to powiadomienie, ponieważ obserwujesz "%{resource_title}". Aby przestać otrzymywać powiadomienia kliknij w powyższy link, a następnie na stronie propozycji kliknij w przycisk obserwowania.
+        proposal_published_for_space:
+          email_outro: Otrzymałeś to powiadomienie, ponieważ obserwujesz "%{participatory_space_title}". Aby przestać otrzymywać powiadomienia kliknij w powyższy link, a następnie na stronie kliknij w przycisk obserwowania.
       resource_hidden:
         email_intro: Administrator usunął %{resource_type}, ponieważ treść została zgłoszona jako %{report_reasons}.
         mail_outro: Otrzymałeś to powiadomienie, ponieważ jesteś autorem usuniętej treści.
@@ -323,6 +384,22 @@ pl:
              in_person: Stacjonarny
         form:
           location_hints_help: "Dodatkowe informacje. Na przykład: piętro budynku lub platforma komunikacyjna"
+    menu:
+      help: Niezbędnik dialogu
+    messaging:
+      conversation_mailer:
+        comanagers_new_conversation:
+          outro: Miłego korzystania z GPD!
+        comanagers_new_message:
+          outro: Miłego korzystania z GPD!
+        new_conversation:
+          outro: Miłego korzystania z GPD!
+        new_group_conversation:
+          outro: Miłego korzystania z GPD!
+        new_group_message:
+          outro: Miłego korzystania z GPD!
+        new_message:
+          outro: Miłego korzystania z GPD!
     moderations:
       models:
         moderation:
@@ -332,12 +409,28 @@ pl:
       home:
         extended:
           more_info: Więcej informacji
+      index:
+        title: Niezbędnik dialogu
     participatory_processes:
       show:
         local_area: Jednostka odpowiedzialna
         developer_group: Inicjator
         target: Kto może wziąć udział
+    profiles:
+      default_officialization_text_for_users: Użytkownik został zweryfikowany
     proposals:
+      admin:
+        proposal_answers:
+          form:
+            accepted: Przyjęta
+            evaluating: Weryfikacja
+            rejected: Odrzucona
+      application_helper:
+        filter_state_values:
+          accepted: Przyjęta
+          evaluating: Weryfikacja
+          not_answered: Zgłoszona
+          rejected: Odrzucona
       proposals:
         placeholder:
           address: 'ul. Żeromskiego 31, 81-346 Gdynia'

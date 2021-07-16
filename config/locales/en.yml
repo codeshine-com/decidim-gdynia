@@ -21,3 +21,10 @@ en:
         until_further_notice: Do odwołania
       created_by:
         city_council: Gdynia's City Council
+    # custom
+    compnents:
+      proposals:
+        settings:
+          step:
+            automatic_hashtags_help: Enter words separated with spaces
+            suggested_hashtags_help: Enter words separated with spaces
