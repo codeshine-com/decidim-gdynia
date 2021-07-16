@@ -1,0 +1,42 @@
+<% add_decidim_page_title(t("delete_my_account", scope: "layouts.decidim.user_profile")) %>
+<% content_for(:subtitle) { t("delete_my_account", scope: "layouts.decidim.user_profile") } %>
+
+<div class="wrapper">
+    <!-- <div class="columns medium-9 medium-offset-3"> -->
+  <div class="row">
+    <div class="columns medium-3">
+      <%= cell "decidim/profile_sidebar", profile_holder %>
+    </div>
+    <div class="columns medium-9">
+
+<div class="row">
+  <div class="columns large-8 end">
+    <div class="callout alert">
+      <p><%= t("decidim.group.delete.alert") %></p>
+    </div>
+    <p><%= t("decidim.group.delete.explanation") %></p>
+    <%= decidim_form_for(@form, url: decidim_core_extended.group_path(@user_group.nickname), method: :delete, namespace: "delete_user", html: { class: "user-form delete-account" }) do |f| %>
+      <div>
+        <label>
+          <span class="user-form__label"><%= t("activemodel.attributes.group.delete_reason") %></span>
+          <%= f.text_area :delete_reason, rows: 2, label: false %>
+        </label>
+      </div>
+      <button class="button open-modal-button"><%= t("decidim.group.delete.confirm.title") %></button>
+    <% end %>
+    <div class="tiny reveal" id="deleteConfirm" data-reveal>
+      <%= decidim_form_for(@form, url: decidim_core_extended.group_path(@user_group.nickname), method: :delete, namespace: "delete_user_confirm", html: { class: "user-form delete-account-modal" }) do |f| %>
+        <%= f.hidden_field :delete_reason %>
+
+        <p><%= t("decidim.group.delete.confirm.question") %></p>
+
+        <input type="submit" class="button expanded" value="<%= t("decidim.group.delete.confirm.ok") %>">
+
+        <button class="close-button" data-close aria-label="<%= t("decidim.group.delete.confirm.close") %>" type="button">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      <% end %>
+    </div>
+  </div>
+</div>
+</div>

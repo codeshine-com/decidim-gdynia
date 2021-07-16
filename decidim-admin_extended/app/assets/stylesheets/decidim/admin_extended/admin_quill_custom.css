@@ -1,0 +1,58 @@
+.ql-snow .ql-formats button { position: relative; }
+.ql-snow .ql-formats button::before {
+  display: none;
+  content: 'T';
+  background-color: #000;
+  color: #fff;
+  position: absolute;
+  top: -20px;
+  left: 5px;
+  width: auto;
+  height: 20px;
+  font-size: 12px;
+  padding: 4px 8px;
+}
+
+.ql-snow .ql-formats button:hover::before { display: block; }
+
+.ql-snow .ql-formats button.ql-bold::before {
+  content: 'Pogrubienie';
+}
+.ql-snow .ql-formats button.ql-italic::before {
+  content: 'Kursywa';
+}
+.ql-snow .ql-formats button.ql-underline::before {
+  content: 'Podkreślenie';
+}
+.ql-snow .ql-formats button.ql-linebreak::before {
+  content: 'Nowa linia';
+  width: 80px;
+}
+.ql-snow .ql-formats button.ql-list[value="ordered"]::before {
+  content: 'Lista numerowana';
+  width: 120px;
+}
+.ql-snow .ql-formats button.ql-list[value="bullet"]::before {
+  content: 'Lista';
+}
+.ql-snow .ql-formats button.ql-link::before {
+  content: "Link załącznika";
+  width: 100px;
+}
+.ql-snow .ql-formats button.ql-clean::before {
+  content: 'Usuń style';
+  width: 80px;
+}
+.ql-snow .ql-formats button.ql-video::before {
+  content: 'Link do video';
+  width: 95px;
+}
+
+.ql-snow .ql-tooltip[data-mode="video"]::before,
+.ql-snow .ql-tooltip[data-mode="link"]::before {
+    content: 'Wpisz adres URL:';
+}
+
+.ql-snow .ql-tooltip.ql-editing a.ql-action::after {
+  content: 'Zapisz'
+}

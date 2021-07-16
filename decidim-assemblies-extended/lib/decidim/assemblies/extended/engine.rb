@@ -1,3 +1,11 @@
+# frozen_string_literal: true
+
+require "rails"
+require "active_support/all"
+
+# require "decidim/core"
+# require "decidim/assemblies/query_extensions"
+
 module Decidim
   module Assemblies
     module Extended
@@ -6,6 +14,18 @@ module Decidim
 
         initializer "decidim_processes_extended.assets.precompile" do |app|
           app.config.assets.precompile += %w(decidim/assemblies/admin/custom.js)
+        end
+
+        routes do
+          scope "/assemblies/:assembly_slug" do
+            resources :cadencies, controller: 'admin/cadencies'
+          end
+        end
+
+        initializer "decidim_assemblies_extended.append_routes", after: :load_config_initializers do |_app|
+          Rails.application.routes.append do
+            mount Decidim::Assemblies::Extended::Engine => "/admin", at: '/admin'
+          end
         end
 
         # needs to be removed for generating new migrations

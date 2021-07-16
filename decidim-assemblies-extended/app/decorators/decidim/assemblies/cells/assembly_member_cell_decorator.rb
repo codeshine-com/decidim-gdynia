@@ -1,11 +1,14 @@
 # frozen_string_literal: true
 
-module Decidim
-  module Assemblies::Extended
-    class AssemblyMemberCell < Decidim::Assemblies::AssemblyMemberCell
-      property :affiliation
-      property :representation
-      property :ceased_date
-    end
+Decidim::Assemblies::AssemblyMemberCell.class_eval do
+  include Rails.application.routes.mounted_helpers
+
+  property :affiliation
+  property :representation
+  property :ceased_date
+
+  def show
+    render :new_show
   end
+
 end

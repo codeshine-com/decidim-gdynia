@@ -9,6 +9,7 @@ DECIDIM_VERSION = "0.24.3"
 gem "decidim", DECIDIM_VERSION
 
 # Deployment
+# gem "bootsnap", "~> 1.4"
 gem 'mina'
 gem 'sentry-raven'
 gem 'slack-notifier'
@@ -22,7 +23,6 @@ gem "faker", "~> 2.14"
 group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
   gem "decidim-dev", DECIDIM_VERSION
-  gem "bootsnap", "~> 1.4"
 end
 
 group :development do
@@ -38,6 +38,12 @@ group :production, :staging do
 end
 
 # extended functionalities
+gem 'decidim-admin_extended', path: 'decidim-admin_extended'
 gem 'decidim-core-extended', path: 'decidim-core-extended'
+gem 'decidim-debates_extended', path: 'decidim-debates_extended'
 gem 'decidim-processes-extended', path: 'decidim-processes-extended'
 gem 'decidim-assemblies-extended', path: 'decidim-assemblies-extended'
+gem 'decidim-meetings_extended', path: 'decidim-module-meetings_extended'
+gem 'decidim-pages_extended', path: 'decidim-pages_extended'
+gem 'decidim-proposals_extended', path: 'decidim-proposals_extended'
+gem 'decidim-surveys_extended', path: 'decidim-surveys_extended'

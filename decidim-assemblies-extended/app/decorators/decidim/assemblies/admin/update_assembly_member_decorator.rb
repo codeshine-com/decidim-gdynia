@@ -38,6 +38,7 @@ Decidim::Assemblies::Admin::UpdateAssemblyMember.class_eval do
         :affiliation,
         :representation
       ).merge(
+        decidim_assemblies_extended_cadency_id: form.cadency_id,
         user: form.user,
         avatar: form.avatar.presence || nil
       ),

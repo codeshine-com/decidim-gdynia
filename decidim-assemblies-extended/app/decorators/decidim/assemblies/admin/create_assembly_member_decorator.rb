@@ -32,8 +32,10 @@ Decidim::Assemblies::Admin::CreateAssemblyMember.class_eval do
         :affiliation,
         :representation
       ).merge(
+        decidim_assemblies_extended_cadency_id: form.cadency_id,
         assembly: assembly,
-        user: form.user
+        user: form.user,
+        avatar: form.avatar.presence || nil
       ),
       log_info
     )

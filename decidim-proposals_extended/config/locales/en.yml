@@ -1,0 +1,14 @@
+en:
+  decidim:
+    components:
+      proposals:
+        settings:
+          global:
+            private_proposal: Private proposals
+            transparent: Transparent
+    proposals:
+      proposal:
+        not_allowed: You can not see this proposals
+      proposals:
+        vote_button:
+          private_component: Voting enabled for private users only

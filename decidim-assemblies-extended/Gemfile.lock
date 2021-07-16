@@ -409,6 +409,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    sqlite3 (1.4.2)
     ssrf_filter (1.0.7)
     temple (0.8.2)
     thor (1.1.0)
@@ -445,6 +446,7 @@ PLATFORMS
 
 DEPENDENCIES
   decidim-assemblies-extended!
+  sqlite3
 
 BUNDLED WITH
    2.1.4

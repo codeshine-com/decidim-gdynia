@@ -1,0 +1,11 @@
+<%= render "layouts/decidim/admin/application" do %>
+  <div class="process-title">
+    <div class="process-title-content">
+      <%= link_to translated_attribute(page.component.participatory_space.title), decidim_assemblies.assembly_path(page.component.participatory_space), target: "_blank" %>
+    </div>
+  </div>
+
+  <div class="process-content">
+    <%= yield %>
+  </div>
+<% end %>

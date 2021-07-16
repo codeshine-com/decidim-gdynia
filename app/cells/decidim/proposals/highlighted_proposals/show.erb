@@ -1,0 +1,5 @@
+<% published_components.each do |component| %>
+  <% unless component.settings[:participatory_texts_enabled] || component.has_to_be_hidden?(current_user) %>
+    <%= cell "decidim/proposals/highlighted_proposals_for_component", component %>
+  <% end %>
+<% end %>

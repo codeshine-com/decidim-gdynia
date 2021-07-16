@@ -10,7 +10,36 @@ pl:
         affiliation: Afiliacja
         avatar: Awatar (Zdjęcie)
         representation: Reprezentacja
+        cadency_id: Kadencja
+      cadency:
+        name: Nazwa
+        weight: Kolejność
   decidim:
+    admin_log:
+      cadency:
+        create: "%{user_name} utworzył(a) kadencję %{resource_name} w %{space_name}"
+        delete: "%{user_name} usujął/usunęła kadencję %{resource_name} z %{space_name}"
+        update: "%{user_name} zaktualizował(a) kadencję %{resource_name} w %{space_name}"
+    admin:
+      actions:
+        new_cadency: Nowa kadencja
+      cadencies:
+        new:
+          create: Zapisz
+          title: Nowa kadencja
+      menu:
+        assemblies_submenu:
+          assembly_cadencies: Kadencje
+      models:
+        assembly_member:
+          fields:
+            cadency: Kadencja
+        cadencies:
+          fields:
+            created_at: Utworzono
+            name: Nazwa
+      titles:
+        cadencies: Kadencje
     assemblies:
       admin:
         assemblies:
@@ -30,17 +59,27 @@ pl:
             social_handlers_help: Do adresu z mediów społecznościowych należy wpisać tylko końcówkę nazwy (to, co ma znaleźć się na końcu po znaku „/”). System automatycznie zaciąga jego początek.
             duration_help: Jeśli czas trwania tego zespołu jest ograniczony, wybierz datę końcową. W przeciwnym razie zaznacz pole poniżej i wybierz jedną z opcji.
             team_service: Obsługa zespołu
-            transparent_help: Tylko przy zaznaczonej opcji Prywatny - zespół jest widoczny dla innych użytkowników, ale są zablokowane aktywności 
+            transparent_help: Tylko przy zaznaczonej opcji Prywatny - zespół jest widoczny dla innych użytkowników, ale są zablokowane aktywności
         assembly_members:
           form:
             affiliation: Afiliacja
+            define_cadencies: Zdefiniuj kadencje
             representation: Reprezentacja
+            select_a_cadency: Wybierz kadencję
+      assembly_members:
+        index:
+          cadencies: Poprzednie kadencje
       duration_text:
         indefinitely: Bezterminowo
         until_further_notice: Do odwołania
       created_by:
         city_council: Rada Miasta Gdyni
         city_mayor: Prezydent Miasta Gdyni
+      extended:
+        admin:
+          cadencies:
+            form:
+              title: Nowa kadencja
       show:
         # composition: Skład
         contact_address: Adres kontaktowy

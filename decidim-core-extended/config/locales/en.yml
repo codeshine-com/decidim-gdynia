@@ -4,6 +4,10 @@ en:
       update_password: Update password
       about_hint: This description will be seen on your public profile and will be seen by other users.
       about_group_hint: This description will be seen on group's public profile and will be seen by other users.
+    amendable:
+      fields:
+        body: body
+        title: title
     devise:
       invitations:
         edit:
@@ -15,6 +19,9 @@ en:
             I am aware of the RODO regulations of this page.<br>
             More informations on the RODO is availabe %{link}.
           rodo_link: here
+    profiles:
+      user:
+        delete_group: Delete group
     user_interests:
       show:
         areas: Areas

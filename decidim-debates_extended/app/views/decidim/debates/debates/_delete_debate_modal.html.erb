@@ -1,0 +1,10 @@
+<div class="reveal delete-debate-modal" id="deleteDebateModal" data-reveal>
+  <div class="reveal__header">
+    <h3 class="reveal__title"><%= t("decidim.debates.debates.show.delete_debate") %></h3>
+    <button class="close-button" data-close aria-label="<%= t("decidim.debates.debates.close_debate_modal.close") %>" type="button">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <p><%= t("decidim.debates.debates.show.delete_debate_description") %></p>
+  <%= link_to t("decidim.debates.debates.show.delete_debate"), close_debate_path(debate, delete: true), method: :post, class: 'button' %>
+</div>

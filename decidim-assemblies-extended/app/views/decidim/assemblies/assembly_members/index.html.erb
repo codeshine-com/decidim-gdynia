@@ -1,0 +1,33 @@
+<% add_decidim_meta_tags(title: t("assembly_members.index.title", scope: "decidim")) %>
+
+<div class="section row column">
+  <div class="flex--sbe">
+    <h3 class="section-heading"><%= t(".members") %> <span class="text-muted">(<%= collection.size %>)</span></h3>
+  </div>
+  <div id="assembly_members-grid" class="row small-up-1 medium-up-2 large-up-3 card-grid">
+    <%= render(collection) %>
+  </div>
+</div>
+
+<% if @cadencies %>
+  <div class="section row column">
+    <div class="flex--sbe">
+      <h3 class="section-heading"><%= t(".cadencies") %> <span class="text-muted">(<%= @cadencies.size %>)</span></h3>
+    </div>
+    <% @cadencies.each do |cadency| %>
+      <% unless cadency.members.none? %>
+        <div class="docs__container">
+          <span data-toggle="docs-collection-<%= cadency.id %>"><%= icon "caret-right", class: "icon--small", role: "img", "aria-hidden": true %>&nbsp;
+            <strong><%= translated_attribute(cadency.name) %></strong>
+            <small>(<%= cadency.members.count %>)</small>
+          </span>
+          <div id="docs-collection-<%= cadency.id %>" class="docs__content hide" data-toggler=".hide">
+            <div id="assembly_members-grid" class="row small-up-1 medium-up-2 large-up-3 card-grid">
+              <%= render(cadency.members) %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+<% end%>

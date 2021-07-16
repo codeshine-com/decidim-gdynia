@@ -81,7 +81,14 @@ Decidim::ParticipatoryProcesses::Admin::CreateParticipatoryProcess.class_eval do
   end
 
   def translate_areas_into_categories(process)
-    Decidim::Area.where(organization: process.organization).each do |area|
+    Decidim::AreaType.where(organization: process.organization).each do |area_type|
+      parent_category = process.categories.create(name: area_type.name, description: area_type.name)
+      area_type.areas.each do |area|
+        process.categories.create(name: area.name, description: area.name, parent_id: parent_category.id)
+      end
+    end
+
+    Decidim::Area.where(organization: process.organization).where(area_type_id: nil).each do |area|
       process.categories.create(name: area.name, description: area.name)
     end
   end

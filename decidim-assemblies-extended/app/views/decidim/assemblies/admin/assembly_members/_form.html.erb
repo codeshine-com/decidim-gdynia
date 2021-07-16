@@ -15,15 +15,15 @@
         <%= form.text_field :full_name, autofocus: true %>
       </div>
 
-      <div class="columns xlarge-6">
-        <%= form.upload :avatar %>
-      </div>
-
       <div class="row column user-fields--user-picker">
         <% prompt_options = { url: decidim_admin.users_organization_url, placeholder: t(".select_user") } %>
         <%= form.autocomplete_select(:user_id, form.object.user.presence,  { multiple: false }, prompt_options) do |user|
           { value: user.id, label: "#{user.name} (@#{user.nickname})" }
         end %>
+      </div>
+
+      <div class="columns xlarge-6">
+        <%= form.upload :avatar %>
       </div>
     </div>
 
@@ -47,6 +47,14 @@
 
     <div class="row column">
       <%= form.date_field :ceased_date %>
+    </div>
+
+    <div class="row column">
+      <% if current_assembly.cadencies.any? %>
+        <%= form.select :cadency_id, @form.cadencies_for_select(current_assembly), { include_blank: t(".select_a_cadency") }, { multiple: false } %>
+      <% else %>
+        <%= form.select :cadency_id, [], { include_blank: t(".define_cadencies")}, { multiple: false, disabled: true  } %>
+      <% end %>
     </div>
 
     <div class="row column">

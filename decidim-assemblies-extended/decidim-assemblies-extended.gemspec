@@ -27,6 +27,5 @@ Gem::Specification.new do |spec|
   spec.add_dependency "decidim-core"
   spec.add_dependency "rails", "~> 5.2.4", ">= 5.2.4.4"
 
-  # required for generating new migrations
-  # spec.add_development_dependency "sqlite3"
+  spec.add_development_dependency "sqlite3"
 end

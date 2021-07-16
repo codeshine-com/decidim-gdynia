@@ -1,0 +1,14 @@
+pl:
+  decidim:
+    components:
+      proposals:
+        settings:
+          global:
+            private_proposal: Propozycje prywatne
+            transparent: Transparenta
+    proposals:
+      proposal:
+        not_allowed: Nie możesz zobaczyć tej strony
+      proposals:
+        vote_button:
+          private_component: Głosowanie ograniczone do użytkowników prywatnych

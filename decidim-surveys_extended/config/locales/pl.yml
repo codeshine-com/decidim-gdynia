@@ -1,0 +1,11 @@
+pl:
+  decidim:
+    components:
+      surveys:
+        settings:
+          global:
+            private_survey: Ankieta prywatna
+            transparent: Transparenta
+    surveys:
+      survey:
+        not_allowed: Nie możesz zobaczyć tej ankiety

@@ -1,0 +1,10 @@
+pl:
+  decidim:
+    debates:
+      debates:
+        delete:
+          success: Debata została usunięta.
+        show:
+          delete_debate: Usuń debatę
+          delete_debate_description: Czy jesteś pewien, że chcesz usunąć debatę? Tego działania nie można cofnąć.
+          closed: "Zamknięta %{close_date}"

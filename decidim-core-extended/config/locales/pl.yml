@@ -1,9 +1,17 @@
 pl:
+  activemodel:
+    attributes:
+      group:
+        delete_reason: Powód usunięcia grupy
   decidim:
     account:
       update_password: Zaktualizuj hasło
       about_hint: Ten opis będzie się wyświetlał w Twoim profilu publicznym i będzie widoczny dla innych użytkowników platformy.
       about_group_hint: Ten opis będzie się wyświetlał na profilu publicznym grupy i będzie widoczny dla innych użytkowników.
+    amendable:
+      fields:
+        body: treść
+        title: tytuł
     devise:
       invitations:
         edit:
@@ -16,6 +24,18 @@ pl:
             Na podstawie art. 6 ust. 1 lit. a) Rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 roku w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia Dyrektywy 95/46/WE (Ogólne Rozporządzenie o Ochronie Danych) z dnia 27 kwietnia 2016 roku, (Dz.Urz.UE.L Nr 119, strona 1) wyrażam zgodę na przetwarzanie moich danych osobowych przez Laboratorium Innowacji Społecznych w celu realizacji Budżetu Obywatelskiego 2020 w Gdyni w zakresie imienia i nazwiska, nazwy konta oraz adresu e-mail.<br>
             Więcej na temat przetwarzania Twoich danych osobowych znajdziesz %{link}.
           rodo_link: tutaj
+    group:
+      delete:
+        alert: Nie można cofnąć tej czynności.
+        explanation: Proszę podać przyczynę, dla której chcesz usunąć grupę (opcjonalne).
+        confirm:
+          ok: Tak, chcę usunać grupę
+          close: Zamknij
+          question: Czy na pewno chcesz usunąć grupę?
+          title: Usuń moją grupę
+    profiles:
+      user:
+        delete_group: Usuń grupę
     user_interests:
       show:
         areas: Kategorie

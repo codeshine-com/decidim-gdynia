@@ -1,0 +1,10 @@
+pl:
+  decidim:
+    debates:
+      debates:
+        delete:
+          success: Debate was deleted.
+        show:
+          delete_debate: Delete debate
+          delete_debate_description: Are you sure you want to delete debate? This action cannot be cancelled!
+          closed: "Closed %{close_date}"

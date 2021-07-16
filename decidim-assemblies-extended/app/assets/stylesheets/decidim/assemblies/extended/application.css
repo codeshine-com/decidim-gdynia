@@ -13,3 +13,6 @@
  *= require_tree .
  *= require_self
  */
+
+.docs__container .affiliation,
+.docs__container .representation { display: none; }

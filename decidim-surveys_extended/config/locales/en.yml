@@ -1,0 +1,11 @@
+en:
+  decidim:
+    components:
+      surveys:
+        settings:
+          global:
+            private_survey: Private survey
+            transparent: Transparent
+    surveys:
+      survey:
+        not_allowed: You can not see this survey

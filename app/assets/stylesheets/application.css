@@ -12,6 +12,7 @@
  *
  *= require decidim
  *= require decidim/core/extended/application.css
+ *= require decidim/assemblies/extended/application.css
  *= require_tree .
  *= require_self
  */
@@ -25,3 +26,62 @@
   width: 0.875em;
   height: 0.875em;
 }
+/******* graphics changes ******/
+
+.title-bar { background-color: #fff; color: #000; }
+.topbar__search input { background-color: #f8f8f8; color: #000; }
+.topbar__search input::placeholder { color: #000; }
+.topbar__search input:focus { background-color: #f8f8f8; color: #000; }
+.topbar__search:not(:focus-within) button { background-color: var(--primary); color: rgba(0, 0, 0, 0.5); }
+.topbar__dropmenu > ul > li > a { color: #000; }
+.topbar__dropmenu > ul > li > a::after { border-top-color: #000 !important; }
+.topbar__user__login a { color: #000; font-weight: 200; }
+.topbar__user__login a:hover { color: #000; }
+.topbar__admin__link a { color: #000; font-weight: 200; }
+.topbar__admin__link a:hover { color: #000; }
+.topbar__notifications .icon, .topbar__conversations .icon { fill: #000; }
+
+
+.navbar { background-color: #f8f8f8; color: #000; }
+.main-nav__link a { color: #000; }
+
+#content section,
+.home-section:nth-of-type(2n+1),
+.home-section:nth-of-type(2n) { background-color: #fff; }
+.home-section { position: relative; }
+.home-section:after {
+  content: '';
+  width: 75rem;
+  height: 3px;
+  background-color: #000;
+  position: absolute;
+  top: calc(100% - 4px);
+  left: calc(50% - (75rem / 2));
+}
+
+
+.button { color: #000; border-radius: 15px; }
+.button:hover { color: #000; }
+.button--sc.large {
+  display: inline-block;
+  width: auto;
+  font-size: 1.25rem;
+  text-transform: none;
+}
+.button.hollow { color: #000; background-color: var(--primary); }
+.button.hollow:hover { color: #000; }
+.button.tiny {
+  border-radius: 4px;
+}
+.opinion-toggle--meh:hover, .opinion-toggle--meh:focus, .opinion-toggle--meh.is-active { background-color: var(--primary); }
+.button.tiny.opinion-toggle--ok {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.button.tiny.opinion-toggle--ko {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.button.tiny.opinion-toggle--meh { border-radius: 0; }
+.button--muted { color: #fff; }
+.hero-cta { padding: 1rem 1.5rem }
