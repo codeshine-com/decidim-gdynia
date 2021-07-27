@@ -17,6 +17,7 @@ gem 'slack-notifier'
 # gem "puma", "~> 5.0"
 gem 'puma', '= 5.3.2'
 gem "uglifier", "~> 4.1"
+gem "fog-aws"
 
 gem "faker", "~> 2.14"
 
