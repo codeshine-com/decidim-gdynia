@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_15_165937) do
+ActiveRecord::Schema.define(version: 2021_08_06_132654) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
@@ -119,6 +119,7 @@ ActiveRecord::Schema.define(version: 2021_07_15_165937) do
     t.bigint "decidim_organization_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "icon"
     t.index ["area_type_id"], name: "index_decidim_areas_on_area_type_id"
     t.index ["decidim_organization_id"], name: "index_decidim_areas_on_decidim_organization_id"
   end
@@ -1187,6 +1188,7 @@ ActiveRecord::Schema.define(version: 2021_07_15_165937) do
     t.integer "parent_id"
     t.string "code", null: false
     t.integer "part_of", default: [], null: false, array: true
+    t.boolean "promoted", default: false
     t.index ["decidim_organization_id", "code"], name: "index_decidim_scopes_on_decidim_organization_id_and_code", unique: true
     t.index ["decidim_organization_id"], name: "index_decidim_scopes_on_decidim_organization_id"
     t.index ["parent_id"], name: "index_decidim_scopes_on_parent_id"
@@ -1263,6 +1265,7 @@ ActiveRecord::Schema.define(version: 2021_07_15_165937) do
     t.bigint "organization_id", null: false
     t.integer "weight"
     t.boolean "show_in_footer", default: false, null: false
+    t.string "cover"
     t.index ["organization_id"], name: "index_decidim_static_page_topics_on_organization_id"
   end
 
