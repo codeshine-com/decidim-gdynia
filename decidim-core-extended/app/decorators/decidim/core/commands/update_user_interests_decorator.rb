@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Decidim::UpdateUserInterests.class_eval do
 
   private

@@ -10,6 +10,10 @@ module Decidim
           app.config.assets.precompile += %w(decidim/processes/extended/dates.js)
         end
 
+        initializer "decidim_processes_extended.add_cells_view_paths" do
+	         Cell::ViewModel.view_paths << File.expand_path("#{Decidim::Processes::Extended::Engine.root}/app/cells")
+      	end
+
         # make decorators autoload in development env
         config.autoload_paths << File.join(
           Decidim::Processes::Extended::Engine.root, "app", "decorators", "{**}"

@@ -37,6 +37,9 @@ $(document).ready(function () {
         }
       });
     }, 500);
+  }
 
+  if ($('.promoted-scope').length > 0) {
+    $('.promoted-scope').last().addClass('border');
   }
 });

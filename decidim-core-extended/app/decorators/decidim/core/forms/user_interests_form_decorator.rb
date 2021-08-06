@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Decidim::UserInterestsForm.class_eval do
   attribute :areas, Array[Decidim::UserInterestAreaForm]
 

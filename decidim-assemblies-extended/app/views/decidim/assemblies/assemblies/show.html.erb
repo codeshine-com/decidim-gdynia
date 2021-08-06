@@ -98,7 +98,13 @@ edit_link(
         <% area = current_participatory_space.area %>
         <% if translated_attribute(area&.name).present? %>
           <div class="definition-data__item area">
-            <span class="definition-data__title"><%= t("area", scope: "decidim.assemblies.show") %></span>
+            <span class="definition-data__title">
+              <% if area.icon.present? %>
+                <%= image_tag area.icon_url(:square), alt: "ikona kategorii #{area.name}" %>
+              <% else %>
+                <%= t("area", scope: "decidim.assemblies.show") %>
+              <% end %>
+            </span>
             <%= translated_attribute(area.name) %>
           </div>
         <% end %>

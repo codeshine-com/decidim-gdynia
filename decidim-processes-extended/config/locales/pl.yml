@@ -5,9 +5,18 @@ pl:
         contact_address: Adres kontaktowy
         facebook_handler: Facebook
         social_handlers_help: Do adresu z Facebooka należy wpisać tylko końcówkę nazwy (to, co ma znaleźć się na końcu po znaku „/”). System automatycznie zaciąga jego początek.
-
+        related_scope_ids: Zakresy
+      scope:
+        promoted: Wyróżniony
 
   decidim:
+    admin:
+      components:
+        settings_fields:
+          select_a_scope: Wybierz zakres
+      scopes:
+        form:
+          promoted_hint: Zaznacz, żeby na listach w panelu administratora zakres pojawiał się na górze listy
     participatory_processes:
       admin:
         participatory_processes:
@@ -21,3 +30,7 @@ pl:
         facebook_handler: Facebook
         facebook_title: Odwiedź proces na Facebook
         social_networks: Portale społacznościowe
+    shared:
+      participatory_space_filters:
+        filters:
+          select_a_scope: Wybierz zakres

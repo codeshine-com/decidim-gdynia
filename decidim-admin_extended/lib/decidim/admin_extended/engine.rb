@@ -7,6 +7,7 @@ module Decidim
 
       initializer "decidim_admin_extended.assets.precompile" do |app|
         app.config.assets.precompile += %w(decidim/admin_extended/admin_quill_custom.css)
+        app.config.assets.precompile += %w(decidim/admin_extended/admin_styles.css)
       end
 
       # make decorators autoload in development env

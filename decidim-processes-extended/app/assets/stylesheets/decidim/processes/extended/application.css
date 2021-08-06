@@ -1,0 +1,35 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+.scope_id_scopes_select_filter label { position: relative; }
+.scope_id_scopes_select_filter option { padding: 3px 4px; }
+.scope_id_scopes_select_filter optgroup::before { padding: 3px 4px; }
+select.scopes-expanded {
+  overflow-y: hidden;
+  /* scroll-behavior: initial; */
+  height: 2.4375rem;
+  top: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,24' style='fill: rgb%2844, 41, 48%29'></polygon></svg>");
+}
+select.scopes-expanded:focus {
+  height: 200px;
+  position: absolute;
+  left: 25%;
+  overflow-y: scroll;
+  /* scroll-behavior: unset; */
+  background-image: none;
+  z-index: 20;
+}

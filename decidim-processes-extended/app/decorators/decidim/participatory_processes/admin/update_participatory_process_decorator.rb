@@ -48,14 +48,14 @@ Decidim::ParticipatoryProcesses::Admin::UpdateParticipatoryProcess.class_eval do
     end
     link_related_processes
     # addes scopes
-    link_scopes
+    link_related_scopes
   end
 
-  def scopes
-    @scopes ||= Decidim::Scope.where(id: form.scope_ids)
+  def related_scopes
+    @related_scopes ||= Decidim::Scope.where(id: form.related_scope_ids)
   end
 
-  def link_scopes
-    @participatory_process.link_participatory_space_resources(scopes, "scopes")
+  def link_related_scopes
+    @participatory_process.link_participatory_space_resources(related_scopes, "related_scopes")
   end
 end

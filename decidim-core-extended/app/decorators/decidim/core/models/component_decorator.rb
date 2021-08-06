@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Decidim::Component.class_eval do
 
   def has_to_be_hidden?(user)

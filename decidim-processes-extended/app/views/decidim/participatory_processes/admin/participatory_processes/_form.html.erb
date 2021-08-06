@@ -115,43 +115,25 @@
   </div>
 
   <div class="card-section">
-    <!-- TODO: do uzuniecia -->
     <div class="row column">
       <%= form.check_box :scopes_enabled %>
     </div>
-
+    <!-- nasze custom -->
     <div class="row column">
-      <%= scopes_picker_field form, :scope_id, root: nil %>
-
-      <div class="row" id="scope-depth ">
-        <%= form.collection_select :scope_type_max_depth_id,
-                                    organization_scope_depths,
-                                    :id,
-                                    :name,
-                                    scope_type_depth_select_options,
-                                    scope_type_depth_select_html_options %>
-        <p class="help-text">
-          <%== t(".scope_type_max_depth_help") %>
-        </p>
-      </div>
-    </div>
-    <!-- TODO: do uzuniecia END -->
-
-    <!-- TODO: nasze custom
-    <div class="row column">
-      <%#= form.select(
-        :scope_ids,
-        @form.scopes.order(name: :asc).map{|scope| [translated_attribute(scope.name), scope.id]},
+      <%= form.select(
+        :related_scope_ids,
+        @form.scopes.promoted_first.map{|scope| [translated_attribute(scope.name), scope.id, class: "#{scope.promoted ? 'promoted-scope' : nil}"  ]},
         { include_blank: true },
         { multiple: true, class: "chosen-select" }
       ) %>
-    </div>-->
+    </div>
+    <!-- END nasze custom -->
 
     <div class="row column">
       <%= form.areas_select :area_id,
                             areas_for_select(current_organization),
                             selected: current_participatory_process.try(:decidim_area_id),
-                            include_blank: t(".select_an_area") %>
+                            include_blank: t(".select_an_area"), multiple: true %>
     </div>
   </div>
 
@@ -210,4 +192,5 @@
   </div>
 </div>
 
+<%#= javascript_include_tag "decidim/participatory-processes-extended/admin/participatory_processes" %>
 <%= javascript_include_tag "decidim/participatory_processes/admin/participatory_processes" %>

@@ -1,13 +1,24 @@
 pl:
   activemodel:
     attributes:
+      area:
+        icon: Ikona
       group:
         delete_reason: Powód usunięcia grupy
+      static_page_topic:
+        cover: Obraz główny
   decidim:
     account:
+      fill_more_data: Dziękujemy za dołączenie do GPD. Proszę poświęć kilka chwil na wypełnienie pól statystycznych, by pomóc nam rozwijać platformę.
+      not_confirmed: Potwierdź swój e-mail, żeby móc sie zalogować.
       update_password: Zaktualizuj hasło
       about_hint: Ten opis będzie się wyświetlał w Twoim profilu publicznym i będzie widoczny dla innych użytkowników platformy.
       about_group_hint: Ten opis będzie się wyświetlał na profilu publicznym grupy i będzie widoczny dla innych użytkowników.
+    admin:
+      models:
+        area:
+          fields:
+            icon: Ikona
     amendable:
       fields:
         body: treść
@@ -40,6 +51,9 @@ pl:
     profiles:
       user:
         delete_group: Usuń grupę
+    searches:
+      filters:
+        select_a_scope: Wybierz zakres
     user_interests:
       show:
         areas: Kategorie

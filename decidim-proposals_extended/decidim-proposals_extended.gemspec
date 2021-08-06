@@ -24,7 +24,7 @@ Gem::Specification.new do |spec|
 
   spec.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
-  spec.add_dependency "decidim-core"
+  spec.add_dependency "decidim-core", Decidim::ProposalsExtended::DECIDIM_VERSION
   spec.add_dependency "rails", "~> 5.2.6"
 
   spec.add_development_dependency "sqlite3"

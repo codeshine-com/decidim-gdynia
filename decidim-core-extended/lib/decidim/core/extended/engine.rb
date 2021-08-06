@@ -6,6 +6,15 @@ module Decidim
       class Engine < ::Rails::Engine
         isolate_namespace Decidim::Core::Extended
 
+        unsearchable_resources_manifest_names = [
+          'initiative', 'conference', 'consultation', 'voting',
+          'budget'
+        ]
+        unsearchable_resources_manifest_names.each do |manifest_name|
+          resourcable = Decidim.find_resource_manifest(manifest_name)
+          resourcable.searchable = false if resourcable
+        end
+
         initializer "decidim.user_menu" do
           Decidim.menu :user_menu do |menu|
             menu.item t("change_password", scope: "layouts.decidim.user_profile"),

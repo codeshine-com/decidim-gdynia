@@ -74,7 +74,14 @@
         <% area = current_participatory_space.area %>
         <% if translated_attribute(area&.name).present? %>
           <div class="definition-data__item area">
-            <span class="definition-data__title"><%= t("area", scope: "decidim.participatory_processes.show") %></span>
+            <span class="definition-data__title">
+              <% if area.icon.present? %>
+                <%= image_tag area.icon_url(:square), alt: "ikona kategorii #{area.name}", class: 'area-icon' %>
+              <% else %>
+                <%= t("area", scope: "decidim.participatory_processes.show") %>
+              <% end %>
+            </span>
+
             <%= translated_attribute(area.name) %>
           </div>
         <% end %>
@@ -121,7 +128,7 @@
       <% end %>
 
       <!-- BOX 3 -->
-      <% if current_participatory_space.local_area.present? || current_participatory_space.contact_address.present? || current_participatory_space.facebook_handler.present? %>
+      <% if translated_attribute(current_participatory_space.local_area).present? || translated_attribute(current_participatory_space.contact_address).present? || translated_attribute(current_participatory_space.facebook_handler).present? %>
         <div class="card extra definition-data">
           <!-- czeka na decyzje Uli
           <% if translated_attribute(current_participatory_space.participatory_scope).present? %>

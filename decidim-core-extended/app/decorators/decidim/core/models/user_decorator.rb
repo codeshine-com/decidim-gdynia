@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Decidim::User.class_eval do
 
   attr_accessor :rodo_agreements

@@ -11,7 +11,7 @@ Decidim::ParticipatoryProcesses::Admin::CreateParticipatoryProcess.class_eval do
       link_related_processes
       translate_areas_into_categories(process)
       # addes scopes
-      # link_scopes
+      link_related_scopes
       broadcast(:ok, process)
     else
       form.errors.add(:hero_image, process.errors[:hero_image]) if process.errors.include? :hero_image
@@ -50,7 +50,8 @@ Decidim::ParticipatoryProcesses::Admin::CreateParticipatoryProcess.class_eval do
       end_date: form.end_date,
       participatory_process_group: form.participatory_process_group,
       ### our custom
-      contact_address: form.contact_address
+      contact_address: form.contact_address,
+      facebook_handler: form.facebook_handler
     )
 
     return process unless process.valid?
@@ -72,12 +73,12 @@ Decidim::ParticipatoryProcesses::Admin::CreateParticipatoryProcess.class_eval do
     end
   end
 
-  def scopes
-    @scopes ||= Decidim::Scope.where(id: form.scope_ids)
+  def related_scopes
+    @related_scopes ||= Decidim::Scope.where(id: form.related_scope_ids)
   end
 
-  def link_scopes
-    @participatory_process.link_participatory_space_resources(scopes, "scopes")
+  def link_related_scopes
+    @participatory_process.link_participatory_space_resources(related_scopes, "related_scopes")
   end
 
   def translate_areas_into_categories(process)
