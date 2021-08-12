@@ -118,7 +118,13 @@
     </div>
 
     <div class="row column">
-      <%= scopes_picker_field form, :scope_id, root: nil %>
+      <%#= scopes_picker_field form, :scope_id, root: nil %>
+      <%= form.select(
+        :scope_id,
+        Decidim::Scope.where(organization: current_organization).promoted_first.map{|scope| [translated_attribute(scope.name), scope.id, class: "#{scope.promoted ? 'promoted-scope' : nil}"  ]},
+        { include_blank: false, prompt: t(".select_a_scope") },
+        { multiple: false }
+      ) %>
     </div>
 
     <div class="row column">

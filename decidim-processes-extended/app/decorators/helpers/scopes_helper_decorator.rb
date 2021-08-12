@@ -21,10 +21,10 @@ Decidim::ScopesHelper.class_eval do
           text: scope_name_for_picker(scope, I18n.t("decidim.scopes.global")) }
       end
     else
-      scopes = try(:current_participatory_space)&.scopes&.promoted_first
+      scopes = try(:current_participatory_space)&.scopes&.promoted_first || []
       form.select(
         name,
-        scopes.promoted_first.map{|scope| [translated_attribute(scope.name), scope.id, class: "#{scope.promoted ? 'promoted-scope' : nil}"  ]},
+        scopes.map{|scope| [translated_attribute(scope.name), scope.id, class: "#{scope.promoted ? 'promoted-scope' : nil}"  ]},
         { include_blank: true },
         { multiple: false, class: "chosen-select" }
       )
