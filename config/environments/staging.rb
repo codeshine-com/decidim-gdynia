@@ -64,7 +64,7 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "decidim_app_#{Rails.env}"
 
   config.action_mailer.perform_caching = false
-  config.action_mailer.asset_host = 'https://decidim.cdsh.dev/'
+  config.action_mailer.asset_host = 'https://lis-decidim.cdsh.dev/'
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.

@@ -11,7 +11,8 @@ gem "decidim", DECIDIM_VERSION
 # Deployment
 # gem "bootsnap", "~> 1.4"
 gem 'mina'
-gem 'sentry-raven'
+gem "sentry-ruby"
+gem "sentry-rails"
 gem 'slack-notifier'
 
 gem 'puma', '= 5.3.2'
