@@ -59,6 +59,8 @@ PATH
   specs:
     decidim-surveys_extended (0.1.0)
       decidim-core (= 0.24.3)
+      decidim-forms (= 0.24.3)
+      decidim-surveys (= 0.24.3)
       rails (~> 5.2.6)
 
 GEM

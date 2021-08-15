@@ -7,6 +7,19 @@ pl:
         delete_reason: Powód usunięcia grupy
       static_page_topic:
         cover: Obraz główny
+      user:
+        gender:
+          female: Kobieta
+          male: Mężczyzna
+          no_answer:  Nie chcę podawać
+        age:
+          below_18: Poniżej 18
+          from_18_to_24: '18-24'
+          from_25_to_34: '25-34'
+          from_35_to_54: '35-54'
+          from_55_to_74: '55-74'
+          over_74: '75 lat i więcej'
+
   decidim:
     account:
       fill_more_data: Dziękujemy za dołączenie do GPD. Proszę poświęć kilka chwil na wypełnienie pól statystycznych, by pomóc nam rozwijać platformę.

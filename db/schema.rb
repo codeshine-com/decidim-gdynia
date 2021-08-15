@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_06_132654) do
+ActiveRecord::Schema.define(version: 2021_08_15_081146) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
@@ -591,6 +591,7 @@ ActiveRecord::Schema.define(version: 2021_08_06_132654) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "max_characters", default: 0
+    t.string "metrics"
     t.index ["decidim_questionnaire_id"], name: "index_decidim_forms_questions_on_decidim_questionnaire_id"
     t.index ["position"], name: "index_decidim_forms_questions_on_position"
   end
