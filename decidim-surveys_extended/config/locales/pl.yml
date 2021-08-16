@@ -16,7 +16,7 @@ pl:
           form:
             add_metrics: Dodaj metryczkę
             add_metrics_age: Pytanie o wiek
-            add_metrics_district: Pytanie dzielnicę
+            add_metrics_district: Pytanie o dzielnicę
             add_metrics_gender: Pytanie o płeć
             add_metrics_answer_required: Obowiązkowe
           metrics_question:

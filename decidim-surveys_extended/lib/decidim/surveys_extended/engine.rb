@@ -10,6 +10,10 @@ module Decidim
         settings.attribute :transparent, type: :boolean, default: true
       end
 
+      initializer "decidim_surveys_extended.assets.precompile" do |app|
+        app.config.assets.precompile += %w(decidim/surveys_extended/admin/forms_new.js.es6 decidim/surveys_extended/admin/dynamic_fields_new.component.js.es6)
+      end
+
       config.autoload_paths << File.join(
         Decidim::SurveysExtended::Engine.root, "app", "decorators", "{**}"
       )

@@ -12,6 +12,7 @@
 //
 // require rails-ujs
 //= require activestorage
+//= require 'decidim/surveys_extended/admin/dynamic_fields_new.component'
 //= require_tree .
 
 $(document).ready(function () {
