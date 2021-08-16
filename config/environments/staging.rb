@@ -64,7 +64,7 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "decidim_app_#{Rails.env}"
 
   config.action_mailer.perform_caching = false
-  config.action_mailer.asset_host = 'https://lis-decidim.cdsh.dev/'
+  config.action_mailer.asset_host = 'https://decidim-gdynia.cdsh.dev/'
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
@@ -103,8 +103,8 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  if ENV["STAGING_PASSWORD"].present?
+  if ENV["SITE_PASSWORD"].present?
     # Block users that do not know a given password
-    config.middleware.use RackPassword::Block, auth_codes: [ENV["STAGING_PASSWORD"]]
+    config.middleware.use RackPassword::Block, auth_codes: [ENV["SITE_PASSWORD"]]
   end
 end
