@@ -26,7 +26,7 @@ Decidim::ScopesHelper.class_eval do
         name,
         scopes.map{|scope| [translated_attribute(scope.name), scope.id, class: "#{scope.promoted ? 'promoted-scope' : nil}"  ]},
         { include_blank: true },
-        { multiple: false, class: "chosen-select" }
+        { multiple: false }
       )
     end
   end

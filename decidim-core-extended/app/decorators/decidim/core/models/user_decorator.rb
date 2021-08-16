@@ -27,4 +27,39 @@ Decidim::User.class_eval do
     @interested_areas ||= organization.areas.where(id: interested_areas_ids)
   end
 
+  def answer_match?(answer, metrics)
+    case metrics
+    when 'age'
+      return false unless birth_year
+
+      user_age = Date.current.year - birth_year
+      if user_age < 18 && answer.body['pl'] == I18n.t("ages.#{AGE[0]}", scope: "activemodel.attributes.user")
+        true
+      elsif user_age >= 18 && user_age < 25 && answer.body['pl'] == I18n.t("ages.#{AGE[1]}", scope: "activemodel.attributes.user")
+        true
+      elsif user_age >= 25 && user_age < 35 && answer.body['pl'] == I18n.t("ages.#{AGE[2]}", scope: "activemodel.attributes.user")
+        true
+      elsif user_age >= 35 && user_age < 55 && answer.body['pl'] == I18n.t("ages.#{AGE[3]}", scope: "activemodel.attributes.user")
+        true
+      elsif user_age >= 55 && user_age < 75 && answer.body['pl'] == I18n.t("ages.#{AGE[4]}", scope: "activemodel.attributes.user")
+        true
+      elsif user_age >= 75 && answer.body['pl'] == I18n.t("ages.#{AGE[5]}", scope: "activemodel.attributes.user")
+        true
+      else
+        false
+      end
+    when 'gender'
+      return false unless gender
+
+      answer.body['pl'] == I18n.t("genders.#{gender}", scope: "activemodel.attributes.user")
+    when 'district'
+      return false unless district
+       
+      answer.body['pl'] == district
+    else
+      false
+    end
+
+  end
+
 end

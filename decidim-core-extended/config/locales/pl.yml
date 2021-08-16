@@ -8,11 +8,14 @@ pl:
       static_page_topic:
         cover: Obraz główny
       user:
-        gender:
+        gender: Pleć
+        birth_year: Rok urodzenia
+        district: Dzielnica
+        genders:
           female: Kobieta
           male: Mężczyzna
-          no_answer:  Nie chcę podawać
-        age:
+          no_answer: Nie chcę podawać
+        ages:
           below_18: Poniżej 18
           from_18_to_24: '18-24'
           from_25_to_34: '25-34'
@@ -27,6 +30,10 @@ pl:
       update_password: Zaktualizuj hasło
       about_hint: Ten opis będzie się wyświetlał w Twoim profilu publicznym i będzie widoczny dla innych użytkowników platformy.
       about_group_hint: Ten opis będzie się wyświetlał na profilu publicznym grupy i będzie widoczny dla innych użytkowników.
+      show:
+        select_a_gender: Wybierz płeć
+        birth_year_placeholder: Podaj datę urodzenia
+        select_a_district: Wybierz dzielnicę
     admin:
       models:
         area:
@@ -36,6 +43,11 @@ pl:
       fields:
         body: treść
         title: tytuł
+    core:
+      extended:
+        authorizations:
+          show:
+            authenticate_account: Autoryzuj konto
     devise:
       invitations:
         edit:
@@ -77,5 +89,6 @@ pl:
     decidim:
       user_profile:
         change_password: Zmień hasło
+        inhabitant_card_authorization: Autoryzacja kartą mieszkańca
       footer:
         ue_logotypes: Logotypy UE

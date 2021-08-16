@@ -22,6 +22,12 @@ module Decidim
                       position: 998,
                       active: :exact
           end
+          Decidim.menu :user_menu do |menu|
+            menu.item t("inhabitant_card_authorization", scope: "layouts.decidim.user_profile"),
+                      decidim_core_extended.inhabitant_cards_path,
+                      position: 1.25,
+                      active: :exact
+          end
         end
 
         routes do
@@ -33,6 +39,9 @@ module Decidim
           end
           # get "/groups/:id/delete", controller: '/decidim/groups', to: "/decidim/groups#delete", as: :delete_group
           # delete "/groups/:id", controller: '/decidim/groups', to: "/decidim/groups#destroy", as: :destroy_group
+          resource :inhabitant_cards, only: [:show, :create], controller: 'authorizations'
+          # get 'inhabitant_card/authorization', as: :authorization, controller: 'authorizations', action: :show
+          # post 'inhabitant_card/authorization', as: :authorization_post, controller: 'authorizations', action: :create
 
           resources :static_pages, only: [] do
             resources :attachment_collections, controller: 'admin/attachment_collections'

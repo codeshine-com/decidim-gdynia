@@ -21,8 +21,7 @@ module Decidim
 
         def destroy
           enforce_permission_to :manage, :user_group, current_user: current_user, user_group: user_group
-          p 'initializeinitializeinitialize'
-          p params
+
           @form = form(Decidim::DeleteAccountForm).from_params(params)
 
           Decidim::DestroyUserGroup.call(user_group, @form) do

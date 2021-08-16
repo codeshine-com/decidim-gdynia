@@ -1,0 +1,23 @@
+<% add_decidim_page_title(t("inhabitant_card_authorization", scope: "layouts.decidim.user_profile")) %>
+<% content_for(:subtitle) { t("inhabitant_card_authorization", scope: "layouts.decidim.user_profile") } %>
+
+<div class="row">
+  <%= decidim_form_for(@account, url: '/', method: :put, html: { autocomplete: "off" }) do |f| %>
+    <input autocomplete="off" name="hidden" type="password" style="display:none;">
+    <div class="columns large-12 end">
+      <%= form_required_explanation %>
+      <span style = 'color: red'>W BUDOWIE</span>
+
+      <%#= f.number_field :card_number %>
+      <%= f.text_field :name %>
+      <%= f.email_field :email %>
+
+      <% if @account.errors[:password].any? || @account.errors[:password_confirmation].any? %>
+        <%= render partial: "password_fields", locals: { form: f } %>
+      <% else %>
+      <% end %>
+
+      <%= f.submit t(".authenticate_account"), disabled: true %>
+    </div>
+  <% end %>
+</div>

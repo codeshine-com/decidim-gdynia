@@ -447,6 +447,8 @@ pl:
         does_not_belong: Zawiera informacje, które według Ciebie nie powinny pojawić się na Gdyńskiej Platformie Dialogu. Jeśli zaznaczyłeś tę opcję wyjaśnij poniżej.
         offensive: Promuje rasizm, seksizm,  ataki osobiste, groźby śmierci lub inną formę mowy nienawiści
         spam: Zawiera reklamy, oszustwa, próby wyłudzenia danych itp.
+      floating_help:
+        help: O podstronie
     user_interests:
       show:
         select_your_interests: "Wybierz tematy, które Cię interesują, aby otrzymywać związane z nimi wydarzenia na swojej stronie profilowej w zakładce <a href = %{href}>Oś czasu</a>."
