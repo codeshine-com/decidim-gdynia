@@ -21,6 +21,8 @@ gem "fog-aws"
 
 gem "faker", "~> 2.14"
 
+gem 'dotenv-rails', group: [:development, :test, :staging]
+
 group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
   gem "decidim-dev", DECIDIM_VERSION

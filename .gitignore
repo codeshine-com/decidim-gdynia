@@ -43,3 +43,6 @@ public/uploads
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
+
+# Ignore Dotenv variables.
+.env
