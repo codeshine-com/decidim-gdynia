@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-if Rails.env.production?
+if Rails.env.production? || Rails.env.staging?
   # Setup CarrierWave to use Amazon S3. Add `gem "fog-aws" to your Gemfile.
   #
   CarrierWave.configure do |config|
