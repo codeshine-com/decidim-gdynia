@@ -8,11 +8,11 @@ Decidim::Forms::Question.class_eval do
   def set_metrics_answers
     if gender?
       Decidim::User.const_get(:GENDERS).each do |g|
-        answer_options.new(body: { pl: I18n.t("activemodel.attributes.user.gender.#{g}") })
+        answer_options.new(body: { pl: I18n.t("activemodel.attributes.user.genders.#{g}") })
       end
     elsif age?
       Decidim::User.const_get(:AGE).each do |g|
-        answer_options.new(body: { pl: I18n.t("activemodel.attributes.user.age.#{g}") })
+        answer_options.new(body: { pl: I18n.t("activemodel.attributes.user.ages.#{g}") })
       end
     elsif district?
       Decidim::Scope.where(organization: organization).where(promoted: false).each do |scope|

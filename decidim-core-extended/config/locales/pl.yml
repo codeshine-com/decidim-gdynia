@@ -48,6 +48,9 @@ pl:
         authorizations:
           show:
             authenticate_account: Autoryzuj konto
+            card_number: Numer karty
+            email: Adres email
+            email_hint: Podaj adres email, na który zarejestrowana została Twoja karta mieszkańca
     devise:
       invitations:
         edit:

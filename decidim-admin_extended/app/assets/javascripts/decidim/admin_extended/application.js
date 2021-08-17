@@ -13,6 +13,7 @@
 // require rails-ujs
 //= require activestorage
 //= require 'decidim/surveys_extended/admin/dynamic_fields_new.component'
+//= require 'decidim/admin/scope_picker_enabler.component'
 //= require_tree .
 
 $(document).ready(function () {
