@@ -18,6 +18,7 @@ PATH
     decidim-core-extended (0.1.0)
       decidim-core (= 0.24.3)
       rails (~> 5.2.4, >= 5.2.4.4)
+      valid_email2 (~> 2.1)
 
 PATH
   remote: decidim-debates_extended
