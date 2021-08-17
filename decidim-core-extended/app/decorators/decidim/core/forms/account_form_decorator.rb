@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require "valid_email2"
+
 Decidim::AccountForm .class_eval do
   include Decidim::TranslationsHelper
 
