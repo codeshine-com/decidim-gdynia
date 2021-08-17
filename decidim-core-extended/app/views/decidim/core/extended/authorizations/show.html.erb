@@ -2,22 +2,39 @@
 <% content_for(:subtitle) { t("inhabitant_card_authorization", scope: "layouts.decidim.user_profile") } %>
 
 <div class="row">
-  <%= decidim_form_for(@account, url: '/', method: :put, html: { autocomplete: "off" }) do |f| %>
-    <input autocomplete="off" name="hidden" type="password" style="display:none;">
-    <div class="columns large-12 end">
-      <%= form_required_explanation %>
-      <span style = 'color: red'>W BUDOWIE</span>
-
-      <%#= f.number_field :card_number %>
-      <%= f.text_field :name %>
-      <%= f.email_field :email %>
-
-      <% if @account.errors[:password].any? || @account.errors[:password_confirmation].any? %>
-        <%= render partial: "password_fields", locals: { form: f } %>
-      <% else %>
-      <% end %>
-
-      <%= f.submit t(".authenticate_account"), disabled: true %>
+  <% if current_user.authorized_with_inhabitant_card? %>
+    <div class="card card--list">
+      <div class="card--list__item">
+        <div class="card--list__text">
+          <%= icon "circle-check", class: "card--list__icon", aria_label: t("inhabitant_card_authorization_success", scope: "layouts.decidim.user_profile"), role: "img" %>
+          <div>
+            <h5 class="card--list__heading">
+              <%= t("inhabitant_card_authorization", scope: "layouts.decidim.user_profile") %>
+            </h5>
+            <span class="text-small">
+              <%= t("inhabitant_card_authorization_text", scope: "layouts.decidim.user_profile") %>
+            </span>
+          </div>
+        </div>
+        <div class="card--list__data" aria-hidden="true">
+          <span class="card--list__data__icon">
+            <%= icon "circle-check", role: "img", "aria-hidden": true %>
+          </span>
+        </div>
+      </div>
     </div>
+  <% else %>
+    <%= decidim_form_for(@form, url: decidim_core_extended.inhabitant_cards_path, as: :inhabitant_card, html: { autocomplete: "off" }) do |f| %>
+      <input autocomplete="off" name="hidden" type="password" style="display:none;">
+      <div class="columns large-12 end">
+        <%= form_required_explanation %>
+        <!-- <span style = 'color: red'>W BUDOWIE</span> -->
+
+        <%= f.number_field :card_number, label: t('.card_number') %>
+        <%= f.email_field :email, label: t('.email'), help_text: t('.email_hint') %>
+
+        <%= f.submit t(".authenticate_account") %>
+      </div>
+    <% end %>
   <% end %>
 </div>

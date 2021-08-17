@@ -23,6 +23,10 @@ Decidim::User.class_eval do
     extended_data["interested_areas"] || []
   end
 
+  def authorized_with_inhabitant_card?
+    inhabitant_card_number.present?
+  end
+
   def interested_areas
     @interested_areas ||= organization.areas.where(id: interested_areas_ids)
   end
@@ -54,7 +58,7 @@ Decidim::User.class_eval do
       answer.body['pl'] == I18n.t("genders.#{gender}", scope: "activemodel.attributes.user")
     when 'district'
       return false unless district
-       
+
       answer.body['pl'] == district
     else
       false

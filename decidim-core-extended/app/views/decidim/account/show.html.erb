@@ -10,6 +10,10 @@
     <div class="columns large-8 end">
       <%= form_required_explanation %>
 
+      <% if current_user.authorized_with_inhabitant_card? %>
+        <%= f.text_field :inhabitant_card_number, disabled: true %>
+      <% end %>
+
       <%= f.text_field :name %>
       <%= f.text_field :nickname %>
       <%= f.email_field :email %>
@@ -19,7 +23,7 @@
       <%= f.select :gender,
                       @account.genders_for_select,
                       { include_blank: t(".select_a_gender") },
-                      { multiple: false } %>      
+                      { multiple: false } %>
       <%= f.select :district,
                       @account.districts_for_select,
                       { include_blank: t(".select_a_district") },

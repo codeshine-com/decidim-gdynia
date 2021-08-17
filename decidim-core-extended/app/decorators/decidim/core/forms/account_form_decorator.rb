@@ -8,6 +8,7 @@ Decidim::AccountForm .class_eval do
   attribute :gender
   attribute :birth_year
   attribute :district
+  attribute :inhabitant_card_number
 
   def genders_for_select
     Decidim::User.const_get(:GENDERS).map do |text|
