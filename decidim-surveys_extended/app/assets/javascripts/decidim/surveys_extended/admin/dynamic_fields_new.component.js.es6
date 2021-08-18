@@ -192,13 +192,13 @@
           }
           $newField.find(".question-title-statement").text('Pytanie o dzielnicę');
           $newField.find(".metrics-type").val(metrics);
-          $newField.find(".metrics-body").val('Wybierz zakres');
+          $newField.find(".metrics-body").val('W jakiej dzielnicy Pan(i) mieszka?');
           // remove
           $('.column-metrics-district').remove();
         } else {
           $newField.remove();
         }
-        // hiding
+        // remove
         if ( $('.card.metrics .row.column').length == 0 ) {
           $('.card.metrics').remove();
         }

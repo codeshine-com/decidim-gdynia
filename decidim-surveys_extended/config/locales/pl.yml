@@ -2,7 +2,7 @@ pl:
   activemodel:
     attributes:
       question:
-        scope_no_answer: nie dotyczy, nie mieszkam w Gdyni
+        scope_no_answer: Nie dotyczy, nie mieszkam w Gdyni
   decidim:
     components:
       surveys:
