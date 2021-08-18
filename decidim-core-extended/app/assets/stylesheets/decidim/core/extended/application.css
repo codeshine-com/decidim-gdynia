@@ -24,6 +24,10 @@
   vertical-align: top;
 }
 
+/************* registration *************/
+
+.do-not-show { display: none; }
+
 /************* static pages *************/
 
 .card--full__image.static_ppage {

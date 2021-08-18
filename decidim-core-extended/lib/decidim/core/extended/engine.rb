@@ -34,14 +34,9 @@ module Decidim
           resources :groups, only: :destroy, controller: "groups" do
             member do
               get 'delete', action: :delete, as: :delete
-              # delete '/', action: 'destroy', as: :destroy
             end
           end
-          # get "/groups/:id/delete", controller: '/decidim/groups', to: "/decidim/groups#delete", as: :delete_group
-          # delete "/groups/:id", controller: '/decidim/groups', to: "/decidim/groups#destroy", as: :destroy_group
           resource :inhabitant_cards, only: [:show, :create], controller: 'authorizations'
-          # get 'inhabitant_card/authorization', as: :authorization, controller: 'authorizations', action: :show
-          # post 'inhabitant_card/authorization', as: :authorization_post, controller: 'authorizations', action: :create
 
           resources :static_pages, only: [] do
             resources :attachment_collections, controller: 'admin/attachment_collections'
@@ -57,6 +52,7 @@ module Decidim
 
         initializer "decidim_core_extended.assets.precompile" do |app|
           app.config.assets.precompile += %w(decidim/core/extended/Logotypy_UE.png)
+          app.config.assets.precompile += %w(decidim/core/extended/registration_types_handler.js)
         end
 
         initializer "decidim_core_extended.add_cells_view_paths" do

@@ -2,6 +2,7 @@
 
 Decidim::RegistrationForm.class_eval do
   attr_accessor :rodo_agreements
+  attribute :card_number
 
   validates :rodo_agreements, allow_nil: false, acceptance: true
 end

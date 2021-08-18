@@ -11,10 +11,12 @@ module Decidim
         end
 
         def call
+          return broadcast(:invalid) unless user
           return broadcast(:invalid) if form.invalid?
 
           if verify_card
             handle_user
+            broadcast(:ok)
           else
             form.errors.add(:email, t('activemodel.attributes.user.inhabitant_card_number_error'))
             form.errors.add(:card_number, t('activemodel.attributes.user.inhabitant_card_number_error'))
@@ -31,27 +33,7 @@ module Decidim
         end
 
         def handle_user
-          if user
-            # for authorization of existing user
-            user.update_column('inhabitant_card_number', form.card_number)
-          else
-            # for registration with inhabitant card params
-            # TODO - moze przeniesc do commanda od rejestracji
-            @user = Decidim::User.create!(
-              email: form.email,
-              name: form.name,
-              nickname: form.nickname,
-              password: form.password,
-              password_confirmation: form.password_confirmation,
-              organization: form.current_organization,
-              tos_agreement: form.tos_agreement,
-              newsletter_notifications_at: form.newsletter_at,
-              email_on_notification: true,
-              accepted_tos_version: form.current_organization.tos_version,
-              locale: form.current_locale,
-              inhabitant_card_number: form.inhabitant_card_number
-            )
-          end
+          user.update_column('inhabitant_card_number', form.card_number)
         end
       end
     end

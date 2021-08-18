@@ -5,12 +5,21 @@ module Decidim
     module Extended
       class InhabitantCardService
 
-        def initialize()
-          @user = user
-          @action = action.to_s if action
-          @component = resource.try(:component) || component
-          @resource = resource
+        def initialize(form)
+          @card_number = form.card_number
+          @email = form.email
         end
+
+        def call
+          return false unless card_number.present? && email.present?
+          return false
+
+          ### TODO: Przemek
+        end
+
+        private
+
+        attr_reader :card_number, :email
 
       end
     end
