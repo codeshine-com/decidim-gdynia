@@ -42,6 +42,10 @@ pl:
         scopes_enabled: Włącz zakresy
         title: Nazwa zespołu
         is_transparent: Transparentny
+        document: Plik
+        import_categories: Zaimportuj kategorie wewnętrzne
+        import_attachments: Zaimportuj załączniki
+        import_components: Zaimportuj komponenty
       assembly_member:
         ceased_date: Czas trwania kadencji
         designation_date: Data powołania
@@ -89,6 +93,11 @@ pl:
         meta_scope: Zakres
         private_space: Przestrzeń prywatna
         target: Kto może wziąć udział
+        document: Plik
+        import_steps: Zaimportuj etapy
+        import_categories: Zaimportuj kategorie wewnętrzne
+        import_attachments: Zaimportuj załączniki
+        import_components: Zaimportuj komponenty
       participatory_process_group:
         promoted: Wyróżniona
       participatory_process_user_role:
