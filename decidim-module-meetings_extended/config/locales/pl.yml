@@ -4,3 +4,9 @@ pl:
     components:
       meetings_extended:
         name: Spotkania
+    meetings:
+      admin:
+        agenda_item:
+          title: Nazwa
+          duration: Czas trwania
+          description: Opis
