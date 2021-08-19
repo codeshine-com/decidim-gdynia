@@ -128,17 +128,8 @@
       <% end %>
 
       <!-- BOX 3 -->
-      <% if translated_attribute(current_participatory_space.local_area).present? || translated_attribute(current_participatory_space.contact_address).present? || translated_attribute(current_participatory_space.facebook_handler).present? %>
+      <% if translated_attribute(current_participatory_space.local_area).present? || current_participatory_space.has_any_contact? || current_participatory_space.facebook_handler.present? %>
         <div class="card extra definition-data">
-          <!-- czeka na decyzje Uli
-          <% if translated_attribute(current_participatory_space.participatory_scope).present? %>
-            <div class="definition-data__item participatory_scope">
-              <span class="definition-data__title"><%= t("participatory_scope", scope: "decidim.participatory_processes.show") %></span>
-              <%= translated_attribute(current_participatory_space.participatory_scope) %>
-            </div>
-          <% end %>
-          -->
-
           <% if translated_attribute(current_participatory_space.local_area).present? %>
             <div class="definition-data__item local_area">
               <span class="definition-data__title"><%= t("local_area", scope: "decidim.participatory_processes.show") %></span>
@@ -146,10 +137,21 @@
             </div>
           <% end %>
 
-          <% if current_participatory_space.contact_address.present? %>
+
+          <% if current_participatory_space.has_any_contact? %>
             <div class="definition-data__item local_area">
               <span class="definition-data__title"><%= t("contact_address", scope: "decidim.participatory_processes.show") %></span>
-              <%= current_participatory_space.contact_address %>
+              <% if current_participatory_space.contact_address.present? %>
+                <%= current_participatory_space.contact_address %>
+              <% end %>
+              <br style='margin-bottom: 7px'>
+              <% if current_participatory_space.contact_email.present? %>
+                <%= mail_to current_participatory_space.contact_email, current_participatory_space.contact_email %>
+              <% end %>
+              <br style='margin-bottom: 7px'>
+              <% if current_participatory_space.contact_phone.present? %>
+                <%= current_participatory_space.contact_phone %>
+              <% end %>
             </div>
           <% end %>
 

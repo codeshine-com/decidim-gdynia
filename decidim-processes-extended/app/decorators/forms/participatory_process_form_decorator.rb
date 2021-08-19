@@ -4,6 +4,8 @@ Decidim::ParticipatoryProcesses::Admin::ParticipatoryProcessForm.class_eval do
   attribute :related_scope_ids, Array[Integer]
 
   attribute :contact_address, String
+  attribute :contact_email, String
+  attribute :contact_phone, String
   attribute :facebook_handler, String
 
   def map_model(model)

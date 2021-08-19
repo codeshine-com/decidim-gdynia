@@ -50,7 +50,11 @@ Decidim::ParticipatoryProcesses::Admin::CreateParticipatoryProcess.class_eval do
       end_date: form.end_date,
       participatory_process_group: form.participatory_process_group,
       ### our custom
+      show_metrics: form.show_metrics,
+      show_statistics: form.show_statistics,
       contact_address: form.contact_address,
+      contact_email: form.contact_email,
+      contact_phone: form.contact_phone,
       facebook_handler: form.facebook_handler
     )
 

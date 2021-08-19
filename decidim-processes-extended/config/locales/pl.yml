@@ -2,7 +2,9 @@ pl:
   activemodel:
     attributes:
       participatory_process:
-        contact_address: Adres kontaktowy
+        contact_address: Adres
+        contact_email: Adres e-mail
+        contact_phone: Telefon
         facebook_handler: Facebook
         social_handlers_help: Do adresu z Facebooka należy wpisać tylko końcówkę nazwy (to, co ma znaleźć się na końcu po znaku „/”). System automatycznie zaciąga jego początek.
         related_scope_ids: Zakresy
@@ -26,10 +28,12 @@ pl:
             social_handlers_help: Do adresu z mediów społecznościowych należy wpisać tylko końcówkę nazwy (to, co ma znaleźć się na końcu po znaku „/”). System automatycznie zaciąga jego początek.
 
       show:
-        contact_address: Adres kontaktowy
+        contact_address: Kontakt
+        contact_email: Adres e-mail
+        contact_phone: Telefon
         facebook_handler: Facebook
         facebook_title: Odwiedź proces na Facebook
-        social_networks: Portale społacznościowe
+        social_networks: Portale społecznościowe
     shared:
       participatory_space_filters:
         filters:

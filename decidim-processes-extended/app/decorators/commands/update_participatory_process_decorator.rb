@@ -33,6 +33,8 @@ Decidim::ParticipatoryProcesses::Admin::UpdateParticipatoryProcess.class_eval do
             announcement: form.announcement,
             ### our custom
             contact_address: form.contact_address,
+            contact_email: form.contact_email,
+            contact_phone: form.contact_phone,
             facebook_handler: form.facebook_handler
           }.merge(uploader_attributes)
         end

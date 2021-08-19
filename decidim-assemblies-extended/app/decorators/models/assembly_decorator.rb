@@ -13,4 +13,8 @@ Decidim::Assembly.class_eval do
     # info shown in BOX 2 contact field
     contact_address.present? || contact_email.present? || contact_phone.present?
   end
+
+  def has_any_social_links?
+    SOCIAL_HANDLERS.map{ |sh| self.try("#{sh}_handler").present? }.include?(true)      
+  end
 end

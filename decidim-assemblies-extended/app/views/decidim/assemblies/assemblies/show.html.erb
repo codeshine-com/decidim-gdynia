@@ -149,7 +149,7 @@ edit_link(
       <% end %>
 
       <!-- BOX 2 -->
-      <% if current_participatory_space.team_service.present? || current_participatory_space.has_any_contact? %>
+      <% if current_participatory_space.team_service.present? || current_participatory_space.has_any_contact? || current_participatory_space.has_any_social_links? %>
         <div class="card extra definition-data">
           <% if current_participatory_space.team_service.present? %>
             <div class="definition-data__item team_service">
