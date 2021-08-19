@@ -51,6 +51,8 @@ Decidim::Assemblies::Admin::CreateAssembly.class_eval do
       weight: form.weight,
       # customized - our custom fields
       contact_address: form.contact_address,
+      contact_email: form.contact_email,
+      contact_phone: form.contact_phone,
       duration_text: form.duration_text,
       team_service: form.team_service,
       next_meeting_date: form.next_meeting_date

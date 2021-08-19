@@ -2,7 +2,9 @@ pl:
   activemodel:
     attributes:
       assembly:
-        contact_address: Adres kontaktowy
+        contact_address: Adres
+        contact_email: Adres e-mail
+        contact_phone: Telefon
         duration_text: Data zakończenia - inne
         next_meeting_date: Najbliższe posiedzenie
         team_service: Obsługa zespołu
@@ -44,7 +46,9 @@ pl:
       admin:
         assemblies:
           form:
-            contact_address: Adres kontaktowy
+            contact_address: Adres
+            contact_email: Adres e-mail
+            contact_phone: Telefon
             # description: Podstawa prawna
             description_help: Opis czym zajmuje się zespół, jakie są jego cele i zadania.
             # duration_other: Data zakończenia - inne
@@ -83,7 +87,7 @@ pl:
               title: Nowa kadencja
       show:
         # composition: Skład
-        contact_address: Adres kontaktowy
+        contact_address: Kontakt
         # description: Podstawa prawna
         # creation_date: Data powołania
         # duration: Data zakończenia

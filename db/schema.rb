@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_17_135104) do
+ActiveRecord::Schema.define(version: 2021_08_19_092338) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
@@ -177,6 +177,8 @@ ActiveRecord::Schema.define(version: 2021_08_17_135104) do
     t.date "next_meeting_date"
     t.string "contact_address"
     t.string "team_service"
+    t.string "contact_email"
+    t.string "contact_phone"
     t.index ["decidim_area_id"], name: "index_decidim_assemblies_on_decidim_area_id"
     t.index ["decidim_assemblies_type_id"], name: "index_decidim_assemblies_on_decidim_assemblies_type_id"
     t.index ["decidim_organization_id", "slug"], name: "index_unique_assembly_slug_and_organization", unique: true

@@ -94,60 +94,62 @@ edit_link(
       </div>
 
       <!-- BOX 1 -->
-      <div class="card extra definition-data">
-        <% area = current_participatory_space.area %>
-        <% if translated_attribute(area&.name).present? %>
-          <div class="definition-data__item area">
-            <span class="definition-data__title">
-              <% if area.icon.present? %>
-                <%= image_tag area.icon_url(:square), alt: "ikona kategorii #{area.name}" %>
+      <% if current_participatory_space.main_info? %>
+        <div class="card extra definition-data">
+          <% area = current_participatory_space.area %>
+          <% if translated_attribute(area&.name).present? %>
+            <div class="definition-data__item area">
+              <span class="definition-data__title">
+                <% if area.icon.present? %>
+                  <%= image_tag area.icon_url(:square), alt: "ikona kategorii #{area.name}" %>
+                <% else %>
+                  <%= t("area", scope: "decidim.assemblies.show") %>
+                <% end %>
+              </span>
+              <%= translated_attribute(area.name) %>
+            </div>
+          <% end %>
+
+          <% if current_participatory_space.assembly_type.present? %>
+            <div class="definition-data__item assembly_type">
+              <span class="definition-data__title"><%= t("assembly_type", scope: "decidim.assemblies.show") %></span>
+              <%= translated_attribute(current_participatory_space.assembly_type.title) %>
+            </div>
+          <% end %>
+
+          <% if current_participatory_space.created_by.present? %>
+            <div class="definition-data__item created_by">
+              <span class="definition-data__title"><%= t("created_by", scope: "decidim.assemblies.show") %></span>
+              <% if current_participatory_space.created_by == "others" %>
+                <%= translated_attribute(current_participatory_space.created_by_other) %>
               <% else %>
-                <%= t("area", scope: "decidim.assemblies.show") %>
+                <%= t("created_by.#{current_participatory_space.created_by }", scope: "decidim.assemblies") %>
               <% end %>
-            </span>
-            <%= translated_attribute(area.name) %>
-          </div>
-        <% end %>
+            </div>
+          <% end %>
 
-        <% if current_participatory_space.assembly_type.present? %>
-          <div class="definition-data__item assembly_type">
-            <span class="definition-data__title"><%= t("assembly_type", scope: "decidim.assemblies.show") %></span>
-            <%= translated_attribute(current_participatory_space.assembly_type.title) %>
-          </div>
-        <% end %>
+          <% if current_participatory_space.creation_date.present? %>
+            <div class="definition-data__item creation_date">
+              <span class="definition-data__title"><%= t("creation_date", scope: "decidim.assemblies.show") %></span>
+              <%= l current_participatory_space.creation_date, format: :decidim_short %>
+            </div>
+          <% end %>
 
-        <% if current_participatory_space.created_by.present? %>
-          <div class="definition-data__item created_by">
-            <span class="definition-data__title"><%= t("created_by", scope: "decidim.assemblies.show") %></span>
-            <% if current_participatory_space.created_by == "others" %>
-              <%= translated_attribute(current_participatory_space.created_by_other) %>
-            <% else %>
-              <%= t("created_by.#{current_participatory_space.created_by }", scope: "decidim.assemblies") %>
-            <% end %>
-          </div>
-        <% end %>
-
-        <% if current_participatory_space.creation_date.present? %>
-          <div class="definition-data__item creation_date">
-            <span class="definition-data__title"><%= t("creation_date", scope: "decidim.assemblies.show") %></span>
-            <%= l current_participatory_space.creation_date, format: :decidim_short %>
-          </div>
-        <% end %>
-
-        <% if current_participatory_space.duration_text.present? || current_participatory_space.duration.present? %>
-          <div class="definition-data__item duration">
-            <span class="definition-data__title"><%= t("duration", scope: "decidim.assemblies.show") %></span>
-            <% if current_participatory_space.duration_text.present? %>
-              <%= t("duration_text.#{current_participatory_space.duration_text}", scope: "decidim.assemblies") %>
-            <% elsif current_participatory_space.duration.present? %>
-              <%= l current_participatory_space.duration, format: :decidim_short %>
-            <% end %>
-          </div>
-        <% end %>
-      </div>
+          <% if current_participatory_space.duration_text.present? || current_participatory_space.duration.present? %>
+            <div class="definition-data__item duration">
+              <span class="definition-data__title"><%= t("duration", scope: "decidim.assemblies.show") %></span>
+              <% if current_participatory_space.duration_text.present? %>
+                <%= t("duration_text.#{current_participatory_space.duration_text}", scope: "decidim.assemblies") %>
+              <% elsif current_participatory_space.duration.present? %>
+                <%= l current_participatory_space.duration, format: :decidim_short %>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
 
       <!-- BOX 2 -->
-      <% if current_participatory_space.team_service.present? || current_participatory_space.contact_address.present? %>
+      <% if current_participatory_space.team_service.present? || current_participatory_space.has_any_contact? %>
         <div class="card extra definition-data">
           <% if current_participatory_space.team_service.present? %>
             <div class="definition-data__item team_service">
@@ -156,10 +158,20 @@ edit_link(
             </div>
           <% end %>
 
-          <% if current_participatory_space.contact_address.present? %>
+          <% if current_participatory_space.has_any_contact? %>
             <div class="definition-data__item contact_address">
               <span class="definition-data__title"><%= t("contact_address", scope: "decidim.assemblies.show") %></span>
-              <%= current_participatory_space.contact_address %>
+              <% if current_participatory_space.contact_address.present? %>
+                <%= current_participatory_space.contact_address %>
+              <% end %>
+              <br style='margin-bottom: 7px'>
+              <% if current_participatory_space.contact_email.present? %>
+                <%= mail_to current_participatory_space.contact_email, current_participatory_space.contact_email %>
+              <% end %>
+              <br style='margin-bottom: 7px'>
+              <% if current_participatory_space.contact_phone.present? %>
+                <%= current_participatory_space.contact_phone %>
+              <% end %>
             </div>
           <% end %>
           <%= social_handler_links(current_participatory_space) %>

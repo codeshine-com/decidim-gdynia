@@ -4,10 +4,13 @@ Decidim::Assemblies::Admin::AssemblyForm.class_eval do
   CREATED_BY = %w(city_council city_mayor others).freeze
   DURATION_TEXT = %w(indefinitely until_further_notice).freeze
 
-  attribute :contact_address, String
   attribute :duration_text, String
   attribute :team_service, String
   attribute :next_meeting_date, Decidim::Attributes::LocalizedDate
+
+  attribute :contact_address, String
+  attribute :contact_email, String
+  attribute :contact_phone, String
 
   validates :subtitle, presence: true, if: proc{ |a| false }
   _validators.reject! { |key, _| key == :subtitle }
