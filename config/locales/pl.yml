@@ -375,6 +375,11 @@ pl:
       file_help:
         image:
           message_1: Preferowany obraz lub zdjęcie, które nie zawiera żadnego tekstu.
+      questionnaires:
+        show:
+          questionnaire_answered:
+            title: Dziękujemy za wypełnienie ankiety i podzielanie się swoimi uwagami!
+            body: Jej wyniki będą opublikowane na Platformie Dialogu po zakończeniu procesu.
     meetings:
       admin:
         invite_join_meeting_mailer:
