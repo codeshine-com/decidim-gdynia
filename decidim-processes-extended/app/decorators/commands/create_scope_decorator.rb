@@ -6,7 +6,7 @@ Decidim::Admin::CreateScope.class_eval do
 
   def create_scope
     Decidim.traceability.create!(
-      DEcidim::Scope,
+      Decidim::Scope,
       form.current_user,
       {
         name: form.name,
