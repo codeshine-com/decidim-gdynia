@@ -78,7 +78,7 @@ Decidim::ParticipatoryProcesses::Admin::CreateParticipatoryProcess.class_eval do
   end
 
   def link_related_scopes
-    participatory_process.link_participatory_space_resources(related_scopes, "related_scopes")
+    process.link_participatory_space_resources(related_scopes, "related_scopes")
   end
 
   def translate_areas_into_categories(process)
