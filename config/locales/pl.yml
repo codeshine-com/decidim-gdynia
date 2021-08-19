@@ -53,7 +53,7 @@ pl:
         position_other: Inna funkcja
         weight: Kolejność na stronie
       assembly_user_role:
-        name: Imię i nazwisko
+        name: Nazwa użytkownika
       attachment:
         weight: Kolejność na stronie
       attachment_collection:
@@ -82,7 +82,7 @@ pl:
         registration_type: Typ rejestracji
         reserved_slots: Zarezerowane miejsca
       meeting_registration_invite:
-        name: Imię i nazwisko
+        name: Nazwa użytkownika
         email: E-mail
         user_id: Użytkownik
       organization:
@@ -101,9 +101,9 @@ pl:
       participatory_process_group:
         promoted: Wyróżniona
       participatory_process_user_role:
-        name: Imię i nazwisko
+        name: Nazwa użytkownika
       participatory_space_private_user:
-        name: Imię i nazwisko
+        name: Nazwa użytkownika
         email: Adres e-mail
       static_page:
         topic_id: Temat
@@ -117,7 +117,7 @@ pl:
       user:
         about: Kilka słów o Tobie
         avatar: Awatar (zdjęcie)
-        name: Twoje imię i nazwisko
+        name: Twoja nazwa użytkownika
         nickname: Nazwa konta
         personal_url: Adres strony internetowej
       validate_registration_code:
@@ -168,10 +168,10 @@ pl:
           label: Status
       impersonations:
         form:
-          name: Imię i nazwisko
+          name: Nazwa użytkownika
       impersonatable_users:
         index:
-          name: Imię i nazwisko
+          name: Nazwa użytkownika
       menu:
         assemblies_submenu:
           categories: Dodatkowe kategorie
@@ -183,7 +183,7 @@ pl:
             title: Nazwa zespołu
         assembly_user_role:
           fields:
-            name: Imię i nazwisko
+            name: Nazwa użytkownika
         area:
           fields:
             area_type_id: Typ kategorii
@@ -195,13 +195,13 @@ pl:
             # weight: Kolejność na stronie
         participatory_process_user_role:
           fields:
-            name: Imię i nazwisko
+            name: Nazwa użytkownika
         participatory_space_private_user:
           fields:
-            name: Imię i nazwisko
+            name: Nazwa użytkownika
         user:
           fields:
-            name: Imię i nazwisko
+            name: Nazwa użytkownika
       moderations:
         report:
           reasons:
@@ -210,7 +210,7 @@ pl:
       officializations:
         index:
           badge: Funkcja
-          name: Imię i nazwisko
+          name: Nazwa użytkownika
           nickname: Nazwa konta
           reports: Zgłoszenia
         new:
@@ -231,7 +231,7 @@ pl:
         statistics: Użytkownicy
       users:
         form:
-          name: Imię i nazwisko
+          name: Nazwa użytkownika
 
     assemblies:
       admin:
@@ -308,7 +308,7 @@ pl:
       omniauth_registrations:
         new:
           nickname_help: To systemowa, unikalna nazwa Twojego konta na platformie. Będzie wyświetlać się tylko na Twojej stronie profilowej. Po niej inni użytkownicy będą mogli Cię wyszukać, dlatego dobrze, aby była łatwa do zapamiętania np. pierwsza litera imienia i nazwisko (j_kowalski). Może zawierać tylko litery, cyfry, '-' i '_'.
-          username_help: Imię i nazwisko będzie wyświetlać się przy Twoich wpisach na platformie.
+          username_help: Nazwa użytkownika będzie wyświetlać się przy Twoich wpisach na platformie.
       registrations:
         new:
           newsletter: Wyrażam zgodę na otrzymywanie newsletteru z istotnymi informacjami dotyczącymi Platformy oraz najważniejszych wydarzeń umieszczanych na niej.
@@ -317,7 +317,7 @@ pl:
           subtitle: Zarejestruj się, aby brać  udział w dyskusjach, spotkaniach i być na bieżąco ze wszystkimi procesami partycypacyjnymi w Gdyni.
           terms: regulamin korzystania
           tos_title: Warunki korzystania z Gdyńskiej Platformy Dialogu
-          username_help: Imię i nazwisko będzie wyświetlać się przy Twoich wpisach na platformie.
+          username_help: Nazwa użytkownika będzie wyświetlać się przy Twoich wpisach na platformie.
     doorkeeper:
       authorizations:
         new:
