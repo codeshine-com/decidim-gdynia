@@ -86,10 +86,19 @@
           </div>
         <% end %>
 
-        <% if translated_attribute(current_participatory_space.meta_scope).present? %>
+        <% if translated_attribute(current_participatory_space.meta_scope).present? || current_participatory_space.scopes.any?%>
           <div class="definition-data__item scope">
-            <span class="definition-data__title"><%= t("scope", scope: "decidim.participatory_processes.show") %></span>
-            <%= translated_attribute(current_participatory_space.meta_scope) %>
+            <span class="definition-data__title">
+              <%= t("scope", scope: "decidim.participatory_processes.show") %>
+              <% if translated_attribute(current_participatory_space.meta_scope).present? %>
+                <br style="margin-bottom: 4px;">
+                <%= translated_attribute(current_participatory_space.meta_scope) %>
+              <% end %>
+            </span>
+            <% current_participatory_space.scopes.promoted_first.each do |scope| %>
+              <%= translated_attribute(scope.name) %>
+              <br>
+            <% end %>
           </div>
         <% end %>
 
