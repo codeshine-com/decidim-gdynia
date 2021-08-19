@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_19_101323) do
+ActiveRecord::Schema.define(version: 2021_08_19_212624) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
@@ -1412,7 +1412,7 @@ ActiveRecord::Schema.define(version: 2021_08_19_101323) do
     t.string "gender"
     t.integer "birth_year"
     t.string "district"
-    t.integer "inhabitant_card_number"
+    t.string "inhabitant_card_number"
     t.index ["confirmation_token"], name: "index_decidim_users_on_confirmation_token", unique: true
     t.index ["decidim_organization_id"], name: "index_decidim_users_on_decidim_organization_id"
     t.index ["email", "decidim_organization_id"], name: "index_decidim_users_on_email_and_decidim_organization_id", unique: true, where: "((deleted_at IS NULL) AND (managed = false) AND ((type)::text = 'Decidim::User'::text))"
