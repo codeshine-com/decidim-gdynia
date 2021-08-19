@@ -41,7 +41,9 @@ Decidim::CreateRegistration.class_eval do
       accepted_tos_version: form.current_organization.tos_version,
       locale: form.current_locale,
       # custom
-      inhabitant_card_number: form.card_number.presence || nil
+      inhabitant_card_number: form.card_number.presence || nil,
+      officialized_at: form.card_number.present? ? Time.current : nil,
+      officialized_as: form.card_number.present? ? t('activemodel.attributes.user.inhabitant_officialization_badge') : nil
     )
   end
 end
