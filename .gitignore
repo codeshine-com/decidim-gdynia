@@ -47,3 +47,5 @@ public/uploads
 
 # Ignore Dotenv variables.
 .env
+
+config/locales/pl-try.yml
