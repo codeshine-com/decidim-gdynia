@@ -14,6 +14,8 @@ pl:
         inhabitant_card_number: Numer karty mieszkańca
         card_number: Numer karty mieszkańca
         inhabitant_card_number_error: Dane nie zostaly potwierdzone przez platformę Karta Mieszkańca
+        inhabitant_officialization_badge: Użytkownik zweryfikowany
+        inhabitant_card_taken_error: Zarejestrowano juz konto na ten numer karty
         genders:
           female: Kobieta
           male: Mężczyzna

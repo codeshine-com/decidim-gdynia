@@ -33,7 +33,15 @@ module Decidim
         end
 
         def handle_user
-          user.update_column('inhabitant_card_number', form.card_number)
+          if user.officialized?
+            user.update_column('inhabitant_card_number', form.card_number)
+          else
+            user.update_columns(
+              inhabitant_card_number: form.card_number,
+              officialized_at: Time.current,
+              officialized_as: t('activemodel.attributes.user.inhabitant_officialization_badge')
+            )
+          end
         end
       end
     end
