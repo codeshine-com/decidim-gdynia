@@ -255,6 +255,10 @@ pl:
         city_council: Rada Miasta Gdyni
         city_mayor: Prezydent Miasta Gdyni
         others: Inny
+      pages:
+        home:
+          highlighted_assemblies:
+            active_assemblies: Poznaj zespoły
       show:
         composition: Skład
         # contact_address: Adres kontaktowy

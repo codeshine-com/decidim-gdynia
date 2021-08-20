@@ -142,7 +142,7 @@ section#metrics, #content section.home-section:after {
   font-size: 1.25rem;
   text-transform: none;
 }
-.button.hollow { color: #000; background-color: var(--primary); border-radius: 15px; }
+.button.hollow { color: #000; background-color: var(--primary); }
 .button.hollow.small { border-radius: 4px; }
 .button.hollow:hover, .button.hollow:focus { color: #000; outline-offset: unset; }
 .button.tiny {
@@ -159,7 +159,7 @@ section#metrics, #content section.home-section:after {
 }
 .button.tiny.opinion-toggle--meh { border-radius: 0; }
 .button--muted { color: #fff; }
-.hero-cta { padding: 1rem 1.5rem; border-radius: 15px; }
+.hero-cta { padding: 1rem 1.5rem; }
 
 #highlighted-assemblies .card--full__image .button.expanded,
 #highlighted-assemblies .card--full__image .button.expanded:focus,
