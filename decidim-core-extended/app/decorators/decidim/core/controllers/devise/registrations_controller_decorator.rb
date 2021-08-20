@@ -7,7 +7,7 @@ Decidim::Devise::RegistrationsController.class_eval do
 
     Decidim::CreateRegistration.call(@form) do
       on(:ok) do |user|
-        if user.authorized_with_inhabitant_card? || true
+        if user.authorized_with_inhabitant_card?
           user.confirm
           set_flash_message! :notice, :signed_up
           sign_up(:user, user)
