@@ -98,6 +98,10 @@ section#metrics, #content section.home-section:after {
 
 #participatory_process-statistics { margin-bottom: 0px; }
 
+#content .extended.highligted-content-banner.home-section { margin-top: -5px; }
+#content .extended.highligted-content-banner.home-section .text-highlight { text-shadow: none; }
+#content .extended.highligted-content-banner.home-section:after { display: none; }
+
 /******* headers ******/
 
 .hero-heading { font-size: 4rem; text-shadow: none; }
