@@ -163,12 +163,12 @@ edit_link(
               <span class="definition-data__title"><%= t("contact_address", scope: "decidim.assemblies.show") %></span>
               <% if current_participatory_space.contact_address.present? %>
                 <%= current_participatory_space.contact_address %>
+                <br style='margin-bottom: 7px'>
               <% end %>
-              <br style='margin-bottom: 7px'>
               <% if current_participatory_space.contact_email.present? %>
                 <%= mail_to current_participatory_space.contact_email, current_participatory_space.contact_email %>
-              <% end %>
-              <br style='margin-bottom: 7px'>
+                <br style='margin-bottom: 7px'>
+              <% end %>              
               <% if current_participatory_space.contact_phone.present? %>
                 <%= current_participatory_space.contact_phone %>
               <% end %>

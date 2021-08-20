@@ -76,7 +76,7 @@
           <div class="definition-data__item area">
             <span class="definition-data__title">
               <% if area.icon.present? %>
-                <%= image_tag area.icon_url(:square), alt: "ikona kategorii #{area.name}", class: 'area-icon' %>
+                <%= image_tag area.icon_url(:square), alt: "ikona kategorii #{translated_attribute(area.name)}", class: 'area-icon' %>
               <% else %>
                 <%= t("area", scope: "decidim.participatory_processes.show") %>
               <% end %>
@@ -152,12 +152,12 @@
               <span class="definition-data__title"><%= t("contact_address", scope: "decidim.participatory_processes.show") %></span>
               <% if current_participatory_space.contact_address.present? %>
                 <%= current_participatory_space.contact_address %>
+                <br style='margin-bottom: 7px'>
               <% end %>
-              <br style='margin-bottom: 7px'>
               <% if current_participatory_space.contact_email.present? %>
                 <%= mail_to current_participatory_space.contact_email, current_participatory_space.contact_email %>
+                <br style='margin-bottom: 7px'>
               <% end %>
-              <br style='margin-bottom: 7px'>
               <% if current_participatory_space.contact_phone.present? %>
                 <%= current_participatory_space.contact_phone %>
               <% end %>
