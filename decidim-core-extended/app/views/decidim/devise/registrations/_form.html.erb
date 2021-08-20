@@ -38,7 +38,7 @@
         <%= f.check_box :tos_agreement, label: t("decidim.devise.registrations.new.tos_agreement", link: link_to(t("decidim.devise.registrations.new.terms"), page_path("terms-and-conditions"), target: '_blank')) %>
       </div>
       <div class="field">
-        <%= f.check_box :rodo_agreements, label: t("decidim.devise.registrations.new.rodo_agreements", link: link_to(t("decidim.devise.registrations.new.rodo_link"), 'https://bo.gdynia.pl/Polityka_Prywatnosci_serwisu_www.bo.gdynia.pl_.html', target: '_blank')) %>
+        <%= f.check_box :rodo_agreements, label: t("decidim.devise.registrations.new.rodo_agreements", link: link_to(t("decidim.devise.registrations.new.rodo_link"), 'https://konsultujemy.gdynia.pl/pages/rodo', target: '_blank')) %>
       </div>
     </div>
   </div>
@@ -47,7 +47,7 @@
     <div class="card__content">
       <h3><%= t("decidim.devise.registrations.new.newsletter_title") %></h3>
         <div class="field">
-          <%= f.check_box :newsletter, label: t("decidim.devise.registrations.new.newsletter"), checked: @form.newsletter %>
+          <%= f.check_box :newsletter, label: t("decidim.devise.registrations.new.newsletter"), checked: form.newsletter %>
         </div>
     </div>
   </div>

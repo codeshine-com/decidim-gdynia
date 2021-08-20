@@ -1,4 +1,4 @@
-<%= decidim_form_for(form, namespace: "registration", as: resource_name, url: registration_path(resource_name), html: { class: "register-form new_user #{visibility_class}", id: "inhabitant-register-form" }) do |f| %>
+<%= decidim_form_for(form, namespace: "inhregistration", as: resource_name, url: registration_path(resource_name), html: { class: "register-form new_user #{visibility_class}", id: "inhabitant-register-form" }) do |f| %>
   <%= invisible_captcha %>
   <div class="card">
     <div class="card__content">
@@ -34,7 +34,7 @@
     </div>
   </div>
 
-  <div class="card" id="card__tos">
+  <div class="card" id="inh_card__tos">
     <div class="card__content">
       <h3><%= t("decidim.devise.registrations.new.tos_title") %></h3>
 
@@ -42,12 +42,12 @@
         <%= f.check_box :tos_agreement, label: t("decidim.devise.registrations.new.tos_agreement", link: link_to(t("decidim.devise.registrations.new.terms"), page_path("terms-and-conditions"), target: '_blank')) %>
       </div>
       <div class="field">
-        <%= f.check_box :rodo_agreements, label: t("decidim.devise.registrations.new.rodo_agreements", link: link_to(t("decidim.devise.registrations.new.rodo_link"), 'https://bo.gdynia.pl/Polityka_Prywatnosci_serwisu_www.bo.gdynia.pl_.html', target: '_blank')) %>
+        <%= f.check_box :rodo_agreements, label: t("decidim.devise.registrations.new.rodo_agreements", link: link_to(t("decidim.devise.registrations.new.rodo_link"), 'https://konsultujemy.gdynia.pl/pages/rodo', target: '_blank')) %>
       </div>
     </div>
   </div>
 
-  <div class="card" id="card__newsletter">
+  <div class="card" id="inh_card__newsletter">
     <div class="card__content">
       <h3><%= t("decidim.devise.registrations.new.newsletter_title") %></h3>
         <div class="field">
