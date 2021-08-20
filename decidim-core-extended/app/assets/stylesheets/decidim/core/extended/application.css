@@ -27,7 +27,7 @@
 /************* registration *************/
 
 .do-not-show { display: none; }
-.inhabitant-register-form #inh_card__tos { text-align: center; }
+#inh_card__newsletter, #inh_card__tos { text-align: center; }
 
 /************* static pages *************/
 
