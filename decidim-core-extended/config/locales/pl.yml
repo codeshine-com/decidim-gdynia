@@ -87,15 +87,15 @@ pl:
       home:
         extended:
           what_can_i_do: Co mogę zrobić na platformie?
-          assemblies: Zaspoły
+          assemblies: Zespoły
           assemblies_explanation: Zobacz kiedy odbywają się posiedzenia zespołów i co było na nich omawiane.
-          assemblies_link: Przejdź do procesów
+          assemblies_link: Przejdź do zespołów
           help: Niezbędnik dialogu
-          help_explanation: Dowiedz się więcej o dialogu w mieście i skorzystaj z pomocy.
+          help_explanation: Dowiedz się więcej o dialogu w mieście i o działaniu Platformy.
           help_link: Skorzystaj z niezbędnika dialogu
           processes: Procesy
           processes_explanation: Na platformie możesz znaleźć wszystkie procesy dialogowe dziejące się w mieście.
-          processes_link: Przejdź do zespołów
+          processes_link: Przejdź do procesów
     profiles:
       user:
         delete_group: Usuń grupę
