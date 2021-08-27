@@ -13,7 +13,7 @@ pl:
     invitations:
       edit:
         nickname: Nazwa konta
-        nickname_help: To systemowa, unikalna nazwa Twojego konta na platformie. Będzie wyświetlać się tylko na Twojej stronie profilowej. Po niej inni użytkownicy będą mogli Cię wyszukać, dlatego dobrze, aby była łatwa do zapamiętania np. pierwsza litera imienia i nazwisko (j_kowalski). Może zawierać tylko litery, cyfry, '-' i '_'.
+        nickname_help: To systemowa, unikalna nazwa Twojego konta na Platformie. Będzie wyświetlać się tylko na Twojej stronie profilowej. Po niej inni użytkownicy będą mogli Cię wyszukać, dlatego dobrze, aby była łatwa do zapamiętania np. pierwsza litera imienia i nazwisko (j_kowalski). Może zawierać tylko litery, cyfry, '-' i '_'.
         subtitle: Jeśli akceptujesz zaproszenie, ustaw swoją nazwę konta i hasło.
     mailer:
       invitation_instructions:
@@ -217,7 +217,7 @@ pl:
           badge: Funkcja
       organization:
         edit:
-          title: Edytuj podstawowe informacje o platformie
+          title: Edytuj podstawowe informacje o Platformie
           update: Zapisz zmiany
         form:
           social_handlers_help: Należy wpisać tylko końcówkę nazwy (to, co ma znaleźć się na końcu po znaku „/”). System automatycznie zaciąga jego początek.
@@ -311,17 +311,17 @@ pl:
     devise:
       omniauth_registrations:
         new:
-          nickname_help: To systemowa, unikalna nazwa Twojego konta na platformie. Będzie wyświetlać się tylko na Twojej stronie profilowej. Po niej inni użytkownicy będą mogli Cię wyszukać, dlatego dobrze, aby była łatwa do zapamiętania np. pierwsza litera imienia i nazwisko (j_kowalski). Może zawierać tylko litery, cyfry, '-' i '_'.
-          username_help: Nazwa użytkownika będzie wyświetlać się przy Twoich wpisach na platformie.
+          nickname_help: To systemowa, unikalna nazwa Twojego konta na Platformie. Będzie wyświetlać się tylko na Twojej stronie profilowej. Po niej inni użytkownicy będą mogli Cię wyszukać, dlatego dobrze, aby była łatwa do zapamiętania np. pierwsza litera imienia i nazwisko (j_kowalski). Może zawierać tylko litery, cyfry, '-' i '_'.
+          username_help: Nazwa użytkownika będzie wyświetlać się przy Twoich wpisach na Platformie.
       registrations:
         new:
           newsletter: Wyrażam zgodę na otrzymywanie newsletteru z istotnymi informacjami dotyczącymi Platformy oraz najważniejszych wydarzeń umieszczanych na niej.
-          nickname_help: To systemowa, unikalna nazwa Twojego konta na platformie. Będzie wyświetlać się tylko na Twojej stronie profilowej. Po niej inni użytkownicy będą mogli Cię wyszukać, dlatego dobrze, aby była łatwa do zapamiętania np. pierwsza litera imienia i nazwisko (j_kowalski). Może zawierać tylko litery, cyfry, '-' i '_'.
+          nickname_help: To systemowa, unikalna nazwa Twojego konta na Platformie. Będzie wyświetlać się tylko na Twojej stronie profilowej. Po niej inni użytkownicy będą mogli Cię wyszukać, dlatego dobrze, aby była łatwa do zapamiętania np. pierwsza litera imienia i nazwisko (j_kowalski). Może zawierać tylko litery, cyfry, '-' i '_'.
           password_help: "Minimalna liczba znaków: %{minimun_characters}; nie może być zbyt powszechny (np. 123456) i musi różnić się od Twojej nazwy konta i adresu e-mail."
           subtitle: Zarejestruj się, aby brać  udział w dyskusjach, spotkaniach i być na bieżąco ze wszystkimi procesami partycypacyjnymi w Gdyni.
           terms: regulamin korzystania
           tos_title: Warunki korzystania z Gdyńskiej Platformy Dialogu
-          username_help: Nazwa użytkownika będzie wyświetlać się przy Twoich wpisach na platformie.
+          username_help: Nazwa użytkownika będzie wyświetlać się przy Twoich wpisach na Platformie.
     doorkeeper:
       authorizations:
         new:
@@ -391,7 +391,7 @@ pl:
             invited_you_to_join_a_meeting: "%{invited_by} zaprosił(a) Cię do udziału w spotkaniu %{meeting_name} %{space_name} poprzez Gdyńską Platformę Dialogu. Więcej informacji o spotkaniu możesz zobaczyć %{meeting_link}.<br>Aby zaakceptować lub odrzucić zaproszenie użyj poniższego linku:"
         invites:
           form:
-            invite_explanation: Użytkownik zostanie zaproszony do udziału w spotkaniu i do rejestracji na platformie
+            invite_explanation: Użytkownik zostanie zaproszony do udziału w spotkaniu i do rejestracji na Platformie
         meetings:
           form:
             location_hints_help: "Dodatkowe informacje. Na przykład: piętro budynku lub platforma komunikacyjna"
@@ -407,17 +407,23 @@ pl:
     messaging:
       conversation_mailer:
         comanagers_new_conversation:
-          outro: Miłego korzystania z GPD!
+          greeting: Witaj, %{recipient}!
+          outro: Miłego korzystania z Gdyńskiej Platformy Dialogu!
         comanagers_new_message:
-          outro: Miłego korzystania z GPD!
+          greeting: Witaj, %{recipient}!
+          outro: Miłego korzystania z Gdyńskiej Platformy Dialogu!
         new_conversation:
-          outro: Miłego korzystania z GPD!
+          greeting: Witaj, %{recipient}!
+          outro: Miłego korzystania z Gdyńskiej Platformy Dialogu!
         new_group_conversation:
-          outro: Miłego korzystania z GPD!
+          greeting: Witaj, %{recipient}!
+          outro: Miłego korzystania z Gdyńskiej Platformy Dialogu!
         new_group_message:
-          outro: Miłego korzystania z GPD!
+          greeting: Witaj, %{recipient}!
+          outro: Miłego korzystania z Gdyńskiej Platformy Dialogu!
         new_message:
-          outro: Miłego korzystania z GPD!
+          greeting: Witaj, %{recipient}!
+          outro: Miłego korzystania z Gdyńskiej Platformy Dialogu!
     moderations:
       models:
         moderation:

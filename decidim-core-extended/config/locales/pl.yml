@@ -30,7 +30,7 @@ pl:
 
   decidim:
     account:
-      fill_more_data: Dziękujemy za dołączenie do GPD. Proszę poświęć kilka chwil na wypełnienie pól statystycznych, by pomóc nam rozwijać platformę.
+      fill_more_data: Dziękujemy za dołączenie do Gdyńskiej Platformy Dialogu. Proszę poświęć kilka chwil na wypełnienie pól statystycznych, by pomóc nam rozwijać platformę.
       not_confirmed: Potwierdź swój e-mail, żeby móc sie zalogować.
       update_password: Zaktualizuj hasło
       about_hint: Ten opis będzie się wyświetlał w Twoim profilu publicznym i będzie widoczny dla innych użytkowników platformy.

@@ -25,7 +25,7 @@ module Decidim
           Decidim.menu :user_menu do |menu|
             menu.item t("inhabitant_card_authorization", scope: "layouts.decidim.user_profile"),
                       decidim_core_extended.inhabitant_cards_path,
-                      position: 1.25,
+                      position: 1.05,
                       active: :exact
           end
         end
