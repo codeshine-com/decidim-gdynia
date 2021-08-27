@@ -5,7 +5,7 @@
         <%= icon "caret-bottom", class: "icon--small process-nav__trigger__icon", aria_label: t(".unfold"), role: "img" %>
         <% default_item = active_item || items.first %>
         <span class="process-nav__link">
-          <%= default_item[:name] %>
+          <%= controller_name == 'participatory_process_steps' ? 'menu' : default_item[:name] %>
         </span>
       </button>
       <div class="row column process-nav__content <%= browser.mobile? ? "is-active" : "" %>" id="process-nav-content" data-toggler=".is-active">
