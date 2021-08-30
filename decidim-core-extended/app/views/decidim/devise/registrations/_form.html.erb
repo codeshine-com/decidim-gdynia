@@ -35,10 +35,10 @@
       <h3><%= t("decidim.devise.registrations.new.tos_title") %></h3>
 
       <div class="field">
-        <%= f.check_box :tos_agreement, label: t("decidim.devise.registrations.new.tos_agreement", link: link_to(t("decidim.devise.registrations.new.terms"), page_path("terms-and-conditions"), target: '_blank')) %>
+        <%= f.check_box :tos_agreement, required: true, label: t("decidim.devise.registrations.new.tos_agreement", link: link_to(t("decidim.devise.registrations.new.terms"), page_path("terms-and-conditions"), target: '_blank')), class: 'required' %>
       </div>
       <div class="field">
-        <%= f.check_box :rodo_agreements, label: t("decidim.devise.registrations.new.rodo_agreements", link: link_to(t("decidim.devise.registrations.new.rodo_link"), 'https://konsultujemy.gdynia.pl/pages/rodo', target: '_blank')) %>
+        <%= f.check_box :rodo_agreements, required: true, label: t("decidim.devise.registrations.new.rodo_agreements", link: link_to(t("decidim.devise.registrations.new.rodo_link"), 'https://konsultujemy.gdynia.pl/pages/rodo', target: '_blank')) %>
       </div>
     </div>
   </div>

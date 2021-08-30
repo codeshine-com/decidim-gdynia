@@ -14,7 +14,7 @@ pl:
         inhabitant_card_number: Numer karty mieszkańca
         card_number: Numer karty mieszkańca
         inhabitant_card_number_error: Dane nie zostaly potwierdzone przez platformę Karta Mieszkańca
-        inhabitant_officialization_badge: Użytkownik zweryfikowany
+        inhabitant_officialization_badge: Użytkownik potwierdzony
         inhabitant_card_taken_error: Zarejestrowano juz konto na ten numer karty
         genders:
           female: Kobieta
@@ -30,7 +30,7 @@ pl:
 
   decidim:
     account:
-      fill_more_data: Dziękujemy za dołączenie do Gdyńskiej Platformy Dialogu. Proszę poświęć kilka chwil na wypełnienie pól statystycznych, by pomóc nam rozwijać platformę.
+      fill_more_data: Dziękujemy za dołączenie do Gdyńskiej Platformy Dialogu! Poświęć kilka chwil na uzupełnienie konta, by pomóc nam rozwijać Platformę.
       not_confirmed: Potwierdź swój e-mail, żeby móc sie zalogować.
       update_password: Zaktualizuj hasło
       about_hint: Ten opis będzie się wyświetlał w Twoim profilu publicznym i będzie widoczny dla innych użytkowników platformy.
@@ -44,6 +44,8 @@ pl:
         area:
           fields:
             icon: Ikona
+      deleted_user:
+        new_name: Użytkownik usunięty
     amendable:
       fields:
         body: treść
@@ -59,7 +61,7 @@ pl:
     devise:
       invitations:
         edit:
-          password_help: "Minimalna liczba znaków: %{minimun_characters}; nie może być zbyt powszechny (np. 123456) i musi różnić się od Twojej nazwy konta i adresu e-mail."
+          password_help: "Minimalna liczba znaków: %{minimun_characters}; nie może być zbyt powszechne (np. 123456) i musi różnić się od Twojej nazwy konta i adresu e-mail."
           required_fields_info: Pola tekstowe oraz zgoda na Warunki korzystania z Platformy oraz zapoznanie się z wymaganiami RODO są wymagane
       registrations:
         new:
@@ -117,7 +119,11 @@ pl:
       user_profile:
         change_password: Zmień hasło
         delete_group: Usuń grupę
-        inhabitant_card_authorization: Autoryzacja kartą mieszkańca
+        inhabitant_card_authorization_info: |-
+          Masz możliwość potwierdzenia swojego konta kartą mieszkańca. Jest to dobrowolne, opcjonalne potwierdzenie, że jesteś mieszkańcem Gdyni.<br>
+          Dzięki temu na Twoim profilu i przy Twojej nazwie użytkownika będzie widniał specjalny status – %{img} Użytkownik potwierdzony.<br>
+          Docelowo Platforma będzie również zintegrowana z Kartą Mieszkańca funkcjonalnie, co ułatwi Ci korzystanie z Platformy i ułatwi uczestniczenie w ważnych procesach.
+        inhabitant_card_authorization: Potwierdzenie kartą mieszkańca
         inhabitant_card_authorization_text: Twoje konto zostało zautoryzowane przy pomocy karty mieszkańca
         inhabitant_card_authorization_success: Autoryzowano
       footer:

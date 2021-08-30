@@ -22,7 +22,7 @@ pl:
           Twoje konto nie zostanie utworzone, dopóki nie klikniesz w powyższy link i nie ustawisz nazwy konta i hasła.
     passwords:
       edit:
-        password_help: "Minimalna liczba znaków: %{minimun_characters}; nie może być zbyt powszechny (np. 123456) i musi różnić się od Twojej nazwy konta i adresu e-mail."
+        password_help: "Minimalna liczba znaków: %{minimun_characters}; nie może być zbyt powszechne (np. 123456) i musi różnić się od Twojej nazwy konta i adresu e-mail."
     user_activities_info: Tu wyświetlają się informacje o wszystkich dzianiach podjętych przez Ciebie na Platformie.
     user_following_info: Tu wyświetlają się informacje o wszystkich zmianach w działaniach na Platformie, o których otrzymujesz powiadomienia.
   activemodel:
@@ -315,9 +315,9 @@ pl:
           username_help: Nazwa użytkownika będzie wyświetlać się przy Twoich wpisach na Platformie.
       registrations:
         new:
-          newsletter: Wyrażam zgodę na otrzymywanie newsletteru z istotnymi informacjami dotyczącymi Platformy oraz najważniejszych wydarzeń umieszczanych na niej.
+          newsletter: Wyrażam zgodę na otrzymywanie newslettera o ważnych wydarzeniach i informacjach dotyczących Platformy.
           nickname_help: To systemowa, unikalna nazwa Twojego konta na Platformie. Będzie wyświetlać się tylko na Twojej stronie profilowej. Po niej inni użytkownicy będą mogli Cię wyszukać, dlatego dobrze, aby była łatwa do zapamiętania np. pierwsza litera imienia i nazwisko (j_kowalski). Może zawierać tylko litery, cyfry, '-' i '_'.
-          password_help: "Minimalna liczba znaków: %{minimun_characters}; nie może być zbyt powszechny (np. 123456) i musi różnić się od Twojej nazwy konta i adresu e-mail."
+          password_help: "Minimalna liczba znaków: %{minimun_characters}; nie może być zbyt powszechne (np. 123456) i musi różnić się od Twojej nazwy konta i adresu e-mail."
           subtitle: Zarejestruj się, aby brać  udział w dyskusjach, spotkaniach i być na bieżąco ze wszystkimi procesami partycypacyjnymi w Gdyni.
           terms: regulamin korzystania
           tos_title: Warunki korzystania z Gdyńskiej Platformy Dialogu
@@ -475,7 +475,7 @@ pl:
         help: O podstronie
     user_interests:
       show:
-        select_your_interests: "Wybierz tematy, które Cię interesują, aby otrzymywać związane z nimi wydarzenia na swojej stronie profilowej w zakładce <a href = %{href}>Oś czasu</a>."
+        select_your_interests: "Wybierz obszary tematyczne, które Cię interesują, aby otrzymywać związane z nimi powiadomienia w zakładce <a href = %{href}>Oś czasu</a>."
     verifications:
       postal_letter:
         admin:

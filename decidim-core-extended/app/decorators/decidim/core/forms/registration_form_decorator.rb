@@ -6,6 +6,9 @@ Decidim::RegistrationForm.class_eval do
 
   validates :rodo_agreements, allow_nil: false, acceptance: true
 
+  validates :tos_agreement, presence: true
+  validates :rodo_agreements, presence: true
+
   # TODO: walidacja unikalnosci
   validate :is_card_number_uniqie?
 

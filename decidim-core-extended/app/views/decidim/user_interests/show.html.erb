@@ -15,7 +15,7 @@
         <% end %>
         <% if @user_interests.areas.any? %>
           <div class='interests-col'>
-            <p><strong><%= t(".areas") %></strong></p>
+            <!-- <p><strong><%#= t(".areas") %></strong></p> -->
             <%= render partial: "areas", locals: { areas: @user_interests.areas, f: f } %>
           </div>
         <% end %>

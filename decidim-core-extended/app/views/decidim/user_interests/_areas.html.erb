@@ -1,5 +1,12 @@
 <ul class="no-bullet-indented">
+  <% area_types = [] %>
   <% areas.each do |area| %>
+    <% unless area_types.include?(area.area_type.id) %>
+      <p style="margin-left: -20px; font-weight: 600;">
+        <%= translated_attribute(area.area_type.name) %>
+        <% area_types << area.area_type.id %>
+      </p>
+    <% end %>
     <li>
       <div class="switch tiny switch-with-label">
         <%= f.fields_for "areas[]", area do |form| %>

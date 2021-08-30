@@ -10,7 +10,7 @@ Decidim::DestroyAccount.class_eval do
     @user.name = ""
     @user.nickname = ""
     @user.email = ""
-    @user.inhabitant_card_number = nil
+    @user.inhabitant_card_number = nil # custom
     @user.delete_reason = @form.delete_reason
     @user.admin = false if @user.admin?
     @user.deleted_at = Time.current

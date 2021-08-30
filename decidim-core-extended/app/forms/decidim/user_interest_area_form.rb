@@ -8,14 +8,17 @@ module Decidim
 
     attribute :name, String
     attribute :checked, Boolean
+    attribute :area_type, Decidim::AreaType
 
     def map_model(model_hash)
       area = model_hash[:area]
       user = model_hash[:user]
+      area_type = model_hash[:area_type]
 
       self.id = area.id
       self.name = area.name
       self.checked = user.interested_areas_ids.include?(area.id)
+      self.area_type = area_type
     end
   end
 end
