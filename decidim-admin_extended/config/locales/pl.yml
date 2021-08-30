@@ -1,1 +1,6 @@
-dummy_hash: Dummy
+pl:
+  decidim:
+    admin:
+      block_user:
+        new:
+          new_name: Zablokowany użytkownik
