@@ -27,6 +27,11 @@
     <div class="row column">
       <%= form.translated :text_field, :title, autofocus: true %>
     </div>
+    <% if questionnaire_for.respond_to?(:visible_for_unregistered) %>
+      <div class="row column">
+        <%= form.check_box :visible_for_unregistered, label: t("models.surveys.visible_for_unregistered", scope: "decidim.surveys.admin"), checked: questionnaire_for&.visible_for_unregistered %>
+      </div>
+    <% end %>
     <div class="row column">
       <%= form.translated :editor, :description, toolbar: :full, lines: 30, label: t("models.components.description", scope: "decidim.forms.admin") %>
     </div>

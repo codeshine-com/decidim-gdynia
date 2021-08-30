@@ -14,6 +14,7 @@
  *= require decidim/core/extended/application.css
  *= require decidim/assemblies/extended/application.css
  *= require decidim/processes/extended/application.css
+ *= require decidim/surveys_extended/application.css
  *= require_tree .
  *= require_self
  */
@@ -200,3 +201,6 @@ a img + .external-link-indicator { left: 5px; bottom: 15px; top: unset; }
 .switch.tiny { height: auto; }
 
 .topbar__admin__link.topbar__edit__link { margin-left: 5px; }
+
+/******* surveys *********/
+.questionnaire-question_readonly em { display: none; }

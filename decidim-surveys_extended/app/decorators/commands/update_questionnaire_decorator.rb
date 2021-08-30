@@ -67,4 +67,14 @@ Decidim::Forms::Admin::UpdateQuestionnaire.class_eval do
       end
     end
   end
+
+  def update_questionnaire
+    @questionnaire.update!(title: @form.title,
+                           description: @form.description,
+                           tos: @form.tos)
+
+    if @questionnaire.questionnaire_for.respond_to?(:visible_for_unregistered)
+      @questionnaire.questionnaire_for.update!(visible_for_unregistered: @form.visible_for_unregistered)
+    end
+  end
 end
