@@ -116,6 +116,7 @@ pl:
     decidim:
       user_profile:
         change_password: Zmień hasło
+        delete_group: Usuń grupę
         inhabitant_card_authorization: Autoryzacja kartą mieszkańca
         inhabitant_card_authorization_text: Twoje konto zostało zautoryzowane przy pomocy karty mieszkańca
         inhabitant_card_authorization_success: Autoryzowano

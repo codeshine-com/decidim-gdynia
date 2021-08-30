@@ -17,11 +17,8 @@ module Decidim
 
       Decidim::UserGroup.transaction do
         destroy_user_group!
-        # destroy_user_identities
         destroy_user_group_memberships
         destroy_follows
-        # destroy_participatory_space_private_user
-        # delegate_destroy_to_participatory_spaces
       end
 
       broadcast(:ok)
@@ -40,11 +37,6 @@ module Decidim
       @user_group.save!(validate: false)
     end
 
-    # user groups do not have identities
-    # def destroy_user_identities
-    #   @user_group.identities.destroy_all
-    # end
-
     def destroy_user_group_memberships
       Decidim::UserGroupMembership.where(user_group: @user_group).destroy_all
     end
@@ -53,17 +45,5 @@ module Decidim
       Decidim::Follow.where(followable: @user_group).destroy_all
       Decidim::Follow.where(user: @user_group).destroy_all
     end
-
-    # group_userds can not be provate users
-    # def destroy_participatory_space_private_user
-    #   Decidim::ParticipatorySpacePrivateUser.where(user: @user).destroy_all
-    # end
-
-    # destroys roles - groups can not have roles
-    # def delegate_destroy_to_participatory_spaces
-    #   Decidim.participatory_space_manifests.each do |space_manifest|
-    #     space_manifest.invoke_on_destroy_account(@user_group)
-    #   end
-    # end
   end
 end
