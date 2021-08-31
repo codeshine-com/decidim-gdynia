@@ -139,8 +139,8 @@ pl:
 
   decidim:
     account:
-      delate:
-        alert: Nie można cofnąć tej czynności. Jeśli usuniesz konto, nie będzie można się już na nie logować. Będziesz mógł raz jeszcze założyć konto używając tych samych danych. 
+      delete:
+        alert: Nie można cofnąć tej czynności. Jeśli usuniesz konto, nie będzie można się już na nie logować. Będziesz mógł raz jeszcze założyć konto używając tych samych danych.
     admin:
       actions:
         participatory_space_private_user:
@@ -413,6 +413,7 @@ pl:
           greeting: Witaj, %{recipient}!
           outro: Miłego korzystania z Gdyńskiej Platformy Dialogu!
         comanagers_new_message:
+          intro: "%{manager} wysłał(a) Ci nową wiadomość w imieniu %{group}. Kliknij tutaj, aby ją zobaczyć:"
           greeting: Witaj, %{recipient}!
           outro: Miłego korzystania z Gdyńskiej Platformy Dialogu!
         new_conversation:
@@ -425,6 +426,7 @@ pl:
           greeting: Witaj, %{recipient}!
           outro: Miłego korzystania z Gdyńskiej Platformy Dialogu!
         new_message:
+          intro: "%{sender} wysłał(a) Ci nową wiadomość. Kliknij %{here}, aby ją zobaczyć."
           greeting: Witaj, %{recipient}!
           outro: Miłego korzystania z Gdyńskiej Platformy Dialogu!
     moderations:
