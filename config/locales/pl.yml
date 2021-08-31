@@ -434,6 +434,9 @@ pl:
         moderation:
           fields:
             reports: Zgłoszenia
+    notifications_settings:
+      show:
+        email_on_notification: Chcę otrzymywać wiadomości e-mail za każdym razem gdy otrzymuję powiadomienie lub wiadomość w konwersacji
     pages:
       home:
         extended:
