@@ -138,6 +138,9 @@ pl:
   hello: "Witaj"
 
   decidim:
+    account:
+      delate:
+        alert: Nie można cofnąć tej czynności. Jeśli usuniesz konto, nie będzie można się już na nie logować. Będziesz mógł raz jeszcze założyć konto używając tych samych danych. 
     admin:
       actions:
         participatory_space_private_user:

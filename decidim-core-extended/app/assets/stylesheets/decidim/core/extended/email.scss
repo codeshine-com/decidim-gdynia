@@ -1715,9 +1715,13 @@ body.outlook p{
 /* 2 - Custom styles --------- */
 
 table.body th.decidim-bar,
-table.body td.decidim-bar{
+table.body td.decidim-bar {
   padding: 10px 0;
-  background-color: transparent;
+  background-color: #fff;
+}
+
+table.body td.decidim-bar {
+  border-bottom: 3px solid #f4bf55;
 }
 
 table.body td.decidim-bar img {
