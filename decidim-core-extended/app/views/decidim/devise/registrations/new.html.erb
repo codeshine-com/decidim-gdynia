@@ -24,19 +24,8 @@
   <% end %>
 
   <div class="row">
-    <div class="columns small-centered small-12  smallmedium-8 medium-6 large-4">
-      <button class="button expanded button--sc home-section__cta"
-              id='registration-type-toggler'
-              title="Link do strony Procesy wyświetlającej wszystkie procesy"
-              data-show-inhabitant="<%= t('.show_inhabitant') %>"
-              data-show-default="<%= t('.show_default') %>"
-              >
-        <%= @form.card_number&.present? ? t('.show_default') : t('.show_inhabitant') %>
-      </button>
-    </div>
     <div class="columns large-6 medium-10 medium-centered">
-      <%= render "decidim/devise/registrations/inhabitant_card_form", form: @form, visibility_class: @form.card_number&.present? ? nil : 'do-not-show' %>
-      <%= render "decidim/devise/registrations/form", form: @form, visibility_class: @form.card_number&.present? ? 'do-not-show' : nil %>
+      <%= render "decidim/devise/registrations/form", form: @form, visibility_class: nil %>
     </div>
   </div>
 </div>

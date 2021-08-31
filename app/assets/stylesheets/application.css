@@ -131,6 +131,8 @@ section#metrics, #content section.home-section:after {
 .content-block-icon { width: 60px; height: 60px; }
 .home-bullet__desc { width: calc(100% - 60px) }
 
+.extended.highligted-content-banner.home-section .external-link-containerexternal-link-container { color: var(--primary); }
+
 
 /******* cards ******/
 
@@ -163,11 +165,51 @@ select, .inline-filters button[data-toggle], textarea {
   border-color: #b8b8b8;
 }
 
-#card__tos label { position: relative; text-align: left; line-height: 1.5; }
-#card__tos input { margin-right: 1rem; margin-bottom: 0; }
-#card__tos span.label-required { position: absolute; top: 0; left: 14px; margin-bottom: 0; }
+.register-form .card .help-text { margin-top: 0; }
+.register-form input { margin-bottom: 10px; }
+.register-form label { position: relative; font-weight: 600; }
+.register-form label.is-invalid-label { margin-bottom: 25px; }
+.register-form label span { font-weight: 400; }
+.register-form .form-error {
+  position: absolute;
+  bottom: -20px;
+  margin-bottom: 0;
+}
+
+.user-nickname label { position: relative; }
+.register-form .card .user-nickname .help-text { margin-top: 10px; }
+.user-nickname .form-error {
+  position: absolute;
+  bottom: -20px;
+  margin-bottom: 0;
+}
+#registration_user_nickname.is-invalid-input { margin-bottom: 0; }
+.user-nickname label.is-invalid-label .help-text { margin-bottom: 25px; }
+.user-nickname label.is-invalid-label .row > span:last-of-type { height: auto; }
+#registration_user_nickname_characters {
+  position: absolute;
+  bottom: -20px;
+  right: 0;
+  margin-bottom: 0;
+}
+
+#registration_user_password { margin-top: 0.5rem; }
+
+
+#card__newsletter label,
+#card__tos label { position: relative; text-align: left; line-height: 1.5; font-weight: 400; }
+#card__newsletter input,
+#card__tos input { margin-bottom: 10px; }
+/* #card__newsletter span.label-required,
+#card__tos span.label-required { position: absolute; top: 0; left: 14px; margin-bottom: 0; } */
+#card__newsletter small,
+#card__tos small { font-size: 80%; }
+
+#card__tos label.is-invalid-label { margin-bottom: 0; }
 
 input:checked ~ .switch-paddle { background: var(--secondary); }
+
+.register-form input[type="number"] { height: 3rem; }
 
 
 /******* buttons ******/

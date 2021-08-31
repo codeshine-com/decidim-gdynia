@@ -13,6 +13,7 @@ pl:
         district: Dzielnica
         inhabitant_card_number: Numer karty mieszkańca
         card_number: Numer karty mieszkańca
+        card_number_possesion: Już mam kartę mieszkańca
         inhabitant_card_number_error: Dane nie zostaly potwierdzone przez platformę Karta Mieszkańca
         inhabitant_officialization_badge: Użytkownik potwierdzony
         inhabitant_card_taken_error: Zarejestrowano juz konto na ten numer karty
@@ -67,15 +68,17 @@ pl:
         new:
           rodo_agreements: |-
             Zapoznałem/am się z zasadami przetwarzania moich danych osobowych.<br>
-            Wyrażam zgodę na przetwarzanie moich danych osobowych przez Laboratorium Innowacji Społecznych w celu realizacji Budżetu Obywatelskiego 2020 w Gdyni w zakresie imienia
+            <small>Wyrażam zgodę na przetwarzanie moich danych osobowych przez Laboratorium Innowacji Społecznych w celu realizacji Budżetu Obywatelskiego 2020 w Gdyni w zakresie imienia
             i nazwiska, nazwy konta oraz adresu e-mail, na podstawie art. 6 ust. 1 lit. a) Rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 roku
             w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia Dyrektywy 95/46/WE (Ogólne
             Rozporządzenie o Ochronie Danych) z dnia 27 kwietnia 2016 roku, (Dz.Urz.UE.L Nr 119, strona 1) wyrażam zgodę na przetwarzanie moich danych osobowych przez
             Laboratorium Innowacji Społecznych w celu realizacji Budżetu Obywatelskiego 2020 w Gdyni w zakresie imienia i nazwiska, nazwy konta oraz adresu e-mail.<br>
-            Więcej na temat przetwarzania Twoich danych osobowych znajdziesz %{link}.
+            Więcej na temat przetwarzania Twoich danych osobowych znajdziesz %{link}.</small>
           rodo_link: tutaj
           show_inhabitant: Zarejestruj się kartą mieszkańca
           show_default: Zarejestruj się klasycznie
+          card_number_help: Podaj numer karty mieszkańca zarejestrowany na email który podałeś wyzej
+          email_help: Zakłądajać koonto z kartą mieszkańca, podaj email, na który jest ona zarejestrowana.
     group:
       delete:
         alert: Nie można cofnąć tej czynności.

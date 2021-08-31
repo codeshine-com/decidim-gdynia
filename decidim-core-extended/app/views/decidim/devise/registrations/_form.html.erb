@@ -5,7 +5,15 @@
       <%= form_required_explanation %>
 
       <div class="field">
-        <%= f.email_field :email %>
+        <%= f.email_field :email, help_text: t("decidim.devise.registrations.new.email_help") %>
+      </div>
+
+      <div class="field">
+        <%= f.check_box :card_number_possesion %>
+      </div>
+
+      <div class="field <%= form.card_number_possesion ? nil : 'hidden' %>">
+        <%= f.number_field :card_number, help_text: t("decidim.devise.registrations.new.card_number_help") %>
       </div>
 
       <div class="user-person">
@@ -38,7 +46,7 @@
         <%= f.check_box :tos_agreement, required: true, label: t("decidim.devise.registrations.new.tos_agreement", link: link_to(t("decidim.devise.registrations.new.terms"), page_path("terms-and-conditions"), target: '_blank')), class: 'required' %>
       </div>
       <div class="field">
-        <%= f.check_box :rodo_agreements, required: true, label: t("decidim.devise.registrations.new.rodo_agreements", link: link_to(t("decidim.devise.registrations.new.rodo_link"), 'https://konsultujemy.gdynia.pl/pages/rodo', target: '_blank')) %>
+        <%= f.check_box :rodo_agreements, required: true, label: t("decidim.devise.registrations.new.rodo_agreements", link: link_to(t("decidim.devise.registrations.new.rodo_link").html_safe, 'https://konsultujemy.gdynia.pl/pages/rodo', target: '_blank')) %>
       </div>
     </div>
   </div>

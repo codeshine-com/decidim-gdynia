@@ -13,4 +13,5 @@
 //= require rails-ujs
 //= require activestorage
 //= require decidim
+//=require decidim/core/extended/application.js
 //= require_tree .
