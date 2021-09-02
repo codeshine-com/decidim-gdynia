@@ -105,11 +105,11 @@ pl:
         delete_group: Usuń grupę
     searches:
       filters:
-        select_a_scope: Wybierz zakres
+        select_a_scope: Wybierz obszar
     user_interests:
       show:
         areas: Kategorie
-        scopes: Zakresy
+        scopes: Obszary
     inhabitant_card_authorization:
       authenticate:
         success: Pomyślnie autoryzowano

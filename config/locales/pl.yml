@@ -39,7 +39,7 @@ pl:
         duration: Data zakończenia
         internal_organisation: Organizacja prac
         private_space: Prywatny
-        scopes_enabled: Włącz zakresy
+        scopes_enabled: Włącz obszary
         title: Nazwa zespołu
         is_transparent: Transparentny
         document: Plik

@@ -85,14 +85,14 @@ pl:
         name: Nazwa
         organization: Organizacja
         parent_id: Rodzic
-        scope_type: Typ zakresu
-        scope_type_id: Typ zakresu
+        scope_type: Typ obszaru
+        scope_type_id: Typ obszaru
       scope_type:
         name: Nazwa
         organization: Organizacja
         plural: Liczba mnoga
       settings:
-        scope_id: Zakres
+        scope_id: Obszar
       static_page:
         changed_notably: Nastąpiły zauważalne zmiany.
         content: Zawartość
@@ -314,7 +314,7 @@ pl:
             'false': Opublikowany
             'true': Nieopublikowany
         scope_id_eq:
-          label: Zakres
+          label: Obszar
         search_label: Szukaj
         search_placeholder:
           name_or_nickname_or_email_cont: Przeszukaj %{collection} według adresu e-mail, nazwiska lub nazwy użytkownika.
@@ -384,8 +384,8 @@ pl:
         impersonations: Podszywanie się pod inne osoby
         newsletters: Newslettery
         participants: Użytkownicy
-        scope_types: Typy zakresów
-        scopes: Zakresy
+        scope_types: Typy obszarów
+        scopes: Obszary
         settings: Ustawienia
         static_pages: Strony
         user_groups: Grupy użytkowników
@@ -434,7 +434,7 @@ pl:
         scope:
           fields:
             name: Nazwa
-            scope_type: Typ zakresu
+            scope_type: Typ obszaru
         scope_type:
           fields:
             name: Nazwa
@@ -507,7 +507,7 @@ pl:
           confirm_delete: Czy na pewno chcesz usunąć ten newsletter?
           followers: 'obserwujący '
           has_been_sent_to: 'Wysłano do: '
-          no_scopes: Brak zakresów
+          no_scopes: Brak obszarów
           not_sent: Nie wysłano
           participants: 'użytkownicy '
           segmented_to: 'Podzielone na %{subject}: '
@@ -525,8 +525,8 @@ pl:
           none: Żaden
           participants_help: Wysyła newsletter do wszystkich potwierdzonych użytkowników, którzy uczestniczyli w którejkolwiek z przestrzeni partycypacyjnych z tej listy.
           recipients_count: Ten newsletter zostanie wysłany do <strong id='recipients_count'>%{count}</strong> użytkowników.
-          scopes_help: Wysyła newsletter do użytkowników, którzy mają dowolny z wybranych zakresów ustawiony jako aktywny w zakładce konta „Moje zainteresowania”.
-          select_scopes: Filtruj według użytkowników, którzy mają dowolny z wybranych zakresów ustawiony jako aktywny w zakładce konta „Moje zainteresowania”.
+          scopes_help: Wysyła newsletter do użytkowników, którzy mają dowolny z wybranych obszarów ustawiony jako aktywny w zakładce konta „Moje zainteresowania”.
+          select_scopes: Filtruj według użytkowników, którzy mają dowolny z wybranych obszarów ustawiony jako aktywny w zakładce konta „Moje zainteresowania”.
           select_spaces: Wybierz przestrzenie, aby podzielić newsletter
           select_users: Wybierz użytkowników, do których chcesz wysyłać newsletter
           send_to_all_users: Wyślij do wszystkich użytkowników
@@ -641,38 +641,38 @@ pl:
       resources:
         index:
           headers:
-            scope: Zakres
+            scope: Obszar
       scope_types:
         create:
-          error: Podczas tworzenia nowego typu zakresu wystąpił błąd.
-          success: Typ zakresu został pomyślnie utworzony.
+          error: Podczas tworzenia nowego typu obszaru wystąpił błąd.
+          success: Typ obszaru został pomyślnie utworzony.
         destroy:
-          success: Typ zakresu został usunięty
+          success: Typ obszaru został usunięty
         edit:
-          title: Edytuj typ zakresu
+          title: Edytuj typ obszaru
           update: Aktualizuj
         new:
-          create: Utwórz typ zakresu
-          title: Nowy zakres
+          create: Utwórz typ obszaru
+          title: Nowy obszar
         update:
-          error: Podczas aktualizowania tego typu zakresu wystąpił błąd.
-          success: Typ zakresu został zaktualizowany
+          error: Podczas aktualizowania tego typu obszaru wystąpił błąd.
+          success: Typ obszaru został zaktualizowany
       scopes:
         create:
-          error: Podczas tworzenia nowego zakresu wystąpił błąd.
-          success: Zakres został utworzony.
+          error: Podczas tworzenia nowego obszaru wystąpił błąd.
+          success: Obszar został utworzony.
         destroy:
-          success: Zakres został usunięty
+          success: Obszar został usunięty
         edit:
-          title: Edytuj zakres
+          title: Edytuj obszar
           update: Aktualizuj
         new:
-          create: Utwórz zakres
-          title: Nowy zakres
-        no_scopes: Brak zakresów na tym poziomie.
+          create: Utwórz obszar
+          title: Nowy obszar
+        no_scopes: Brak obszarów na tym poziomie.
         update:
-          error: Podczas aktualizowania tego zakresu wystąpił błąd.
-          success: Zakres został zaktualizowany
+          error: Podczas aktualizowania tego obszaru wystąpił błąd.
+          success: Obszar został zaktualizowany
       share_tokens:
         actions:
           confirm_destroy: Czy jesteś pewien, że chcesz usunąć ten token?
@@ -743,8 +743,8 @@ pl:
         impersonations: Zarządzanie użytkownikami
         metrics: Partycypacja w liczbach
         participants: Użytkownicy
-        scope_types: Typy zakresów
-        scopes: Zakresy
+        scope_types: Typy obszarów
+        scopes: Obszary
         static_pages: Strony
         statistics: Działania
         user_groups: Grupy użytkowników

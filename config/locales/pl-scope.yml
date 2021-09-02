@@ -1,0 +1,53 @@
+pl:
+  activemodel:
+    attributes:
+      result:
+        decidim_scope_id: Obszar
+      scope:
+        scope_type: Typ obszaru
+        scope_type_id: Typ obszaru
+      settings:
+        scope_id: Obszar
+  decidim:
+    accountability:
+      admin:
+        import_results:
+          new:
+            info: "<p> Zalecamy wykonanie następujących kroków:</p><ol><li>Utwórz Statusy dla Wyników, które chcesz dodać (<a href='%{link_new_status}' target='_blank'>link</a>)</li><li>Utwórz co najmniej jeden wynik ręcznie z poziomu tego Panelu administracyjnego (<a href='%{link_new_result}' target='_blank'>link</a>) przed wybraniem opcji Importuj, aby lepiej zrozumieć format oraz jakie informacje należy załączyć.</li><li>Pobierz plik Eksport w formacie CSV (%{link_export_csv})</li><li>Wprowadź zmiany lokalnie. Możesz zmienić tylko następujące kolumny pliku CSV:</li></ol><ul><li><b>kategoria/id:</b> ID kategorii</li><li><b>obszar/id:</b> ID obszaru</li><li><b>element nadrzędny/id:</b> ID elementu nadrzędnego (dla powiązanych wyników). Opcjonalnie</li><li><b>tytuł/I18N:</b> Tytuł w języku X</li><li><b>opis/I18N:</b> Opis w języku X</li><li><b>start_date:</b> data rozpoczęcia pracy nad utworzeniem wyniku (format RRRR-MM-DD)</li><li><b>end_date:</b> data zakończenia pracy nad utworzeniem wyniku (format RRRR-MM-DD)</li><li><b>status/id:</b> ID statusu dla tego wyniku</li><li><b>postęp:</b> Postęp prac nad wynikiem wyrażony procentowo (od 0 do 100)</li><li><b>proposals_ids:</b> wewnętrzne ID powiązanych propozycji (oddzielone przecinkiem). Jest ono automatycznie konwertowane na <span class='attribute-name'>proposal_url</span></li></ul>"
+      models:
+        result:
+          fields:
+            scope: Obszar
+        results:
+          filters:
+            scopes: Obszary
+    admin:
+      filters:
+        results:
+          scope_id_eq:
+            label: Obszar
+        scope_id_eq:
+          label: Obszar
+      menu:
+        scope_types: Typy obszarów
+        scopes: Obszary
+      models:
+        scope:
+          fields:
+            scope_type: Typ obszaru
+      newsletters:
+        index:
+          no_scopes: Brak obszarów
+        select_recipients_to_deliver:
+          scopes_help: Wysyła newsletter do użytkowników, którzy mają dowolny z wybranych obszarów ustawiony jako aktywny w zakładce konta „Moje zainteresowania”.
+          select_scopes: Filtruj według użytkowników, którzy mają dowolny z wybranych obszarów ustawiony jako aktywny w zakładce konta „Moje zainteresowania”.
+      resources:
+        index:
+          headers:
+            scope: Obszar
+    components:
+      accountability:
+        settings:
+          global:
+            scope_id: Obszar
+            scopes_enabled: Obszary włączone

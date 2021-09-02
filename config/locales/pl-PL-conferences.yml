@@ -8,15 +8,15 @@ pl:
         copy_categories: Skopiuj kategorie
         copy_components: Skopiuj komponenty
         copy_features: Skopiuj funkcje
-        decidim_scope_id: Zakres
+        decidim_scope_id: Obszar
         description: Opis
         hashtag: Hashtag
         hero_image: Obraz główny
         participatory_processes_ids: Powiązane procesy partycypacyjne
         promoted: Wyróżniona
         published_at: Opublikowano
-        scope_id: Zakres
-        scopes_enabled: Zakresy dozwolone
+        scope_id: Obszar
+        scopes_enabled: Obszary dozwolone
         short_description: Krótki opis
         show_statistics: Pokaż statystyki
         slogan: Slogan

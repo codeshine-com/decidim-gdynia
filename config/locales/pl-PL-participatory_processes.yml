@@ -16,16 +16,16 @@ pl:
         hashtag: Hashtag
         hero_image: Obraz główny
         local_area: Obszar organizacji
-        meta_scope: Zakres
+        meta_scope: Obszar
         participatory_process_group_id: Grupa procesów
         participatory_scope: Zaproponowano
         participatory_structure: Jak wziąć udział
         promoted: Promowany
         published_at: Opublikowano
         related_process_ids: Powiązane procesy
-        scope_id: Zakres
-        scope_type_max_depth_id: Głębokość filtra zakresu
-        scopes_enabled: Zakresy włączone
+        scope_id: Obszar
+        scope_type_max_depth_id: Głębokość filtra obszaru
+        scopes_enabled: Obszary włączone
         short_description: Krótki opis
         show_metrics: Pokaż mierniki
         show_statistics: Pokaż statystyki
@@ -346,7 +346,7 @@ pl:
             metadata: Metadane
             other: Inny
             related_processes: Powiązane procesy
-            scope_type_max_depth_help: Ogranicz głębokość filtra zakresu; Filtr pokaże typy zakresu od ogólnego do wybranego.
+            scope_type_max_depth_help: Ogranicz głębokość filtra obszaru; Filtr pokaże typy obszaru od ogólnego do wybranego.
             select_an_area: Wybierz kategorię
             select_process_group: Wybierz grupę procesów
             slug_help: 'URL slugi służą do generowania adresów URL kierujących bezpośrednio do tego procesu. Należy wpisać tylko to, co ma znaleźć się na końcu po znaku „/”, a nie pełen adres. Można użyć liter, cyfr i myślników. Musi zaczynać się od litery. Przykład: %{url}'
@@ -416,7 +416,7 @@ pl:
         participatory_structure: Jak wziąć udział
         private_space: To jest prywatny proces
         related_processes: Powiązane procesy
-        scope: Zakres
+        scope: Obszar
         start_date: Data rozpoczęcia
         target: Kto może wziąć udział
         unspecified: Nieokreślony

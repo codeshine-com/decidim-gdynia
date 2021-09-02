@@ -27,8 +27,8 @@ pl:
             clean_after_publish: Usuń odpowiedzi podczas publikowania ankiety
             ends_at: Odpowiedzi akceptowane do
             ends_at_help: Pozostaw puste jeśli nie określono daty
-            scope_id: Zakres
-            scopes_enabled: Zakresy włączone
+            scope_id: Obszar
+            scopes_enabled: Obszary włączone
             starts_at: Odpowiedzi akceptowane od
             starts_at_help: Pozostaw puste jeśli nie określono daty
           step:

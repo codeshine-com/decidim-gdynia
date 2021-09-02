@@ -7,7 +7,7 @@ pl:
         contact_phone: Telefon
         facebook_handler: Facebook
         social_handlers_help: Do adresu z Facebooka należy wpisać tylko końcówkę nazwy (to, co ma znaleźć się na końcu po znaku „/”). System automatycznie zaciąga jego początek.
-        related_scope_ids: Zakresy
+        related_scope_ids: Obszary
       scope:
         promoted: Wyróżniony
 
@@ -15,10 +15,10 @@ pl:
     admin:
       components:
         settings_fields:
-          select_a_scope: Wybierz zakres
+          select_a_scope: Wybierz obszar
       scopes:
         form:
-          promoted_hint: Zaznacz, żeby na listach w panelu administratora zakres pojawiał się na górze listy
+          promoted_hint: Zaznacz, żeby na listach w panelu administratora obszar pojawiał się na górze listy
     participatory_processes:
       admin:
         participatory_processes:
@@ -37,4 +37,4 @@ pl:
     shared:
       participatory_space_filters:
         filters:
-          select_a_scope: Wybierz zakres
+          select_a_scope: Wybierz obszar

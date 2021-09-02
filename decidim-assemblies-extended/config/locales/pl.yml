@@ -64,7 +64,7 @@ pl:
             duration_help: Jeśli czas trwania tego zespołu jest ograniczony, wybierz datę końcową. W przeciwnym razie zaznacz pole poniżej i wybierz jedną z opcji.
             team_service: Obsługa zespołu
             transparent_help: Tylko przy zaznaczonej opcji Prywatny - zespół jest widoczny dla innych użytkowników, ale są zablokowane aktywności
-            select_a_scope: Wybierz zakres
+            select_a_scope: Wybierz obszar
         assembly_members:
           form:
             affiliation: Afiliacja

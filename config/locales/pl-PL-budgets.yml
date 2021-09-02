@@ -2,7 +2,7 @@ pl:
   activemodel:
     attributes:
       budget:
-        decidim_scope_id: Zakres
+        decidim_scope_id: Obszar
         description: Opis
         title: Tytuł
         total_budget: Całkowity budżet
@@ -10,7 +10,7 @@ pl:
       project:
         budget_amount: Kwota budżetu
         decidim_category_id: Kategoria
-        decidim_scope_id: Zakres
+        decidim_scope_id: Obszar
         description: Opis
         proposal_ids: Powiązane propozycje
         selected: Wybrane do implementacji
@@ -160,7 +160,7 @@ pl:
             other: "%{count} projektów"
         filters:
           category: Kategoria
-          scope: Zakres
+          scope: Obszar
           search: Szukaj
           status: Status
           status_values:
@@ -227,8 +227,8 @@ pl:
             more_information_modal: Więcej informacji
             projects_per_page: Projektów na stronie
             resources_permissions_enabled: Uprawnienia działań można ustawić dla każdego spotkania
-            scope_id: Zakres
-            scopes_enabled: Zakresy włączone
+            scope_id: Obszar
+            scopes_enabled: Obszary włączone
             title: Tytuł
             total_budget: Całkowity budżet
             vote_minimum_budget_projects_number: Minimalna liczba projektów, na które można głosować

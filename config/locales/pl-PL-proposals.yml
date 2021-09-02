@@ -5,9 +5,9 @@ pl:
         address: Adres
         body: Treść
         category_id: Kategoria
-        decidim_scope_id: Zakres
+        decidim_scope_id: Obszar
         has_address: Ma adres
-        scope_id: Zakres
+        scope_id: Obszar
         state: Stan
         title: Tytuł
         user_group_id: Utwórz wspólny szkic jako
@@ -18,9 +18,9 @@ pl:
         automatic_hashtags: Hashtagi zostały dodane automatycznie
         body: Treść
         category_id: Kategoria
-        decidim_scope_id: Zakres
+        decidim_scope_id: Obszar
         has_address: Ma adres
-        scope_id: Zakres
+        scope_id: Obszar
         state: Stan
         suggested_hashtags: Sugerowane hashtagi
         title: Tytuł
@@ -54,7 +54,7 @@ pl:
     models:
       decidim/proposals/accepted_proposal_event: Wniosek został przyjęty
       decidim/proposals/admin/update_proposal_category_event: Zmieniono kategorię propozycji
-      decidim/proposals/admin/update_proposal_scope_event: Zmieniono zakres propozycji
+      decidim/proposals/admin/update_proposal_scope_event: Zmieniono obszar propozycji
       decidim/proposals/creation_enabled_event: Włączono tworzenie propozycji
       decidim/proposals/endorsing_enabled_event: Możliwe rekomendowanie propozycji
       decidim/proposals/evaluating_proposal_event: Propozycja jest oceniana
@@ -96,7 +96,7 @@ pl:
               'false': Propozycje
               'true': Poprawki
           scope_id_eq:
-            label: Zakres
+            label: Obszar
           state_eq:
             label: Stan
             values:
@@ -152,8 +152,8 @@ pl:
             proposal_wizard_step_3_help_text: 'Tekst pomocy Kreatora - krok: "Dokończ"'
             proposal_wizard_step_4_help_text: 'Tekst pomocy Kreatora - krok: "Publikuj"'
             resources_permissions_enabled: Uprawnienia działań można ustawić dla każdej propozycji
-            scope_id: Zakres
-            scopes_enabled: Zakresy włączone
+            scope_id: Obszar
+            scopes_enabled: Obszary włączone
             threshold_per_proposal: Próg poparcia dla propozycji
             vote_limit: Limit możliwych wsparć na użytkownika
           step:
@@ -283,10 +283,10 @@ pl:
           email_subject: Kategoria %{resource_title} propozycji została zaktualizowana
           notification_title: Kategoria propozycji <a href="%{resource_path}">%{resource_title}</a> została zaktualizowana przez administratora.
         proposal_update_scope:
-          email_intro: 'Administrator zaktualizował zakres Twojej propozycji „%{resource_title}”, sprawdź to na tej stronie:'
+          email_intro: 'Administrator zaktualizował obszar Twojej propozycji „%{resource_title}”, sprawdź to na tej stronie:'
           email_outro: Otrzymałeś to powiadomienie, ponieważ jesteś autorem propozycji.
-          email_subject: Zaktualizowano zakres propozycji %{resource_title}
-          notification_title: Administrator zaktualizował zakres propozycji <a href="%{resource_path}">%{resource_title}</a>.
+          email_subject: Zaktualizowano obszar propozycji %{resource_title}
+          notification_title: Administrator zaktualizował obszar propozycji <a href="%{resource_path}">%{resource_title}</a>.
         voting_enabled:
           email_intro: 'Możesz wspierać propozycje w %{participatory_space_title}! Dołącz na tej stronie:'
           email_outro: Otrzymałeś to powiadomienie, ponieważ obserwujesz %{participatory_space_title}. Możesz przestać otrzymywać powiadomienia klikając w poprzedni link.
@@ -440,7 +440,7 @@ pl:
             assign_to_valuator_button: Przypisz
             cancel: Anuluj
             change_category: Zmień kategorię
-            change_scope: Zmień zakres
+            change_scope: Zmień obszar
             merge: Przyłącz do nowego
             merge_button: Przyłącz
             publish: Publikuj
@@ -453,7 +453,7 @@ pl:
             unassign_from_valuator: Anuluj przypisanie do weryfikatora
             unassign_from_valuator_button: Anuluj przypisanie
             update: Aktualizuj
-            update_scope_button: Aktualizuj zakres
+            update_scope_button: Aktualizuj obszar
           new:
             create: Utwórz
             title: Utwórz propozycję
@@ -495,10 +495,10 @@ pl:
             select_a_proposal: Wybierz propozycję
             success: 'Zaktualizowano kategorię nad %{subject_name} dla następujących propozycji: %{proposals}.'
           update_scope:
-            invalid: 'Następujące propozycje miały już zakres %{subject_name}: %{proposals}.'
+            invalid: 'Następujące propozycje miały już obszar %{subject_name}: %{proposals}.'
             select_a_proposal: Wybierz propozycję
-            select_a_scope: Wybierz zakres
-            success: 'Zaktualizowano zakres na %{subject_name} dla następujących propozycji: %{proposals}.'
+            select_a_scope: Wybierz obszar
+            success: 'Zaktualizowano obszar na %{subject_name} dla następujących propozycji: %{proposals}.'
         proposals_imports:
           create:
             invalid: Podczas importowania propozycji wystąpił błąd
@@ -609,7 +609,7 @@ pl:
           open: Otwarty
           published: Opublikowany
           related_to: Związany z
-          scope: Zakres
+          scope: Obszar
           search: Szukaj
           state: Status
           withdrawn: Wycofane
@@ -707,7 +707,7 @@ pl:
             official_proposal: Oficjalna propozycja
             published_answer: Opublikowane odpowiedzi
             published_at: Opublikowano
-            scope: Zakres
+            scope: Obszar
             state: Status
             title: Tytuł
             valuator: Weryfikator
@@ -762,7 +762,7 @@ pl:
           my_proposals: Moje propozycje
           origin: Źródło
           related_to: Związany z
-          scope: Zakres
+          scope: Obszar
           search: Szukaj
           state: Status
           type: Typ

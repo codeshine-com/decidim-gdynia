@@ -37,8 +37,8 @@ pl:
             announcement: Ogłoszenie
             comments_enabled: Komentarze włączone
             comments_max_length: Maksymalna długość komentarzy (Pozostaw 0 dla wartości domyślnej)
-            scope_id: Zakres
-            scopes_enabled: Zakresy włączone
+            scope_id: Obszar
+            scopes_enabled: Obszary włączone
           step:
             announcement: Ogłoszenie
             comments_blocked: Komentarze zablokowane
@@ -119,7 +119,7 @@ pl:
           my_debates: Moje debaty
           official: Urzędnik
           origin: Źródło
-          scope: Zakres
+          scope: Obszar
           search: Szukaj
           state: Status
           state_values:

@@ -140,12 +140,12 @@ pl:
         create_via_csv: "%{user_name} zaprosił(a) %{resource_name} poprzez CSV, aby został(a) uczestnikiem prywatnym"
         delete: "%{user_name} usunął/usunęła użytkownika %{resource_name} jako użytkownika prywatnego"
       scope:
-        create: "%{user_name} utworzył(a) zakres %{resource_name}"
-        create_with_parent: "%{user_name} utworzył(a) zakres podrzędny %{resource_name} w zakresie %{parent_scope}"
-        delete: "%{user_name} usunął/usunęła zakres %{resource_name}"
-        delete_with_parent: "%{user_name} usunął/usunęła zakres podrzędny %{resource_name} w zakresie %{parent_scope}"
-        update: "%{user_name} zaktualizował(a) zakres %{resource_name}"
-        update_with_parent: "%{user_name} zaktualizował(a) zakres podrzędny %{resource_name} w zakresie %{parent_scope}"
+        create: "%{user_name} utworzył(a) obszar %{resource_name}"
+        create_with_parent: "%{user_name} utworzył(a) obszar podrzędny %{resource_name} w obszarie %{parent_scope}"
+        delete: "%{user_name} usunął/usunęła obszar %{resource_name}"
+        delete_with_parent: "%{user_name} usunął/usunęła obszar podrzędny %{resource_name} w obszarie %{parent_scope}"
+        update: "%{user_name} zaktualizował(a) obszar %{resource_name}"
+        update_with_parent: "%{user_name} zaktualizował(a) obszar podrzędny %{resource_name} w obszarie %{parent_scope}"
       static_page:
         create: "%{user_name} stworzył(a) stronę statyczną %{resource_name}"
         delete: "%{user_name} usunął/usunęła stronę statyczną %{resource_name}"
@@ -278,7 +278,7 @@ pl:
         explanation: Uzyskaj weryfikację, wprowadzając numer dokumentu kończący się na "X"
         fields:
           allowed_postal_codes: Dozwolone kody pocztowe (oddzielone przecinkami)
-          allowed_scope_id: Dozwolony zakres
+          allowed_scope_id: Dozwolony obszar
           document_number: Numer dokumentu
           postal_code: Kod pocztowy
           scope_id: Niniejsze rozporządzenie stosuje się od dnia 1 stycznia 2018 r.
@@ -369,8 +369,8 @@ pl:
             dummy_global_translatable_text: Przykładowy tekst do tłumaczenia
             enable_pads_creation: Włącz tworzenie padów
             resources_permissions_enabled: Włączono uprawnienia do zasobów
-            scope_id: Zakres
-            scopes_enabled: Zakresy włączone
+            scope_id: Obszar
+            scopes_enabled: Obszary włączone
           step:
             amendment_creation_enabled: Tworzenie poprawek włączone
             amendment_promotion_enabled: Promowanie poprawek włączone
@@ -843,9 +843,9 @@ pl:
         area_type_presenter:
           not_found: 'Typ kategorii nie został znaleziony w bazie danych (ID: %{id})'
         scope_presenter:
-          not_found: 'Zakres nie został znaleziony w bazie danych (ID: %{id})'
+          not_found: 'Obszar nie został znaleziony w bazie danych (ID: %{id})'
         scope_type_presenter:
-          not_found: 'Typ zakresu nie został znaleziony w bazie danych (ID: %{id})'
+          not_found: 'Typ obszaru nie został znaleziony w bazie danych (ID: %{id})'
     managed_users:
       expired_session: Obecna sesja administracyjna użytkownika wygasła.
     map:
@@ -1153,17 +1153,17 @@ pl:
       create:
         error: Wystąpił błąd podczas udzielania rekomendacji.
     scopes:
-      global: Zakres globalny
+      global: Obszar globalny
       picker:
         cancel: Anuluj
-        change: Zmień wybrany zakres
+        change: Zmień wybrany obszar
         choose: Wybierz
-        currently_selected: Aktualnie wybrany zakres
+        currently_selected: Aktualnie wybrany obszar
         title: Wybierz %{field}
-      prompt: Wybierz zakres
-      scopes: Zakresy
+      prompt: Wybierz obszar
+      scopes: Obszary
       scopes_picker_input:
-        select_scope: 'Wybierz zakres (obecny: %{current})'
+        select_scope: 'Wybierz obszar (obecny: %{current})'
     search:
       results: Wyniki wyszukiwania
       results_found_for_term: '%{count} wyników wyszukiwania dla frazy: "%{term}"'
@@ -1245,7 +1245,7 @@ pl:
         share_link: Udostępnij link
     tags:
       filter_results_for_category: 'Filtruj wyniki dla kategorii: %{resource}'
-      filter_results_for_scope: 'Filtruj wyniki dla zakresu: %{resource}'
+      filter_results_for_scope: 'Filtruj wyniki dla obszaru: %{resource}'
     translation_bar:
       help_text: "<strong>Uwaga:</strong> Zawartość może być tłumaczeniem automatycznym i może nie być w 100% dokładna."
       show_original: Pokaż oryginalny tekst
@@ -1287,7 +1287,7 @@ pl:
     user_interests:
       show:
         my_interests: Moje zainteresowania
-        no_scopes: Ta organizacja nie ma jeszcze żadnego zakresu!
+        no_scopes: Ta organizacja nie ma jeszcze żadnego obszaru!
         select_your_interests: Wybierz tematy, które Cię interesują, aby otrzymywać związane z nimi wydarzenia na swojej stronie profilowej w zakładce Oś czasu.
         update_my_interests: Zaktualizuj moje zainteresowania
       update:
@@ -1481,7 +1481,7 @@ pl:
       already_confirmed: już potwierdzono
       confirmation_period_expired: musi być potwierdzone w ciągu %{period}, proszę poprosić o nowy
       content_type_whitelist_error: typ pliku jest nieprawidłowy
-      cycle_detected: zakres podrzędny nie może być jednocześnie zakresem nadrzędnym
+      cycle_detected: obszar podrzędny nie może być jednocześnie obszarem nadrzędnym
       expired: wygasł, proszę poprosić o nowy
       file_size_is_less_than_or_equal_to: rozmiar pliku musi być mniejszy lub równy %{count}
       invalid_time_zone: nie jest prawidłową strefą czasową

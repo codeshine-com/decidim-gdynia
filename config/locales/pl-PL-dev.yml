@@ -3,7 +3,7 @@ pl:
     attributes:
       dummy_resource:
         created_at: Utworzono
-        decidim_scope_id: Zakres
+        decidim_scope_id: Obszar
         field: Moja dziedzina
         start_date: Data rozpoczęcia
         title: Tytuł

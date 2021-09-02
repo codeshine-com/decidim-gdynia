@@ -3,7 +3,7 @@ pl:
     attributes:
       consultation:
         banner_image: Baner
-        decidim_highlighted_scope_id: Wyróżniony zakres
+        decidim_highlighted_scope_id: Wyróżniony obszar
         description: Opis
         end_voting_date: Głosowanie kończy się
         introductory_image: Obraz wprowadzający
@@ -15,7 +15,7 @@ pl:
         title: Tytuł
       question:
         banner_image: Baner
-        decidim_scope_id: Zakres
+        decidim_scope_id: Obszar
         hashtag: Hashtag
         hero_image: Obraz główny
         i_frame_url: URL do zewnętrznego systemu głosowania
@@ -29,7 +29,7 @@ pl:
         promoter_group: Grupa inicjatorów
         question_context: Kontekst
         reference: Odniesienie
-        scope: Zakres
+        scope: Obszar
         slug: URL slug
         subtitle: Podtytuł
         vote: Zewnętrzny system głosowania

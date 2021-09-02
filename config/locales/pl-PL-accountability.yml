@@ -4,7 +4,7 @@ pl:
       result:
         decidim_accountability_status_id: Status
         decidim_category_id: Kategoria
-        decidim_scope_id: Zakres
+        decidim_scope_id: Obszar
         description: Opis
         end_date: Data zakończenia
         progress: Postęp
@@ -148,7 +148,7 @@ pl:
             end_date: Data zakończenia
             id: ID
             progress: Postęp
-            scope: Zakres
+            scope: Obszar
             start_date: Data rozpoczęcia
             status: Status
             title: Tytuł
@@ -174,7 +174,7 @@ pl:
             other: "%{count} wyników"
         filters:
           all: Wszystkie
-          scopes: Zakresy
+          scopes: Obszary
         home:
           categories_label: Kategorie
           subcategories_label: Podkategorie
@@ -203,7 +203,7 @@ pl:
           category_id_eq:
             label: Kategoria
           scope_id_eq:
-            label: Zakres
+            label: Obszar
           status_id_eq:
             label: Status
     components:
@@ -218,8 +218,8 @@ pl:
             heading_leaf_level_results: Nagłówek dla "Projektów"
             heading_parent_level_results: Nagłówek dla "Wyników"
             intro: Wprowadzenie
-            scope_id: Zakres
-            scopes_enabled: Zakresy włączone
+            scope_id: Obszar
+            scopes_enabled: Obszary włączone
             subcategories_label: Nagłówek dla "Podkategorii"
           step:
             comments_blocked: Komentarze zablokowane

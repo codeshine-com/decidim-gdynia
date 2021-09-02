@@ -6,7 +6,7 @@ pl:
         description: Opis
         offline_votes: Podpisy na piśmie
         offline_votes_for_scope: Podpisy dla %{scope_name}
-        scope_id: Zakres
+        scope_id: Obszar
         signature_end_date: Koniec okresu zbiórki podpisów
         signature_start_date: Początek okresu zbiórki podpisów
         signature_type: Typ zbiórki podpisów
@@ -112,9 +112,9 @@ pl:
             title: Inicjatywy
         initiatives_type_scope:
           fields:
-            scope: Zakres
+            scope: Obszar
             supports_required: Wymaga podpisów
-          name: Zakres typu inicjatywy
+          name: Obszar typu inicjatywy
         initiatives_types:
           fields:
             created_at: Utworzono
@@ -132,7 +132,7 @@ pl:
             initiative_title: Tytuł inicjatywy
             name_and_surname: Imię i nazwisko
             postal_code: Kod pocztowy
-            scope: Zakres
+            scope: Obszar
             time_and_date: Czas i data
             timestamp: Znacznik czasu
       titles:
@@ -245,22 +245,22 @@ pl:
         initiatives_type_scopes:
           create:
             error: Wystąpił błąd
-            success: Utworzono nowy zakres dla danego typu inicjatywy
+            success: Utworzono nowy obszar dla danego typu inicjatywy
           destroy:
-            success: Zakres został pomyślnie usunięty
+            success: Obszar został pomyślnie usunięty
           edit:
             back: Wróć
             confirm_destroy: Jesteś pewny?
             destroy: Usuń
-            title: Edytuj zakres typu inicjatywy
+            title: Edytuj obszar typu inicjatywy
             update: Aktualizuj
           new:
             back: Wróć
             create: Utwórz
-            title: Utwórz zakres typu inicjatywy
+            title: Utwórz obszar typu inicjatywy
           update:
             error: Wystąpił błąd
-            success: Zakres został zaktualizowany
+            success: Obszar został zaktualizowany
         initiatives_types:
           create:
             error: Wystąpił błąd
@@ -273,12 +273,12 @@ pl:
             update: Aktualizuj
           form:
             authorizations: Ustawienia autoryzacji
-            child_scope_threshold_enabled_help: 'Ta konfiguracja nie pozwala na głosowania offline, zezwala na pod-zakresy i działa z procedura autoryzacji, która łączy zakres z użytkownikiem, upewnij się, że wybrałeś taką autoryzację, poniżej w sekcji autoryzacji. Żeby działały zakresy muszą być konfigurowane w hierarchii: 1 Rodzic - N element podrzędny. Więcej informacji o działaniu tej konfiguracji znajdziesz pod tym <a href="https://docs.decidim.org/admin-manual/en/initiatives/" target="_blank">linkiem</a>.'
-            only_global_scope_enabled_help: Zaznacz tę flagę, jeśli włączyłeś opcję "Podpisy zakresu podrzędnego" i skonfigurowałeś globalny zakres jako zakres nadrzędny. Umożliwiając to działanie, wybór typu inicjatywy zostanie pominięty w kreatorze tworzenia inicjatyw. Aby uzyskać więcej informacji na temat funkcjonowania tej konfiguracji, zobacz ten <a href="https://docs.decidim.org/admin-manual/en/initiatives/" target="_blank">link</a>.
+            child_scope_threshold_enabled_help: 'Ta konfiguracja nie pozwala na głosowania offline, zezwala na pod-obszary i działa z procedura autoryzacji, która łączy obszar z użytkownikiem, upewnij się, że wybrałeś taką autoryzację, poniżej w sekcji autoryzacji. Żeby działały obszary muszą być konfigurowane w hierarchii: 1 Rodzic - N element podrzędny. Więcej informacji o działaniu tej konfiguracji znajdziesz pod tym <a href="https://docs.decidim.org/admin-manual/en/initiatives/" target="_blank">linkiem</a>.'
+            only_global_scope_enabled_help: Zaznacz tę flagę, jeśli włączyłeś opcję "Podpisy obszaru podrzędnego" i skonfigurowałeś globalny obszar jako obszar nadrzędny. Umożliwiając to działanie, wybór typu inicjatywy zostanie pominięty w kreatorze tworzenia inicjatyw. Aby uzyskać więcej informacji na temat funkcjonowania tej konfiguracji, zobacz ten <a href="https://docs.decidim.org/admin-manual/en/initiatives/" target="_blank">link</a>.
             options: Ustawienia
             title: Informacje ogólne
           initiative_type_scopes:
-            title: Zakresy dla rodzaju inicjatywy
+            title: Obszary dla rodzaju inicjatywy
           new:
             create: Utwórz
             title: Nowy typ inicjatywy
@@ -329,7 +329,7 @@ pl:
           initiative_type: Typ inicjatywy
           more_information: "(Więcej informacji)"
           select_area: Wybierz kategorię
-          select_scope: Wybierz zakres
+          select_scope: Wybierz obszar
         finish:
           back: Wróć
           back_to_initiatives: Wróć do inicjatyw
@@ -429,7 +429,7 @@ pl:
           area: Kategoria
           author: Autor
           myself: Moje inicjatywy
-          scope: Zakres
+          scope: Obszar
           search: Szukaj
           state: Stan
           type: Typ
@@ -523,7 +523,7 @@ pl:
       states:
         accepted: Przyjęto
         expired: Przedawnione
-      unavailable_scope: Niedostępny zakres
+      unavailable_scope: Niedostępny obszar
       versions:
         shared:
           back_to_resource: Wróć do inicjatywy
