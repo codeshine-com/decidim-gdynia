@@ -1,5 +1,6 @@
+<br>
 <p><%= t(".greeting", recipient: @recipient.name) %></p>
 
 <p><%= t(".intro", sender: @sender.name, here: link_to(t('decidim.initiatives.initiatives_mailer.initiative_link.here'), decidim.conversation_url(@conversation, host: @host))).html_safe %></p>
-
+<br>
 <p><%= t(".outro") %></p>
