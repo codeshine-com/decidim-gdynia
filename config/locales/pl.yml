@@ -433,6 +433,11 @@ pl:
           intro: "%{sender} wysłał(a) Ci nową wiadomość. Kliknij %{here}, aby ją zobaczyć."
           greeting: Witaj, %{recipient}!
           outro: Miłego korzystania z Gdyńskiej Platformy Dialogu!
+      conversations:
+        add_conversation_users:
+          add_max_users: 'Dodaj użytkowników do konwersacji: maksymalnie 9 użytkowników zaczynając od “@” celem ich wyszukania'
+        index:
+          next: Rozpocznij konwersację
     moderations:
       models:
         moderation:
