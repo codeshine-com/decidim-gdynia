@@ -1,6 +1,8 @@
 pl:
   activemodel:
     attributes:
+      common:
+        scope: Obszar
       participatory_process:
         contact_address: Adres
         contact_email: Adres e-mail

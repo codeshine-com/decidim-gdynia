@@ -33,3 +33,19 @@ select.scopes-expanded:focus {
   background-image: none;
   z-index: 20;
 }
+
+.card__support__data--left.custom {
+  max-width: 100%;
+}
+
+.card__support__data--left.custom .text-ellipsis {
+  overflow: unset;
+}
+.card__support__data--left.custom strong {
+  overflow: unset;
+  white-space: normal;line-height: 1.2;
+  display: block;
+  margin: 10px 0;
+}
+
+.card__support .card__button.centered { margin: auto; }
