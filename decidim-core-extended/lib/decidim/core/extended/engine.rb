@@ -52,6 +52,7 @@ module Decidim
 
         initializer "decidim_core_extended.assets.precompile" do |app|
           app.config.assets.precompile += %w(decidim/core/extended/Logotypy_UE.png)
+          app.config.assets.precompile += %w(decidim/core/extended/O_platformie_pasek.png)
           app.config.assets.precompile += %w(decidim/core/extended/email.scss)
           app.config.assets.precompile += %w(decidim/core/extended/registration_types_handler.js)
         end

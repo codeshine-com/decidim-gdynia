@@ -13,7 +13,7 @@ pl:
     invitations:
       edit:
         nickname: Nazwa konta
-        nickname_help: To systemowa, unikalna nazwa Twojego konta na Platformie. Będzie wyświetlać się tylko na Twojej stronie profilowej. Po niej inni użytkownicy będą mogli Cię wyszukać, dlatego dobrze, aby była łatwa do zapamiętania np. pierwsza litera imienia i nazwisko (j_kowalski). Może zawierać tylko litery, cyfry, '-' i '_'.
+        nickname_help: To systemowa, unikalna nazwa Twojego konta na Platformie. Będzie wyświetlana tylko na Twojej stronie profilowej. Po niej inni użytkownicy będą mogli Cię wyszukać by nawiązać z Tobą kontakt, dlatego dobrze, aby była łatwa do zapamiętania np. pierwsza litera imienia i nazwisko (j_kowalski). Może zawierać tylko litery, cyfry, '-' i '_'.
         subtitle: Jeśli akceptujesz zaproszenie, ustaw swoją nazwę konta i hasło.
     mailer:
       invitation_instructions:
@@ -314,17 +314,21 @@ pl:
     devise:
       omniauth_registrations:
         new:
-          nickname_help: To systemowa, unikalna nazwa Twojego konta na Platformie. Będzie wyświetlać się tylko na Twojej stronie profilowej. Po niej inni użytkownicy będą mogli Cię wyszukać, dlatego dobrze, aby była łatwa do zapamiętania np. pierwsza litera imienia i nazwisko (j_kowalski). Może zawierać tylko litery, cyfry, '-' i '_'.
-          username_help: Nazwa użytkownika będzie wyświetlać się przy Twoich wpisach na Platformie.
+          nickname_help: To systemowa, unikalna nazwa Twojego konta na Platformie. Będzie wyświetlana tylko na Twojej stronie profilowej. Po niej inni użytkownicy będą mogli Cię wyszukać by nawiązać z Tobą kontakt, dlatego dobrze, aby była łatwa do zapamiętania np. pierwsza litera imienia i nazwisko (j_kowalski). Może zawierać tylko litery, cyfry, '-' i '_'.
+          username_help: Nazwa użytkownika wyświetlana będzie przy Twoich wpisach na Platformie. Nazwa ta będzie przekierowywać do Twojego konta, kiedy inni użytkownicy będą chcieli z Tobą nawiązać kontakt czy też obserwować Twoją aktywność.
       registrations:
         new:
           newsletter: Wyrażam zgodę na otrzymywanie newslettera o ważnych wydarzeniach i informacjach dotyczących Platformy.
-          nickname_help: To systemowa, unikalna nazwa Twojego konta na Platformie. Będzie wyświetlać się tylko na Twojej stronie profilowej. Po niej inni użytkownicy będą mogli Cię wyszukać, dlatego dobrze, aby była łatwa do zapamiętania np. pierwsza litera imienia i nazwisko (j_kowalski). Może zawierać tylko litery, cyfry, '-' i '_'.
+          nickname_help: To systemowa, unikalna nazwa Twojego konta na Platformie. Będzie wyświetlana tylko na Twojej stronie profilowej. Po niej inni użytkownicy będą mogli Cię wyszukać by nawiązać z Tobą kontakt, dlatego dobrze, aby była łatwa do zapamiętania np. pierwsza litera imienia i nazwisko (j_kowalski). Może zawierać tylko litery, cyfry, '-' i '_'.
           password_help: "Minimalna liczba znaków: %{minimun_characters}; nie może być zbyt powszechne (np. 123456) i musi różnić się od Twojej nazwy konta i adresu e-mail."
-          subtitle: Zarejestruj się, aby brać  udział w dyskusjach, spotkaniach i być na bieżąco ze wszystkimi procesami partycypacyjnymi w Gdyni.
+          subtitle: Chcesz otrzymywać powiadomienia o procesach konsultacyjnych i działaniach zespołów oraz komentować treści czy komunikować się z innymi użytkownikami? Zarejestruj się!
+          subtitle_two: |-
+            Jeśli masz Kartę Mieszkańca - wpisz jej numer. Dzięki temu potwierdzisz swoje konto, a na Twoim profilu pojawi się specjalny status – użytkownik potwierdzony.
+            <br>
+            <small>Jeśli nie masz jeszcze Karty Mieszkańca – <a href="https://karta.um.gdynia.pl/" title="Karta mieszkańca" target="_blank">TU</a> możesz ją złożyć.</small>
           terms: regulamin korzystania
           tos_title: Warunki korzystania z Gdyńskiej Platformy Dialogu
-          username_help: Nazwa użytkownika będzie wyświetlać się przy Twoich wpisach na Platformie.
+          username_help: Nazwa użytkownika wyświetlana będzie przy Twoich wpisach na Platformie. Nazwa ta będzie przekierowywać do Twojego konta, kiedy inni użytkownicy będą chcieli z Tobą nawiązać kontakt czy też obserwować Twoją aktywność.
     doorkeeper:
       authorizations:
         new:

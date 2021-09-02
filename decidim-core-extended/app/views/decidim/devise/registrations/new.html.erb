@@ -9,10 +9,13 @@
   <div class="row collapse">
     <div class="columns large-8 large-centered text-center page-title">
       <h1><%= t(".sign_up") %></h1>
-      <p>
+      <p class='sign-up-parahraph'>
         <%= t(".subtitle") %>
       </p>
-      <p>
+      <p class='sign-up-parahraph'>
+        <%= t(".subtitle_two").html_safe %>
+      </p>
+      <p class='sign-up-parahraph'>
         <%= t(".already_have_an_account?") %>
         <%= link_to t(".sign_in"), new_user_session_path %>
       </p>

@@ -29,6 +29,9 @@
 .do-not-show { display: none; }
 #inh_card__newsletter, #inh_card__tos { text-align: center; }
 
+.sign-up-parahraph { line-height: 1.2; }
+.sign-up-parahraph small { font-size: 80%; }
+
 /************* static pages *************/
 
 .card--full__image.static_ppage {

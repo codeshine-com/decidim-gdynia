@@ -13,12 +13,12 @@
       </div>
 
       <div class="field <%= form.card_number_possesion ? nil : 'hidden' %>">
-        <%= f.number_field :card_number, help_text: t("decidim.devise.registrations.new.card_number_help") %>
+        <%= f.number_field :card_number, help_text: t("decidim.devise.registrations.new.card_number_help").html_safe %>
       </div>
 
       <div class="user-person">
         <div class="field">
-          <%= f.text_field :name, help_text: t("decidim.devise.registrations.new.username_help") %>
+          <%= f.text_field :name, help_text: t("decidim.devise.registrations.new.username_help").html_safe %>
         </div>
       </div>
 
