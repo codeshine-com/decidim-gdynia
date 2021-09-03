@@ -68,6 +68,17 @@ a:focus { outline: none; }
 .hide-for-medium .topbar__user__login a { color: #e8e8e8; }
 .off-canvas .close-button { color: #2c2930; }
 
+.logo-cityhall {
+  top: 0;
+  right: 10px;
+  margin-top: 0;
+  height: 77px;
+}
+
+.logo-cityhall img {
+    height: 77px !important;
+}
+
 
 /******* space shared elements ******/
 

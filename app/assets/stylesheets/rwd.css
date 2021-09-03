@@ -1,5 +1,17 @@
 @media only screen and (max-width: 640px) {
+
  .floating-helper__trigger {
-  bottom: initial; 
+   bottom: initial;
  }
+
+ .title-bar .logo-cityhall {
+    right: 0;
+    top: 0;
+    height: 50px;
+    margin-top: -37px;
+  }
+
+  .title-bar .logo-cityhall img {
+    height: 50px !important;
+  }
 }

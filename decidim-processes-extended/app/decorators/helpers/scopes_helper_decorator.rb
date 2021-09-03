@@ -8,7 +8,7 @@ Decidim::ScopesHelper.class_eval do
                       scopes_for_select(current_organization),
                       legend_title: t("decidim.scopes.scopes"),
                       label: "",
-                      multiple: controller_name == 'participatory_processes',
+                      multiple: false,
                       selected: filter.try(:scope_id),
                       include_blank: t(".select_a_scope")
 
