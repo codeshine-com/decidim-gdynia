@@ -23,7 +23,7 @@ pl:
     passwords:
       edit:
         password_help: "Minimalna liczba znaków: %{minimun_characters}; nie może być zbyt powszechne (np. 123456) i musi różnić się od Twojej nazwy konta i adresu e-mail."
-    user_activities_info: Tu wyświetlają się informacje o wszystkich dzianiach podjętych przez Ciebie na Platformie.
+    user_activities_info: Tu wyświetlają się informacje o wszystkich działaniach podjętych przez Ciebie na Platformie.
     user_following_info: Tu wyświetlają się informacje o wszystkich zmianach w działaniach na Platformie, o których otrzymujesz powiadomienia.
   activemodel:
     attributes:
