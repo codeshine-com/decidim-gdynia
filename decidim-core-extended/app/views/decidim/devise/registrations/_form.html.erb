@@ -5,7 +5,7 @@
       <%= form_required_explanation %>
 
       <div class="field">
-        <%= f.email_field :email, help_text: t("decidim.devise.registrations.new.email_help") %>
+        <%= f.email_field :email, help_text: t("decidim.devise.registrations.new.email_help").html_safe %>
       </div>
 
       <div class="field">

@@ -11,12 +11,12 @@ pl:
         gender: Pleć
         birth_year: Rok urodzenia
         district: Dzielnica
-        inhabitant_card_number: Numer karty mieszkańca
-        card_number: Numer karty mieszkańca
-        card_number_possesion: Już mam kartę mieszkańca
+        inhabitant_card_number: Numer Karty Mieszkańca
+        card_number: Numer Karty Mieszkańca
+        card_number_possesion: Mam Kartę Mieszkańca
         inhabitant_card_number_error: Dane nie zostaly potwierdzone przez platformę Karta Mieszkańca
         inhabitant_officialization_badge: Użytkownik potwierdzony
-        inhabitant_card_taken_error: Zarejestrowano juz konto na ten numer karty
+        inhabitant_card_taken_error: Zarejestrowano juz konto na ten numer Karty Mieszkańca
         genders:
           female: Kobieta
           male: Mężczyzna
@@ -56,9 +56,9 @@ pl:
         authorizations:
           show:
             authenticate_account: Autoryzuj konto
-            card_number: Numer karty
+            card_number: Numer Karty Mieszkańca
             email: Adres email
-            email_hint: Podaj adres email, na który zarejestrowana została Twoja karta mieszkańca
+            email_hint: Podaj adres email, na który zarejestrowana została Twoja Karta Mieszkańca
     devise:
       invitations:
         edit:
@@ -69,12 +69,12 @@ pl:
           rodo_agreements: |-
             Zapoznałem/am się z zasadami przetwarzania moich danych osobowych.<br>
             <small>Wyrażam zgodę na przetwarzanie moich danych osobowych przez Laboratorium Innowacji Społecznych w celu założenia konta na Gdyńskiej Platformie Dialogu oraz korzystania
-            z jej funkcjonalności w zakresie adresu e-mail, nazwy konta, nazwy użytkownika oraz numeru karty mieszkańca, na podstawie art. 6 ust. 1 lit. a) Rozporządzenia Parlamentu Europejskiego
+            z jej funkcjonalności w zakresie adresu e-mail, nazwy konta, nazwy użytkownika oraz numeru Karty Mieszkańca, na podstawie art. 6 ust. 1 lit. a) Rozporządzenia Parlamentu Europejskiego
             i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 roku w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz
             uchylenia Dyrektywy 95/46/WE (Ogólne Rozporządzenie o Ochronie Danych) z dnia 27 kwietnia 2016 roku, (Dz.Urz.UE.L Nr 119, strona 1).<br>
             Więcej na temat przetwarzania Twoich danych osobowych znajdziesz %{link}.</small>
           rodo_link: tutaj
-          show_inhabitant: Zarejestruj się kartą mieszkańca
+          show_inhabitant: Zarejestruj się Kartą Mieszkańca
           show_default: Zarejestruj się klasycznie
           card_number_help: Podaj numer Karty Mieszkańca <b>zarejestrowany na email, który podałeś wyżej</b>.
           email_help: <b>Zakładając konto z Kartą Mieszkańca</b>, podaj email, na który jest ona zarejestrowana.
@@ -122,11 +122,11 @@ pl:
         change_password: Zmień hasło
         delete_group: Usuń grupę
         inhabitant_card_authorization_info: |-
-          Masz możliwość potwierdzenia swojego konta kartą mieszkańca. Jest to dobrowolne, opcjonalne potwierdzenie, że jesteś mieszkańcem Gdyni.<br>
+          Masz możliwość potwierdzenia swojego konta Kartą Mieszkańca. Jest to dobrowolne, opcjonalne potwierdzenie, że jesteś mieszkańcem Gdyni.<br>
           Dzięki temu na Twoim profilu i przy Twojej nazwie użytkownika będzie widniał specjalny status – %{img} Użytkownik potwierdzony.<br>
           Docelowo Platforma będzie również zintegrowana z Kartą Mieszkańca funkcjonalnie, co ułatwi Ci korzystanie z Platformy i ułatwi uczestniczenie w ważnych procesach.
-        inhabitant_card_authorization: Potwierdzenie kartą mieszkańca
-        inhabitant_card_authorization_text: Twoje konto zostało zautoryzowane przy pomocy karty mieszkańca
+        inhabitant_card_authorization: Potwierdzenie Kartą Mieszkańca
+        inhabitant_card_authorization_text: Twoje konto zostało zautoryzowane przy pomocy Karty Mieszkańca
         inhabitant_card_authorization_success: Autoryzowano
       footer:
         ue_logotypes: Logotypy UE

@@ -325,7 +325,7 @@ pl:
           subtitle_two: |-
             Jeśli masz Kartę Mieszkańca - wpisz jej numer. Dzięki temu potwierdzisz swoje konto, a na Twoim profilu pojawi się specjalny status – użytkownik potwierdzony.
             <br>
-            <small>Jeśli nie masz jeszcze Karty Mieszkańca – <a href="https://karta.um.gdynia.pl/" title="Karta mieszkańca" target="_blank">TU</a> możesz ją złożyć.</small>
+            <small>Jeśli nie masz jeszcze Karty Mieszkańca – <a href="https://karta.um.gdynia.pl/" title="Karta Mieszkańca" target="_blank">TU</a> możesz ją złożyć.</small>
           terms: regulamin korzystania
           tos_title: Warunki korzystania z Gdyńskiej Platformy Dialogu
           username_help: Nazwa użytkownika wyświetlana będzie przy Twoich wpisach na Platformie. Nazwa ta będzie przekierowywać do Twojego konta, kiedy inni użytkownicy będą chcieli z Tobą nawiązać kontakt czy też obserwować Twoją aktywność.
