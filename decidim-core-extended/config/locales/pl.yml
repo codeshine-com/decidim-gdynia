@@ -55,7 +55,7 @@ pl:
       extended:
         authorizations:
           show:
-            authenticate_account: Autoryzuj konto
+            authenticate_account: Potwierdź konto
             card_number: Numer Karty Mieszkańca
             email: Adres email
             email_hint: Podaj adres email, na który zarejestrowana została Twoja Karta Mieszkańca

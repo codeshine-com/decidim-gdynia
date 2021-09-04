@@ -27,6 +27,8 @@ pl:
     user_following_info: Tu wyświetlają się informacje o wszystkich zmianach w działaniach na Platformie, o których otrzymujesz powiadomienia.
   activemodel:
     attributes:
+      agenda:
+        visible: Widoczny
       address:
         full_address: Pełen adres do korespondencji
       assembly:
