@@ -1,0 +1,2 @@
+<% new_default_filters = params[:filter] && params[:filter][:date].present? ? params[:filter][:date] : default_date_filter %>
+<%= cell "decidim/participatory_processes/process_filters", default_filter: new_default_filters %>

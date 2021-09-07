@@ -259,6 +259,9 @@ input:checked ~ .switch-paddle { background: var(--secondary); }
 #highlighted-processes .card--full__image .button.expanded:focus,
 #highlighted-processes .card--full__image .button.expanded:hover { color: #fff; background-color: var(--secondary); }
 
+#button-text { overflow: hidden; line-height: 2.5; }
+.inline-filters label { align-items: center; }
+
 /******* assemblies *******/
 
 #assemblies-filter.inline-filters .dropdown-pane.is-open { padding: 5px 0px;  }

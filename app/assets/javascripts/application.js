@@ -14,4 +14,5 @@
 //= require activestorage
 //= require decidim
 //=require decidim/core/extended/application.js
+//=require decidim/assemblies/extended/application.js
 //= require_tree .
