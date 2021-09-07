@@ -8,7 +8,7 @@ pl:
       static_page_topic:
         cover: Obraz główny
       user:
-        gender: Pleć
+        gender: Płeć
         birth_year: Rok urodzenia
         district: Dzielnica
         inhabitant_card_number: Numer Karty Mieszkańca
