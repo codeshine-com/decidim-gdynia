@@ -1,10 +1,40 @@
+@media only screen and (max-width: 1444px) {
+  .title-bar .logo-cityhall {
+    top: 17px;
+    height: 50px;
+  }
+  .title-bar .logo-cityhall img { height: 50px !important; }
+}
+
+@media only screen and (max-width: 1350px) {
+  .row.column.topbar {
+    padding-right: 40px;
+  }
+  .topbar__admin__link.topbar__edit__link {
+    right: 40px;
+    position: relative;
+  }
+
+  .topbar__user.show-for-medium { margin-left: 15px; }
+  .topbar__dropmenu.topbar__user__logged { margin-left: 15px; }
+}
+
+@media only screen and (max-width: 760px) {
+  .topbar__search { max-width: 150px; }
+  .topbar__admin__link.topbar__edit__link { display: none; }
+}
+
 @media only screen and (max-width: 640px) {
 
- .floating-helper__trigger {
-   bottom: initial;
- }
+  .topbar__search { max-width: 220px; }
+  .topbar__admin__link.topbar__edit__link { display: flex; position: static; }
+  .row.column.topbar { padding-right: 0.625rem; }
 
- .title-bar .logo-cityhall {
+  .floating-helper__trigger {
+    bottom: initial;
+  }
+
+  .title-bar .logo-cityhall {
     right: 0;
     top: 0;
     height: 50px;
