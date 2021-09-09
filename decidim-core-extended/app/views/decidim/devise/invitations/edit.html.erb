@@ -10,7 +10,7 @@
 
   <div class="row">
     <div class="columns large-6 medium-10 medium-centered">
-      <%= decidim_form_for resource, namespace: "invitation", as: resource_name, url: invitation_path(resource_name, invite_redirect: params[:invite_redirect]), html: { method: :put, class: "register-form new_user" } do |f| %>
+      <%= decidim_form_for resource, namespace: "invitation", as: resource_name, url: invitation_path(resource_name, invite_redirect: params[:invite_redirect]), html: { method: :put, class: "register-form new_user", autocomplete: "off" } do |f| %>
         <div class="card">
           <div class="card__content">
             <legend><%= t("sign_up_as.legend", scope: "decidim.devise.registrations.new") %></legend>
@@ -21,17 +21,17 @@
 
             <div class="user-nickname">
               <div class="field">
-                <%= f.text_field :nickname, help_text: t("devise.invitations.edit.nickname_help", organization: current_organization.name), required: "required", prefix: { value: "@", small: 1, large: 1 } %>
+                <%= f.text_field :nickname, help_text: t("devise.invitations.edit.nickname_help", autocomplete: "off", organization: current_organization.name), required: "required", prefix: { value: "@", small: 1, large: 1 } %>
               </div>
             </div>
 
             <% if f.object.class.require_password_on_accepting %>
               <div class="field">
-                <p><%= f.password_field :password, help_text: t(".password_help", minimun_characters: ::Devise.password_length.min), required: "required", minlength: ::Devise.password_length.min, maxlength: ::Devise.password_length.max %></p>
+                <p><%= f.password_field :password, help_text: t(".password_help", minimun_characters: ::Devise.password_length.min), required: "required", autocomplete: "off", minlength: ::Devise.password_length.min, maxlength: ::Devise.password_length.max %></p>
               </div>
 
               <div class="field">
-                <p><%= f.password_field :password_confirmation, required: "required", minlength: ::Devise.password_length.min, maxlength: ::Devise.password_length.max %></p>
+                <p><%= f.password_field :password_confirmation, required: "required", autocomplete: "off", minlength: ::Devise.password_length.min, maxlength: ::Devise.password_length.max %></p>
               </div>
             <% end %>
           </div>
