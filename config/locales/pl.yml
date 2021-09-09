@@ -409,6 +409,9 @@ pl:
             location_hints_help: "Dodatkowe informacje. Na przykład: piętro budynku lub platforma komunikacyjna"
       meetings:
         filters:
+          origin_values:
+            citizens: Mieszkańcy/Użytkownicy
+            official: Jednostka miejska
           type_values:
              hybrid: Łączony
              in_person: Stacjonarny
@@ -476,6 +479,9 @@ pl:
             evaluating: Weryfikacja
             rejected: Odrzucona
       application_helper:
+        filter_origin_values:
+          citizens: Mieszkańcy/Użytkownicy
+          official: Jednostka miejska 
         filter_state_values:
           accepted: Przyjęta
           evaluating: Weryfikacja
