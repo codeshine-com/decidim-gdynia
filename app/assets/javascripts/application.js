@@ -16,3 +16,18 @@
 //=require decidim/core/extended/application.js
 //=require decidim/assemblies/extended/application.js
 //= require_tree .
+
+$( function() {
+  if ( $('.tooltip').length > 0 ) {
+    $(document).keyup(function(e) {
+      if (e.keyCode == 27) {
+        //27 = keycode for escape
+        $('.tooltip').each( function() {
+          $(this).attr('aria-hidden', true);
+          $(this).attr('data-is-active', false);
+          $(this).css('display', 'none');
+        });
+      }
+    });
+  }
+});
