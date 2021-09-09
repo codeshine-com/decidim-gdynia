@@ -6,6 +6,10 @@ pl:
         name: Spotkania
     meetings:
       admin:
+        agenda:
+          form:
+            title: Tytuł
+            visible: Widoczny
         agenda_item:
           title: Nazwa
           duration: Czas trwania
