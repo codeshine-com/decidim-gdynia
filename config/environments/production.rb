@@ -104,8 +104,8 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  if ENV["SITE_PASSWORD"].present?
-    # Block users that do not know a given password
-    config.middleware.use RackPassword::Block, auth_codes: [ENV["SITE_PASSWORD"]]
-  end
+  # if ENV["SITE_PASSWORD"].present?
+  #   # Block users that do not know a given password
+  #   config.middleware.use RackPassword::Block, auth_codes: [ENV["SITE_PASSWORD"]]
+  # end
 end
