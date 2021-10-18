@@ -1,0 +1,32 @@
+<% add_decidim_page_title(translated_attribute(current_participatory_space.title)) %>
+
+<% content_for :secondary_nav do %>
+  <%#= participatory_process_menu.render do
+    public_page_link decidim_participatory_processes.participatory_process_path(current_participatory_space)
+  end %>
+
+  <div class="secondary-nav secondary-nav--subnav">
+    <ul>
+      <% if current_participatory_space.is_a?(Decidim::ParticipatoryProcess) %>
+        <%= public_page_link decidim_participatory_processes.participatory_process_path(current_participatory_space) %>
+        <li><%= link_to 'Powrót', decidim_admin_participatory_processes.components_path(current_participatory_space), style: 'text-align: center;' %></li>
+      <% elsif current_participatory_space.is_a?(Decidim::Assembly) %>
+        <%= public_page_link decidim_assemblies.assembly_path(current_participatory_space) %>
+        <li><%= link_to 'Powrót', decidim_admin_assemblies.components_path(current_participatory_space), style: 'text-align: center;' %></li>
+      <% end %>
+      <%= Decidim::Admin.view_hooks.render(:admin_secondary_nav, deep_dup) %>
+    </ul>
+  </div>
+<% end %>
+
+<%= render "layouts/decidim/admin/application" do %>
+  <div class="process-title">
+    <div class="process-title-content">
+      <%= link_to translated_attribute(current_participatory_space.title), decidim_participatory_processes.participatory_process_path(current_participatory_space), target: "_blank" %>
+    </div>
+  </div>
+
+  <div class="process-content">
+    <%= yield %>
+  </div>
+<% end %>
