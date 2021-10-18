@@ -1,0 +1,82 @@
+<% add_decidim_page_title(t("decidim.admin.titles.dashboard")) %>
+
+<h2 class="card-title">
+  <%= t "decidim.admin.titles.dashboard" %>
+</h2>
+
+<div class="content">
+  <p><%= t ".welcome" %></p>
+
+  <% unless current_user.admin_terms_accepted? %>
+    <%= cell("decidim/announcement", announcement_body, callout_class: current_user.admin_terms_accepted? ? "success" : "warning" ) %>
+
+    <article class="card">
+      <div class="card-section grid-x grid-margin-x">
+        <div class="cell medium-12">
+
+          <div class="content">
+            <%= admin_terms_of_use_body %>
+          </div>
+        </div>
+
+        <% unless current_user.admin_terms_accepted? %>
+          <h4 class="cell medium-12 text-center">
+            <%= t("decidim.admin.admin_terms_of_use.actions.title") %>
+          </h4>
+
+          <div class="cell medium-6 small-order-2 medium-order-1 text-center">
+            <%= button_to_refuse_admin_terms %>
+          </div>
+
+          <div class="cell medium-6 small-order-1 medium-order-2 text-center">
+            <%= button_to_accept_admin_terms %>
+          </div>
+        <% end %>
+      </div>
+    </article>
+  <% end %>
+
+  <div class="grid-x grid-margin-x">
+    <% if current_user.admin? && current_user.organization&.id == current_organization.id %>
+      <div class="cell small-12 medium-6 large-4">
+        <%= render(
+          partial: "decidim/admin/users_statistics/users_count",
+          locals: {
+            result: users_counter
+          }
+        ) %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="grid-x grid-margin-x">
+    <% if allowed_to? :read, :metrics %>
+      <div class="cell small-6">
+        <%= render(
+          partial: "decidim/admin/metrics/metrics",
+          locals: {
+            metrics_presenter: metrics_presenter,
+            show_link_to_more: true
+          }
+        ) %>
+      </div>
+    <% end %>
+
+    <% if allowed_to? :read, :admin_log %>
+      <div class="cell small-6">
+        <%= render partial: "decidim/admin/logs/logs_list", locals: { logs: latest_action_logs } %>
+        <% if latest_action_logs.any? %>
+          <div class="text-center"><%= link_to t(".view_more_logs"), logs_path %></div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
+  <% if current_user.admin_terms_accepted? %>
+    <p class="text-right">
+      <small>
+        <%= link_to( t("title", scope: "decidim.admin.admin_terms_of_use"), admin_terms_show_path) %>
+      </small>
+    </p>
+  <% end %>
+</div>
