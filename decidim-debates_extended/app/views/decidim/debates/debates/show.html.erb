@@ -76,20 +76,24 @@ edit_link(
             <% end %>
           </span>
         </div>
-
-        <div class="definition-data__item definition-data__item--double">
+        <% if current_organization.user_groups_enabled %>
+          <div class="definition-data__item definition-data__item--double">
+        <% else %>
+          <div class="definition-data__item definition-data__item">
+        <% end %>
           <span class="definition-data__title">
             <%= t ".participants_count" %>
           </span>
           <span class="definition-data__number"><%= debate_presenter.participants_count %></span>
         </div>
-
-        <div class="definition-data__item definition-data__item--double">
-          <span class="definition-data__title">
-            <%= t ".groups_count" %>
-          </span>
-          <span class="definition-data__number"><%= debate_presenter.groups_count %></span>
-        </div>
+        <% if current_organization.user_groups_enabled %>
+          <div class="definition-data__item definition-data__item--double">
+            <span class="definition-data__title">
+              <%= t ".groups_count" %>
+            </span>
+            <span class="definition-data__number"><%= debate_presenter.groups_count %></span>
+          </div>
+        <% end %>
       </div>
     </div>
     <%= resource_reference(debate) %>
