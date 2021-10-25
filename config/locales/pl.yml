@@ -62,9 +62,13 @@ pl:
         weight: Kolejność na stronie
       area:
         area_type_id: Typ kategorii
+      blog_post:
+        title: Tytuł
       close_meeting:
         attending_organizations: Uczestniczyli
         proposals: Propozycje
+      debate:
+        scope_id: Obszar
       decidim/user:
         name: Nazwa konta
       group:
@@ -481,7 +485,7 @@ pl:
       application_helper:
         filter_origin_values:
           citizens: Mieszkańcy/Użytkownicy
-          official: Jednostka miejska 
+          official: Jednostka miejska
         filter_state_values:
           accepted: Przyjęta
           evaluating: Weryfikacja
