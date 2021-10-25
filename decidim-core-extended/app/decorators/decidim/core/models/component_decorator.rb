@@ -28,7 +28,7 @@ Decidim::Component.class_eval do
     if private?
       return user && participatory_space.participatory_space_private_users.exists?(decidim_user_id: user.id)
     else
-      return false
+      return true
     end
   end
 end

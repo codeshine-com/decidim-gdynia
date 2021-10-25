@@ -8,7 +8,7 @@ module Decidim
 
         unsearchable_resources_manifest_names = [
           'initiative', 'conference', 'consultation', 'voting',
-          'budget'
+          'budget', 'sortitions'
         ]
         unsearchable_resources_manifest_names.each do |manifest_name|
           resourcable = Decidim.find_resource_manifest(manifest_name)

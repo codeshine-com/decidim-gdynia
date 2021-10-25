@@ -11,4 +11,4 @@ pl:
         not_allowed: Nie możesz zobaczyć tej strony
       proposals:
         vote_button:
-          private_component: Głosowanie ograniczone do użytkowników prywatnych
+          private_component: Poparcia ograniczone do użytkowników prywatnych
