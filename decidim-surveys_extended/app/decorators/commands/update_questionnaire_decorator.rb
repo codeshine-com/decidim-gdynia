@@ -2,21 +2,6 @@
 
 Decidim::Forms::Admin::UpdateQuestionnaire.class_eval do
 
-  def call
-    return broadcast(:invalid) if @form.invalid?
-
-    Decidim::Forms::Questionnaire.transaction do
-      if @questionnaire.questions_editable?
-        update_questionnaire_questions
-        delete_answers unless @questionnaire.published?
-      end
-
-      update_questionnaire
-    end
-
-    broadcast(:ok)
-  end
-
   private
 
   def update_questionnaire_question(form_question)
@@ -29,7 +14,9 @@ Decidim::Forms::Admin::UpdateQuestionnaire.class_eval do
       max_choices: form_question.max_choices,
       max_characters: form_question.max_characters,
       # custom
-      metrics: form_question.metrics
+      metrics: form_question.metrics,
+      question_image: form_question.question_image.presence || nil,
+      remove_question_image: form_question.remove_question_image
     }
 
     update_nested_model(form_question, question_attributes, @questionnaire.questions) do |question|

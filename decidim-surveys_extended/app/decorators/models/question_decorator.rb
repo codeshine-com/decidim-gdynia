@@ -5,6 +5,10 @@ Decidim::Forms::Question.class_eval do
 
   after_create :set_metrics_answers, if: :metrics?
 
+  delegate :organization, to: :questionnaire, allow_nil: true
+
+  mount_uploader :question_image, Decidim::ImageUploader
+
   def set_metrics_answers
     if gender?
       Decidim::User.const_get(:GENDERS).each do |g|
@@ -37,9 +41,5 @@ Decidim::Forms::Question.class_eval do
 
   def district?
     metrics == 'district'
-  end
-
-  def organization
-    questionnaire&.questionnaire_for&.organization
   end
 end

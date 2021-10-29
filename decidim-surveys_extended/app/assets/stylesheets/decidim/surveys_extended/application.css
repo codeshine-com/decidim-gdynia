@@ -27,3 +27,13 @@
   font-weight: normal;
   font-size: 85%;
 }
+
+.questionnaires-image-field .external-link-container {
+  padding: 5px 0;
+  margin-bottom: 10px;
+}
+.questionnaires-image-field .external-link-container img {
+  max-height: 150px;
+  margin-bottom: 0;
+  border-radius: 4px;
+}

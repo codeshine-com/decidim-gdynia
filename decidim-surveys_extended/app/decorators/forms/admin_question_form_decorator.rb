@@ -2,10 +2,15 @@
 
 Decidim::Forms::Admin::QuestionForm.class_eval do
   # include ActiveModel::Validations::Callbacks
+  include Decidim::HasUploadValidations
 
   METRICS = %w(gender age district).freeze
 
   attribute :metrics, String
+  attribute :question_image
+  attribute :remove_question_image
+
+  # validates :question_image, passthru: { to: Decidim::Forms::Question }
 
   def metrics?
     METRICS.include? metrics
