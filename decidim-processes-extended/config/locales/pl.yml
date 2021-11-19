@@ -21,7 +21,9 @@ pl:
       scopes:
         form:
           promoted_hint: Zaznacz, żeby na listach w panelu administratora obszar pojawiał się na górze listy
-    participatory_processes:
+      newsletters:
+        select_recipients_to_deliver:
+          select_a_scope: obszar zainteresowań
       admin:
         participatory_processes:
           form:

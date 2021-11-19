@@ -9,7 +9,7 @@ Decidim::ScopesHelper.class_eval do
                       legend_title: t("decidim.scopes.scopes"),
                       label: "",
                       multiple: false,
-                      selected: filter.try(:scope_id),
+                      selected: form.try(:scope_id),
                       include_blank: t(".select_a_scope")
 
   end
