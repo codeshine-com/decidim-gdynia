@@ -8,6 +8,7 @@ pl:
         contact_email: Adres e-mail
         contact_phone: Telefon
         facebook_handler: Facebook
+        hashtag_help: "Należy wpisać tylko jeden hashtag bez znaku # np. dialoggdynia"
         social_handlers_help: Do adresu z Facebooka należy wpisać tylko końcówkę nazwy (to, co ma znaleźć się na końcu po znaku „/”). System automatycznie zaciąga jego początek.
         related_scope_ids: Obszary
       scope:
@@ -23,7 +24,7 @@ pl:
           promoted_hint: Zaznacz, żeby na listach w panelu administratora obszar pojawiał się na górze listy
       newsletters:
         select_recipients_to_deliver:
-          select_a_scope: obszar zainteresowań
+          select_a_scope: Wybierz obszar
       admin:
         participatory_processes:
           form:
@@ -42,8 +43,8 @@ pl:
       admin:
         participatory_processes:
           form:
-            hashtag_help: Hashtag
-            social_handlers_help: Link do portalu
+            hashtag_help: "Należy wpisać tylko jeden hashtag bez znaku # np. dialoggdynia"
+            social_handlers_help: Do adresu z Facebooka należy wpisać tylko końcówkę nazwy (to, co ma znaleźć się na końcu po znaku „/”). System automatycznie zaciąga jego początek.
     shared:
       participatory_space_filters:
         filters:
