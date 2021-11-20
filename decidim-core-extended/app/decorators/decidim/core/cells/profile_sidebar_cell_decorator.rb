@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Decidim::ProfileSidebarCell.class_eval do
   include Rails.application.routes.mounted_helpers
 

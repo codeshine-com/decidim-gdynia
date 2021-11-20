@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Decidim::EndorsementButtonsCell.class_eval do
 
   def endorsements_blocked_or_user_can_not_participate?

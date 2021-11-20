@@ -20,5 +20,4 @@ Decidim::Assemblies::AssemblyMembersController .class_eval do
   def cadencies
     @cadencies = all_cadencies[1..-1]
   end
-
 end
