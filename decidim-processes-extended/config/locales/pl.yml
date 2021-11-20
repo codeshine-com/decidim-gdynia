@@ -43,6 +43,7 @@ pl:
         participatory_processes:
           form:
             hashtag_help: Hashtag
+            social_handlers_help: Link do portalu
     shared:
       participatory_space_filters:
         filters:
