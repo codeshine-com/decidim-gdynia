@@ -10,7 +10,7 @@ Decidim::ScopesHelper.class_eval do
                       label: "",
                       multiple: false,
                       selected: form.try(:scope_id),
-                      include_blank: t("decidim.admin.shared.settings_fields.select_a_scope")
+                      include_blank: t("decidim.admin.components.settings_fields.select_a_scope")
   end
 
   def scopes_picker_field(form, name, root: false, options: { checkboxes_on_top: true })
