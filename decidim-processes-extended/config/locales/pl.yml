@@ -45,6 +45,13 @@ pl:
           form:
             hashtag_help: "Należy wpisać tylko jeden hashtag bez znaku # np. dialoggdynia"
             social_handlers_help: Do adresu z Facebooka należy wpisać tylko końcówkę nazwy (to, co ma znaleźć się na końcu po znaku „/”). System automatycznie zaciąga jego początek.
+      show:
+        contact_address: Kontakt
+        contact_email: Adres e-mail
+        contact_phone: Telefon
+        facebook_handler: Facebook
+        facebook_title: Odwiedź proces na Facebook
+        social_networks: Portale społecznościowe
     shared:
       participatory_space_filters:
         filters:
