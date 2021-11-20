@@ -38,6 +38,11 @@ pl:
         facebook_handler: Facebook
         facebook_title: Odwiedź proces na Facebook
         social_networks: Portale społecznościowe
+    participatory_processes:
+      admin:
+        participatory_processes:
+          form:
+            hashtag_help: Hashtag
     shared:
       participatory_space_filters:
         filters:
