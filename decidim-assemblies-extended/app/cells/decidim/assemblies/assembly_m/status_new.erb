@@ -1,0 +1,15 @@
+<div class="card__status">
+  <ul class="card-data">
+    <% statuses.each do |status_name| %>
+      <li class="card-data__item <%= status_name %>_status">
+        <% if status_name == :creation_date %>
+          <strong>
+            <%= t('decidim.assemblies.show.cadency_start_date') %>
+          </strong>
+          <br>
+        <% end %>
+        <%= send("#{status_name}_status") %>
+      </li>
+    <% end %>
+  </ul>
+</div>
