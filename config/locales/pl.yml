@@ -20,6 +20,8 @@ pl:
         ignore: |-
           Jeśli nie chcesz zaakceptować zaproszenia, zignoruj ​​ten e-mail.<br />
           Twoje konto nie zostanie utworzone, dopóki nie klikniesz w powyższy link i nie ustawisz nazwy konta i hasła.
+        invited_you_as_private_user: "Zostałeś zaproszony do %{resource_type} %{invited_to} na Gdyńskiej Platformie Dialogu jako prywatny użytkownik. Możesz zaakceptować zaproszenie za pomocą poniższego linku."
+        someone_invited_you_as_private_user: "Zostałeś zaproszony do %{resource_type} %{invited_to} na Gdyńskiej Platformie Dialogu jako prywatny użytkownik. Możesz zaakceptować zaproszenie za pomocą poniższego linku."
     passwords:
       edit:
         password_help: "Minimalna liczba znaków: %{minimun_characters}; nie może być zbyt powszechne (np. 123456) i musi różnić się od Twojej nazwy konta i adresu e-mail."
@@ -144,6 +146,12 @@ pl:
   hello: "Witaj"
 
   decidim:
+    space_type_to_polish:
+      assembly: Zespołu
+      participatory_process: Procesu
+      consultation: Konsultacji
+      conference: Konferencji
+      initiative: Inicjatywy
     account:
       delete:
         alert: Nie można cofnąć tej czynności. Jeśli usuniesz konto, nie będzie można się już na nie logować. Będziesz mógł raz jeszcze założyć konto używając tych samych danych.
