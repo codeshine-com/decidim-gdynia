@@ -2,7 +2,6 @@
 
 Decidim::Proposals::CollaborativeDraftsController.class_eval do
 
-
   private
 
   # Available orders based on enabled settings

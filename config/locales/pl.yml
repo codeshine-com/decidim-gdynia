@@ -399,6 +399,7 @@ pl:
         show:
           questionnaire_answered:
             title: Dziękujemy za wypełnienie ankiety i podzielanie się swoimi uwagami!
+            title_for_private: Dziękujemy za wypełnienie ankiety!
             body: Jej wyniki będą opublikowane na Platformie Dialogu po zakończeniu procesu.
     meetings:
       admin:

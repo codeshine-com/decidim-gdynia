@@ -33,8 +33,12 @@
             <% if visitor_already_answered? %>
               <div class="section">
                 <div class="callout success">
-                  <h5><%= t(".questionnaire_answered.title") %></h5>
-                  <p><%= t(".questionnaire_answered.body") %></p>
+                  <% if current_component.participatory_space.can_participate?(current_user) %>
+                    <h5><%= t(".questionnaire_answered.title_for_private") %></h5>
+                  <% else %>
+                    <h5><%= t(".questionnaire_answered.title") %></h5>
+                    <p><%= t(".questionnaire_answered.body") %></p>
+                  <% end %>
                 </div>
               </div>
             <% else %>
