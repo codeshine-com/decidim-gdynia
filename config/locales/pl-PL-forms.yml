@@ -153,6 +153,7 @@ pl:
           questionnaire_not_published:
             body: Ten formularz nie został jeszcze opublikowany.
           tos_agreement: Biorąc udział akceptujesz Warunki korzystania z Platformy
+          saving: Zapisuję
       step_navigation:
         show:
           are_you_sure: Tego działania nie można cofnąć i nie będzie można edytować odpowiedzi. Jesteś pewny?
