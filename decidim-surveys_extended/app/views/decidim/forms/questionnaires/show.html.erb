@@ -146,3 +146,9 @@
 </div>
 
 <%= javascript_include_tag "decidim/forms/forms" %>
+<%= javascript_tag do %>
+  $('form.answer-questionnaire').on('submit', function() {
+    $('button:submit').attr('disabled', true);
+    $('button:submit').html('<%= t("decidim.forms.questionnaires.show.saving") %>');
+  });
+<% end %>
