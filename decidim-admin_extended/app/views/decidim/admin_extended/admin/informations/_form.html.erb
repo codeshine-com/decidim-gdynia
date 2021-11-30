@@ -1,0 +1,20 @@
+
+<div class="row column">
+  <%= form.text_field :name %>
+</div>
+
+<div class="row column">
+  <%= form.editor :body, rows: 3  %>
+</div>
+
+<div class="row column">
+  <%= form.text_field :lead, help_text: 'np. Weź udział w procesie!' %>
+</div>
+
+<div class="row column">
+  <%= form.url_field :link_url, help_text: 'Link musi zaczynać się od: https://' %>
+</div>
+
+<div class="row column">
+  <%= form.check_box :published %>
+</div>

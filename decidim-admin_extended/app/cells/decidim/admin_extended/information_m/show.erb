@@ -1,0 +1,11 @@
+<div class="column information-single-element">
+  <% if model.link_url.present? %>
+    <a class="card" href="<%= model.link_url %>">
+      <%= render :data %>
+    </a>
+  <% else model.link_url.present? %>
+    <div class="card">
+      <%= render :data %>
+    </div>
+  <% end %>
+</div>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_29_102757) do
+ActiveRecord::Schema.define(version: 2021_11_30_141354) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
@@ -88,6 +88,18 @@ ActiveRecord::Schema.define(version: 2021_10_29_102757) do
     t.index ["resource_type", "resource_id"], name: "index_action_logs_on_resource_type_and_id"
     t.index ["version_id"], name: "index_decidim_action_logs_on_version_id"
     t.index ["visibility"], name: "index_decidim_action_logs_on_visibility"
+  end
+
+  create_table "decidim_admin_extended_information", force: :cascade do |t|
+    t.string "name"
+    t.text "body"
+    t.string "lead"
+    t.string "link_url"
+    t.boolean "published", default: false
+    t.bigint "decidim_organization_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["decidim_organization_id"], name: "index_information_on_organization_id"
   end
 
   create_table "decidim_amendments", force: :cascade do |t|
@@ -1509,6 +1521,7 @@ ActiveRecord::Schema.define(version: 2021_10_29_102757) do
     t.index ["item_type", "item_id"], name: "index_versions_on_item_type_and_item_id"
   end
 
+  add_foreign_key "decidim_admin_extended_information", "decidim_organizations"
   add_foreign_key "decidim_area_types", "decidim_organizations"
   add_foreign_key "decidim_areas", "decidim_area_types", column: "area_type_id"
   add_foreign_key "decidim_areas", "decidim_organizations"

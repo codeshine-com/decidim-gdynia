@@ -1,2 +1,16 @@
 .promoted-scope { color: var(--secondary) }
 .promoted-scope.border { margin-bottom: 15px; }
+
+
+.icon.red {
+  color: #e66a5d;
+}
+.icon.green {
+  color: green;
+}
+
+.sliced-in-two {
+  vertical-align: top;
+  width: 49%;
+  display: inline-block;
+}

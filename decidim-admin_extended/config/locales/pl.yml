@@ -1,6 +1,47 @@
 pl:
+  activemodel:
+    attributes:
+      information:
+        name: Tytuł
+        body: Treść
+        link_url: Link
+        lead: Komunikat
+        published: Widoczna
   decidim:
     admin:
       block_user:
         new:
           new_name: Zablokowany użytkownik
+      models:
+        information:
+          fields:
+            name: Tutuł
+            body: Treść
+            published: Widoczny?
+      menu:
+        informations: Informacje
+      titles:
+        informations: Informacje
+      informations:
+        no_informations: Brak danych
+        update:
+          succes: Zapisano zmiany w informacji
+          error: NIe udało się zapisać zmian
+        create:
+          succes: Utworozno nową infromację
+          error: Nie udało się utworzyć informacji
+    admin_extended:
+      admin:
+        informations:
+          show:
+            title: Podglad
+            lead: Poniżej możesz zobaczyć, jak nowa wiadomość będzie się prezentowała w otoczeniu dwóch innych przykładowych
+          new:
+            title: Nowa informacja
+            create: Utwórz
+          edit:
+            title: Edytuj informację
+            update: Zapisz
+      content_blocks:
+        latest_informations:
+          name: Informacje
