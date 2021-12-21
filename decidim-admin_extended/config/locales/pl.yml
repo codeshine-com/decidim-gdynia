@@ -19,17 +19,17 @@ pl:
             body: Treść
             published: Widoczny?
       menu:
-        informations: Informacje
+        informations: Aktualności
       titles:
-        informations: Informacje
+        informations: Aktualności
       informations:
         no_informations: Brak danych
         update:
-          succes: Zapisano zmiany w informacji
+          succes: Zapisano zmiany w aktualizacji
           error: NIe udało się zapisać zmian
         create:
           succes: Utworozno nową infromację
-          error: Nie udało się utworzyć informacji
+          error: Nie udało się utworzyć aktualizacji
     admin_extended:
       admin:
         informations:
@@ -37,11 +37,11 @@ pl:
             title: Podglad
             lead: Poniżej możesz zobaczyć, jak nowa wiadomość będzie się prezentowała w otoczeniu dwóch innych przykładowych
           new:
-            title: Nowa informacja
+            title: Nowa aktualizacja
             create: Utwórz
           edit:
-            title: Edytuj informację
+            title: Edytuj aktualizację
             update: Zapisz
       content_blocks:
         latest_informations:
-          name: Informacje
+          name: Aktualności
