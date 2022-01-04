@@ -323,3 +323,19 @@ a img + .external-link-indicator { left: 5px; bottom: 15px; top: unset; }
   border-radius: 4px;
   margin-top: 7px;
 }
+
+.docs__container svg {
+  color: #cfcfcf;
+}
+
+.docs__container .directory-label {
+  padding: 15px 25px;
+  display: block;
+  font-size: 20px;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+}
+
+.docs__container .directory-label:hover {
+  filter: brightness(85%);
+}
