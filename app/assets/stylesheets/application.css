@@ -302,3 +302,24 @@ a img + .external-link-indicator { left: 5px; bottom: 15px; top: unset; }
 
 /******* surveys *********/
 .questionnaire-question_readonly em { display: none; }
+
+/******* processes ********/
+.process-header__phase .see-all-steps {
+  background-color: var(--secondary);
+  color: #fff;
+  text-transform: uppercase;
+  display: inline-block;
+  font-weight: bold;
+  border-radius: 4px;
+  margin-top: 7px;
+}
+
+.process-header__phase .steps-box-custom-button {
+  background-color: var(--primary);
+  color: #000;
+  text-transform: uppercase;
+  display: inline-block;
+  font-weight: bold;
+  border-radius: 4px;
+  margin-top: 7px;
+}

@@ -548,6 +548,8 @@ pl:
           take_part_in: Weź udział w procesie %{resource_name}
         promoted_process:
           take_part_in: Weź udział w procesie %{resource_name}
+      process_header_steps:
+        view_steps: Zobacz etapy procesu
       process_navigation:
         process_menu_item: O procesie
 
