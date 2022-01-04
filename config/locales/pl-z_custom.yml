@@ -39,8 +39,8 @@ pl:
         created_by: Utworzony przez
         created_by_other: Utworzony przez - inny
         creation_date: Data powołania
-        duration_other: Data zakończenia - inne
-        duration: Data zakończenia
+        duration_other: Koniec kadencji - inne
+        duration: Koniec kadencji
         internal_organisation: Organizacja prac
         private_space: Prywatny
         scopes_enabled: Włącz obszary
@@ -279,8 +279,8 @@ pl:
             # contact_address: Adres kontaktowy
             created_by: Utworzony przez
             description: Zakres działania
-            duration_other: Data zakończenia - inne
-            duration: Data zakończenia
+            duration_other: Koniec kadencji - inne
+            duration: Koniec kadencji
             other: Inne
             # next_meeting_date: Najbliższe posiedzenie
             # next_meeting_date_help: Nie wyświetli się, gdy data będzie w przeszłości
@@ -304,7 +304,7 @@ pl:
         description: Zakres działania
         created_by: Utworzony przez
         creation_date: Data powołania
-        duration: Data zakończenia
+        duration: Koniec kadencji
         internal_organisation: Organizacja prac
         # next_meeting_date: Najbliższe posiedzenie
         # team_service: Obsługa zespołu
