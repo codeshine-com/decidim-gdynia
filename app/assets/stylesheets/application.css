@@ -304,6 +304,9 @@ a img + .external-link-indicator { left: 5px; bottom: 15px; top: unset; }
 .questionnaire-question_readonly em { display: none; }
 
 /******* processes ********/
+.phase-date strong {
+  font-weight: bolder;
+}
 .process-header__phase .see-all-steps {
   background-color: var(--secondary);
   color: #fff;
