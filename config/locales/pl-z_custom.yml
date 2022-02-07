@@ -499,7 +499,7 @@ pl:
       pages:
         home:
           highlighted_processes:
-            participate_in: Weź udział w procesie %{resource_name}
+            participate_in: Więcej informacji o procesie %{resource_name}
       show:
         local_area: Jednostka odpowiedzialna
         developer_group: Inicjator
@@ -567,9 +567,9 @@ pl:
         link_label: nowej polityce prywatności portalu internetowego konsultujemy.gdynia.pl
       participatory_processes:
         participatory_process:
-          take_part_in: Weź udział w procesie %{resource_name}
+          take_part_in: Więcej informacji o procesie %{resource_name}
         promoted_process:
-          take_part_in: Weź udział w procesie %{resource_name}
+          take_part_in: Więcej informacji o procesie %{resource_name} 2
       process_header_steps:
         view_steps: Zobacz etapy procesu
       process_navigation:
