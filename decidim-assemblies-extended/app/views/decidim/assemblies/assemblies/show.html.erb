@@ -77,13 +77,25 @@ edit_link(
       <% if current_participatory_space.children.visible_for(current_user).count.positive? %>
         <section id="assemblies-grid" class="section row collapse">
           <h3 class="section-heading"><%= t("children", scope: "decidim.assemblies.show") %></h3>
-          <div class="row small-up-1 medium-up-2 large-up-2 card-grid">
-            <%= render partial: "decidim/assemblies/assembly", collection: current_participatory_space.children.visible_for(current_user).published %>
+          <div class="row small-up-1 medium-up-2 card-grid">
+            <% current_participatory_space.children.visible_for(current_user).each do |linked_assembly| %>
+              <%= render 'decidim/assemblies/assemblies/new_mini', assembly: linked_assembly %>
+            <% end %>
           </div>
         </section>
       <% end %>
 
-      <%= participatory_processes_for_assembly(assembly_participatory_processes) if assembly_participatory_processes.present? %>
+      <% if assembly_participatory_processes.any? %>
+        <div class="section row collapse related_processes">
+          <h4 class="section-heading"><%= t "related_processes", scope: "decidim.participatory_processes.show" %></h4>
+          <div class="row small-up-1 medium-up-2 card-grid">
+            <% assembly_participatory_processes.each do |related_process| %>
+              <%= render 'decidim/participatory_processes/participatory_processes/new_mini', participatory_process: related_process %>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+      <%#= participatory_processes_for_assembly(assembly_participatory_processes) if assembly_participatory_processes.present? %>
     </div>
 
     <div class="section columns medium-5 mediumlarge-4 large-3">
