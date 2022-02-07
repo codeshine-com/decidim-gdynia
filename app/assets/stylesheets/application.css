@@ -157,13 +157,14 @@ h4 small, .h4 small, h5 small, .h5 small, h6 small, .h6 small { color: #5A5358; 
 
 
 /******* cards ******/
-
 .card.card--mini, .card-grid .card, .card-grid .chart-tooltip,
 .card-grid .conference-registration, .card-grid .conference-speaker .speaker-bio,
 .conference-speaker .card-grid .speaker-bio,
 .card-grid .add-message, .card-grid .comment-thread { overflow: hidden; }
+.card.card--mini.mini-mini,
 #highlighted-processes .card.card--mini,
 #highlighted-assemblies .card.card--mini { background-color: #fff8e5; border-radius: 15px; color: #000; overflow: hidden; }
+.card.card--mini.mini-mini .card__link,
 #highlighted-processes .card.card--mini .card__link,
 #highlighted-assemblies .card.card--mini .card__link { color: #000; font-weight: bold; font-size: 1.2rem; }
 .card.card--mini:hover,
