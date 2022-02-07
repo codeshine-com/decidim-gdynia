@@ -7,6 +7,9 @@ pl:
             private_proposal: Propozycje prywatne
             transparent: Transparenta
     proposals:
+      collaborative_drafts:
+        index:
+          back_to_list: Powrót do listy propozycji
       proposal:
         not_allowed: Nie możesz zobaczyć tej strony
       proposals:
