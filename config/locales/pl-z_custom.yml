@@ -66,6 +66,8 @@ pl:
         area_type_id: Typ kategorii
       blog_post:
         title: Tytuł
+      category:
+        weight: Kolejność na stronie
       close_meeting:
         attending_organizations: Uczestniczyli
         proposals: Propozycje
@@ -134,7 +136,10 @@ pl:
     # events
     models:
       decidim/amendment_created_event: Dodano poprawkę
+      decidim/collaborative_draft_access_accepted_event: Zaakceptowano prośbę o dołączenie do wspólnego szkicu
+      decidim/collaborative_draft_access_requester_accepted_event: Zaakceptowano prośbę o dołączenie do wspólnego szkicu
       decidim/meetings/meeting_registration_notification_event: Rejestracja na spotkanie
+      decidim/role_assigned_to_assembly_event: Przypisano rolę administratora zespołu
       decidim/user_group_created_event: Utworzono grupę
       decidim/welcome_notification_event: Wiadomość powitalna
 
@@ -522,9 +527,22 @@ pl:
           evaluating: Weryfikacja
           not_answered: Zgłoszona
           rejected: Odrzucona
+      last_activity:
+        proposal_updated_at_html: "<span>Propozycja zaktualizowana o %{link}</span>"
       proposals:
         placeholder:
           address: 'ul. Żeromskiego 31, 81-346 Gdynia'
+        voting_rules:
+          vote_limit:
+            description: "Maksymalna ilość propozycji, które możesz wesprzeć: %{limit}."
+          proposal_limit:
+            description: "Maksymalna ilość propozycji, jakie możesz utworzyć: %{limit}."
+          threshold_per_proposal:
+            description: "Ilość wsparć konieczna do zaakceptowania propozycji: %{limit}."
+          can_accumulate_supports_beyond_threshold:
+            description: "Każda propozycja może uzyskać dodatkowe wsparcie ponad wymagane minimum."
+          minimum_votes_per_user:
+            supports_remaining: "Musisz wesprzeć inne propozycje, minimum: %{remaining_votes}."
     scopes:
       global: Zakres ogólny
     shared:
