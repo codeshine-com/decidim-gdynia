@@ -31,10 +31,10 @@ Decidim::Meetings::Meeting.class_eval do
   end
 
   def private_user?(user)
-    meeting.participatory_space.participatory_space_private_users.map(&:decidim_user_id).include?(user.id)
+    participatory_space.participatory_space_private_users.map(&:decidim_user_id).include?(user.id)
   end
 
   def space_admin?(user)
-    meeting.participatory_space.user_roles.map(&:decidim_user_id).include?(user.id)
+    participatory_space.user_roles.map(&:decidim_user_id).include?(user.id)
   end
 end
