@@ -97,7 +97,18 @@ a:hover, a:focus,
 .process-header__hashtag a { color: var(--primary); }
 .process-header__hashtag a:hover, .process-header__hashtag a:focus { color: #fff8e5; }
 
-.definition-data__title { color: var(--secondary); }
+.card.extra.definition-data {
+  background-color: #eeeeee;
+  text-align: left;
+}
+.definition-data__item.area {
+  text-align: center;
+}
+.definition-data__title {
+  color: var(--secondary);
+  font-weight: bold;
+  text-align: left;
+}
 
 .floating-helper-container { min-height: 20px; }
 #floating-helper-tip { z-index: 5; }
