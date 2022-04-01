@@ -20,9 +20,6 @@
         </div>
 
         <% unless current_user.admin_terms_accepted? %>
-          <h4 class="cell medium-12 text-center">
-            <%= t("decidim.admin.admin_terms_of_use.actions.title") %>
-          </h4>
 
           <div class="cell medium-6 small-order-2 medium-order-1 text-center">
             <%= button_to_refuse_admin_terms %>

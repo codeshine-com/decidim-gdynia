@@ -139,6 +139,7 @@ pl:
       decidim/collaborative_draft_access_accepted_event: Zaakceptowano prośbę o dołączenie do wspólnego szkicu
       decidim/collaborative_draft_access_requester_accepted_event: Zaakceptowano prośbę o dołączenie do wspólnego szkicu
       decidim/meetings/meeting_registration_notification_event: Rejestracja na spotkanie
+      decidim/participatory_process_role_assigned_event: Przypisano rolę administratora procesu
       decidim/role_assigned_to_assembly_event: Przypisano rolę administratora zespołu
       decidim/user_group_created_event: Utworzono grupę
       decidim/welcome_notification_event: Wiadomość powitalna
