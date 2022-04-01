@@ -39,8 +39,8 @@ pl:
         created_by: Utworzony przez
         created_by_other: Utworzony przez - inny
         creation_date: Data powołania
-        duration_other: Data zakończenia - inne
-        duration: Data zakończenia
+        duration_other: Koniec kadencji - inne
+        duration: Koniec kadencji
         internal_organisation: Organizacja prac
         private_space: Prywatny
         scopes_enabled: Włącz obszary
@@ -66,6 +66,8 @@ pl:
         area_type_id: Typ kategorii
       blog_post:
         title: Tytuł
+      category:
+        weight: Kolejność na stronie
       close_meeting:
         attending_organizations: Uczestniczyli
         proposals: Propozycje
@@ -134,7 +136,10 @@ pl:
     # events
     models:
       decidim/amendment_created_event: Dodano poprawkę
+      decidim/collaborative_draft_access_accepted_event: Zaakceptowano prośbę o dołączenie do wspólnego szkicu
+      decidim/collaborative_draft_access_requester_accepted_event: Zaakceptowano prośbę o dołączenie do wspólnego szkicu
       decidim/meetings/meeting_registration_notification_event: Rejestracja na spotkanie
+      decidim/role_assigned_to_assembly_event: Przypisano rolę administratora zespołu
       decidim/user_group_created_event: Utworzono grupę
       decidim/welcome_notification_event: Wiadomość powitalna
 
@@ -143,7 +148,29 @@ pl:
       decidim/user:
         nickname: Nazwa konta
 
-  hello: "Witaj"
+  date:
+    formats:
+      decidim_short: "%d.%m.%Y"
+      decidim_short_with_month_name_short: "%d %b %Y"
+      decidim_with_day_and_month_name: "%A %d %b %Y"
+      decidim_with_month_name: "%d %B %Y"
+      decidim_with_month_name_short: "%d %b"
+  formats:
+    day_of_month: "%b %d"
+    day_of_week: "%a"
+    day_of_week_long: "%a %e"
+    day_of_year: "%d.%m.%y"
+    decidim_day_of_year: "%d %B %Y"
+    decidim_short: "%d.%m.%Y %H:%M"
+    default: "%a, %d %b %Y %H:%M:%S %z"
+    devise:
+      mailer:
+        invitation_instructions:
+          accept_until_format: "%B %d, %Y %I:%M %p"
+    long: "%B %d, %Y %H:%M"
+    long_dashed: "%Y.%m.%d %H:%M:%S"
+    short: "%d.%m.%Y %H:%M"
+    time_of_day: "%H:%M"
 
   decidim:
     space_type_to_polish:
@@ -257,8 +284,8 @@ pl:
             # contact_address: Adres kontaktowy
             created_by: Utworzony przez
             description: Zakres działania
-            duration_other: Data zakończenia - inne
-            duration: Data zakończenia
+            duration_other: Koniec kadencji - inne
+            duration: Koniec kadencji
             other: Inne
             # next_meeting_date: Najbliższe posiedzenie
             # next_meeting_date_help: Nie wyświetli się, gdy data będzie w przeszłości
@@ -282,7 +309,7 @@ pl:
         description: Zakres działania
         created_by: Utworzony przez
         creation_date: Data powołania
-        duration: Data zakończenia
+        duration: Koniec kadencji
         internal_organisation: Organizacja prac
         # next_meeting_date: Najbliższe posiedzenie
         # team_service: Obsługa zespołu
@@ -477,7 +504,7 @@ pl:
       pages:
         home:
           highlighted_processes:
-            participate_in: Weź udział w procesie %{resource_name}
+            participate_in: Więcej informacji o procesie %{resource_name}
       show:
         local_area: Jednostka odpowiedzialna
         developer_group: Inicjator
@@ -500,9 +527,22 @@ pl:
           evaluating: Weryfikacja
           not_answered: Zgłoszona
           rejected: Odrzucona
+      last_activity:
+        proposal_updated_at_html: "<span>Propozycja zaktualizowana o %{link}</span>"
       proposals:
         placeholder:
           address: 'ul. Żeromskiego 31, 81-346 Gdynia'
+        voting_rules:
+          vote_limit:
+            description: "Maksymalna ilość propozycji, które możesz wesprzeć: %{limit}."
+          proposal_limit:
+            description: "Maksymalna ilość propozycji, jakie możesz utworzyć: %{limit}."
+          threshold_per_proposal:
+            description: "Ilość wsparć konieczna do zaakceptowania propozycji: %{limit}."
+          can_accumulate_supports_beyond_threshold:
+            description: "Każda propozycja może uzyskać dodatkowe wsparcie ponad wymagane minimum."
+          minimum_votes_per_user:
+            supports_remaining: "Musisz wesprzeć inne propozycje, minimum: %{remaining_votes}."
     scopes:
       global: Zakres ogólny
     shared:
@@ -545,9 +585,11 @@ pl:
         link_label: nowej polityce prywatności portalu internetowego konsultujemy.gdynia.pl
       participatory_processes:
         participatory_process:
-          take_part_in: Weź udział w procesie %{resource_name}
+          take_part_in: Więcej informacji o procesie %{resource_name}
         promoted_process:
-          take_part_in: Weź udział w procesie %{resource_name}
+          take_part_in: Więcej informacji o procesie %{resource_name} 2
+      process_header_steps:
+        view_steps: Zobacz etapy procesu
       process_navigation:
         process_menu_item: O procesie
 

@@ -97,7 +97,18 @@ a:hover, a:focus,
 .process-header__hashtag a { color: var(--primary); }
 .process-header__hashtag a:hover, .process-header__hashtag a:focus { color: #fff8e5; }
 
-.definition-data__title { color: var(--secondary); }
+.card.extra.definition-data {
+  background-color: #eeeeee;
+  text-align: left;
+}
+.definition-data__item.area {
+  text-align: center;
+}
+.definition-data__title {
+  color: var(--secondary);
+  font-weight: bold;
+  text-align: left;
+}
 
 .floating-helper-container { min-height: 20px; }
 #floating-helper-tip { z-index: 5; }
@@ -157,13 +168,14 @@ h4 small, .h4 small, h5 small, .h5 small, h6 small, .h6 small { color: #5A5358; 
 
 
 /******* cards ******/
-
 .card.card--mini, .card-grid .card, .card-grid .chart-tooltip,
 .card-grid .conference-registration, .card-grid .conference-speaker .speaker-bio,
 .conference-speaker .card-grid .speaker-bio,
 .card-grid .add-message, .card-grid .comment-thread { overflow: hidden; }
+.card.card--mini.mini-mini,
 #highlighted-processes .card.card--mini,
 #highlighted-assemblies .card.card--mini { background-color: #fff8e5; border-radius: 15px; color: #000; overflow: hidden; }
+.card.card--mini.mini-mini .card__link,
 #highlighted-processes .card.card--mini .card__link,
 #highlighted-assemblies .card.card--mini .card__link { color: #000; font-weight: bold; font-size: 1.2rem; }
 .card.card--mini:hover,
@@ -302,3 +314,43 @@ a img + .external-link-indicator { left: 5px; bottom: 15px; top: unset; }
 
 /******* surveys *********/
 .questionnaire-question_readonly em { display: none; }
+
+/******* processes ********/
+.phase-date strong {
+  font-weight: bolder;
+}
+.process-header__phase .see-all-steps {
+  background-color: var(--secondary);
+  color: #fff;
+  text-transform: uppercase;
+  display: inline-block;
+  font-weight: bold;
+  border-radius: 4px;
+  margin-top: 7px;
+}
+
+.process-header__phase .steps-box-custom-button {
+  background-color: var(--primary);
+  color: #000;
+  text-transform: uppercase;
+  display: inline-block;
+  font-weight: bold;
+  border-radius: 4px;
+  margin-top: 7px;
+}
+
+.docs__container svg {
+  color: #cfcfcf;
+}
+
+.docs__container .directory-label {
+  padding: 15px 25px;
+  display: block;
+  font-size: 20px;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+}
+
+.docs__container .directory-label:hover {
+  filter: brightness(85%);
+}

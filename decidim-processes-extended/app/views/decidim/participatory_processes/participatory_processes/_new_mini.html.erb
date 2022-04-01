@@ -1,0 +1,9 @@
+<div class="column">
+  <%= link_to decidim_participatory_processes.participatory_process_path(participatory_process), class: "card card--process mini-mini card--mini" do %>
+    <div aria-hidden="true" class="card__image-top"
+         style="background-image:url(<%= participatory_process.hero_image.url %>)"></div>
+    <div class="card__content">
+      <span class="card__title card__link"><%= translated_attribute participatory_process.title %></span>
+    </div>
+  <% end %>
+</div>

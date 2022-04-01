@@ -92,13 +92,13 @@ pl:
         extended:
           what_can_i_do: Co mogę zrobić na Platformie?
           assemblies: Zespoły
-          assemblies_explanation: Zobacz kiedy odbywają się posiedzenia zespołów i co było na nich omawiane.
+          assemblies_explanation: Poznać rózne rady i zespoły działające w Gdyni, zobaczyć kiedy odbywają się ich posiedzenia i co było na nich omawiane.
           assemblies_link: Przejdź do zespołów
           help: Niezbędnik dialogu
-          help_explanation: Dowiedz się więcej o dialogu w mieście i o działaniu Platformy.
+          help_explanation: Dowiedzieć się więcej o dialogu w Gdyni i o działaniu Platformy.
           help_link: Skorzystaj z niezbędnika dialogu
           processes: Procesy
-          processes_explanation: Na platformie możesz znaleźć wszystkie procesy dialogowe dziejące się w mieście.
+          processes_explanation: Wziąć udział w konsultacjach, wyrazić swoją opinię, obserwować trwajace wydarzenia, zapoznać się ze wszystkimi formami dialogu w Gdyni.
           processes_link: Przejdź do procesów
     profiles:
       user:
