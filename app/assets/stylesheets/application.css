@@ -107,6 +107,10 @@ a:hover, a:focus,
   background-color: #fff;
 }
 
+.card.extra form .button.secondary.hollow {
+  border-color: #eeeeee;
+}
+
 .definition-data__item.area {
   text-align: center;
 }
