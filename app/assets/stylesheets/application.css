@@ -97,17 +97,27 @@ a:hover, a:focus,
 .process-header__hashtag a { color: var(--primary); }
 .process-header__hashtag a:hover, .process-header__hashtag a:focus { color: #fff8e5; }
 
+.card.extra,
 .card.extra.definition-data {
   background-color: #eeeeee;
-  text-align: left;
+  /*text-align: left;*/
 }
+
+.card.extra form {
+  background-color: #fff;
+}
+
+.card.extra form .button.secondary.hollow {
+  border-color: #eeeeee;
+}
+
 .definition-data__item.area {
   text-align: center;
 }
 .definition-data__title {
   color: var(--secondary);
   font-weight: bold;
-  text-align: left;
+  /*text-align: left;*/
 }
 
 .floating-helper-container { min-height: 20px; }
