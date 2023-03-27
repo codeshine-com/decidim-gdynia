@@ -19,6 +19,10 @@ gem 'puma', '= 5.3.2'
 gem "uglifier", "~> 4.1"
 gem "fog-aws"
 
+# FOR AWS ONLY
+# ##################
+gem "nio4r", "2.5.8"
+
 gem "faker", "~> 2.14"
 
 gem 'dotenv-rails', group: [:development, :test, :staging]
