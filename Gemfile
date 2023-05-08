@@ -25,6 +25,8 @@ gem "nio4r", "2.5.8"
 
 gem "faker", "~> 2.14"
 
+gem "wicked_pdf", "~> 1.4"
+
 gem 'dotenv-rails', group: [:development, :test, :staging]
 
 group :development, :test do
