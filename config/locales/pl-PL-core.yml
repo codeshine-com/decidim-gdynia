@@ -1478,6 +1478,7 @@ pl:
       public: Twoje informacje publiczne.
   errors:
     messages:
+      extension_whitelist_error: niepoprawne rozszerzenie pliku
       already_confirmed: już potwierdzono
       confirmation_period_expired: musi być potwierdzone w ciągu %{period}, proszę poprosić o nowy
       content_type_whitelist_error: typ pliku jest nieprawidłowy
