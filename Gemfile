@@ -15,7 +15,7 @@ gem "sentry-ruby"
 gem "sentry-rails"
 gem 'slack-notifier'
 
-gem 'puma', '= 5.3.2'
+gem 'puma'
 gem "uglifier", "~> 4.1"
 gem "fog-aws"
 
@@ -46,13 +46,12 @@ group :production, :staging do
   gem 'rack_password'
 end
 
-# extended functionalities
 # WAITING FOR MIGRATION:
-# gem 'decidim-admin_extended', path: 'decidim-admin_extended'
-# gem 'decidim-core-extended', path: 'decidim-core-extended'
-# gem 'decidim-debates_extended', path: 'decidim-debates_extended'
+gem 'decidim-admin_extended', path: 'decidim-admin_extended'
+gem 'decidim-core-extended', path: 'decidim-core-extended'
+gem 'decidim-debates_extended', path: 'decidim-debates_extended'
 # gem 'decidim-processes-extended', path: 'decidim-processes-extended'
-# gem 'decidim-assemblies-extended', path: 'decidim-assemblies-extended'
+gem 'decidim-assemblies-extended', path: 'decidim-assemblies-extended'
 # gem 'decidim-meetings_extended', path: 'decidim-module-meetings_extended'
 # gem 'decidim-pages_extended', path: 'decidim-pages_extended'
 # gem 'decidim-proposals_extended', path: 'decidim-proposals_extended'

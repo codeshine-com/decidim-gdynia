@@ -1553,6 +1553,7 @@ pl:
         profile: Moje konto
         public_profile: Mój profil publiczny
         sign_out: Wyloguj się
+        title: Profile links
       user_profile:
         account: Moje konto
         authorizations: Autoryzacje
