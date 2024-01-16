@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = "0.24.3"
+DECIDIM_VERSION = "0.25.2"
 
 gem "decidim", DECIDIM_VERSION
 
@@ -25,7 +25,7 @@ gem "nio4r", "2.5.8"
 
 gem "faker", "~> 2.14"
 
-gem "wicked_pdf", "~> 1.4"
+gem "wicked_pdf"
 
 gem 'dotenv-rails', group: [:development, :test, :staging]
 
@@ -47,12 +47,13 @@ group :production, :staging do
 end
 
 # extended functionalities
-gem 'decidim-admin_extended', path: 'decidim-admin_extended'
-gem 'decidim-core-extended', path: 'decidim-core-extended'
-gem 'decidim-debates_extended', path: 'decidim-debates_extended'
-gem 'decidim-processes-extended', path: 'decidim-processes-extended'
-gem 'decidim-assemblies-extended', path: 'decidim-assemblies-extended'
-gem 'decidim-meetings_extended', path: 'decidim-module-meetings_extended'
-gem 'decidim-pages_extended', path: 'decidim-pages_extended'
-gem 'decidim-proposals_extended', path: 'decidim-proposals_extended'
-gem 'decidim-surveys_extended', path: 'decidim-surveys_extended'
+# WAITING FOR MIGRATION:
+# gem 'decidim-admin_extended', path: 'decidim-admin_extended'
+# gem 'decidim-core-extended', path: 'decidim-core-extended'
+# gem 'decidim-debates_extended', path: 'decidim-debates_extended'
+# gem 'decidim-processes-extended', path: 'decidim-processes-extended'
+# gem 'decidim-assemblies-extended', path: 'decidim-assemblies-extended'
+# gem 'decidim-meetings_extended', path: 'decidim-module-meetings_extended'
+# gem 'decidim-pages_extended', path: 'decidim-pages_extended'
+# gem 'decidim-proposals_extended', path: 'decidim-proposals_extended'
+# gem 'decidim-surveys_extended', path: 'decidim-surveys_extended'
