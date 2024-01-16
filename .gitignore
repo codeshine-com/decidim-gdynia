@@ -48,3 +48,15 @@ public/uploads
 # Ignore Dotenv variables.
 .env
 config/locales/pl-try.yml
+
+/public/packs
+/public/packs-test
+/public/decidim-packs
+/node_modules
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity
+
+# Ignore files during version migration
+public/uploads_backup_2024.01
+assets-old
