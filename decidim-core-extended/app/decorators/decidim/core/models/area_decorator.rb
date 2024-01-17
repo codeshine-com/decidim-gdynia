@@ -2,6 +2,7 @@
 
 Decidim::Area.class_eval do
 
-  mount_uploader :icon, Decidim::ImageUploader
+  # TODO: dodac uploader w nowej wersji
+  # mount_uploader :icon, Decidim::ImageUploader
 
 end

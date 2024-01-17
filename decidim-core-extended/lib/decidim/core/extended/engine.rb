@@ -1,15 +1,15 @@
 # frozen_string_literal: true
 
+require "rails"
+require "decidim/core"
+
 module Decidim
   module Core
     module Extended
       class Engine < ::Rails::Engine
         isolate_namespace Decidim::Core::Extended
 
-        unsearchable_resources_manifest_names = [
-          'initiative', 'conference', 'consultation', 'voting',
-          'budget', 'sortitions'
-        ]
+        unsearchable_resources_manifest_names = %w[initiative conference consultation voting budget sortitions]
         unsearchable_resources_manifest_names.each do |manifest_name|
           resourcable = Decidim.find_resource_manifest(manifest_name)
           resourcable.searchable = false if resourcable
@@ -50,11 +50,20 @@ module Decidim
           end
         end
 
-        initializer "decidim_core_extended.assets.precompile" do |app|
-          app.config.assets.precompile += %w(decidim/core/extended/Logotypy_UE.png)
-          app.config.assets.precompile += %w(decidim/core/extended/O_platformie_pasek.png)
-          app.config.assets.precompile += %w(decidim/core/extended/email.scss)
-          app.config.assets.precompile += %w(decidim/core/extended/registration_types_handler.js)
+        # initializer "decidim_core_extended.assets.precompile" do |app|
+        #   app.config.assets.precompile += %w(decidim/core/extended/Logotypy_UE.png)
+        #   app.config.assets.precompile += %w(decidim/core/extended/O_platformie_pasek.png)
+        #   app.config.assets.precompile += %w(decidim/core/extended/email.scss)
+        #   app.config.assets.precompile += %w(decidim/core/extended/registration_types_handler.js)
+        # end
+
+        # activate Decidim LayoutHelper for the overriden views
+        initializer "decidim_core_extended.helpers" do
+          # ::Decidim::Admin::ApplicationController.helper ::Decidim::LayoutHelper
+          ::Decidim::ApplicationController.helper ::Decidim::LayoutHelper
+        end
+        initializer "decidim_core_extended.helpers" do
+          ::Decidim::Admin::ApplicationController.helper ::Decidim::LayoutHelper
         end
 
         initializer "decidim_core_extended.add_cells_view_paths" do
@@ -71,6 +80,10 @@ module Decidim
           Dir.glob(Decidim::Core::Extended::Engine.root + "app/decorators/**/*_decorator*.rb").each do |c|
             require_dependency(c)
           end
+        end
+
+        initializer "decidim_core_extended.webpacker.assets_path" do
+          Decidim.register_assets_path File.expand_path("app/packs", root)
         end
       end
     end

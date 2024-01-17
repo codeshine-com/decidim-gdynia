@@ -1,0 +1,67 @@
+.columns .section { margin-bottom: 1.5rem; }
+
+.card .help-text { margin-top: 1rem; }
+
+.interests-col {
+  display: inline-block;
+  width: 48%;
+  vertical-align: top;
+}
+
+/************* registration *************/
+
+.do-not-show { display: none; }
+#inh_card__newsletter, #inh_card__tos { text-align: center; }
+
+.sign-up-parahraph { line-height: 1.2; }
+.sign-up-parahraph small { font-size: 80%; }
+
+/************* static pages *************/
+
+.card--full__image.static_ppage {
+  width: 100%;
+  height: 170px;
+  background-color: var(--primary);
+}
+
+/************* footer *************/
+
+.ue-footer {
+  padding: 5px 0 15px 0;
+  /* background-color: #1a181d; */
+  background-color: #fff;
+  color: #1a181d;
+
+}
+
+/* .ue-footer:before {
+  position: relative;
+  content: '';
+  display: block;
+  width: 75rem;
+  height: 3px;
+  background-color: #fff;
+  top: 0px;
+  left: calc(50% - (75rem / 2));
+  margin-bottom: 10px;
+} */
+
+.ue-footer img {
+  width: 100%;
+  max-width: 800px;
+  display: block;
+  margin: auto;
+}
+
+.ue-footer .ue-info-text {
+  margin: auto;
+  padding: 5px 10px 0px 10px;
+  text-align: center;
+  max-width: 600px;
+  font-size: 0.9rem;
+}
+
+.pages-attachments-container {
+  padding-top: 20px;
+  margin-bottom: -35px;
+}

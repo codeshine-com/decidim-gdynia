@@ -30,6 +30,14 @@ pl:
           over_74: '75 lat i więcej'
 
   decidim:
+    application:
+      collection:
+        html:
+          documents: Dokumenty
+    shared:
+      share_modal:
+        copy_share_link_clarification: Skopiuj link
+        copy_share_link: Skopiuj link # views/decidim/shared/_share_modal.html.erb
     account:
       fill_more_data: Dziękujemy za dołączenie do Gdyńskiej Platformy Dialogu! Poświęć kilka chwil na uzupełnienie konta, by pomóc nam rozwijać Platformę.
       not_confirmed: Potwierdź swój e-mail, żeby móc sie zalogować.
@@ -40,6 +48,7 @@ pl:
         select_a_gender: Wybierz płeć
         birth_year_placeholder: Podaj datę urodzenia
         select_a_district: Wybierz dzielnicę
+        available_locales_helper: Wybierz język, w którym będziesz przeglądać strony i otrzymywać powiadomienia w serwisie
     admin:
       models:
         area:
