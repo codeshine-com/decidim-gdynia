@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+require "rails"
+require "decidim/core"
+
 module Decidim
   module AdminExtended
     class Engine < ::Rails::Engine
@@ -17,11 +20,11 @@ module Decidim
         end
       end
 
-      initializer "decidim_admin_extended.assets.precompile" do |app|
-        app.config.assets.precompile += %w(decidim/admin_extended/admin_quill_custom.css)
-        app.config.assets.precompile += %w(decidim/admin_extended/admin_styles.css)
-      end
-
+      # initializer "decidim_admin_extended.assets.precompile" do |app|
+      #   app.config.assets.precompile += %w(decidim/admin_extended/admin_quill_custom.css)
+      #   app.config.assets.precompile += %w(decidim/admin_extended/admin_styles.css)
+      # end
+      #
       # make decorators autoload in development env
       config.autoload_paths << File.join(
         Decidim::AdminExtended::Engine.root, "app", "decorators", "{**}"
@@ -56,6 +59,11 @@ module Decidim
                     active: [%w(decidim/admin/informations decidim/admin_extened/admin/informations decidim/admin_extened/informations), []],
                     if: allowed_to?(:update, :organization, organization: current_organization)
         end
+      end
+
+
+      initializer "admin_extended.webpacker.assets_path" do
+        Decidim.register_assets_path File.expand_path("app/packs", root)
       end
     end
   end
