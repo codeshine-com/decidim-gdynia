@@ -12,9 +12,10 @@ module Decidim
       class Engine < ::Rails::Engine
         isolate_namespace Decidim::Assemblies::Extended
 
-        initializer "decidim_processes_extended.assets.precompile" do |app|
-          app.config.assets.precompile += %w(decidim/assemblies/admin/custom.js)
-        end
+        # TODO: assets
+        # initializer "decidim_processes_extended.assets.precompile" do |app|
+        #   app.config.assets.precompile += %w(decidim/assemblies/admin/custom.js)
+        # end
 
         routes do
           scope "/assemblies/:assembly_slug" do
@@ -47,6 +48,10 @@ module Decidim
           Dir.glob(Decidim::Assemblies::Extended::Engine.root + "app/models/**/*_decorator*.rb").each do |c|
             require_dependency(c)
           end
+        end
+
+        initializer "decidim_assemblies_extended.webpacker.assets_path" do
+          Decidim.register_assets_path File.expand_path("app/packs", root)
         end
       end
     end
