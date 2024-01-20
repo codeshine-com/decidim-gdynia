@@ -26,6 +26,12 @@ PATH
       rails (~> 6.0)
 
 PATH
+  remote: decidim-module-meetings_extended
+  specs:
+    decidim-meetings_extended (0.25.2)
+      decidim-core (= 0.25.2)
+
+PATH
   remote: decidim-processes-extended
   specs:
     decidim-processes-extended (0.1.0)
@@ -854,6 +860,7 @@ DEPENDENCIES
   decidim-core-extended!
   decidim-debates_extended!
   decidim-dev (= 0.25.2)
+  decidim-meetings_extended!
   decidim-processes-extended!
   dotenv-rails
   faker (~> 2.14)
