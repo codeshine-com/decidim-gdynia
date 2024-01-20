@@ -50,7 +50,7 @@ end
 gem 'decidim-admin_extended', path: 'decidim-admin_extended'
 gem 'decidim-core-extended', path: 'decidim-core-extended'
 gem 'decidim-debates_extended', path: 'decidim-debates_extended'
-# gem 'decidim-processes-extended', path: 'decidim-processes-extended'
+gem 'decidim-processes-extended', path: 'decidim-processes-extended'
 gem 'decidim-assemblies-extended', path: 'decidim-assemblies-extended'
 # gem 'decidim-meetings_extended', path: 'decidim-module-meetings_extended'
 # gem 'decidim-pages_extended', path: 'decidim-pages_extended'
