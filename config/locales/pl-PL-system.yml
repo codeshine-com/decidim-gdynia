@@ -57,6 +57,9 @@ pl:
         update:
           error: Podczas aktualizowania tego administratora wystąpił błąd.
           success: Administrator został zaktualizowany
+      dashboard:
+        show:
+          current_organizations: Aktualna organizacja
       default_pages:
         placeholders:
           content: Proszę dodać istotne treści do strony statycznej %{page} w panelu administratora.
@@ -112,6 +115,9 @@ pl:
           error: Wystąpił błąd podczas aktualizowania tej aplikacji.
           success: Aplikacja została zaktualizowana.
       organizations:
+        advanced_settings:
+          hide: Ukryj zaawansowane ustawienia
+          show: Pokaż zaawansowane ustawienia
         create:
           error: Podczas tworzenia nowej organizacji wystąpił błąd.
           success: Organizacja została utworzona.
