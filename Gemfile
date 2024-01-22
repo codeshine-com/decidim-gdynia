@@ -16,6 +16,7 @@ gem "sentry-rails"
 gem 'slack-notifier'
 
 gem 'puma'
+gem 'http' # for InhabitantCardService
 gem "uglifier", "~> 4.1"
 gem "fog-aws"
 
