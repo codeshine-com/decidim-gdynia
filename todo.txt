@@ -1,0 +1,8 @@
+
+Rzeczy do zrobienia:
+. AssemblyMember - poprawić uploader po update
+. decidim-assemblies-extended/app/views/layouts/decidim/_assembly_header.html.erb - TODO: zaktualizowac po update banner_image
+- decidim-assemblies-extended/app/views/decidim/assemblies/assemblies/show.html.erb - # TODO: zaktualizowac po update
+- decidim-assemblies-extended/app/views/decidim/assemblies/admin/assemblies/_form.html.erb - poprawc assety javascript_include_tag
+
+- decidim-surveys_extended/app/decorators/models/question_decorator.rb - uploader - Decidim::Forms::Question.class_eval

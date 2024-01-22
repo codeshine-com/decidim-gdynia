@@ -53,6 +53,15 @@ PATH
       decidim-core (= 0.25.2)
       rails (~> 6.0)
 
+PATH
+  remote: decidim-surveys_extended
+  specs:
+    decidim-surveys_extended (0.1.0)
+      decidim-core (= 0.25.2)
+      decidim-forms (= 0.25.2)
+      decidim-surveys (= 0.25.2)
+      rails (~> 6.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -878,6 +887,7 @@ DEPENDENCIES
   decidim-pages_extended!
   decidim-processes-extended!
   decidim-proposals_extended!
+  decidim-surveys_extended!
   dotenv-rails
   faker (~> 2.14)
   fog-aws
