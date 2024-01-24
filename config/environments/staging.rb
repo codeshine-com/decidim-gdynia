@@ -22,7 +22,7 @@ Rails.application.configure do
   # Apache or NGINX already handles this.
   config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
-    # Enable serving of images, stylesheets, and JavaScripts from an asset server.
+  # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.action_controller.asset_host = 'http://assets.example.com'
 
   # Specifies the header that your server uses for sending files.
@@ -51,12 +51,11 @@ Rails.application.configure do
   # config.cache_store = :mem_cache_store
 
   # Use a real queuing backend for Active Job (and separate queues per environment)
-  # config.active_job.queue_adapter     = :resque
   config.active_job.queue_adapter     = :sidekiq
   # config.active_job.queue_name_prefix = "decidim_app_#{Rails.env}"
 
   config.action_mailer.perform_caching = false
-  config.action_mailer.asset_host = 'https://decidim-gdynia.cdsh.dev/'
+  config.action_mailer.asset_host = 'https://decidim-gdynia-test.cdsh.dev/'
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
@@ -79,6 +78,7 @@ Rails.application.configure do
     :password       => Rails.application.secrets.smtp_password,
     :domain         => Rails.application.secrets.smtp_domain,
     :enable_starttls_auto => Rails.application.secrets.smtp_starttls_auto,
+    :tls            => Rails.application.secrets.smtp_tls,
     :openssl_verify_mode => 'none'
   }
 
