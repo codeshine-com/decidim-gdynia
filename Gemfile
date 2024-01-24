@@ -30,6 +30,8 @@ gem "wicked_pdf"
 
 gem 'dotenv-rails', group: [:development, :test, :staging]
 
+gem 'sidekiq'
+
 group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
   # gem "decidim-dev", DECIDIM_VERSION
