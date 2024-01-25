@@ -40,7 +40,9 @@ pl:
         meetings:
           form:
             show_embedded_iframe_help: Określa, czy należy osadzić element iframe dla tego adresu URL wideokonferencji. Tylko kilka serwisów umożliwia osadzanie (np. Youtube, Twitch...)
-
+          publish:
+            invalid: Podczas publikowania tego spotkania wystąpił problem
+            success: Spotkanie zostało pomyślnie opublikowane
       meetings:
         show:
           visit_finished: Zakończone spotkania
