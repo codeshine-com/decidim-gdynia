@@ -9,6 +9,8 @@ pl:
         published: Widoczna
   decidim:
     admin:
+      conflicts:
+        title: Weryfikacja konfliktów
       block_user:
         new:
           new_name: Zablokowany użytkownik
