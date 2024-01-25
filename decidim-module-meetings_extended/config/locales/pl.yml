@@ -1,5 +1,9 @@
 ---
 pl:
+  activemodel:
+    attributes:
+      meeting:
+        show_embedded_iframe: Pokaż osadzoną ramkę iframe dla tego adresu URL
   decidim:
     admin:
       filters:
@@ -33,6 +37,9 @@ pl:
           title: Nazwa
           duration: Czas trwania
           description: Opis
+        meetings:
+          form:
+            show_embedded_iframe_help: Określa, czy należy osadzić element iframe dla tego adresu URL wideokonferencji. Tylko kilka serwisów umożliwia osadzanie (np. Youtube, Twitch...)
 
       meetings:
         show:
