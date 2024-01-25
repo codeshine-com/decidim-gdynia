@@ -12,6 +12,12 @@ pl:
       block_user:
         new:
           new_name: Zablokowany użytkownik
+      filters:
+        last_sign_in_at_present:
+          label: Czy ostatnio logował się
+          values:
+            'false': 'Nie'
+            'true': 'Tak'
       models:
         information:
           fields:
