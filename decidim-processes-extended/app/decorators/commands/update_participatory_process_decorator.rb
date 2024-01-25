@@ -36,7 +36,9 @@ Decidim::ParticipatoryProcesses::Admin::UpdateParticipatoryProcess.class_eval do
             contact_email: form.contact_email,
             contact_phone: form.contact_phone,
             facebook_handler: form.facebook_handler
-          }.merge(uploader_attributes)
+          }.merge(
+            attachment_attributes(:hero_image, :banner_image)
+          )
         end
 
   def update_participatory_process
