@@ -3,6 +3,7 @@
 
 <div class="row">
   <%= decidim_form_for(@account, url: account_path, method: :put, html: { autocomplete: "off" }) do |f| %>
+    <input autocomplete="off" name="hidden" type="password" style="display:none;">
     <div class="columns large-4">
       <%= f.upload :avatar %>
     </div>
@@ -29,6 +30,14 @@
                       { include_blank: t(".select_a_district") },
                       { multiple: false } %>
       <%= f.text_area :about, rows: 5, help_text: t('decidim.account.about_hint') %>
+
+      <%= f.collection_select(
+            :locale,
+            @account.organization.available_locales,
+            :to_s,
+            ->(locale) {locale_name(locale) }
+          ) %>
+      <p class="help-text"><%= t(".available_locales_helper") %></p>
 
       <%= f.submit t(".update_account") %>
     </div>

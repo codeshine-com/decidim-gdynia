@@ -8,6 +8,7 @@ pl:
       static_page_topic:
         cover: Obraz główny
       user:
+        locale: Język
         gender: Płeć
         birth_year: Rok urodzenia
         district: Dzielnica
