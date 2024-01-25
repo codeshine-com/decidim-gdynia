@@ -30,6 +30,7 @@
               </td>
               <td>
                 <% if area.icon.present? %>
+                  <%# TODO: dodac uploader w nowej wersji %>
                   <%= image_tag area.icon_url(:mini_square), alt: "ikona kategorii #{area.name}" %>
                 <% end %>
               </td>

@@ -10,3 +10,10 @@ Rzeczy do zrobienia:
 obrazki current_participatory_space.banner_image.url:
 - decidim-processes-extended/app/views/layouts/decidim/_process_header.html.erb
 - decidim-assemblies-extended/app/views/layouts/decidim/_assembly_header.html.erb
+
+
+# TODO: dodac uploader w nowej wersji:
+- Decidim::Cw::ImageUploader
+- decidim-core-extended/app/decorators/decidim/core/models/area_decorator.rb
+- decidim-core-extended/app/decorators/decidim/core/uploaders/image_uploader_decorator.rb
+- decidim-core-extended/app/views/decidim/admin/areas/index.html.erb
