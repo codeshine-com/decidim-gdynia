@@ -7,8 +7,8 @@ Decidim::Forms::Question.class_eval do
 
   delegate :organization, to: :questionnaire, allow_nil: true
 
-  #  TODO: do akutalizacjia uploader
-  # mount_uploader :question_image, Decidim::ImageUploader
+  # TODO: dodac uploader w nowej wersji
+  mount_uploader :question_image, Decidim::Cw::ImageUploader
 
   def set_metrics_answers
     if gender?

@@ -1,7 +1,5 @@
 <% add_decidim_meta_tags({
-  # TODO: zaktualizowac po update
-  # image_url: current_participatory_space.hero_image.url,
-  image_url: nil,
+  image_url: current_participatory_space.attached_uploader(:hero_image).path,
   description: translated_attribute(current_participatory_space.short_description),
   url: assembly_url(current_participatory_space),
   twitter_handler: current_organization.twitter_handler
@@ -22,6 +20,8 @@ edit_link(
   <%= render partial: "decidim/shared/private_participatory_space",
              locals: { text: t("private_space", scope: "decidim.assemblies.show") } %>
 <% end %>
+
+<%= cell("decidim/announcement", current_participatory_space.announcement) %>
 
 <div class="row column">
   <% if current_participatory_space.parent.present? %>
@@ -213,4 +213,4 @@ edit_link(
   <% end %>
 </div>
 
-<%= javascript_include_tag "decidim/assemblies/assemblies" %>
+<%= javascript_pack_tag "decidim_assemblies" %>
