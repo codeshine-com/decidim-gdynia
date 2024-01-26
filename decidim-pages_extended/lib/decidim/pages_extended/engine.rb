@@ -40,6 +40,10 @@ module Decidim
           require_dependency(c)
         end
       end
+
+      initializer "pages_extended.webpacker.assets_path" do
+        Decidim.register_assets_path File.expand_path("app/packs", root)
+      end
     end
   end
 end
