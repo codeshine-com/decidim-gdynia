@@ -15,3 +15,8 @@ Rzeczy do zrobienia:
 - decidim-assemblies-extended/app/decorators/models/assembly_member_decorator.rb
 - decidim-surveys_extended/app/decorators/models/question_decorator.rb
 - decidim-core-extended/app/decorators/decidim/core/models/static_page_topic_decorator.rb
+
+#TODO: do uzupelnienia assety:
+- decidim-surveys_extended/app/views/decidim/forms/admin/questionnaires/_form.html.erb
+- decidim-admin_extended/app/views/layouts/decidim/admin/_header_extra.html.erb
+
