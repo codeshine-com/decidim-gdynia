@@ -1,7 +1,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <%= csrf_meta_tags %>
 <%= stylesheet_pack_tag "decidim_admin", media: "all" %>
-<%= javascript_pack_tag "decidim_admin", defer: false %>
+<%# TODO: uzupelnic %>
+<%#= javascript_pack_tag "decidim/confirm" %>
+<%= javascript_pack_tag "decidim_admin" %>
 <%= organization_colors %>
 <%= snippets.display(:head) %>
 <%= render "layouts/decidim/admin/header_extra" %>

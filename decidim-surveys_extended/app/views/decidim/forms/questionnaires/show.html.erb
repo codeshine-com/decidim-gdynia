@@ -149,7 +149,7 @@
   </div>
 </div>
 
-<%= javascript_pack_tag "decidim_forms" %>
+<%= javascript_include_tag "decidim/forms/forms" %>
 <%= javascript_tag do %>
   $('form.answer-questionnaire').on('submit', function() {
     $('button:submit').attr('disabled', true);
