@@ -121,6 +121,9 @@ Decidim.configure do |config|
   #   api_key: Rails.application.secrets.etherpad[:api_key],
   #   api_version: Rails.application.secrets.etherpad[:api_version]
   # }
+
+  # participants must confirm their email account to sign in
+  config.unconfirmed_access_for = 2.days
 end
 
 # Inform Decidim about the assets folder
