@@ -139,3 +139,6 @@ pl:
         inhabitant_card_authorization_success: Autoryzowano
       footer:
         ue_logotypes: Logotypy UE
+  time:
+    formats:
+      ddmmyyyy: "%d.%m.%Y"
