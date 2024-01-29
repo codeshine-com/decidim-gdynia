@@ -5,7 +5,7 @@ $LOAD_PATH.push File.expand_path("lib", __dir__)
 require "decidim/meetings_extended/version"
 
 Gem::Specification.new do |s|
-  s.version = Decidim::MeetingsExtended.version
+  s.version = Decidim::MeetingsExtended::VERSION
   s.authors = ["Paulina Kamińska"]
   s.email = ["paulina.kaminska@codeshine.com"]
   s.license = "AGPL-3.0"
