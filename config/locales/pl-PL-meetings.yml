@@ -411,6 +411,7 @@ pl:
           select_a_category: Wybierz kategorię
         index:
           new_meeting: Nowe spotkanie
+          see_all_withdrawn: Zobacz wszystkie wycofane spotkania
         meeting_minutes:
           meeting_minutes: Protokół ze spotkania
           related_information: Powiązana informacja
