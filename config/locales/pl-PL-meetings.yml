@@ -264,6 +264,7 @@ pl:
             address_help: 'Adres: używany przez Geocoder do znalezienia lokalizacji'
             location_help: 'Lokalizacja: informacja dla użytkowników dotycząca miejsca spotkania'
             location_hints_help: 'Wskazówki dotyczące lokalizacji: dodatkowe informacje. Przykład: piętro budynku'
+            select_an_iframe_access_level: Wybierz poziom dostępu elementu iframe
           index:
             title: Spotkania
           new:
@@ -348,6 +349,10 @@ pl:
           name: Nadchodzące wydarzenia
           upcoming_events: Nadchodzące spotkania
           view_all_events: Pokaż wszystkie
+        upcoming_meetings:
+          name: Nadchodzące spotkania
+          upcoming_meetings: Upcoming meetings
+          view_all_meetings: Pokaż wszystkie
       directory:
         meetings:
           index:
