@@ -35,6 +35,11 @@ pl:
       collection:
         html:
           documents: Dokumenty
+    editor_images:
+      create:
+        error: Error uploading image
+        success: Image uploaded successfully
+      drag_and_drop_help: Add images by dragging & dropping or pasting them.
     shared:
       share_modal:
         copy_share_link_clarification: Skopiuj link
