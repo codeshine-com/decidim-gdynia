@@ -37,9 +37,9 @@ pl:
           documents: Dokumenty
     editor_images:
       create:
-        error: Error uploading image
-        success: Image uploaded successfully
-      drag_and_drop_help: Add images by dragging & dropping or pasting them.
+        error: Błąd podczas przesyłania obrazu
+        success: Obraz został przesłany pomyślnie
+      drag_and_drop_help: Przeciągnij i upuść obrazki lub wklej.
     shared:
       share_modal:
         copy_share_link_clarification: Skopiuj link
