@@ -135,6 +135,17 @@ pl:
             collaborative_drafts_enabled: Zezwalaj na wspólne szkice
             comments_enabled: Komentarze włączone
             comments_max_length: Maksymalna długość komentarzy (Pozostaw 0 dla wartości domyślnej)
+            default_sort_order: Domyślne sortowanie propozycji
+            default_sort_order_help: Domyślnie oznacza, że jeśli podpory są włączone, propozycje zostaną posortowane losowo, a jeśli podpory są zablokowane, to zostaną posortowane według najczęściej wspieranych.
+            default_sort_order_options:
+              default: Domyślnie
+              most_commented: Najczęściej komentowane
+              most_endorsed: Większość popierana
+              most_followed: Większość obserwowana
+              most_voted: Większość wybierana
+              random: Losowo
+              recent: Aktualny
+              with_more_authors: With more authors
             geocoding_enabled: Włączono geokodowanie
             minimum_votes_per_user: Minimalna liczba wsparć na użytkownika
             new_proposal_body_template: Szablon treści nowej propozycji
