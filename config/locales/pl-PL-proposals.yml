@@ -184,6 +184,17 @@ pl:
             automatic_hashtags: Hashtagi dodane do wszystkich propozycji
             comments_blocked: Komentarze zablokowane
             creation_enabled: Włączono tworzenie propozycji
+            default_sort_order: Domyślne sortowanie propozycji
+            default_sort_order_help: Domyślnie oznacza, że jeśli podpory są włączone, propozycje zostaną posortowane losowo, a jeśli podpory są zablokowane, to zostaną posortowane według najczęściej wspieranych.
+            default_sort_order_options:
+              default: Domyślnie
+              most_commented: Najczęściej komentowane
+              most_endorsed: Większość popierana
+              most_followed: Większość obserwowana
+              most_voted: Większość wybierana
+              random: Losowo
+              recent: Aktualny
+              with_more_authors: With more authors
             endorsements_blocked: Rekomendacje zostały zablokowane
             endorsements_enabled: Rekomendacje włączone
             proposal_answering_enabled: Włączono odpowiadanie na propozycję
