@@ -20,6 +20,8 @@ gem 'http' # for InhabitantCardService
 gem "uglifier", "~> 4.1"
 gem "fog-aws"
 
+gem "aws-sdk-s3", require: false
+
 # FOR AWS ONLY
 # ##################
 gem "nio4r", "2.5.8"
