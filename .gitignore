@@ -57,6 +57,9 @@ config/locales/pl-try.yml
 yarn-debug.log*
 .yarn-integrity
 
+# Deleted for deployment
+/storage
+
 # Ignore files during version migration
 public/uploads_backup_2024.01
 assets-old
