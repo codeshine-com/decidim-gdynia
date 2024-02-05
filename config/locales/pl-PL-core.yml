@@ -666,6 +666,7 @@ pl:
       no_followers: Brak obserwujących.
     following:
       no_followings: Jeszcze nikogo ani niczego nie obserwuje.
+      non_public_followings: Niektóre z obserwowanych zasobów nie są publiczne.
     follows:
       create:
         button: Obserwuj
