@@ -14,6 +14,7 @@ pl:
       meeting:
         address: Adres
         available_slots: Dostępne miejsca na to spotkanie
+        customize_registration_email: Dostosuj e-mail rejestracyjny
         decidim_category_id: Kategoria
         decidim_scope_id: Obszar
         decidim_user_group_id: Grupa użytkowników
@@ -24,6 +25,7 @@ pl:
         organizer_gid: Utwórz jako
         organizer_id: Organizator
         private_meeting: Prywatne spotkanie
+        registration_email_custom_content: Niestandardowa treść e-maila rejestracyjnego
         registration_form_enabled: Włączono formularz rejestracyjny
         registration_terms: Warunki rejestracji
         registrations_enabled: Rejestracje włączone
