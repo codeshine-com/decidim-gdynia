@@ -33,6 +33,10 @@ pl:
               must_be_ssl: URI przekierowania musi być URI SSL
   decidim:
     system:
+      devise:
+        shared:
+          links:
+            log_in: "Zaloguj"
       actions:
         confirm_destroy: Czy na pewno chcesz to usunąć?
         destroy: Usuń
@@ -186,3 +190,4 @@ pl:
           our_getting_started_guide: nasz przewodnik
       titles:
         dashboard: Panel
+        decidim: Decidim
