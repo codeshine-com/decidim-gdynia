@@ -76,11 +76,8 @@ edit_link(
             <% end %>
           </span>
         </div>
-        <% if current_organization.user_groups_enabled %>
-          <div class="definition-data__item definition-data__item--double">
-        <% else %>
-          <div class="definition-data__item definition-data__item">
-        <% end %>
+
+        <div class="definition-data__item definition-data__item<%= '--double' if current_organization.user_groups_enabled %>">
           <span class="definition-data__title">
             <%= t ".participants_count" %>
           </span>
