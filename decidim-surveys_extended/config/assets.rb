@@ -31,6 +31,7 @@ Decidim::Webpacker.register_stylesheet_import("stylesheets/decidim/surveys_exten
 # If you want to do the same but include the SCSS file for the admin panel's
 # main SCSS file, you can use the following method.
 # Decidim::Webpacker.register_stylesheet_import("stylesheets/decidim/admin_extended/admin", group: :admin)
+Decidim::Webpacker.register_stylesheet_import("stylesheets/decidim/surveys_extended/surveys_extended", group: :admin)
 
 # If you want to override some SCSS variables/settings for Foundation from the
 # module, you can add the following registered import.

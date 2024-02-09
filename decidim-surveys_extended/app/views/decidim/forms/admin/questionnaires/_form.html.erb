@@ -36,7 +36,7 @@
       <%= form.translated :editor, :description, toolbar: :full, lines: 30, label: t("models.components.description", scope: "decidim.forms.admin") %>
     </div>
     <div class="row column">
-      <%= form.translated :editor, :tos, toolbar: :full, lines: 10, label: t("models.components.tos", scope: "decidim.forms.admin") %>
+      <%= form.translated :editor, :tos, toolbar: :content, lines: 10, label: t("models.components.tos", scope: "decidim.forms.admin") %>
     </div>
   </div>
 </div>
@@ -70,6 +70,12 @@
               id: tabs_id_for_question(blank_question),
               editable: questionnaire.questions_editable? %>
       </script>
+      <script type="text/template" class="decidim-title-and-description-template decidim-template" id="title-and-description-template">
+        <%= render "decidim/forms/admin/questionnaires/title_and_description",
+              form: question_form,
+              id: tabs_id_for_question(blank_question),
+              editable: questionnaire.questions_editable? %>
+      </script>
       <script type="text/template" class="decidim-metrics-question-template decidim-template" id="metrics-question-template">
         <%= render "decidim/forms/admin/questionnaires/metrics_question",
               form: question_form,
@@ -79,7 +85,6 @@
       <%= render "decidim/forms/admin/questionnaires/answer_option_template", form: question_form, editable: questionnaire.questions_editable?, template_id: "answer-option-template-dummy" %>
       <%= render "decidim/forms/admin/questionnaires/display_condition_template", form: question_form, editable: questionnaire.questions_editable?, template_id: "display-condition-template-dummy" %>
       <%= render "decidim/forms/admin/questionnaires/matrix_row_template", form: question_form, editable: questionnaire.questions_editable?, template_id: "matrix-row-template-dummy" %>
-
     <% end %>
   <% else %>
     <div class="callout warning">
@@ -92,6 +97,11 @@
       <%= fields_for "questionnaire[questions][]", question do |question_form| %>
         <% if question.separator? %>
           <%= render "decidim/forms/admin/questionnaires/separator",
+                form: question_form,
+                id: tabs_id_for_question(question),
+                editable: questionnaire.questions_editable? %>
+        <% elsif question.title_and_description? %>
+          <%= render "decidim/forms/admin/questionnaires/title_and_description",
                 form: question_form,
                 id: tabs_id_for_question(question),
                 editable: questionnaire.questions_editable? %>
@@ -123,6 +133,7 @@
   <% if questionnaire.questions_editable? %>
     <button class="button add-question"><%= t(".add_question") %></button>
     <button class="button add-separator"><%= t(".add_separator") %></button>
+    <button class="button add-title-and-description"><%= t(".add_title_and_description") %></button>
 
     <% if questionnaire.can_add_metrics? %>
       <div class="card metrics">
@@ -137,16 +148,16 @@
             </div>
           <% end %>
           <% if questionnaire.has_no_metrics?('age') %>
-          <div class="row column column-metrics-age">
-            <label class='metrics-label'><input id="age" type="checkbox"><%= t(".add_metrics_age") %></label>
-            <label class='metrics-label'><input id="age_required" type="checkbox"><%= t(".add_metrics_answer_required") %></label>
-          </div>
+            <div class="row column column-metrics-age">
+              <label class='metrics-label'><input id="age" type="checkbox"><%= t(".add_metrics_age") %></label>
+              <label class='metrics-label'><input id="age_required" type="checkbox"><%= t(".add_metrics_answer_required") %></label>
+            </div>
           <% end %>
           <% if questionnaire.has_no_metrics?('district') %>
-          <div class="row column column-metrics-district">
-            <label class='metrics-label'><input id="district" type="checkbox"><%= t(".add_metrics_district") %></label>
-            <label class='metrics-label'><input id="district_required" type="checkbox"><%= t(".add_metrics_answer_required") %></label>
-          </div>
+            <div class="row column column-metrics-district">
+              <label class='metrics-label'><input id="district" type="checkbox"><%= t(".add_metrics_district") %></label>
+              <label class='metrics-label'><input id="district_required" type="checkbox"><%= t(".add_metrics_answer_required") %></label>
+            </div>
           <% end %>
           <button class="button add-metrics"><%= t(".add_metrics") %></button>
         </div>
@@ -155,9 +166,13 @@
   <% end %>
 </div>
 
-<% #TODO: do uzupelnienia assety %>
-<% if questionnaire.questions_editable? %>
-  <%= javascript_include_tag "decidim/surveys_extended/admin/forms_new" %>
-<% end %>
+<% #TODO: uzupelnic brakujace nasze funkcjonalnosci forms_new i dodac do nowego skryptu, albo do admina %>
+<%#= javascript_include_tag "decidim/surveys_extended/admin/forms_new" %>
 
-<%= javascript_include_tag "decidim/forms/admin/collapsible_questions" %>
+<%= javascript_pack_tag "decidim_forms_admin", defer: false %>
+
+<% if questionnaire.questions_editable? %>
+  <script>
+    window.Decidim.createEditableForm()
+  </script>
+<% end %>
