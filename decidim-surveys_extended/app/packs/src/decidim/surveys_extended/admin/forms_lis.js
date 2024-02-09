@@ -1,14 +1,22 @@
 /* eslint-disable max-lines */
+/* eslint-disable require-jsdoc */
 
-// = require decidim/forms/admin/auto_buttons_by_min_items.component
-// = require decidim/forms/admin/auto_select_options_by_total_items.component
-// = require decidim/forms/admin/auto_select_options_from_url.component
-// = require decidim/forms/admin/live_text_update.component
+// overwrite createDynamicFields function by createDynamicFieldsLis
 
-((exports) => {
-  const { AutoLabelByPositionComponent, AutoButtonsByPositionComponent, AutoButtonsByMinItemsComponent, AutoSelectOptionsByTotalItemsComponent, AutoSelectOptionsFromUrl, createLiveTextUpdateComponent, createFieldDependentInputs, createDynamicFieldsNew, createSortList } = exports.DecidimAdmin;
-  const { createQuillEditor } = exports.Decidim;
+import AutoButtonsByMinItemsComponent from "src/decidim/forms/admin/auto_buttons_by_min_items.component"
+import AutoSelectOptionsByTotalItemsComponent from "src/decidim/forms/admin/auto_select_options_by_total_items.component"
+import AutoSelectOptionsFromUrl from "src/decidim/forms/admin/auto_select_options_from_url.component"
+import createLiveTextUpdateComponent from "src/decidim/forms/admin/live_text_update.component"
+import AutoButtonsByPositionComponent from "src/decidim/admin/auto_buttons_by_position.component"
+import AutoLabelByPositionComponent from "src/decidim/admin/auto_label_by_position.component"
+import createSortList from "src/decidim/admin/sort_list.component"
+// import createDynamicFields from "src/decidim/admin/dynamic_fields.component"
+import createDynamicFieldsLis from "src/decidim/surveys_extended/admin/dynamic_fields_lis.component"
+import createFieldDependentInputs from "src/decidim/admin/field_dependent_inputs.component"
+import createQuillEditor from "src/decidim/editor"
+import initLanguageChangeSelect from "src/decidim/admin/choose_language"
 
+export default function createEditableForm() {
   const wrapperSelector = ".questionnaire-questions";
   const fieldSelector = ".questionnaire-question";
   const questionTypeSelector = "select[name$=\\[question_type\\]]";
@@ -59,7 +67,7 @@
     listSelector: ".questionnaire-question:not(.hidden)",
     labelSelector: ".card-title span:first",
     onPositionComputed: (el, idx) => {
-      $(el).find("input[name$=\\[position\\]]").val(idx);
+      $(el).find("input[name$=\\[position\\]]:not([name*=\\[matrix_rows\\]])").val(idx);
 
       autoButtonsByPosition.run();
 
@@ -132,11 +140,11 @@
     }
   };
 
-  const createDynamicFieldsNewForAnswerOptions = (fieldId) => {
+  const createDynamicFieldsForAnswerOptions = (fieldId) => {
     const autoButtons = createAutoButtonsByMinItemsForAnswerOptions(fieldId);
     const autoSelectOptions = createAutoMaxChoicesByNumberOfAnswerOptions(fieldId);
 
-    return createDynamicFieldsNew({
+    return createDynamicFieldsLis({
       placeholderId: "questionnaire-question-answer-option-id",
       wrapperSelector: `#${fieldId} ${answerOptionsWrapperSelector}`,
       containerSelector: ".questionnaire-question-answer-options-list",
@@ -157,8 +165,8 @@
 
   const dynamicFieldsForAnswerOptions = {};
 
-  const createDynamicFieldsNewForMatrixRows = (fieldId) => {
-    return createDynamicFieldsNew({
+  const createDynamicFieldsForMatrixRows = (fieldId) => {
+    return createDynamicFieldsLis({
       placeholderId: "questionnaire-question-matrix-row-id",
       wrapperSelector: `#${fieldId} ${matrixRowsWrapperSelector}`,
       containerSelector: ".questionnaire-question-matrix-rows-list",
@@ -268,8 +276,8 @@
     onDisplayConditionQuestionChange($field);
   }
 
-  const createDynamicFieldsNewForDisplayConditions = (fieldId) => {
-    return createDynamicFieldsNew({
+  const createDynamicFieldsForDisplayConditions = (fieldId) => {
+    return createDynamicFieldsLis({
       placeholderId: "questionnaire-question-display-condition-id",
       wrapperSelector: `#${fieldId} ${displayConditionsWrapperSelector}`,
       containerSelector: ".questionnaire-question-display-conditions-list",
@@ -323,9 +331,9 @@
       }
     });
 
-    dynamicFieldsForAnswerOptions[fieldId] = createDynamicFieldsNewForAnswerOptions(fieldId);
-    dynamicFieldsForMatrixRows[fieldId] = createDynamicFieldsNewForMatrixRows(fieldId);
-    dynamicFieldsForDisplayConditions[fieldId] = createDynamicFieldsNewForDisplayConditions(fieldId);
+    dynamicFieldsForAnswerOptions[fieldId] = createDynamicFieldsForAnswerOptions(fieldId);
+    dynamicFieldsForMatrixRows[fieldId] = createDynamicFieldsForMatrixRows(fieldId);
+    dynamicFieldsForDisplayConditions[fieldId] = createDynamicFieldsForDisplayConditions(fieldId);
 
     const dynamicFieldsAnswerOptions = dynamicFieldsForAnswerOptions[fieldId];
     const dynamicFieldsMatrixRows = dynamicFieldsForMatrixRows[fieldId];
@@ -364,15 +372,17 @@
     }
   }
 
-  createDynamicFieldsNew({
+  createDynamicFieldsLis({
     placeholderId: "questionnaire-question-id",
     wrapperSelector: wrapperSelector,
     containerSelector: ".questionnaire-questions-list",
     fieldSelector: fieldSelector,
     addFieldButtonSelector: ".add-question",
     addSeparatorButtonSelector: ".add-separator",
+    addTitleAndDescriptionButtonSelector: ".add-title-and-description",
     fieldTemplateSelector: ".decidim-question-template",
     separatorTemplateSelector: ".decidim-separator-template",
+    TitleAndDescriptionTemplateSelector: ".decidim-title-and-description-template",
     removeFieldButtonSelector: ".remove-question",
     moveUpFieldButtonSelector: ".move-up-question",
     moveDownFieldButtonSelector: ".move-down-question",
@@ -390,6 +400,8 @@
 
       autoLabelByPosition.run();
       autoButtonsByPosition.run();
+
+      initLanguageChangeSelect($field.find("select.language-change").toArray());
     },
     onRemoveField: ($field) => {
       autoLabelByPosition.run();
@@ -433,4 +445,4 @@
 
   autoLabelByPosition.run();
   autoButtonsByPosition.run();
-})(window);
+}

@@ -166,10 +166,7 @@
   <% end %>
 </div>
 
-<% #TODO: uzupelnic brakujace nasze funkcjonalnosci forms_new i dodac do nowego skryptu, albo do admina %>
-<%#= javascript_include_tag "decidim/surveys_extended/admin/forms_new" %>
-
-<%= javascript_pack_tag "decidim_forms_admin", defer: false %>
+<%= javascript_pack_tag "decidim_forms_admin_lis", defer: false %>
 
 <% if questionnaire.questions_editable? %>
   <script>
