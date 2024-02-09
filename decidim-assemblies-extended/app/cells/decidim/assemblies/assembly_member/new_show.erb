@@ -28,7 +28,7 @@
                   <% if model.avatar? %>
                     <%= image_tag model.avatar.url(:big), alt: "member-avatar" %>
                   <% else %>
-                    <%= image_tag image_pack_tag("decidim/default-avatar.svg"), alt: "member-avatar" %>
+                    <%= image_tag model.non_user_avatar_path, alt: "member-avatar" %>
                   <% end %>
                 </div>
                 <div>
