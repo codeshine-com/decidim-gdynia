@@ -127,6 +127,7 @@ pl:
           success: Organizacja została utworzona.
         edit:
           secondary_hosts_hint: Wpisz każdy z nich w nowej linii
+          title: Edycja organizacji
         file_upload_settings:
           content_types:
             admin_hint: Te typy plików są dozwolone dla przesyłania w sekcji administracyjnej. Administratorzy powinni być świadomi zagrożeń związanych z przesyłaniem niektórych formatów dokumentów, więc możesz oczekiwać, że będą ostrożni przy przesyłaniu plików.
@@ -191,3 +192,8 @@ pl:
       titles:
         dashboard: Panel
         decidim: Decidim
+  layouts:
+    decidim:
+      system:
+        login_items:
+          logout: Wyloguj
