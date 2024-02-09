@@ -15,14 +15,14 @@ edit_link(
 
 <div class="row column view-header">
   <div class="m-bottom">
-    <%= link_to debates_path(filter_link_params), class: "small hollow" do %>
+    <%= link_to debates_path, class: "small hollow js-back-to-list" do %>
       <%= icon "chevron-left", class: "icon--small", role: "img", "aria-hidden": true %>
       <%= t(".back") %>
     <% end %>
   </div>
 
   <h2 class="heading3">
-    <%== present(debate).title(links: true) %>
+    <%== present(debate).title(links: true, html_escape: true) %>
   </h2>
 
   <% debate_presenter = Decidim::Debates::DebatePresenter.new(debate) %>
@@ -50,7 +50,7 @@ edit_link(
     <% end %>
     <div class="card extra">
       <div class="card__content">
-        <%= cell("decidim/date", { start: debate.start_time, end: debate.end_time }) %>
+        <%= cell("decidim/date_range", { start: debate.start_time, end: debate.end_time }) %>
 
         <% if endorsements_enabled? && allowed_to?(:endorse, :debate, debate: debate) %>
           <div class="row collapse buttons__row">
