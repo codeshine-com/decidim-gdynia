@@ -19,7 +19,7 @@
             <% unless conversation.interlocutors(current_user).first.deleted? %><span class="muted">@<%= conversation.interlocutors(current_user).first.nickname %></span><% end %>
           </strong>
         <% else %>
-          <%= t("from", scope: "decidim.messaging.conversations.index") %>: <strong><%= username_list(conversation.interlocutors(current_user), shorten: true) %></strong>
+          <%= t("from", scope: "decidim.messaging.conversations.index") %>: <strong><%= raw username_list(conversation.interlocutors(current_user), shorten: true) %></strong>
         <% end %>
         <br>
         <span class="muted">
