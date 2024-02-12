@@ -828,6 +828,15 @@ pl:
       index:
         last_activity: Ostatnia aktywność
         resource_type: Typ
+    links:
+      invalid_url: Nieprawidłowy URL
+      warning:
+        body_1: Za chwilę odwiedzisz link zewnętrzny i prosimy o zachowanie ostrożności w odniesieniu do treści znajdujących się na stronie zewnętrznej.
+        body_2: Przed kontynuowaniem sprawdź link, który zamierzasz odwiedzić i upewnij się, że rozpoznajesz go jako bezpieczną witrynę.
+        cancel: Anuluj
+        close_modal: Zamknij okno
+        proceed: Kontynuuj
+        title: Otwierasz zewnętrzny link
     log:
       base_presenter:
         create: "%{user_name} stworzył(a) %{resource_name}"
