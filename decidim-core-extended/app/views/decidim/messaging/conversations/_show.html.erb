@@ -17,7 +17,7 @@
           </div>
           <% if participants.count == 1 && !participants.first.deleted? %>
             <%= link_to profile_path(participants.first.nickname) do %>
-              <%= image_tag participants.first.avatar.url, alt: t("decidim.author.avatar") %>
+              <%= image_tag participants.first.avatar_url, alt: t("decidim.author.avatar") %>
             <% end %>
           <% elsif participants.count == 1 && participants.first.deleted? %>
             <%= image_tag current_user.avatar.default_url, alt: t("decidim.author.avatar") %>
