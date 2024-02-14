@@ -7,7 +7,7 @@
             <div class="author author--flex">
               <% if has_profile? %>
                 <%= link_to profile_url, class: "author__avatar" do %>
-                  <%= image_tag model.avatar.url(:big), alt: "member-avatar" %>
+                  <%= image_tag model.avatar_url(:big), alt: "member-avatar" %>
                 <% end %>
                 <div>
                   <div class="author__name--container">
@@ -26,9 +26,9 @@
               <% else %>
                 <div class="author__avatar">
                   <% if model.avatar? %>
-                    <%= image_tag model.avatar.url(:big), alt: "member-avatar" %>
+                    <%= image_tag model.avatar_url(:big), alt: "member-avatar" %>
                   <% else %>
-                    <%= image_tag image_pack_tag("decidim/default-avatar.svg"), alt: "member-avatar" %>
+                    <%= image_tag model.non_user_avatar_path, alt: "member-avatar" %>
                   <% end %>
                 </div>
                 <div>
