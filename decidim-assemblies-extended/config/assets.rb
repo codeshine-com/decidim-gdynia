@@ -19,6 +19,7 @@ Decidim::Webpacker.register_path("#{base_path}/app/packs")
 # `stylesheet_pack_tag`.
 Decidim::Webpacker.register_entrypoints(
   assemblies_admin_custom: "#{base_path}/app/packs/entrypoints/assemblies_admin_custom.js",
+  assemblies_extended_custom: "#{base_path}/app/packs/entrypoints/decidim_assemblies_extended.js",
 # #   decidim_admin_extended_admin: "#{base_path}/app/packs/entrypoints/decidim_admin_extended_admin.js"
 #   decidim_admin_extended_admin: "#{base_path}/app/packs/entrypoints/decidim_assemblies_extended_admin.scss"
 )
