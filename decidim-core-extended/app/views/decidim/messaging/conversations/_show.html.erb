@@ -17,12 +17,12 @@
           </div>
           <% if participants.count == 1 && !participants.first.deleted? %>
             <%= link_to profile_path(participants.first.nickname) do %>
-              <%= image_tag participants.first.avatar.url, alt: t("decidim.author.avatar") %>
+              <%= image_tag present(participants.first).avatar_url, alt: t("decidim.author.avatar") %>
             <% end %>
           <% elsif participants.count == 1 && participants.first.deleted? %>
-            <%= image_tag current_user.avatar.default_url, alt: t("decidim.author.avatar") %>
+            <%= image_tag present(current_user).avatar.default_url, alt: t("decidim.author.avatar") %>
           <% else %>
-            <%= image_tag current_user.avatar.default_multiuser_url, alt: t("decidim.author.avatar") %>
+            <%= image_tag present(current_user).avatar.default_multiuser_url, alt: t("decidim.author.avatar") %>
           <% end %>
 
           <div class="ml-s">
@@ -30,7 +30,7 @@
               <%= t(".chat_with") %> <strong><%= participants.first.name.presence || t('decidim.admin.deleted_user.new_name') %></strong><br>
               <% unless participants.first.deleted? %><span class="muted">@<%= participants.first.nickname %></span><% end %>
             <% else %>
-              <%= t(".title", usernames: username_list(participants)) %>
+              <%= raw t(".title", usernames: username_list(participants)) %>
             <% end %>
           </div>
         </div>
