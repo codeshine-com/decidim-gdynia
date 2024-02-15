@@ -17,12 +17,12 @@
           </div>
           <% if participants.count == 1 && !participants.first.deleted? %>
             <%= link_to profile_path(participants.first.nickname) do %>
-              <%= image_tag avatar_url_for(participants.first), alt: t("decidim.author.avatar") %>
+              <%= image_tag present(participants.first).avatar_url, alt: t("decidim.author.avatar") %>
             <% end %>
           <% elsif participants.count == 1 && participants.first.deleted? %>
-            <%= image_tag  ActionController::Base.helpers.asset_pack_path("media/images/default-avatar.svg"), alt: t("decidim.author.avatar") %>
+            <%= image_tag present(current_user).avatar.default_url, alt: t("decidim.author.avatar") %>
           <% else %>
-            <%= image_tag ActionController::Base.helpers.asset_pack_path("media/images/avatar-multiuser.png"), alt: t("decidim.author.avatar") %>
+            <%= image_tag present(current_user).avatar.default_multiuser_url, alt: t("decidim.author.avatar") %>
           <% end %>
 
           <div class="ml-s">
