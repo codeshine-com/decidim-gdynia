@@ -25,8 +25,8 @@
                 </div>
               <% else %>
                 <div class="author__avatar">
-                  <% if model.avatar? %>
-                    <%= image_tag model.avatar_url(:big), alt: "member-avatar" %>
+                  <% if model.avatar.attached? %>
+                    <%= image_tag main_app.url_for(model.avatar_big), alt: "member-avatar" %>
                   <% else %>
                     <%= image_tag model.non_user_avatar_path, alt: "member-avatar" %>
                   <% end %>

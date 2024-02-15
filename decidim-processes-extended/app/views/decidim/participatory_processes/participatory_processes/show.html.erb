@@ -75,8 +75,8 @@
         <% if translated_attribute(area&.name).present? %>
           <div class="definition-data__item area">
             <span class="definition-data__title">
-              <% if area.icon.present? %>
-                <%= image_tag area.icon_url(:square), alt: "ikona kategorii #{translated_attribute(area.name)}", class: 'area-icon' %>
+              <% if area.icon.attached? %>
+                <%= image_tag main_app.url_for(area.icon_square), alt: "ikona kategorii #{translated_attribute(area.name)}", class: 'area-icon' %>
               <% else %>
                 <%= t("area", scope: "decidim.participatory_processes.show") %>
               <% end %>

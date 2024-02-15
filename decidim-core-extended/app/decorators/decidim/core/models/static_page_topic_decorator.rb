@@ -2,7 +2,6 @@
 
 Decidim::StaticPageTopic.class_eval do
 
-  # TODO: dodac uploader w nowej wersji
-  mount_uploader :cover, Decidim::Cw::BannerImageUploader
-
+  # mount_uploader :cover, Decidim::Cw::BannerImageUploader
+  has_one_attached :cover
 end

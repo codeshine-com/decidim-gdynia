@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-Decidim::ImageUploader.class_eval do
+Decidim::Cw::ImageUploader.class_eval do
   set_variants do
     {
       square: { resize_to_fit: [60, 60] },

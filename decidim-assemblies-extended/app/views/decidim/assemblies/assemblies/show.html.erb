@@ -114,8 +114,8 @@ edit_link(
           <% if translated_attribute(area&.name).present? %>
             <div class="definition-data__item area">
               <span class="definition-data__title">
-                <% if area.icon.present? %>
-                  <%= image_tag area.icon_url(:square), alt: "ikona kategorii #{area.name}" %>
+                <% if area.icon.attached? %>
+                  <%= image_tag main_app.url_for(area.icon_square), alt: "ikona kategorii #{area.name}" %>
                 <% else %>
                   <%= t("area", scope: "decidim.assemblies.show") %>
                 <% end %>

@@ -52,8 +52,8 @@
 
     <div class="row column">
       <%= form.file_field :question_image, label: t('.question_image'), disabled: !editable, style: 'background-color: transparent;'  %>
-      <% if question.question_image.present? %>
-        <%= image_tag question.question_image.url, alt: question.body, style: 'max-height: 100px;' %>
+      <% if question.question_image.attached? %>
+        <%= image_tag main_app.url_for(question.question_image), alt: question.body, style: 'max-height: 100px;' %>
         <div class="row column">
           <%=
             form.check_box(
