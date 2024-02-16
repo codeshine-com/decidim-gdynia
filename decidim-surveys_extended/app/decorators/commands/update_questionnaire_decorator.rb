@@ -15,7 +15,7 @@ Decidim::Forms::Admin::UpdateQuestionnaire.class_eval do
       max_characters: form_question.max_characters,
       # custom
       metrics: form_question.metrics,
-      remove_question_image: form_question.remove_question_image
+      # remove_question_image: form_question.remove_question_image
     }.tap do |h|
       h[:question_image] = form_question.question_image if form_question.question_image.present?
     end
