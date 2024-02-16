@@ -11,12 +11,9 @@
     <%= label_tag field_id, answer.label(cleaned_answer_idx), class: "questionnaire-question" %>
   <% end %>
 
-  <%# if answer.question.question_image.present? %>
   <% if answer.question.question_image.attached? %>
     <div class="questionnaires-image-field">
-      <%#= link_to answer.question.question_image.url, target: '_blank' do %>
       <%= link_to main_app.url_for(answer.question.question_image), target: '_blank' do %>
-        <%#= image_tag answer.question.question_image.url, alt: answer.label(cleaned_answer_idx) %>
         <%= image_tag main_app.url_for(answer.question.question_image), alt: answer.label(cleaned_answer_idx) %>
       <% end %>
     </div>
