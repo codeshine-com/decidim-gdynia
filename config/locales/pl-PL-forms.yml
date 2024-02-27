@@ -115,8 +115,8 @@ pl:
         dimensions: "%{width} × %{height} px"
         dimensions_info: 'Rozmiar obrazu będzie wynosił:'
         processors:
-          resize_and_pad: Zmieniony i dopełniony do
-          resize_to_fit: Dopasowany
+          resize_and_pad: Rozmiar obrazu zostanie zmieniony i uzupełniony do %{dimensions}
+          resize_to_fit: Rozmiar obrazu zostanie dostosowany do %{dimensions}.
       question_types:
         long_answer: Długa odpowiedź
         matrix_multiple: Macierz (wiele opcji)
