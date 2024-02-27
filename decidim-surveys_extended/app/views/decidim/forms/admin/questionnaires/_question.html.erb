@@ -52,7 +52,7 @@
 
     <div class="row column">
       <%= form.file_field :question_image, label: t('.question_image'), disabled: !editable, style: 'background-color: transparent;'  %>
-      <% if question.question_image&.attached? %>
+      <% if question.question_image %>
         <%= image_tag main_app.url_for(question.question_image), alt: question.body, style: 'max-height: 100px;' %>
         <div class="row column">
           <%=
