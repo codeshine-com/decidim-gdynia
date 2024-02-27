@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = "0.26.9"
+DECIDIM_VERSION = "0.27.5"
 
 gem "decidim", DECIDIM_VERSION
 
@@ -34,6 +34,8 @@ gem 'dotenv-rails', group: [:development, :test, :staging]
 
 gem 'sidekiq'
 
+gem 'rexml'
+
 group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
   # gem "decidim-dev", DECIDIM_VERSION
@@ -44,7 +46,7 @@ group :development do
   gem "binding_of_caller"
   gem "letter_opener_web", "~> 1.3"
   gem "listen", "~> 3.1"
-  gem "spring", "~> 2.0"
+  gem "spring"
   gem "spring-watcher-listen", "~> 2.0"
   gem "web-console", "~> 3.5"
 end
