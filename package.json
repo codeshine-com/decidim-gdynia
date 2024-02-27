@@ -6,7 +6,7 @@
     "@decidim/core": "^0.27.5",
     "@decidim/elections": "^0.27.5",
     "@decidim/webpacker": "^0.27.5",
-    "@rails/webpacker": "^6.0.0-rc.5"
+    "graphql-ws": ">= 4.5.0"
   },
   "version": "0.1.0",
   "babel": {
@@ -21,6 +21,6 @@
     "@decidim/dev": "^0.27.5",
     "@decidim/eslint-config": "^0.27.5",
     "@decidim/stylelint-config": "^0.27.5",
-    "webpack-dev-server": "^5.0.2"
+    "webpack-dev-server": "^4.15.1"
   }
 }
