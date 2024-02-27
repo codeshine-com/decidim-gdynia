@@ -1622,7 +1622,7 @@ pl:
           preferences:
             description: Te pliki cookie pozwalają witrynie zapamiętać wybory dokonane w przeszłości na tej stronie, aby zapewnić użytkownikom bardziej spersonalizowaną obsługę.
             title: Preferencje
-          save_settings: Save settings
+          save_settings: Zapisz ustawienia
           title: Cookie settings
           toggle: Toggle %{consent_category}
         warning:
