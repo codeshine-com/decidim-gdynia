@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 # TODO: do aktualizacji - usuniete w 0.27
+# chyba zmiany dotycza: decidim-processes-extended/app/views/decidim/shared/participatory_space_filters/_filters.html.erb
 
 # Decidim::ParticipatoryProcesses::ParticipatoryProcessSearch.class_eval do
 #
