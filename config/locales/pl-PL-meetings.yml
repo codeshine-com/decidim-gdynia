@@ -20,18 +20,25 @@ pl:
         decidim_user_group_id: Grupa użytkowników
         description: Opis
         end_time: Czas zakończenia
+        id: ID
+        iframe_embed_type: Typ osadzania elementu iframe
         location: Miejsce
         location_hints: Wskazówki co do miejsca
+        online_meeting_url: Adres URL spotkania online
         organizer_gid: Utwórz jako
         organizer_id: Organizator
         private_meeting: Prywatne spotkanie
         registration_email_custom_content: Niestandardowa treść e-maila rejestracyjnego
         registration_form_enabled: Włączono formularz rejestracyjny
         registration_terms: Warunki rejestracji
+        registration_type: Rodzaj rejestracji
+        registration_url: Link do rejestracji
         registrations_enabled: Rejestracje włączone
+        reserved_slots: Zarezerwowane miejsca na to spotkanie
         start_time: Czas rozpoczęcia
         title: Tytuł
         transparent: Transparentny
+        type_of_meeting: Rodzaj spotkania
       minutes:
         audio_url: Adres URL do audio
         description: Opis
@@ -74,6 +81,34 @@ pl:
         other: Rejestracje
   decidim:
     admin:
+      filters:
+        meetings:
+          category_id_eq:
+            label: Kategoria
+          closed_at_present:
+            label: Stan
+            values:
+              'false': Otwarte
+              'true': Zamknięte
+          is_upcoming_true:
+            label: Data
+            values:
+              'false': Przeszłe
+              'true': Nadchodzące
+          scope_id_eq:
+            label: Zakres
+          with_any_origin:
+            label: Źródło
+            values:
+              official: Jednostka
+              participants: Uczestnik
+              user_group: Grupa
+          with_any_type:
+            label: Typ spotkania
+            values:
+              hybrid: Hybrydowe
+              in_person: Na miejscu
+              online: Online
       meeting_copies:
         create:
           error: Wystąpił błąd podczas duplikowania tego spotkania.
@@ -344,6 +379,12 @@ pl:
       calendar_modal:
         calendar_url: Adres URL kalendarza
         close_window: Zamknij okno
+        copy_calendar_url: Copy
+        copy_calendar_url_clarification: Kopiuj adres URL kalendarza do schowka
+        copy_calendar_url_copied: Skopiowano!
+        copy_calendar_url_description: "Wszystkie opublikowane spotkania możesz zobaczyć w aplikacji kalendarza lub u swojego dostawcy. Skopiuj i wklej ten adres URL do swojego kalendarza, korzystając z opcji „Dodaj nowy kalendarz z adresu URL”."
+        copy_calendar_url_explanation: Pamiętaj, że eksportujesz tylko wybrane przez filtrach spotkania. Jeśli chcesz wyeksportować wszystkie, najpierw zresetuj filtry.
+        copy_calendar_url_message: Adres URL został pomyślnie skopiowany do schowka.
         export_calendar: Eksportuj kalendarz
       conference_venues: Sale konferencyjne
       content_blocks:
@@ -365,7 +406,17 @@ pl:
             search: Szukaj
             space_type: Przestrzeń partycypacyjna
             upcoming: Nadchodzące
+      iframe_access_level:
+        all: Wszyscy odwiedzajacy
+        registered: Zarejestrowani uczestnicy tego spotkania
+        signed_in: Tylko zalogowani uczestnicy
+      iframe_embed_type:
+        embed_in_meeting_page: Umieść na stronie spotkania
+        none: Brak
+        open_in_live_event_page: Otwórz na stronie wydarzenia na żywo (z opcjonalnymi ankietami)
+        open_in_new_tab: Otwórz link w nowej zakładce
       last_activity:
+        meeting_updated_at_html: "<span>Spotkanie zaktualizowano o %{link}</span>"
         new_meeting_at_html: "<span>Nowe spotkanie %{link}</span>"
       mailer:
         invite_join_meeting_mailer:

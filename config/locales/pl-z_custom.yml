@@ -195,6 +195,7 @@ pl:
       filters:
         moderations:
           reportable_type_string_eq:
+            label: Typ
             values:
               Decidim::Comments::Comment: Komentarze
               Decidim::Debates::Debate: Debaty
