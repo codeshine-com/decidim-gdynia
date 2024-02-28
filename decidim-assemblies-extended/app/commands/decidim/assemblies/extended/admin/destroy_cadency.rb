@@ -5,7 +5,7 @@ module Decidim
     module Admin
       # A command with all the business logic when updating a new cadency
       # type in the system.
-      class DestroyCadency < Rectify::Command
+      class DestroyCadency < Decidim::Command
         # Public: Initializes the command.
         #
         # form - A form object with the params.
