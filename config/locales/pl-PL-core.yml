@@ -119,14 +119,31 @@ pl:
         create: "%{user_name} utworzył(a) kategorię %{resource_name}"
         delete: "%{user_name} usunął/usunęła kategorię %{resource_name}"
         update: "%{user_name} zaktualizował(a) kategorię %{resource_name}"
+      area_type:
+        create: "%{user_name} utworzył(a) typ obszaru %{resource_name}"
+        delete: "%{user_name} usunął/usunęła typ obszaru %{resource_name}"
+        update: "%{user_name} zaktualizował(a) typ obszaru %{resource_name}"
+      attachment:
+        create: "%{user_name} utworzył(a) załącznik %{resource_name}"
+        delete: "%{user_name} usunął/usunęła załącznik %{resource_name}"
+        update: "%{user_name} zaktualizował(a) załącznik %{resource_name}"
+      attachment_collection:
+        create: "%{user_name} utworzył(a) kolekcję załączników %{resource_name}"
+        delete: "%{user_name} usunął/usunęła kolekcję załączników %{resource_name}"
+        update: "%{user_name} zaktualizował(a) kolekcję załączników %{resource_name}"
+      category:
+        create: "%{user_name} dodał(a) kategorię %{resource_name} do przestrzeni %{space_name}"
+        delete: "%{user_name} usunął/usunęła kategorię %{resource_name} z przestrzeni %{space_name}"
+        update: "%{user_name} zaktualizował(a) kategorię %{resource_name} w przestrzeni %{space_name}"
       component:
         create: "%{user_name} dodał(a) komponent %{resource_name} do przestrzeni %{space_name}"
         delete: "%{user_name} usunął/usunęła komponent %{resource_name} z przestrzeni %{space_name}"
+        export_component: "%{user_name} wyeksportował(a) %{resource_name} %{component_name} w %{space_name} jako %{format_name}"
         publish: "%{user_name} opublikował(a) komponent %{resource_name} w przestrzeni %{space_name}"
         unpublish: "%{user_name} cofnął/cofnęła publikację komponentu %{resource_name} w przestrzeni %{space_name}"
       moderation:
         hide: "%{user_name} ukrył(a) zasób typu %{resource_type} w przestrzeni %{space_name}"
-        unreport: "%{user_name} cofnął zgłoszenie zasobu typu %{resource_type} w przestrzeni %{space_name}"
+        unreport: "%{user_name} cofnął/cofnęła zgłoszenie zasobu typu %{resource_type} w przestrzeni %{space_name}"
       newsletter:
         create: "%{user_name} stworzył(a) newsletter %{resource_name}"
         delete: "%{user_name} usunął/usunęła newsletter %{resource_name}"
