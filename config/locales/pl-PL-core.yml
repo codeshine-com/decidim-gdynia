@@ -1606,7 +1606,7 @@ pl:
         dialog:
           accept_all: Zaakceptuj wszystkie
           accept_only_essential: Akceptuj tylko niezbędne
-          description: Na naszej stronie internetowej używamy plików cookie w celu poprawy wydajności i zawartości witryny. Pliki cookie pozwalają nam zapewnić bardziej indywidualne doświadczenia użytkownika i kanały mediów społecznościowych.
+          description: Na naszej stronie internetowej używamy plików cookie w celu poprawy wydajności i zawartości witryny. Pozwalają one lepiej dostosować stronę do potrzeb użytkownika oraz umożliwiają dziłanie kanałów społecznościowych.
           settings: Ustawienia
           title: Informacje o plikach cookies stosowanych w serwisie
         modal:
