@@ -11,6 +11,6 @@ Decidim::UpdateUserInterests.class_eval do
     end
 
     def selected_areas_ids
-      @form.areas.select(&:checked).map(&:id)
+      @form.areas.select(&:checked).map(&:id).map(&:to_i).compact
     end
 end
