@@ -1086,6 +1086,10 @@ pl:
       update:
         error: Podczas aktualizowania ustawień powiadomień wystąpił błąd.
         success: Ustawienia powiadomień zostały zaktualizowane.
+    offline:
+      show:
+        message: Wygląda na to, że jesteś obecnie offline. Spróbuj ponownie później.
+        retry: Ponów
     open_data:
       not_available_yet: Pliki Open Data nie są jeszcze dostępne. Spróbuj ponownie za kilka minut.
     own_user_groups:
