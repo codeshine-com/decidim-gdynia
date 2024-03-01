@@ -5,13 +5,13 @@
 
 <% columns = allow_answers? && visitor_can_answer? && @form.responses.map(&:question).any?(&:matrix?) ? 9 : 6 %>
 
-<%= render partial: "decidim/shared/component_announcement" %>
+<%= render partial: "decidim/shared/component_announcement" if current_component.manifest_name == "surveys" %>
 
 <div class="row columns">
   <h3 class="section-heading"><%= translated_attribute questionnaire.title %></h3>
   <div class="row">
     <div class="columns large-<%= columns %> medium-centered lead">
-      <%= decidim_sanitize translated_attribute questionnaire.description %>
+      <%= decidim_sanitize_editor_admin translated_attribute questionnaire.description %>
     </div>
   </div>
 </div>
@@ -20,8 +20,8 @@
   <div class="columns large-<%= columns %> medium-centered">
     <div class="card">
       <div class="card__content">
-       <% unless questionnaire_for.try(:component)&.try(:published?) %>
-           <div class="section">
+        <% unless questionnaire_for.try(:component)&.try(:published?) %>
+          <div class="section">
             <div class="callout warning">
               <p><%= t(".questionnaire_not_published.body") %></p>
             </div>
@@ -69,7 +69,8 @@
                     <div id="step-<%= step_index %>" class="<%= step_index.zero? ? "questionnaire-step" : "questionnaire-step hide" %>" data-toggler=".hide">
                       <% if @form.total_steps > 1 %>
                         <h4 class="section-heading">
-                          <%= t(".current_step", step: step_index + 1) %> <span class="answer-questionnaire__steps"><%= t(".of_total_steps", total_steps: @form.total_steps) %></span>
+                          <%= t(".current_step", step: step_index + 1) %>
+                          <span class="answer-questionnaire__steps"><%= t(".of_total_steps", total_steps: @form.total_steps) %></span>
                         </h4>
                       <% end %>
 
@@ -90,7 +91,7 @@
                             ) %>
                           <% end %>
                         </div>
-                        <% if !answer.question.separator? %>
+                        <% if !(answer.question.separator? || answer.question.title_and_description?) %>
                           <% cleaned_answer_idx += 1 %>
                         <% end %>
                         <% answer_idx += 1 %>
@@ -103,10 +104,16 @@
                           </div>
                         <% end %>
 
+                        <% if show_public_participation? %>
+                          <div class="row column public-participation">
+                            <%= cell("decidim/public_participation", form) %>
+                          </div>
+                        <% end %>
+
                         <div class="row column tos-agreement">
                           <%= form.check_box :tos_agreement, label: t(".tos_agreement"), id: "questionnaire_tos_agreement", disabled: !current_participatory_space.can_participate?(current_user) %>
                           <div class="help-text">
-                            <%= decidim_sanitize translated_attribute questionnaire.tos %>
+                            <%= decidim_sanitize_editor translated_attribute questionnaire.tos %>
                           </div>
                         </div>
                       <% end %>
@@ -125,7 +132,7 @@
             <% end %>
           <% else %>
             <div class="answer-questionnaire">
-              <h5 class="section-heading"><%= t(".answer_questionnaire.title") %></h5>
+              <h3 class="section-heading"><%= t(".answer_questionnaire.title") %></h3>
               <p>
                 <%= t(".answer_questionnaire.anonymous_user_message", sign_in_link: decidim.new_user_session_path, sign_up_link: decidim.new_user_registration_path).html_safe %>
               </p>
@@ -139,7 +146,7 @@
         <% else %>
           <div class="section">
             <div class="callout warning">
-              <h4><%= t(".questionnaire_closed.title") %></h4>
+              <h3 class="heading4"><%= t(".questionnaire_closed.title") %></h3>
               <p><%= t(".questionnaire_closed.body") %></p>
             </div>
           </div>
