@@ -1643,7 +1643,7 @@ pl:
             description: Te pliki cookie pozwalają witrynie zapamiętać wybory dokonane w przeszłości na tej stronie, aby zapewnić użytkownikom bardziej spersonalizowaną obsługę.
             title: Preferencje
           save_settings: Zapisz ustawienia
-          title: Cookie settings
+          title: Ustawienia cookies
           toggle: Toggle %{consent_category}
         warning:
           all_categories: wszystkie ciasteczka
