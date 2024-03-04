@@ -53,8 +53,11 @@ pl:
             author: Autor
             body: Treść
             created_at: Utworzono
+            official_blog_post: Oficjalny post
             title: Tytuł
       posts:
+        index:
+          empty: Nie ma jeszcze żadnych postów.
         show:
           back: Powrót do listy
           comments: Komentarze
