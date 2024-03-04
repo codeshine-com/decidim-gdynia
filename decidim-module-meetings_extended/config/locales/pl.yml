@@ -23,6 +23,10 @@ pl:
             in_person: Osobiście
             online: Online
     components:
+      meetings:
+        actions:
+          comment: Komentarze
+          join: Dołącz
       meetings_extended:
         name: Spotkania
     meetings:
