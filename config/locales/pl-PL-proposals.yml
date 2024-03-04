@@ -388,6 +388,36 @@ pl:
         exports:
           comments: Komentarze
           proposals: Propozycje
+        imports:
+          help:
+            answers: |
+              Importowany dokument powinien zawierać następujące nazwy kolumn w przypadku plików CSV lub Excel lub nazwy kluczy w przypadku plików JSON:
+              <ul>
+              <li><b>id:</b> Identyfikator propozycji odpowiedzi</li>
+              <li><b>state:</b> Jeden z: "accepted", "evaluating", or "rejected"</li>
+              <li><b>answer/en:</b> Odpowiedź w języku angielskim. Będzie to zależeć od konfiguracji języka platformy.</li>
+              </ul>
+            proposals: |
+              Plik musi zawierać następujące nazwy kolumn w przypadku plików CSV lub Excel lub nazwy kluczy w przypadku plików JSON:
+              <ul>
+              <li><b>title/en:</b> Tytuł w języku angielskim. Będzie to zależeć od konfiguracji języka platformy.</li>
+              <li><b>body/en:</b> Treść w języku angielskim. Będzie to zależeć od konfiguracji języka platformy.</li>
+              <li><b>scope/id:</b> Identyfikator zakresu</li>
+              <li><b>category/id:</b> Identyfikator kategorii</li>
+              </ul>
+          label:
+            answers: Importuj odpowiedzi z pliku
+            proposals: Importuj propozycje z pliku
+          resources:
+            answers:
+              one: odpowiedź na propozycję
+              other: odpowiedzi na propozycję
+            proposals:
+              one: propozycja
+              other: propozycje
+          title:
+            answers: Importuj odpowiedzi na propozycje
+            proposals: Importuj propozycje
         models:
           proposal:
             name: Propozycja
@@ -570,6 +600,7 @@ pl:
           citizens: Obywatele
           meetings: Spotkania
           official: Urzędnik
+          participants: Uczestnicy
           user_groups: Grupy użytkowników
         filter_scope_values:
           all: Wszystko
