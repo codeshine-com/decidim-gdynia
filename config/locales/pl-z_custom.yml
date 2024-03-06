@@ -515,8 +515,6 @@ pl:
       default_officialization_text_for_users: Użytkownik został zweryfikowany
     proposals:
       admin:
-        participatory_texts:
-          sections: Sekcje
         proposal_answers:
           form:
             accepted: Przyjęta
