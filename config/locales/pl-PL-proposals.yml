@@ -145,7 +145,7 @@ pl:
               most_voted: Większość wybierana
               random: Losowo
               recent: Aktualny
-              with_more_authors: With more authors
+              with_more_authors: Z większą liczbą autorów
             geocoding_enabled: Włączono geokodowanie
             minimum_votes_per_user: Minimalna liczba wsparć na użytkownika
             new_proposal_body_template: Szablon treści nowej propozycji
@@ -194,7 +194,7 @@ pl:
               most_voted: Większość wybierana
               random: Losowo
               recent: Aktualny
-              with_more_authors: With more authors
+              with_more_authors: Z większą liczbą autorów
             endorsements_blocked: Rekomendacje zostały zablokowane
             endorsements_enabled: Rekomendacje włączone
             proposal_answering_enabled: Włączono odpowiadanie na propozycję
@@ -796,6 +796,8 @@ pl:
           add_images: Plik
           attachment_legend: "(Opcjonalnie) Dodaj załącznik"
           back: Wróć
+          edit_documents: Edytuj dokumenty
+          edit_image: Edytuj obraz
           delete_document: Usuń dokument
           delete_image: Usuń obraz
           gallery_legend: "(Opcjonalnie) Dodaj obraz do karty propozycji"
@@ -826,9 +828,12 @@ pl:
           filter_by: Filtruj według
           unfold: Rozwiń
         index:
+          click_here: Zobacz wszystkie propozycje
           collaborative_drafts_list: Wspólne szkice
           new_proposal: Nowa propozycja
+          see_all: Zobacz wszystkie propozycje
           see_all_withdrawn: Zobacz wszystkie wycofane propozycje
+          text_banner: Przeglądasz listę wniosków wycofanych przez ich autorów. %{go_back_link}.
           view_proposal: Zobacz propozycję
         linked_proposals:
           proposal_votes:
