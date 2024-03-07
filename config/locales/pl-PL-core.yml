@@ -143,6 +143,7 @@ pl:
         unpublish: "%{user_name} cofnął/cofnęła publikację komponentu %{resource_name} w przestrzeni %{space_name}"
       moderation:
         hide: "%{user_name} ukrył(a) zasób typu %{resource_type} w przestrzeni %{space_name}"
+        unhide: "%{user_name} przywrócił(a) widocznosć zgłoszonego zasobu typu %{resource_type} w przestrzeni %{space_name}"
         unreport: "%{user_name} cofnął/cofnęła zgłoszenie zasobu typu %{resource_type} w przestrzeni %{space_name}"
       newsletter:
         create: "%{user_name} stworzył(a) newsletter %{resource_name}"
