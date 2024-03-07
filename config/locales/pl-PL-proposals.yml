@@ -459,6 +459,7 @@ pl:
             accepted: Zaakceptowano
             answer_proposal: Odpowiedź
             evaluating: Ocena
+            not_answered: Brak odpowiedzi
             rejected: Odrzucono
             title: Odpowiedź na propozycję %{title}
         proposal_notes:
