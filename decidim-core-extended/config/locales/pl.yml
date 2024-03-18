@@ -77,7 +77,7 @@ pl:
     devise:
       invitations:
         edit:
-          password_help: "Minimalna liczba znaków: %{minimun_characters}; nie może być zbyt powszechne (np. 123456) i musi różnić się od Twojej nazwy konta i adresu e-mail."
+          password_help: "Minimalna liczba znaków: %{minimum_characters}; nie może być zbyt powszechne (np. 123456) i musi różnić się od Twojej nazwy konta i adresu e-mail."
           required_fields_info: Pola tekstowe oraz zgoda na Warunki korzystania z Platformy oraz zapoznanie się z wymaganiami RODO są wymagane
       registrations:
         new:

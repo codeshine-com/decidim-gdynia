@@ -11,7 +11,7 @@ en:
     devise:
       invitations:
         edit:
-          password_help: "%{minimun_characters} characters minimum, must not be too common (e.g. 123456) and must be different from your nickname and your email."
+          password_help: "%{minimum_characters} characters minimum, must not be too common (e.g. 123456) and must be different from your nickname and your email."
           required_fields_info: All text firlds and Terms of agrement and RODO checkboxes are rquired
       registrations:
         new:
