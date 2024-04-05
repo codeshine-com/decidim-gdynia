@@ -1,4 +1,5 @@
 #
+# Migruje zalaczniki do ActiveStorage
 # Do zmigrowania wystarczy uruchomic kolejno rzeczy w konsoli
 #
 
@@ -34,11 +35,11 @@ def migrate
   routes_mappings = []
 
   MIGRATION_ATTRIBUTES.each do |(klass, cw_attribute, cw_uploader, as_attribute)|
-    Decidim::CarrierWaveMigratorService.migrate_attachment!({
+    Decidim::CarrierWaveMigratorService.migrate_attachment!(
                                                               klass: klass, cw_attribute: cw_attribute,
                                                               cw_uploader: cw_uploader, as_attribute: as_attribute,
                                                               logger: logger,
                                                               routes_mappings: routes_mappings
-                                                            })
+                                                            )
   end
 end
