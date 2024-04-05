@@ -427,8 +427,8 @@ pl:
             <i>%{resource_content}</i>
     forms:
       errors:
-        error: Nie moze byc puste
-        email: Nie moze być puste i musi być emailem
+        error: Nie może być puste
+        email: Nie może być puste i musi być emailem
       file_help:
         image:
           message_1: Preferowany obraz lub zdjęcie, które nie zawiera żadnego tekstu.
