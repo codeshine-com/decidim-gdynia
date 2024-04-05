@@ -1,14 +1,11 @@
 # frozen_string_literal: true
 
 Decidim::RegistrationForm.class_eval do
-  attr_accessor :rodo_agreements
-  attribute :card_number
-  attribute :card_number_possesion
+  attribute :card_number, String
+  attribute :card_number_possesion, Decidim::AttributeObject::TypeMap::Boolean
+  attribute :rodo_agreements, Decidim::AttributeObject::TypeMap::Boolean
 
   validates :rodo_agreements, allow_nil: false, acceptance: true
-
-  validates :tos_agreement, presence: true
-  validates :rodo_agreements, presence: true
 
   # TODO: walidacja unikalnosci
   validate :is_card_number_uniqie?
