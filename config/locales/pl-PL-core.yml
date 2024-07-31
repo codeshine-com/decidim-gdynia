@@ -1685,6 +1685,7 @@ pl:
         instagram: "%{organization} na Instagramie"
         twitter: "%{organization} na Twitterze"
         youtube: "%{organization} na YouTube"
+        x: "%{organization} na X"
       user_menu:
         account: 'Konto użytkownika: %{name}'
         admin_dashboard: Panel administracyjny
