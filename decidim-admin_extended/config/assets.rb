@@ -26,7 +26,7 @@ Decidim::Webpacker.register_entrypoints(
 # If you want to import some extra SCSS files in the Decidim main SCSS file
 # without adding any extra stylesheet inclusion tags, you can use the following
 # method to register the stylesheet import for the main application.
-Decidim::Webpacker.register_stylesheet_import("stylesheets/decidim/admin_extended/app")
+Decidim::Webpacker.register_stylesheet_import("stylesheets/decidim/admin_extended/information_card")
 
 # If you want to do the same but include the SCSS file for the admin panel's
 # main SCSS file, you can use the following method.
