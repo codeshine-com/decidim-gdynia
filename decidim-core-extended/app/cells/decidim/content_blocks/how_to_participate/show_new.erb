@@ -7,7 +7,7 @@
       <div class="column">
         <div class="home-bullet">
           <div class="home-bullet__icon">
-            <%= image_tag asset_path("decidim/icon_gears.svg"), alt: 'kola zebate', class: 'content-block-icon' %>
+            <%= image_pack_tag "media/images/icon_gears.svg", alt: 'kola zebate', class: 'content-block-icon' %>
           </div>
           <div class="home-bullet__desc">
             <h4 class="heading4"><%= link_to t("decidim.pages.home.extended.processes"), decidim_participatory_processes.participatory_processes_path %></h4>
@@ -19,7 +19,7 @@
       <div class="column">
         <div class="home-bullet">
           <div class="home-bullet__icon">
-            <%= image_tag asset_path("decidim/people.svg"), alt: 'czworka ludzi', class: 'content-block-icon' %>
+            <%= image_pack_tag "media/images/people.svg", alt: 'czworka ludzi', class: 'content-block-icon' %>
           </div>
           <div class="home-bullet__desc">
             <h4 class="heading4"><%= link_to t("decidim.pages.home.extended.assemblies"), decidim_assemblies.assemblies_path %></h4>
@@ -31,7 +31,7 @@
       <div class="column">
         <div class="home-bullet">
           <div class="home-bullet__icon">
-            <%= image_tag asset_path("decidim/conversation_clouds.svg"), alt: 'dymki rozmowy', class: 'content-block-icon' %>
+            <%= image_pack_tag "media/images/conversation_clouds.svg", alt: 'dymki rozmowy', class: 'content-block-icon' %>
           </div>
           <div class="home-bullet__desc">
             <h4 class="heading4"><%= link_to t("decidim.pages.home.extended.help"), decidim.pages_path %></h4>

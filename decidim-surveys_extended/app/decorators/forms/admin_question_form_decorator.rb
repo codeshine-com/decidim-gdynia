@@ -8,7 +8,7 @@ Decidim::Forms::Admin::QuestionForm.class_eval do
 
   attribute :metrics, String
   attribute :question_image
-  attribute :remove_question_image, Virtus::Attribute::Boolean
+  attribute :remove_question_image, Decidim::AttributeObject::TypeMap::Boolean
 
   # validates :question_image, passthru: { to: Decidim::Forms::Question }
 

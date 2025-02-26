@@ -7,11 +7,21 @@ pl:
         link_url: Link
         lead: Komunikat
         published: Widoczna
+      organization:
+        enable_participatory_space_filters: Włącz filtry dla przestrzeni partycypacyjnych
   decidim:
     admin:
+      conflicts:
+        title: Weryfikacja konfliktów
       block_user:
         new:
           new_name: Zablokowany użytkownik
+      filters:
+        last_sign_in_at_present:
+          label: Czy ostatnio logował się
+          values:
+            'false': 'Nie'
+            'true': 'Tak'
       models:
         information:
           fields:
@@ -21,6 +31,7 @@ pl:
       menu:
         informations: Aktualności
       titles:
+        edit_organization_appearance: Edytuj wygląd strony głównej
         informations: Aktualności
       informations:
         no_informations: Brak danych

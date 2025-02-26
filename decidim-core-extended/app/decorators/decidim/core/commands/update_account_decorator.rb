@@ -5,6 +5,7 @@ Decidim::UpdateAccount.class_eval do
   private
 
   def update_personal_data
+    @user.locale = @form.locale
     @user.name = @form.name
     @user.nickname = @form.nickname
     @user.email = @form.email

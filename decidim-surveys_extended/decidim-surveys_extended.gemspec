@@ -27,7 +27,5 @@ Gem::Specification.new do |spec|
   spec.add_dependency "decidim-core", Decidim::SurveysExtended::DECIDIM_VERSION
   spec.add_dependency "decidim-surveys", Decidim::SurveysExtended::DECIDIM_VERSION
   spec.add_dependency "decidim-forms", Decidim::SurveysExtended::DECIDIM_VERSION
-  spec.add_dependency "rails", "~> 5.2.6"
-
-  spec.add_development_dependency "sqlite3"
+  spec.add_dependency "rails", "~> 6.0"
 end

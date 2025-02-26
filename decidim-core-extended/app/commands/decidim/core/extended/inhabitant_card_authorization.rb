@@ -3,7 +3,7 @@
 module Decidim
   module Core
     module Extended
-      class InhabitantCardAuthorization < Rectify::Command
+      class InhabitantCardAuthorization < Decidim::Command
 
         def initialize(user, form)
           @user = user

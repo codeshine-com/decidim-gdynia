@@ -42,6 +42,7 @@ Decidim::Assemblies::Admin::UpdateAssembly.class_eval do
       youtube_handler: form.youtube_handler,
       github_handler: form.github_handler,
       weight: form.weight,
+      announcement: form.announcement,
       # customized - our custom fields
       contact_address: form.contact_address,
       contact_email: form.contact_email,
@@ -49,6 +50,8 @@ Decidim::Assemblies::Admin::UpdateAssembly.class_eval do
       duration_text: form.duration_text,
       team_service: form.team_service,
       next_meeting_date: form.next_meeting_date
-    }.merge(uploader_attributes)
+    }.merge(
+      attachment_attributes(:hero_image, :banner_image)
+    )
   end
 end

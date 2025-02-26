@@ -112,6 +112,7 @@ pl:
         if_change_opinion: Jeśli zmieniłeś zdanie, możesz
         my_budgets: Moje budżety
         voted_on: Zagłosowałeś na %{links}
+        vote: Głosuj
       limit_announcement:
         cant_vote: Nie możesz głosować na ten budżet. <a href="%{landing_path}">Spróbuj zagłosować na inny</a>.
         limit_reached: 'Masz aktywne głosy: %{links}. Aby zagłosować na ten budżet, musisz <a href="%{landing_path}">usunąć swój głos i zacząć od nowa</a>.'
@@ -138,6 +139,8 @@ pl:
           description: Są to projekty, które wybrałeś jako część budżetu.
           title: Potwierdź głosowanie
         budget_excess:
+          budget_excess:
+            description: Ten projekt przekracza maksymalny budżet i nie można go dodać. Jeśli chcesz, możesz usunąć wybrany już projekt, aby móc ponownie oddać głos zgodnie ze swoimi preferencjami.
           close: Zamknij
           description: Ten projekt przekracza maksymalny budżet i nie można go dodać. Jeśli chcesz, możesz usunąć projekt, który już zaznaczyłeś do wyboru, albo zagłosować zgodnie z Twoimi preferencjami.
           ok: ok

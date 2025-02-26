@@ -1,5 +1,5 @@
 <% add_decidim_meta_tags({
-                           image_url: current_participatory_space.hero_image.url,
+                           image_url: current_participatory_space.attached_uploader(:hero_image).path,
                            description: translated_attribute(current_participatory_space.short_description),
                            url: participatory_process_url(current_participatory_space),
                            twitter_handler: current_organization.twitter_handler
@@ -75,8 +75,8 @@
         <% if translated_attribute(area&.name).present? %>
           <div class="definition-data__item area">
             <span class="definition-data__title">
-              <% if area.icon.present? %>
-                <%= image_tag area.icon_url(:square), alt: "ikona kategorii #{translated_attribute(area.name)}", class: 'area-icon' %>
+              <% if area.icon.attached? %>
+                <%= image_tag main_app.url_for(area.icon_square), alt: "ikona kategorii #{translated_attribute(area.name)}", class: 'area-icon' %>
               <% else %>
                 <%= t("area", scope: "decidim.participatory_processes.show") %>
               <% end %>
@@ -182,7 +182,7 @@
   </div>
 
   <% if current_participatory_space.show_statistics? %>
-    <%= cell "decidim/participatory_processes/statistics", stats.collection %>
+    <%= cell "decidim/statistics", stats.collection %>
   <% end %>
 
   <% if current_participatory_space.show_metrics? %>

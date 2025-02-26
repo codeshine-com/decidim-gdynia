@@ -4,7 +4,7 @@ module Decidim
   module AdminExtended
     module Admin
       # This command is executed when user creates Information
-      class CreateInformation < Rectify::Command
+      class CreateInformation < Decidim::Command
         def initialize(form)
           @form = form
         end

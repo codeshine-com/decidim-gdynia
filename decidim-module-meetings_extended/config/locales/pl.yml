@@ -1,11 +1,38 @@
 ---
 pl:
+  activemodel:
+    attributes:
+      meeting:
+        show_embedded_iframe: Pokaż osadzoną ramkę iframe dla tego adresu URL
   decidim:
+    admin:
+      filters:
+        meetings:
+          origin_eq:
+            label: Origin
+            values:
+              citizen: Citizen
+              official: Official
+              user_group: User Groups
+          scope_id_eq:
+            label: Scope
+          type_eq:
+            label: Rodzaj sptkania
+          values:
+            hybrid: Wszystkie
+            in_person: Osobiście
+            online: Online
     components:
+      meetings:
+        actions:
+          comment: Komentarze
+          join: Dołącz
       meetings_extended:
         name: Spotkania
     meetings:
       admin:
+        exports:
+          answers: Odpowiedzi
         agenda:
           form:
             title: Tytuł
@@ -14,3 +41,16 @@ pl:
           title: Nazwa
           duration: Czas trwania
           description: Opis
+        meetings:
+          form:
+            show_embedded_iframe_help: Określa, czy należy osadzić element iframe dla tego adresu URL wideokonferencji. Tylko kilka serwisów umożliwia osadzanie (np. Youtube, Twitch...)
+          publish:
+            invalid: Podczas publikowania tego spotkania wystąpił problem
+            success: Spotkanie zostało pomyślnie opublikowane
+      meetings:
+        show:
+          visit_finished: Zakończone spotkania
+      models:
+        meeting:
+          fields:
+            id: ID

@@ -29,8 +29,8 @@
                 <%= area.area_type ? translated_attribute(area.area_type.name) : "-" %>
               </td>
               <td>
-                <% if area.icon.present? %>
-                  <%= image_tag area.icon_url(:mini_square), alt: "ikona kategorii #{area.name}" %>
+                <% if area.icon.attached? %>
+                  <%= image_tag main_app.url_for(area.icon_mini_square), alt: "ikona kategorii #{area.name}" %>
                 <% end %>
               </td>
               <td class="table-list__actions">

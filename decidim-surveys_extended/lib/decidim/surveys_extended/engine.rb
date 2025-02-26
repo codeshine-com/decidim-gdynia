@@ -10,9 +10,10 @@ module Decidim
         settings.attribute :transparent, type: :boolean, default: true
       end
 
-      initializer "decidim_surveys_extended.assets.precompile" do |app|
-        app.config.assets.precompile += %w(decidim/surveys_extended/admin/forms_new.js.es6 decidim/surveys_extended/admin/dynamic_fields_new.component.js.es6)
-      end
+      # initializer "decidim_surveys_extended.assets.precompile" do |app|
+      #   app.config.assets.precompile += %w(decidim/surveys_extended/admin/forms_new.js.es6
+      #                                      decidim/surveys_extended/admin/dynamic_fields_new.component.js.es6)
+      # end
 
       config.autoload_paths << File.join(
         Decidim::SurveysExtended::Engine.root, "app", "decorators", "{**}"
@@ -23,6 +24,10 @@ module Decidim
         Dir.glob(Decidim::SurveysExtended::Engine.root + "app/decorators/**/*_decorator*.rb").each do |c|
           require_dependency(c)
         end
+      end
+
+      initializer "surveys_extended.webpacker.assets_path" do
+        Decidim.register_assets_path File.expand_path("app/packs", root)
       end
     end
   end

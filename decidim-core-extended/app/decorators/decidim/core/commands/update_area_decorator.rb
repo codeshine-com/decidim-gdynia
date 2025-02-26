@@ -9,7 +9,7 @@ Decidim::Admin::UpdateArea.class_eval do
       name: form.name,
       area_type: form.area_type,
       icon: form.icon.presence || nil,
-      remove_icon: form.remove_icon
+      # remove_icon: form.remove_icon
     }
   end
 end
