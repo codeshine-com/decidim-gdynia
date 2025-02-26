@@ -1,6 +1,6 @@
 <% unless cookies_accepted? %>
   <div class="cookie-warning">
-    <% page = Decidim::StaticPage.find_by(slug: 'polityka-cookies').presence || Decidim::StaticPage.find_by(slug: 'terms-and-conditions')  %>
+    <% page = Decidim::StaticPage.find_by(slug: 'polityka').presence || Decidim::StaticPage.find_by(slug: 'terms-and-conditions')  %>
     <%= t(".description_html", link: link_to(t(".link_label"), decidim.page_path(page), title: t(".link_label"), target: "_blank")) %>
     <div class="cookie-warning__action">
       <%= button_to t(".ok"), decidim.accept_cookies_path, method: :get, remote: true, class: "button tiny cookie-bar__button" %>

@@ -2,7 +2,7 @@
 
 module Decidim
   # This command destroys the user's account.
-  class DestroyUserGroup < Rectify::Command
+  class DestroyUserGroup < Decidim::Command
     # Destroy a user's account.
     #
     # user - The user to be updated.

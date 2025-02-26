@@ -8,6 +8,7 @@ pl:
       static_page_topic:
         cover: Obraz główny
       user:
+        locale: Język
         gender: Płeć
         birth_year: Rok urodzenia
         district: Dzielnica
@@ -30,6 +31,19 @@ pl:
           over_74: '75 lat i więcej'
 
   decidim:
+    application:
+      collection:
+        html:
+          documents: Dokumenty
+    editor_images:
+      create:
+        error: Błąd podczas przesyłania obrazu
+        success: Obraz został przesłany pomyślnie
+      drag_and_drop_help: Przeciągnij i upuść obrazki lub wklej.
+    shared:
+      share_modal:
+        copy_share_link_clarification: Skopiuj link
+        copy_share_link: Skopiuj link # views/decidim/shared/_share_modal.html.erb
     account:
       fill_more_data: Dziękujemy za dołączenie do Gdyńskiej Platformy Dialogu! Poświęć kilka chwil na uzupełnienie konta, by pomóc nam rozwijać Platformę.
       not_confirmed: Potwierdź swój e-mail, żeby móc sie zalogować.
@@ -40,6 +54,7 @@ pl:
         select_a_gender: Wybierz płeć
         birth_year_placeholder: Podaj datę urodzenia
         select_a_district: Wybierz dzielnicę
+        available_locales_helper: Wybierz język, w którym będziesz przeglądać strony i otrzymywać powiadomienia w serwisie
     admin:
       models:
         area:
@@ -62,7 +77,7 @@ pl:
     devise:
       invitations:
         edit:
-          password_help: "Minimalna liczba znaków: %{minimun_characters}; nie może być zbyt powszechne (np. 123456) i musi różnić się od Twojej nazwy konta i adresu e-mail."
+          password_help: "Minimalna liczba znaków: %{minimum_characters}; nie może być zbyt powszechne (np. 123456) i musi różnić się od Twojej nazwy konta i adresu e-mail."
           required_fields_info: Pola tekstowe oraz zgoda na Warunki korzystania z Platformy oraz zapoznanie się z wymaganiami RODO są wymagane
       registrations:
         new:
@@ -129,3 +144,6 @@ pl:
         inhabitant_card_authorization_success: Autoryzowano
       footer:
         ue_logotypes: Logotypy UE
+  time:
+    formats:
+      ddmmyyyy: "%d.%m.%Y"

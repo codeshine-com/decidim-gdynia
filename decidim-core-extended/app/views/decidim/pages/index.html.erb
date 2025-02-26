@@ -24,8 +24,8 @@ edit_link(
             <% if topic.pages.any? %>
               <div class="column">
                 <div class="card card--process card--mini">
-                  <% if topic.cover? %>
-                    <div class="card--full__image static_ppage" style="background-image:url(<%= topic.cover.url %>)"></div>
+                  <% if topic.cover.attached? %>
+                    <div class="card--full__image static_ppage" style="background-image:url(<%= main_app.url_for(topic.cover) %>)"></div>
                   <% else %>
                     <div class="card--full__image static_ppage"></div>
                   <% end %>

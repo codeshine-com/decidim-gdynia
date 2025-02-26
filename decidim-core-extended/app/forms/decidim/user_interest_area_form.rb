@@ -6,7 +6,7 @@ module Decidim
   class UserInterestAreaForm < Form
     mimic :area
 
-    attribute :name, String
+    attribute :name, JsonbAttributes
     attribute :checked, Boolean
     attribute :area_type, Decidim::AreaType
 

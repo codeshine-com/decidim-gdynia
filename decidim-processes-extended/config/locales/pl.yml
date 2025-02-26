@@ -43,6 +43,7 @@ pl:
       admin:
         participatory_processes:
           form:
+            announcement: Ogłoszenie
             hashtag_help: "Należy wpisać tylko jeden hashtag bez znaku # np. dialoggdynia"
             social_handlers_help: Do adresu z Facebooka należy wpisać tylko końcówkę nazwy (to, co ma znaleźć się na końcu po znaku „/”). System automatycznie zaciąga jego początek.
       show:

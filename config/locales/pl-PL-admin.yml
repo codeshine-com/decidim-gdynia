@@ -739,9 +739,11 @@ pl:
         areas: Kategorie
         authorization_workflows: Metody weryfikacji
         dashboard: Panel
+        edit_external_domains: Biała lista domen zewnętrznych
         impersonatable_users: Zarządzaj użytkownikami
         impersonations: Zarządzanie użytkownikami
         metrics: Partycypacja w liczbach
+        pages: Strony
         participants: Użytkownicy
         scope_types: Typy obszarów
         scopes: Obszary

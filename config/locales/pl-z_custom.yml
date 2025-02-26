@@ -24,7 +24,7 @@ pl:
         someone_invited_you_as_private_user: "Zostałeś zaproszony do %{resource_type} %{invited_to} na Gdyńskiej Platformie Dialogu jako prywatny użytkownik. Możesz zaakceptować zaproszenie za pomocą poniższego linku."
     passwords:
       edit:
-        password_help: "Minimalna liczba znaków: %{minimun_characters}; nie może być zbyt powszechne (np. 123456) i musi różnić się od Twojej nazwy konta i adresu e-mail."
+        password_help: "Minimalna liczba znaków: %{minimum_characters}; nie może być zbyt powszechne (np. 123456) i musi różnić się od Twojej nazwy konta i adresu e-mail."
     user_activities_info: Tu wyświetlają się informacje o wszystkich działaniach podjętych przez Ciebie na Platformie.
     user_following_info: Tu wyświetlają się informacje o wszystkich zmianach w działaniach na Platformie, o których otrzymujesz powiadomienia.
   activemodel:
@@ -196,6 +196,7 @@ pl:
       filters:
         moderations:
           reportable_type_string_eq:
+            label: Typ
             values:
               Decidim::Comments::Comment: Komentarze
               Decidim::Debates::Debate: Debaty
@@ -363,7 +364,7 @@ pl:
         new:
           newsletter: Wyrażam zgodę na otrzymywanie newslettera o ważnych wydarzeniach i informacjach dotyczących Platformy.
           nickname_help: To systemowa, unikalna nazwa Twojego konta na Platformie. Będzie wyświetlana tylko na Twojej stronie profilowej. Po niej inni użytkownicy będą mogli Cię wyszukać by nawiązać z Tobą kontakt, dlatego dobrze, aby była łatwa do zapamiętania np. pierwsza litera imienia i nazwisko (j_kowalski). Może zawierać tylko litery, cyfry, '-' i '_'.
-          password_help: "Minimalna liczba znaków: %{minimun_characters}; nie może być zbyt powszechne (np. 123456) i musi różnić się od Twojej nazwy konta i adresu e-mail."
+          password_help: "Minimalna liczba znaków: %{minimum_characters}; nie może być zbyt powszechne (np. 123456) i musi różnić się od Twojej nazwy konta i adresu e-mail."
           subtitle: Chcesz otrzymywać powiadomienia o procesach konsultacyjnych i działaniach zespołów oraz komentować treści czy komunikować się z innymi użytkownikami? Zarejestruj się!
           subtitle_two: |-
             Jeśli masz Kartę Mieszkańca - wpisz jej numer. Dzięki temu potwierdzisz swoje konto, a na Twoim profilu pojawi się specjalny status – użytkownik potwierdzony.
@@ -427,8 +428,8 @@ pl:
             <i>%{resource_content}</i>
     forms:
       errors:
-        error: Nie moze byc puste
-        email: Nie moze być puste i musi być emailem
+        error: Nie może być puste
+        email: Nie może być puste i musi być emailem
       file_help:
         image:
           message_1: Preferowany obraz lub zdjęcie, które nie zawiera żadnego tekstu.
@@ -515,8 +516,6 @@ pl:
       default_officialization_text_for_users: Użytkownik został zweryfikowany
     proposals:
       admin:
-        participatory_texts:
-          sections: Sekcje
         proposal_answers:
           form:
             accepted: Przyjęta

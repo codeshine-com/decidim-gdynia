@@ -27,6 +27,9 @@
 /public/assets
 .byebug_history
 
+public/sw.js
+public/sw.js.map
+
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 /config/deploy.rb
@@ -48,3 +51,19 @@ public/uploads
 # Ignore Dotenv variables.
 .env
 config/locales/pl-try.yml
+
+/public/packs
+/public/packs-test
+/public/decidim-packs
+/node_modules
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity
+
+# Ignore files during version migration
+public/uploads_backup_2024.01
+assets-old
+decidim-module-lis
+
+# Deleted for deployment
+/storage

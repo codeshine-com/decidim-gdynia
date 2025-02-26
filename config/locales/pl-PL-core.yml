@@ -111,19 +111,40 @@ pl:
     admin:
       actions:
         cancel: Anuluj
+      password_change:
+        alert: Aby móc kontynuować, musisz zmienić hasło
+        notification: Użytkownicy administracyjni muszą zmieniać swoje hasło co %{days} dni.
     admin_log:
       area:
         create: "%{user_name} utworzył(a) kategorię %{resource_name}"
         delete: "%{user_name} usunął/usunęła kategorię %{resource_name}"
         update: "%{user_name} zaktualizował(a) kategorię %{resource_name}"
+      area_type:
+        create: "%{user_name} utworzył(a) typ obszaru %{resource_name}"
+        delete: "%{user_name} usunął/usunęła typ obszaru %{resource_name}"
+        update: "%{user_name} zaktualizował(a) typ obszaru %{resource_name}"
+      attachment:
+        create: "%{user_name} utworzył(a) załącznik %{resource_name}"
+        delete: "%{user_name} usunął/usunęła załącznik %{resource_name}"
+        update: "%{user_name} zaktualizował(a) załącznik %{resource_name}"
+      attachment_collection:
+        create: "%{user_name} utworzył(a) kolekcję załączników %{resource_name}"
+        delete: "%{user_name} usunął/usunęła kolekcję załączników %{resource_name}"
+        update: "%{user_name} zaktualizował(a) kolekcję załączników %{resource_name}"
+      category:
+        create: "%{user_name} dodał(a) kategorię %{resource_name} do przestrzeni %{space_name}"
+        delete: "%{user_name} usunął/usunęła kategorię %{resource_name} z przestrzeni %{space_name}"
+        update: "%{user_name} zaktualizował(a) kategorię %{resource_name} w przestrzeni %{space_name}"
       component:
         create: "%{user_name} dodał(a) komponent %{resource_name} do przestrzeni %{space_name}"
         delete: "%{user_name} usunął/usunęła komponent %{resource_name} z przestrzeni %{space_name}"
+        export_component: "%{user_name} wyeksportował(a) %{resource_name} %{component_name} w %{space_name} jako %{format_name}"
         publish: "%{user_name} opublikował(a) komponent %{resource_name} w przestrzeni %{space_name}"
         unpublish: "%{user_name} cofnął/cofnęła publikację komponentu %{resource_name} w przestrzeni %{space_name}"
       moderation:
         hide: "%{user_name} ukrył(a) zasób typu %{resource_type} w przestrzeni %{space_name}"
-        unreport: "%{user_name} cofnął zgłoszenie zasobu typu %{resource_type} w przestrzeni %{space_name}"
+        unhide: "%{user_name} przywrócił(a) widocznosć zgłoszonego zasobu typu %{resource_type} w przestrzeni %{space_name}"
+        unreport: "%{user_name} cofnął/cofnęła zgłoszenie zasobu typu %{resource_type} w przestrzeni %{space_name}"
       newsletter:
         create: "%{user_name} stworzył(a) newsletter %{resource_name}"
         delete: "%{user_name} usunął/usunęła newsletter %{resource_name}"
@@ -435,7 +456,7 @@ pl:
           newsletter: Chcę otrzymywać okazjonalne newslettery z istotnymi informacjami
           newsletter_title: Zgoda na subskrybcję
           nickname_help: Twój pseudonim w %{organization}
-          password_help: "Minimalna liczba znaków: %{minimun_characters}; nie może być zbyt powszechny (np. 123456) i musi różnić się od Twojego pseudonimu i adresu e-mail."
+          password_help: "Minimalna liczba znaków: %{minimum_characters}; nie może być zbyt powszechny (np. 123456) i musi różnić się od Twojego pseudonimu i adresu e-mail."
           sign_in: Zaloguj się
           sign_up: Zarejestruj się
           sign_up_as:
@@ -666,6 +687,7 @@ pl:
       no_followers: Brak obserwujących.
     following:
       no_followings: Jeszcze nikogo ani niczego nie obserwuje.
+      non_public_followings: Niektóre z obserwowanych zasobów nie są publiczne.
     follows:
       create:
         button: Obserwuj
@@ -688,13 +710,40 @@ pl:
           explanation: 'Wytyczne dotyczące pliku:'
           message_1: Ma być obrazem lub dokumentem.
           message_2: W przypadku zdjęć używaj najlepiej krajobrazów, obraz jest docinany automatycznie.
+        icon:
+          explanation: 'Wytyczne dotyczące ikony:'
+          message_1: Ma być kwadratowym obrazkiem.
+          message_2: Rekomendowany rozmiad obrazka to 512x512.
         image:
           explanation: 'Wytyczne dotyczące obrazu:'
           message_1: Preferowany obraz krajobrazu, który nie zawiera żadnego tekstu.
           message_2: Obraz jest docinany automatycznie.
       file_validation:
         allowed_file_extensions: 'Dozwolone rozszerzenia plików: %{extensions}'
+        max_file_dimension: 'Maksymalne wymiary pliku: %{resolution}px'
         max_file_size: 'Maksymalny rozmiar pliku: %{megabytes}MB'
+      files:
+        extension_allowlist: 'Akceptowane formaty: %{extensions}'
+      upload:
+        labels:
+          add_attachment: Dodaj załącznik
+          add_file: Dodaj plik
+          add_image: Dodaj obraz
+          cancel: Anuluj
+          edit_image: Edytuj obraz
+          error: Błąd!
+          file_size_too_large: 'Rozmiar pliku jest za duży! Maksymalny rozmiar to: %{megabytes}MB'
+          remove: Usuń
+          replace: Zamień
+          save: Zapisz
+          title: Tytuł
+          title_required: Tytuł jest wymagany!
+          uploaded: Wgrane
+          validating: Weryfikacja...
+          validation_error: Błąd weryfikacji!
+      upload_help:
+        dropzone: Upuść plik tutaj lub kliknij żaby wgrać plik z komputera
+        explanation: Wyjaśnienia dla %{attribute}
       remove_this_file: Usuń ten plik
     gamification:
       all_badges_link: Zobacz wszystkie dostępne odznaki.
@@ -827,15 +876,27 @@ pl:
       index:
         last_activity: Ostatnia aktywność
         resource_type: Typ
+    links:
+      invalid_url: Nieprawidłowy URL
+      warning:
+        body_1: Za chwilę odwiedzisz link zewnętrzny i prosimy o zachowanie ostrożności w odniesieniu do treści znajdujących się na stronie zewnętrznej.
+        body_2: Przed kontynuowaniem sprawdź link, który zamierzasz odwiedzić i upewnij się, że rozpoznajesz go jako bezpieczną witrynę.
+        cancel: Anuluj
+        close_modal: Zamknij okno
+        proceed: Kontynuuj
+        title: Otwierasz zewnętrzny link
     log:
       base_presenter:
         create: "%{user_name} stworzył(a) %{resource_name}"
         create_with_space: "%{user_name} stworzył(a) %{resource_name} w %{space_name}"
         delete: "%{user_name} usunął/usunęła %{resource_name}"
         delete_with_space: "%{user_name} usunął/usunęła %{resource_name} w %{space_name}"
+        publish_with_space: "%{user_name} opublikował(a) %{resource_name} w %{space_name}"
         unknown_action: "%{user_name} wykonał(a) jakąś akcję w %{resource_name}"
         unknown_action_with_space: "%{user_name} wykonał(a) jakąś akcję w %{resource_name} w %{space_name}"
+        unpublish_with_space: "%{user_name} ukrył(a) %{resource_name} z %{space_name}"
         update: "%{user_name} zaktualizował(a) %{resource_name}"
+        update_permissions_with_space: "%{user_name} zaktualizował(a) uprawnienia %{resource_name} w %{space_name}"
         update_with_space: "%{user_name} zaktualizował(a) %{resource_name} w %{space_name}"
       value_types:
         area_presenter:
@@ -1000,19 +1061,36 @@ pl:
       no_notifications: Brak powiadomień.
     notifications_settings:
       show:
+        administrators: Administratorzy
         allow_public_contact: Każdy może wysłać mi prywatną wiadomość, nawet jeśli go nie obserwuję.
+        allow_push_notifications: Otrzymuj powiadomienia push, aby dowiedzieć się, co się dzieje, gdy nie jesteś na platformie. Możesz je wyłączyć w dowolnym momencie.
         direct_messages: Przyjmuj prywatne wiadomości od każdego
+        email_on_moderations: Chcę otrzymywać e-mail za każdym razem, gdy coś lub ktoś zostanie zgłoszony do moderacji.
         email_on_notification: Chcę otrzymywać wiadomości e-mail za każdym razem gdy otrzymuję powiadomienie.
         everything_followed: Dotyczące wszystkiego, co obserwuję
         newsletter_notifications: Chcę otrzymywać newslettery
         newsletters: Newslettery
+        notification_settings:
+          close_meeting_reminder: Chcę otrzymywać przypomnienia e-mailem o niepublikowanych raportach ze spotkań zamkniętych
+        notifications_sending_frequencies:
+          daily: Dziennie
+          none: W ogóle
+          real_time: Na bieżąco
+          weekly: Tygodniowo
+        notifications_sending_frequency: Jak często chcesz otrzymywać e-maile z powiadomieniami?
         own_activity: Dotyczące moich własnych działań, np. kiedy ktoś komentuje moją propozycję lub wspomina o mnie
+        push_notifications: Powiadomienia push
+        push_notifications_reminder: Aby otrzymywać powiadomienia z platformy, musisz najpierw zezwolić na nie w ustawieniach przeglądarki.
         receive_notifications_about: Chcę otrzymywać powiadomienia
         send_notifications_by_email: Wysyłaj powiadomienia pocztą e-mail
         update_notifications_settings: Zapisz zmiany
       update:
         error: Podczas aktualizowania ustawień powiadomień wystąpił błąd.
         success: Ustawienia powiadomień zostały zaktualizowane.
+    offline:
+      show:
+        message: Wygląda na to, że jesteś obecnie offline. Spróbuj ponownie później.
+        retry: Ponów
     open_data:
       not_available_yet: Pliki Open Data nie są jeszcze dostępne. Spróbuj ponownie za kilka minut.
     own_user_groups:
@@ -1083,7 +1161,7 @@ pl:
           agreement: Akceptuję Regulamin
           legend: Zgadzam się z warunkami użytkowania
         refuse:
-          modal_body: Jeśli odmówisz, nie będziesz mógł korzystać z platformy, możesz <a href="%{data_portability_path}">pobrać swoje dane</a> i/lub <a href="%{delete_path}">usunąć konto</a>.
+          modal_body: Jeśli odmówisz, nie będziesz mógł korzystać z platformy, możesz <a href="%{download_your_data_path}">pobrać swoje dane</a> i/lub <a href="%{delete_path}">usunąć konto</a>.
           modal_btn_continue: Zaakceptuj warunki i kontynuuj
           modal_btn_exit: Sprawdzę to później
           modal_button: Odrzuć warunki
@@ -1095,8 +1173,13 @@ pl:
           title: 'Wymagane: sprawdź aktualizacje naszych Warunków korzystania z Platformy'
     participatory_space_private_users:
       not_allowed: Nie możesz wyświetlać tych treści
+    passwords:
+      update:
+        error: Wystąpił problem z aktualizacją hasła
+        success: Hasło zostało pomyślnie zaktualizowane
     profile:
       deleted: Usunięty użytkownik
+      inaccessible_message: Ten profil jest niedostępny z powodu naruszenia Regulaminu!
       view: Zobacz
     profiles:
       default_officialization_text_for_user_groups: Ta grupa użytkowników jest publicznie zweryfikowana, jej nazwa została zweryfikowana, aby odpowiadała jej prawdziwej nazwie
@@ -1227,6 +1310,8 @@ pl:
         close_modal: Zamknij okno
         please_sign_in: Zaloguj się
         sign_up: Zarejestruj się
+      mentions_modal:
+        remove_recipient: Usuń odbiorcę %{name}
       participatory_space_filters:
         filters:
           areas: Kategorie
@@ -1419,7 +1504,9 @@ pl:
         change_your_password: Zmień swoje hasło
         confirm_new_password: Potwierdź nowe hasło
         new_password: Nowe hasło
-        password_help: "Minimalna liczba znaków: %{minimun_characters}; nie może być zbyt powszechny (np. 123456) i musi różnić się od Twojego pseudonimu i adresu e-mail."
+        password_help: "Minimalna liczba znaków: %{minimum_characters}; nie może być zbyt powszechny (np. 123456) i musi różnić się od Twojego pseudonimu i adresu e-mail."
+        password_help_admin: "Minimum %{minimum_characters} znaków, nie może być zbyt oczywiste (np. 123456), musi różnić się od Twojego pseudonimu i adresu e-mail oraz musi różnić się od Twoich starych haseł."
+        title: Zmiana hasła
       new:
         forgot_your_password: Zapomniałeś hasła?
         send_me_reset_password_instructions: Wyślij mi instrukcje resetowania hasła
@@ -1478,6 +1565,7 @@ pl:
       public: Twoje informacje publiczne.
   errors:
     messages:
+      extension_whitelist_error: niepoprawne rozszerzenie pliku
       already_confirmed: już potwierdzono
       confirmation_period_expired: musi być potwierdzone w ciągu %{period}, proszę poprosić o nowy
       content_type_whitelist_error: typ pliku jest nieprawidłowy
@@ -1495,6 +1583,7 @@ pl:
         few: 'Podczas przetwarzania Twojego żądania wystąpiły błędy:'
         many: 'Podczas przetwarzania Twojego żądania wystąpiły błędy:'
         other: 'Podczas przetwarzania Twojego żądania wystąpiły błędy:'
+      password_confirmation_message: 'Potwierdzenie hasła musi być zgodne z polem "Hasło"'
       too_many_marks: używa zbyt wielu kolejnych znaków interpunkcyjnych (np.! i?)
       too_much_caps: używa zbyt dużej liczby wielkich liter (ponad 25% tekstu)
       too_short: jest za krótki (poniżej 15 znaków)
@@ -1517,10 +1606,60 @@ pl:
         description_html: Ta strona używa plików cookie. Kontynuując przeglądanie witryny, zgadzasz się na korzystanie z plików cookie. Dowiedz się więcej o tym %{link}.
         link_label: Dowiedz się więcej o plikach cookie
         ok: Zgadzam się
+      data_consent:
+        details:
+          columns:
+            description: Opis
+            name: Nazwa
+            service: Usługa
+            type: Rodzaj
+          items:
+            _session_id:
+              description: Umożliwia witrynom internetowym zapamiętywanie użytkownika w witrynie podczas poruszania się między stronami internetowymi.
+              service: Ta strona
+            decidim-consent:
+              description: Przechowuje informację o plikach cookies dozwolonych przez użytkownika na tej stronie.
+              service: Ta strona
+            pwaInstallPromptSeen:
+              description: Przechowuje status, jeśli użytkownik widział już powiadomienie o instalacji progresywnej aplikacji internetowej (PWA).
+              service: Ta strona
+          types:
+            cookie: Pliki cookie
+            local_storage: Local storage
+        dialog:
+          accept_all: Zaakceptuj wszystkie
+          accept_only_essential: Akceptuj tylko niezbędne
+          description: Na naszej stronie internetowej używamy plików cookie w celu poprawy wydajności i zawartości witryny. Pozwalają one lepiej dostosować stronę do potrzeb użytkownika oraz umożliwiają dziłanie kanałów społecznościowych.
+          settings: Ustawienia
+          title: Informacje o plikach cookies stosowanych w serwisie
+        modal:
+          accept_all: Zaakceptuj wszystkie
+          accept_only_essential: Akceptuj tylko niezbędne
+          analytics:
+            description: Te pliki cookie służą do pomiaru i analizy liczby odwiedzających witrynę, aby pomóc ulepszyć witrynę.
+            title: Analityka i statystyka
+          description: Używamy plików cookie, aby zapewnić podstawowe funkcjonalności witryny i poprawić komfort korzystania z Internetu. W każdej chwili możesz skonfigurować i zaakceptować użycie plików cookies oraz zmodyfikować opcje wyrażania zgody.
+          essential:
+            description: Te pliki cookie umożliwiają kluczową funkcjonalność witryny i pomagają zapewnić bezpieczeństwo jej użytkownikom. Są one automatycznie zapisywane w przeglądarce i nie można ich wyłączyć.
+            title: Niezbędne
+          marketing:
+            description: Te pliki cookie zbierają informacje o tym, w jaki sposób korzystasz z witryny i mogą być wykorzystywane do zapewnienia bardziej spersonalizowanego marketingu w różnych witrynach, z których korzystasz.
+            title: Marketingowe
+          preferences:
+            description: Te pliki cookie pozwalają witrynie zapamiętać wybory dokonane w przeszłości na tej stronie, aby zapewnić użytkownikom bardziej spersonalizowaną obsługę.
+            title: Preferencje
+          save_settings: Zapisz ustawienia
+          title: Ustawienia cookies
+          toggle: Toggle %{consent_category}
+        warning:
+          all_categories: wszystkie ciasteczka
+          change_settings: Zmień ustawienai cookie
+          consent_required: Aby zobaczyć tę zawartość, musisz włączyć %{categories}.
       edit_link:
         edit: Edytuj
       footer:
         cc_by_license: Licencja Creative Commons
+        data_consent_settings: Ustawienia Cookie
         decidim_logo: Logo Decidim
         download_open_data: Pobierz pliki Open Data
         made_with_open_source: Strona internetowa powstała z użyciem <a target="_blank" href="https://github.com/decidim/decidim">free software</a>.
@@ -1538,12 +1677,15 @@ pl:
       notifications_dashboard:
         mark_all_as_read: Oznacz wszystkie jako przeczytane
         mark_as_read: Oznacz jako przeczytane
+      offline_banner:
+        cache_version_page: Ups! Twoja sieć jest offline. To jest wcześniej zapisana w pamięci podręcznej wersja odwiedzanej strony. Być może treść jest nieaktualna.
       social_media_links:
         facebook: "%{organization} na Facebooku"
         github: "%{organization} na GitHubie"
         instagram: "%{organization} na Instagramie"
         twitter: "%{organization} na Twitterze"
         youtube: "%{organization} na YouTube"
+        x: "%{organization} na X"
       user_menu:
         account: 'Konto użytkownika: %{name}'
         admin_dashboard: Panel administracyjny
@@ -1552,6 +1694,7 @@ pl:
         profile: Moje konto
         public_profile: Mój profil publiczny
         sign_out: Wyloguj się
+        title: Profile links
       user_profile:
         account: Moje konto
         authorizations: Autoryzacje
@@ -1605,6 +1748,8 @@ pl:
       day_of_week: "%a"
       day_of_week_long: "%a %e"
       day_of_year: "%d.%m.%y"
+      ddmm: "%d.%m"
+      ddmmyyyy: "%d.%m.%Y"
       decidim_day_of_year: "%d %B %Y"
       decidim_short: "%d/%m/%Y %H:%M"
       default: "%a, %d %b %Y %H:%M:%S %z"

@@ -27,13 +27,16 @@ module Decidim
         end
 
         def card_owner_email_validation_request
+          ctx = OpenSSL::SSL::SSLContext.new
+          ctx.verify_mode = OpenSSL::SSL::VERIFY_NONE
           response = HTTP.post(
             ENV.fetch('KARTA_MIEJSKA_API_URL'),
             form: {
               token: ENV.fetch('KARTA_MIEJSKA_API_TOKEN'),
               card_number: card_number,
               owner_email: email
-            }
+            },
+            ssl_context: ctx
           )
           JSON.parse response.to_s # => {"success"=>true, "err"=>"", "errno"=>0}
         end

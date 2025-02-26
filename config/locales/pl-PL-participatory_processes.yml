@@ -47,6 +47,8 @@ pl:
         short_description: Krótki opis
         start_date: Data rozpoczęcia
         title: Tytuł
+      participatory_process_type:
+        title: Tytuł
       participatory_process_user_role:
         email: Adres e-mail
         name: Nazwa
@@ -100,6 +102,10 @@ pl:
         unpublish: Cofnij publikowanie
       menu:
         participatory_process_groups: Grupy procesu
+        participatory_process_groups_submenu:
+          info: Informacje
+          landing_page: Strona główna
+        participatory_process_types: Typy procesów
         participatory_processes: Procesy
         participatory_processes_submenu:
           attachment_collections: Foldery
@@ -131,6 +137,11 @@ pl:
             start_date: Data rozpoczęcia
             title: Tytuł
           name: Etap procesu partycypacyjnego
+        participatory_process_type:
+          fields:
+            created_at: Utworzono
+            title: Tytuł
+          name: Typ procesu partycypacyjnego
         participatory_process_user_role:
           fields:
             email: Adres e-mail
@@ -206,6 +217,23 @@ pl:
         update:
           error: Podczas aktualizowania etapu procesu partycypacyjnego wystąpił błąd.
           success: Etap procesu partycypacyjnego został zaktualizowany.
+      participatory_process_types:
+        create:
+          error: Wystąpił błąd podczas tworzenia nowego typu procesu partycypacyjnego.
+          success: Utworzono typ procesu partycypacyjnego.
+        destroy:
+          success: Typ procesu partycypacyjnego został usunięty.
+        edit:
+          title: Edycja typu procesu partycypacyjnego
+          update: Aktualizuj
+        form:
+          title: Tytuł
+        new:
+          create: Utwórz
+          title: Nowy typ procesu partycypacyjnego
+        update:
+          error: Wystąpił błąd podczas aktualizacji typu procesu partycypacyjnego.
+          success: Typ procesu partycypacyjnego został zaktualizowany.
       participatory_process_user_roles:
         create:
           error: Wystąpił błąd podczas dodawania użytkownika do tego procesu partycypacyjnego.
@@ -250,6 +278,7 @@ pl:
           success: Grupa procesu partycypacyjnego została utworzona.
       titles:
         participatory_process_groups: Grupy procesu partycypacyjnego
+        participatory_process_types: Typy procesu partycypacyjnego
         participatory_processes: Procesy partycypacyjne
       users:
         resend_invitation:
@@ -269,6 +298,10 @@ pl:
         create: "%{user_name} utworzył(a) etap %{resource_name} w procesie partycypacyjnym %{space_name}"
         delete: "%{user_name} usunął/usunęła etap %{resource_name} z procesu partycypacyjnego %{space_name}"
         update: "%{user_name} zaktualizował(a) etap %{resource_name} w procesie partycypacyjnym %{space_name}"
+      participatory_process_type:
+        create: "%{user_name} utworzył(a) typ procesu %{resource_name}"
+        delete: "%{user_name} usunął/usunęła typ procesu %{resource_name}"
+        update: "%{user_name} zaktualizował(a) typ procesu %{resource_name}"
       participatory_process_user_role:
         create: "%{user_name} zaprosił(a) użytkownika %{resource_name} do procesu partycypacyjnego %{space_name}"
         delete: "%{user_name} usunął/usunęła użytkownika %{resource_name} z procesu partycypacyjnego %{space_name}"
@@ -348,6 +381,7 @@ pl:
             related_processes: Powiązane procesy
             scope_type_max_depth_help: Ogranicz głębokość filtra obszaru; Filtr pokaże typy obszaru od ogólnego do wybranego.
             select_an_area: Wybierz kategorię
+            select_participatory_process_type: Wybierz typ procesu
             select_process_group: Wybierz grupę procesów
             slug_help: 'URL slugi służą do generowania adresów URL kierujących bezpośrednio do tego procesu. Należy wpisać tylko to, co ma znaleźć się na końcu po znaku „/”, a nie pełen adres. Można użyć liter, cyfr i myślników. Musi zaczynać się od litery. Przykład: %{url}'
             title: Informacje ogólne

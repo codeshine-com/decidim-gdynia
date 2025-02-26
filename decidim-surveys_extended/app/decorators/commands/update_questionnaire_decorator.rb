@@ -15,9 +15,11 @@ Decidim::Forms::Admin::UpdateQuestionnaire.class_eval do
       max_characters: form_question.max_characters,
       # custom
       metrics: form_question.metrics,
-      question_image: form_question.question_image.presence || nil,
-      remove_question_image: form_question.remove_question_image
-    }
+      # TODO: usuwanie obrazka
+      # remove_question_image: form_question.remove_question_image
+    }.tap do |h|
+      h[:question_image] = form_question.question_image if form_question.question_image.present?
+    end
 
     update_nested_model(form_question, question_attributes, @questionnaire.questions) do |question|
       form_question.answer_options.each do |form_answer_option|

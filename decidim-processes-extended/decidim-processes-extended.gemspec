@@ -26,7 +26,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "decidim-core", Decidim::Processes::Extended::DECIDIM_VERSION
   spec.add_dependency "decidim-admin", Decidim::Processes::Extended::DECIDIM_VERSION
-  spec.add_dependency "rails", "~> 5.2.4", ">= 5.2.4.4"
+  spec.add_dependency "rails", "~> 6.0"
 
   spec.add_development_dependency "sqlite3"
 end

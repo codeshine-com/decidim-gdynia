@@ -135,6 +135,17 @@ pl:
             collaborative_drafts_enabled: Zezwalaj na wspólne szkice
             comments_enabled: Komentarze włączone
             comments_max_length: Maksymalna długość komentarzy (Pozostaw 0 dla wartości domyślnej)
+            default_sort_order: Domyślne sortowanie propozycji
+            default_sort_order_help: Domyślnie oznacza, że jeśli podpory są włączone, propozycje zostaną posortowane losowo, a jeśli podpory są zablokowane, to zostaną posortowane według najczęściej wspieranych.
+            default_sort_order_options:
+              default: Domyślnie
+              most_commented: Najczęściej komentowane
+              most_endorsed: Większość popierana
+              most_followed: Większość obserwowana
+              most_voted: Większość wybierana
+              random: Losowo
+              recent: Aktualny
+              with_more_authors: Z większą liczbą autorów
             geocoding_enabled: Włączono geokodowanie
             minimum_votes_per_user: Minimalna liczba wsparć na użytkownika
             new_proposal_body_template: Szablon treści nowej propozycji
@@ -173,6 +184,17 @@ pl:
             automatic_hashtags: Hashtagi dodane do wszystkich propozycji
             comments_blocked: Komentarze zablokowane
             creation_enabled: Włączono tworzenie propozycji
+            default_sort_order: Domyślne sortowanie propozycji
+            default_sort_order_help: Domyślnie oznacza, że jeśli podpory są włączone, propozycje zostaną posortowane losowo, a jeśli podpory są zablokowane, to zostaną posortowane według najczęściej wspieranych.
+            default_sort_order_options:
+              default: Domyślnie
+              most_commented: Najczęściej komentowane
+              most_endorsed: Większość popierana
+              most_followed: Większość obserwowana
+              most_voted: Większość wybierana
+              random: Losowo
+              recent: Aktualny
+              with_more_authors: Z większą liczbą autorów
             endorsements_blocked: Rekomendacje zostały zablokowane
             endorsements_enabled: Rekomendacje włączone
             proposal_answering_enabled: Włączono odpowiadanie na propozycję
@@ -366,6 +388,36 @@ pl:
         exports:
           comments: Komentarze
           proposals: Propozycje
+        imports:
+          help:
+            answers: |
+              Importowany dokument powinien zawierać następujące nazwy kolumn w przypadku plików CSV lub Excel lub nazwy kluczy w przypadku plików JSON:
+              <ul>
+              <li><b>id:</b> Identyfikator propozycji odpowiedzi</li>
+              <li><b>state:</b> Jeden z: "accepted", "evaluating", or "rejected"</li>
+              <li><b>answer/en:</b> Odpowiedź w języku angielskim. Będzie to zależeć od konfiguracji języka platformy.</li>
+              </ul>
+            proposals: |
+              Plik musi zawierać następujące nazwy kolumn w przypadku plików CSV lub Excel lub nazwy kluczy w przypadku plików JSON:
+              <ul>
+              <li><b>title/en:</b> Tytuł w języku angielskim. Będzie to zależeć od konfiguracji języka platformy.</li>
+              <li><b>body/en:</b> Treść w języku angielskim. Będzie to zależeć od konfiguracji języka platformy.</li>
+              <li><b>scope/id:</b> Identyfikator zakresu</li>
+              <li><b>category/id:</b> Identyfikator kategorii</li>
+              </ul>
+          label:
+            answers: Importuj odpowiedzi z pliku
+            proposals: Importuj propozycje z pliku
+          resources:
+            answers:
+              one: odpowiedź na propozycję
+              other: odpowiedzi na propozycję
+            proposals:
+              one: propozycja
+              other: propozycje
+          title:
+            answers: Importuj odpowiedzi na propozycje
+            proposals: Importuj propozycje
         models:
           proposal:
             name: Propozycja
@@ -407,6 +459,7 @@ pl:
             accepted: Zaakceptowano
             answer_proposal: Odpowiedź
             evaluating: Ocena
+            not_answered: Brak odpowiedzi
             rejected: Odrzucono
             title: Odpowiedź na propozycję %{title}
         proposal_notes:
@@ -548,6 +601,7 @@ pl:
           citizens: Obywatele
           meetings: Spotkania
           official: Urzędnik
+          participants: Uczestnicy
           user_groups: Grupy użytkowników
         filter_scope_values:
           all: Wszystko
@@ -619,8 +673,9 @@ pl:
           filter_by: Filtruj według
           unfold: Rozwiń
         new:
+          add_file: Dodaj plik
+          edit_file: Edytuj plik
           send: Dalej
-          title: Utwórz swój wspólny szkic
         new_collaborative_draft_button:
           new_collaborative_draft: Nowy wspólny szkic
         orders:
@@ -743,6 +798,8 @@ pl:
           add_images: Plik
           attachment_legend: "(Opcjonalnie) Dodaj załącznik"
           back: Wróć
+          edit_documents: Edytuj dokumenty
+          edit_image: Edytuj obraz
           delete_document: Usuń dokument
           delete_image: Usuń obraz
           gallery_legend: "(Opcjonalnie) Dodaj obraz do karty propozycji"
@@ -773,9 +830,12 @@ pl:
           filter_by: Filtruj według
           unfold: Rozwiń
         index:
+          click_here: Zobacz wszystkie propozycje
           collaborative_drafts_list: Wspólne szkice
           new_proposal: Nowa propozycja
+          see_all: Zobacz wszystkie propozycje
           see_all_withdrawn: Zobacz wszystkie wycofane propozycje
+          text_banner: Przeglądasz listę wniosków wycofanych przez ich autorów. %{go_back_link}.
           view_proposal: Zobacz propozycję
         linked_proposals:
           proposal_votes:
@@ -929,3 +989,7 @@ pl:
       included_proposals:
         proposal_project: 'Propozycja występująca w tych projektach:'
         proposal_result: 'Propozycja pojawiająca się w tych wynikach:'
+    statistics:
+      proposals_accepted: Zaakceptowane propozycje
+      proposals_count: Propozycje
+      supports_count: Wsparcie

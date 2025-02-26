@@ -4,7 +4,7 @@ module Decidim
   module AdminExtended
     module Admin
       # This command is executed when user updates Information
-      class UpdateInformation < Rectify::Command
+      class UpdateInformation < Decidim::Command
         def initialize(information, form)
           @form = form
           @information = information

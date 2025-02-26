@@ -5,7 +5,7 @@ module Decidim
     module Admin
       # A command with all the business logic when creating a new assembly
       # member in the system.
-      class CreateCadency < Rectify::Command
+      class CreateCadency < Decidim::Command
         # Public: Initializes the command.
         #
         # form - A form object with the params.

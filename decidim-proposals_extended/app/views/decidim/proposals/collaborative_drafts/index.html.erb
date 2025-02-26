@@ -4,13 +4,12 @@
 
 <div class="row columns">
   <div class="mb-s">
-    <%= link_to proposals_path(filter_link_params), class: "small hollow" do %>
+    <%= link_to proposals_path, class: "small hollow" do %>
       <%= icon "chevron-left", class: "icon--small", role: "img", "aria-hidden": true %>
       <%= t(".back_to_list") %>
     <% end %>
   </div>
   <div class="title-action">
-
     <h2 id="drafts-count" class="title-action__title section-heading">
       <%= render partial: "count" %>
     </h2>
@@ -28,5 +27,3 @@
     <%= render partial: "collaborative_drafts" %>
   </div>
 </div>
-<%= javascript_include_tag "decidim/filters" %>
-<%= javascript_include_tag "decidim/results_listing" %>

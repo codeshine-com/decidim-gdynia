@@ -15,9 +15,9 @@ module Decidim
         # root to: "meetings_extended#index"
       end
 
-      initializer "decidim_meetings_extended.assets" do |app|
-        app.config.assets.precompile += %w[decidim_meetings_extended_manifest.js decidim_meetings_extended_manifest.css]
-      end
+      # initializer "decidim_meetings_extended.assets" do |app|
+      #   app.config.assets.precompile += %w[decidim_meetings_extended_manifest.js decidim_meetings_extended_manifest.css]
+      # end
 
       # make decorators autoload in development env
       config.autoload_paths << File.join(
@@ -29,6 +29,10 @@ module Decidim
         Dir.glob(Decidim::MeetingsExtended::Engine.root + "app/decorators/**/*_decorator*.rb").each do |c|
           require_dependency(c)
         end
+      end
+
+      initializer "module_meetings_extended.webpacker.assets_path" do
+        Decidim.register_assets_path File.expand_path("app/packs", root)
       end
     end
   end
