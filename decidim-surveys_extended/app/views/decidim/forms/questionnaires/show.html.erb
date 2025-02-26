@@ -28,7 +28,8 @@
           </div>
         <% end %>
 
-        <% if allow_answers? %>
+        <%# Zeby admin mogl podgladac ankiety juz po jej wygasnieciu %>
+        <% if allow_answers? || current_user&.admin %>
           <% if visitor_can_answer? %>
             <% if visitor_already_answered? %>
               <div class="section">
@@ -60,7 +61,10 @@
                   </div>
                 <% end %>
 
-                <%= decidim_form_for(@form, url: update_url, method: :post, html: { multipart: true, class: "form answer-questionnaire" }, data: { "safe-path" => form_path }) do |form| %>
+                <%# Zeby admin mogl podgladac ankiety juz po jej wygasnieciu %>
+                <% url = allow_answers? && visitor_can_answer? ? update_url : '#' %>
+
+                <%= decidim_form_for(@form, url: url, method: :post, html: { multipart: true, class: "form answer-questionnaire" }, data: { "safe-path" => form_path }) do |form| %>
                   <%= form_required_explanation %>
                   <%= invisible_captcha %>
                   <% answer_idx = 0 %>
@@ -118,11 +122,12 @@
                         </div>
                       <% end %>
 
+                      <%# Zeby admin mogl podgladac ankiety juz po jej wygasnieciu %>
                       <%= cell(
                         "decidim/forms/step_navigation",
                         step_index,
                         total_steps: @form.total_steps,
-                        button_disabled: !current_participatory_space.can_participate?(current_user),
+                        button_disabled: (allow_answers? && visitor_can_answer? ? !current_participatory_space.can_participate?(current_user) : true),
                         form: form
                       ) %>
                     </div>
