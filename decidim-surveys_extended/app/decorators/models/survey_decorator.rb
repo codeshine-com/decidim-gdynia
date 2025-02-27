@@ -10,6 +10,10 @@ Decidim::Surveys::Survey.class_eval do
     component.settings.transparent
   end
 
+  def automatic_question_numbering?
+    component.settings.automatic_question_numbering
+  end
+
   def current_user_can_visit_survey?(user)
     return true if user&.admin
     return true if user && (component.participatory_space.user_roles(role_name = 'admin').pluck(:decidim_user_id).include? user.id)

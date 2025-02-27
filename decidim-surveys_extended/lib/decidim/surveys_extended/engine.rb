@@ -8,6 +8,7 @@ module Decidim
       Decidim.find_component_manifest('surveys').settings(:global) do |settings|
         settings.attribute :private_survey, type: :boolean, default: false
         settings.attribute :transparent, type: :boolean, default: true
+        settings.attribute :automatic_question_numbering, type: :boolean, default: true
       end
 
       # initializer "decidim_surveys_extended.assets.precompile" do |app|

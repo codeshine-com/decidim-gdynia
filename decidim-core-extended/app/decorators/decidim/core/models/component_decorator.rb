@@ -22,6 +22,11 @@ Decidim::Component.class_eval do
     true
   end
 
+  # only for surveys
+  def automatic_question_numbering?
+    settings.automatic_question_numbering
+  end
+
   def current_user_can_take_actions?(user)
     return true if user&.admin?
 

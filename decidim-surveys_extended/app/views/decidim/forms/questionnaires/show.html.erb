@@ -90,7 +90,7 @@
                               answer_form: answer_form,
                               answer: answer,
                               answer_idx: answer_idx,
-                              cleaned_answer_idx: cleaned_answer_idx,
+                              cleaned_answer_idx: current_component.automatic_question_numbering? ? cleaned_answer_idx : nil,
                               disabled: !current_participatory_space.can_participate?(current_user)
                             ) %>
                           <% end %>
