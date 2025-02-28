@@ -14,7 +14,8 @@ Decidim::Forms::UserAnswersSerializer.class_eval do
       else
         key = question_key(answer.question.position, answer.question)
         answers_hash[key] = if answer.question.single_option?
-                              [answer.choices.first.body, answer.choices.first.custom_body].compact.join(' - ')
+                              # odpowiedzi nie sa obowiazkowe
+                              [answer.choices.first&.body, answer.choices.first&.custom_body].compact.join(' - ')
                             else
                               answer.body.presence
                             end
@@ -33,7 +34,7 @@ Decidim::Forms::UserAnswersSerializer.class_eval do
     questions = Decidim::Forms::Question.where(decidim_questionnaire_id: questionnaire_id)
     return {} if questions.none?
 
-    questions.not_separator.not_title_and_description.each.inject({}) do |serialized, question|
+    questions.not_separator.not_title_and_description.order(:position).each.inject({}) do |serialized, question|
       idx = question.position
 
       if question.matrix?
