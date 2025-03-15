@@ -161,10 +161,15 @@
   </div>
 </div>
 
-<%= javascript_pack_tag "decidim_forms" %>
-<%= javascript_tag do %>
-  $('form.answer-questionnaire').on('submit', function() {
-    $('button:submit').attr('disabled', true);
-    $('button:submit').html('<%= t("decidim.forms.questionnaires.show.saving") %>');
-  });
+<% content_for :js_content do %>
+  <%= javascript_pack_tag "decidim_forms" %>
+  <%= javascript_tag do %>
+    // FIXME: remove this when we have a better way to disable the form
+    $('input').removeAttr('required');
+
+    $('form.answer-questionnaire').on('submit', function() {
+      $('button:submit').attr('disabled', true);
+      $('button:submit').html('<%= t("decidim.forms.questionnaires.show.saving") %>');
+    });
+  <% end %>
 <% end %>
