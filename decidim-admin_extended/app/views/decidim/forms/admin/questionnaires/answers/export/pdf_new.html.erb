@@ -9,5 +9,11 @@
     <% end %>
   </div>
 
-  <%= render partial: "decidim/forms/admin/questionnaires/answers/export/answer_new", collection: collection, locals: { questionnaire: questionnaire }, as: :participant %>
+  <%= render partial: "decidim/forms/admin/questionnaires/answers/export/answer_new",
+             collection: collection,
+             locals: {
+               questionnaire: questionnaire,
+               automatic_question_numbering: questionnaire.questionnaire_for.automatic_question_numbering?
+             },
+             as: :participant %>
 </div>

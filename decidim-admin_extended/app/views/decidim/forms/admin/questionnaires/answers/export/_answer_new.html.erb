@@ -25,7 +25,11 @@
   <div class="answers">
     <% participant.answers.each_with_index do |answer, index| %>
       <h3 class="question">
-        <%= index + 1 %>. <%= answer.question %>
+        <% if automatic_question_numbering %>
+          <%= index + 1 %>. <%= answer.question %>
+        <% else %>
+          <%= answer.question %>
+        <% end %>
       </h3>
       <p><%= answer.body %></p>
     <% end %>
