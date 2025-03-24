@@ -23,6 +23,18 @@ Decidim::Forms::Admin::QuestionnaireAnswerPresenter.class_eval do
     end
   end
 
+  def automatic_question_numbering?
+    @automatic_question_numbering ||= begin
+                                        # questionnaire_id = @answers.first&.decidim_questionnaire_id
+                                        # return unless questionnaire_id
+
+                                        questions = Decidim::Forms::Question.where(decidim_questionnaire_id: questionnaire.id)
+                                        return if questions.none?
+
+                                        questions.last.questionnaire.questionnaire_for.automatic_question_numbering?
+                                      end
+  end
+
   private
 
   # overwritten, added matrix row body
