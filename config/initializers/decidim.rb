@@ -340,35 +340,42 @@ Decidim.configure do |config|
   # set cookies.
   config.consent_cookie_name = Rails.application.secrets.decidim[:consent_cookie_name] if Rails.application.secrets.decidim[:consent_cookie_name].present?
 
-  # Defines data consent categories and the data stored in each category.
-  # config.consent_categories = [
-  #   {
-  #     slug: "essential",
-  #     mandatory: true,
-  #     items: [
-  #       {
-  #         type: "cookie",
-  #         name: "_session_id"
-  #       },
-  #       {
-  #         type: "cookie",
-  #         name: Decidim.consent_cookie_name
-  #       }
-  #     ]
-  #   },
-  #   {
-  #     slug: "preferences",
-  #     mandatory: false
-  #   },
-  #   {
-  #     slug: "analytics",
-  #     mandatory: false
-  #   },
-  #   {
-  #     slug: "marketing",
-  #     mandatory: false
-  #   }
-  # ]
+  Decidim.configure do |config|
+    config.consent_categories = [
+      {
+        slug: "essential",
+        mandatory: true,
+        items: [
+          {
+            type: "cookie",
+            name: "_session_id"
+          },
+          {
+            type: "cookie",
+            name: Decidim.consent_cookie_name
+          }
+        ]
+      },
+      {
+        slug: "analytics",
+        mandatory: false,
+        items: [
+          {
+            type: "cookie",
+            name: "_pk_id"
+          },
+          {
+            type: "cookie",
+            name: "_pk_ses"
+          }
+        ]
+      },
+      {
+        slug: "external",
+        mandatory: false
+      }
+    ]
+  end
 
   # Admin admin password configurations
   Rails.application.secrets.dig(:decidim, :admin_password, :strong).tap do |strong_pw|
@@ -381,6 +388,8 @@ Decidim.configure do |config|
 
   # Additional optional configurations (see decidim-core/lib/decidim/core.rb)
   config.cache_key_separator = Rails.application.secrets.decidim[:cache_key_separator] if Rails.application.secrets.decidim[:cache_key_separator].present?
+  config.cache_expiry_time = Rails.application.secrets.decidim[:cache_expiry_time].to_i.minutes if Rails.application.secrets.decidim[:cache_expiry_time].present?
+  config.stats_cache_expiry_time = Rails.application.secrets.decidim[:stats_cache_expiry_time].to_i.minutes if Rails.application.secrets.decidim[:stats_cache_expiry_time].present?
   config.expire_session_after = Rails.application.secrets.decidim[:expire_session_after].to_i.minutes if Rails.application.secrets.decidim[:expire_session_after].present?
   config.enable_remember_me = Rails.application.secrets.decidim[:enable_remember_me].present? unless Rails.application.secrets.decidim[:enable_remember_me] == "auto"
   if Rails.application.secrets.decidim[:session_timeout_interval].present?

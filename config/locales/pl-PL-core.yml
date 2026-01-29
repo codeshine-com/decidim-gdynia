@@ -1285,6 +1285,7 @@ pl:
         close_modal: Zamknij okno
         ok: OK
         title: Potwierdź
+      confirm_unload: Ta strona zawiera niezapisane zmiany. Czy na pewno chcesz opuścić tę stronę?
       embed_modal:
         close_window: Zamknij okno
         embed: Proszę wkleić ten kod na swojej stronie
@@ -1626,6 +1627,12 @@ pl:
             pwaInstallPromptSeen:
               description: Przechowuje status, jeśli użytkownik widział już powiadomienie o instalacji progresywnej aplikacji internetowej (PWA).
               service: Ta strona
+            _pk_ses:
+              description: Tymczasowe dane wizyty
+              service: Zewnętrzny system Matomo
+            _pk_id:
+              service: Zewnętrzny system Matomo
+              description: Unikatowy ID odwiedzającego stronę
           types:
             cookie: Pliki cookie
             local_storage: Local storage
@@ -1636,6 +1643,12 @@ pl:
           settings: Ustawienia
           title: Informacje o plikach cookies stosowanych w serwisie
         modal:
+          external:
+            title: Zewnętrzne
+            description: "Te pliki cookies pochodzą z innych serwisów, np. YouTube. Dzięki nim możesz oglądać
+                          ich treści na naszej stronie.
+                          Te cookies zapamiętają Twoje ustawienia i aktywność w serwisach zewnętrznych. Jeśli je
+                          włączysz, zgadzasz się na zasady polityki prywatności danego serwisu zewnętrznego."
           accept_all: Zaakceptuj wszystkie
           accept_only_essential: Akceptuj tylko niezbędne
           analytics:
@@ -1663,9 +1676,11 @@ pl:
       footer:
         cc_by_license: Licencja Creative Commons
         data_consent_settings: Ustawienia Cookie
+        help: Pomoc
         decidim_logo: Logo Decidim
         download_open_data: Pobierz pliki Open Data
         made_with_open_source: Strona internetowa powstała z użyciem <a target="_blank" href="https://github.com/decidim/decidim">free software</a>.
+        social_media: Social Media
       header:
         close_menu: Zamknij menu
         navigation: Nawigacja
@@ -1698,6 +1713,8 @@ pl:
         public_profile: Mój profil publiczny
         sign_out: Wyloguj się
         title: Profile links
+        unread_conversations: Masz nieprzeczytane konwersacje
+        unread_notifications: Masz nieprzeczytane powiadomienia
       user_profile:
         account: Moje konto
         authorizations: Autoryzacje
