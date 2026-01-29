@@ -84,7 +84,10 @@ pl:
   decidim:
     accessibility:
       external_link: Link zewnętrzny
+      front_page_link: Powrót
       logo: "Oficjalne logo %{organization}"
+      opens_in_new_tab: Otwórz w nowej zakładce
+      secondary_menu: Menu podrzędne
       skip_button: Przejdź do głównej zawartości
     account:
       data_portability_export:
