@@ -2,10 +2,10 @@
   "name": "app",
   "private": true,
   "dependencies": {
-    "@decidim/browserslist-config": "^0.28.6",
-    "@decidim/core": "^0.28.6",
+    "@decidim/browserslist-config": "^0.29.7",
+    "@decidim/core": "^0.29.7",
     "@decidim/elections": "^0.28.6",
-    "@decidim/webpacker": "^0.28.6",
+    "@decidim/webpacker": "^0.29.7",
     "graphql-ws": ">= 4.5.0"
   },
   "version": "0.1.0",
@@ -13,10 +13,10 @@
     "extends @decidim/browserslist-config"
   ],
   "devDependencies": {
-    "@decidim/dev": "^0.28.6",
-    "@decidim/eslint-config": "^0.28.6",
-    "@decidim/prettier-config": "^0.28.6",
-    "@decidim/stylelint-config": "^0.28.6",
+    "@decidim/dev": "^0.29.7",
+    "@decidim/eslint-config": "^0.29.7",
+    "@decidim/prettier-config": "^0.29.7",
+    "@decidim/stylelint-config": "^0.29.7",
     "webpack-dev-server": "^4.15.1"
   }
 }
