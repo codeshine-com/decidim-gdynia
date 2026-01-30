@@ -42,7 +42,17 @@
     <small class="form-error max-choices-alert"><%= t(".max_choices_alert") %></small>
   <% end %>
 
-  <% answer.errors.full_messages.each do |msg| %>
+  <%# bug https://github.com/decidim/decidim/issues/8721 %>
+  <%# Usuwamy komunikaty jakie zostaly juz dodaone do prostych inputow, zeby nie bylo duplikacji %>
+  <% answer.errors.each do |key, msg| %>
+    <%# pomijamy dla body %>
+    <% next if key.to_s == 'body' %>
+
     <small class="form-error is-visible"><%= msg %></small>
   <% end %>
+  <%# answer.errors.full_messages.each do |msg| %>
+    <%# <small class="form-error is-visible">  %>
+      <%#= msg %>
+    <%# </small>  %>
+  <%# end %>
 <% end %>

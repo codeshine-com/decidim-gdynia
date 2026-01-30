@@ -13,3 +13,6 @@
   - [metrics, 1]
   - [exports, 1]
   - [translations, 1]
+  - [ vote_reminder, 2 ]
+  - [ reminders, 2 ]
+  - [ close_meeting_reminder, 1 ]

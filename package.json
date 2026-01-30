@@ -2,25 +2,27 @@
   "name": "app",
   "private": true,
   "dependencies": {
-    "@decidim/browserslist-config": "^0.27.5",
-    "@decidim/core": "^0.27.5",
-    "@decidim/elections": "^0.27.5",
-    "@decidim/webpacker": "^0.27.5",
-    "graphql-ws": ">= 4.5.0"
+    "@decidim/browserslist-config": "^0.30.0",
+    "@decidim/core": "^0.30.0",
+    "@decidim/webpacker": "^0.30.0",
+    "@rails/activestorage": "^8.0.200",
+    "core-js": "^3.48.0",
+    "graphql-ws": "^6.0.3",
+    "js-beautify": "^1.15.4"
   },
   "version": "0.1.0",
-  "babel": {
-    "presets": [
-      "./node_modules/@rails/webpacker/package/babel/preset.js"
-    ]
-  },
   "browserslist": [
     "extends @decidim/browserslist-config"
   ],
+  "engines": {
+    "node": "18.17.1",
+    "npm": "9.6.7",
+    "yarn": "~1.22.1"
+  },
   "devDependencies": {
-    "@decidim/dev": "^0.27.5",
-    "@decidim/eslint-config": "^0.27.5",
-    "@decidim/stylelint-config": "^0.27.5",
-    "webpack-dev-server": "^4.15.1"
+    "@decidim/dev": "^0.30.0",
+    "@decidim/eslint-config": "^0.30.0",
+    "@decidim/prettier-config": "^0.30.0",
+    "@decidim/stylelint-config": "^0.30.0"
   }
 }

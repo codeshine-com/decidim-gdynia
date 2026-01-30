@@ -453,8 +453,11 @@ pl:
       meetings:
         filters:
           origin_values:
+            all: Wszyscy
             citizens: Mieszkańcy/Użytkownicy
             official: Jednostka miejska
+            participants: Uczestnicy
+            user_groups: Grupy
           type_values:
              hybrid: Łączony
              in_person: Stacjonarny

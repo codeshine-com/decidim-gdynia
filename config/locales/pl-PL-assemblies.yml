@@ -93,9 +93,11 @@ pl:
   decidim:
     admin:
       actions:
+        confirm_delete_assembly: Czy na pewno chcesz usunąć to zgromadzenie? Jeśli zmienisz zdanie, możesz je później przywrócić.
         import_assembly: Importuj
         new_assembly: Nowy zespół
         new_assembly_type: Nowy typ zespołu
+        view_deleted_assemblies: Wyświetl usunięte zgromadzenia
       assemblies:
         create:
           error: Podczas tworzenia nowego zespołu wystąpił błąd.
@@ -241,6 +243,8 @@ pl:
       titles:
         assemblies: Zespoły
         assemblies_types: Typy zespołów
+      tooltips:
+        deleted_assemblies_info: Zgromadzenie można usunąć tylko wtedy, gdy ma status „Nieopublikowane”.
     admin_log:
       assembly:
         create: "%{user_name} utworzył(a) zespół %{resource_name}"
@@ -267,19 +271,23 @@ pl:
       admin:
         assemblies:
           form:
+            define_taxonomy_filters: Zanim użyjesz tego ustawienia, zdefiniuj filtry dla tej przestrzeni partycypacyjnej.
             duration: Czas trwania
             duration_help: Jeśli czas trwania tego zespołu jest ograniczony, wybierz datę końcową. W przeciwnym razie pojawi się jako nieokreślony.
             filters: Filtry
             images: Obrazy
             included_at_help: Wybierz datę dodania tego zespołu do Decidim. To niekoniecznie musi być ta sama data co data utworzenia.
             metadata: Metadane
+            no_taxonomy_filters_found: Nie znaleziono filtrów taksonomii.
             other: Inny
+            private_notice: Będziesz mógł/mogła zarządzać prywatnymi uczestnikami po ustawieniu tej przestrzeni jako prywatnej.
             select_a_created_by: Wybierz utworzony przez
             select_an_area: Wybierz kategorię
             select_an_assembly_type: Wybierz typ zespołu
             select_parent_assembly: Wybierz zespół nadrzędny
             slug_help: 'URL slugi służą do generowania adresów URL kierujących bezpośrednio do tego zespołu. Należy wpisać tylko to, co ma znaleźć się na końcu po znaku „/”, a nie pełen adres. Można użyć liter, cyfr i myślników. Musi zaczynać się od litery. Przykład: %{url}'
             social_handlers: Profile społecznościowe
+            taxonomies: Taxonomie
             title: Informacje ogólne
             visbility: Widoczność
         assemblies_settings:
