@@ -282,6 +282,9 @@ pl:
         update:
           error: Wystąpił błąd podczas aktualizowania tego komponentu.
           success: Komponent został pomyślnie zaktualizowany.
+      conflicts:
+        index:
+          text: Wyszukaj według bieżącego adresu e-mail użytkownika, nazwy lub pseudonimu.
       dashboard:
         show:
           view_more_logs: Zobacz więcej logów
@@ -594,8 +597,15 @@ pl:
           update: Aktualizuj
         form:
           colors:
+            choose_color: Wybierz kolor podstawowy
             colors_title: Kolory organizacji
+            colors_warning_html: Uwaga! Zmiana tych kolorów może zaburzyć kontrasty dostępności. Możesz sprawdzić wybrany kontrast za pomocą <a href="https://webaim.org/resources/contrastchecker">WebAIM Contrast Checker</a> lub innych podobnych narzędzi.
+            explanation: To narzędzie pomaga wybrać schemat kolorów, składający się z odcieni równomiernie rozmieszczonych na kole kolorów, który zostanie zastosowany na stronie internetowej danej organizacji.
+            legend_html: Główne kolory aplikacji, oparte na <a href="https://www.color-meanings.com/triadic-colors/">algorytmie triadowym</a>. Kolor <i>drugorzędny</i> jest automatycznie obliczany na podstawie koloru podstawowego i wybranego nasycenia.
             header_snippets_help: Użyj tego pola, aby dodać elementy do nagłówka kodu HTML. Najczęstszym zastosowaniem jest zintegrowanie usług innych firm, które wymagają dodatkowego kodu JavaScript lub CSS. Można również użyć go do dodawania dodatkowych meta tagów do HTML. Zauważ, że będzie to widoczne tylko na stronach publicznych, a nie w sekcji administracyjnej.
+            saturation: Nasycenie
+            title: Wybór koloru
+            update_suggested_colors: Zaktualizuj sugerowane kolory
           cta_button_path_help: 'Możesz nadpisać adres do jakiego kieruje przycisk CTA na stronie głównej. Należy wpisać tylko to, co ma znaleźć się na końcu po znaku „/”, a nie pełen adres. Można użyć liter, cyfr, myślników i ukośników. Musi zaczynać się od litery. Przycisk CTA zostanie wyświetlony na stronie głównej między tekstem powitalnym a opisem. Przykład: %{url}'
           cta_button_text_help: Można nadpisać tekst przycisku CTA na stronie głównej dla każdego dostępnego języka organizacji. Jeśli to pole nie zostanie wypełnione, zostanie użyta wartość domyślna. Przycisk CTA zostanie wyświetlony na stronie głównej między tekstem powitalnym a opisem.
           homepage_appearance_title: Edytuj wygląd strony głównej
