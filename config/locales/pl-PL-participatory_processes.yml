@@ -100,6 +100,7 @@ pl:
         publish: Publikuj
         resend_invitation: Wyślij ponownie zaproszenie
         unpublish: Cofnij publikowanie
+        view_deleted_processes: Pokaż usunięte procesy
       menu:
         participatory_process_groups: Grupy procesu
         participatory_process_groups_submenu:
@@ -280,6 +281,8 @@ pl:
         participatory_process_groups: Grupy procesu partycypacyjnego
         participatory_process_types: Typy procesu partycypacyjnego
         participatory_processes: Procesy partycypacyjne
+      tooltips:
+        deleted_processes_info: Tylko nie opublikowane procesy mogą zostać usunięte przez administratora.
       users:
         resend_invitation:
           error: Wystąpił błąd podczas ponownego wysyłania zaproszenia.
@@ -373,10 +376,13 @@ pl:
         participatory_processes:
           form:
             announcement_help: Wprowadzony tutaj tekst zostanie wyświetlony użytkownikowi tuż pod informacjami o procesie.
+            define_taxonomy_filters: Zanim użyjesz tego ustawienia, zdefiniuj filtry dla tej przestrzeni partycypacyjnej.
             duration: Czas trwania
             filters: Filtry
             images: Obrazy
             metadata: Metadane
+            no_taxonomy_filters_found: Nie znaleziono filtrów taksonomii.
+            private_notice: Będziesz mógł/mogła zarządzać członkami po ustawieniu tej przestrzeni jako prywatnej.
             other: Inny
             related_processes: Powiązane procesy
             scope_type_max_depth_help: Ogranicz głębokość filtra obszaru; Filtr pokaże typy obszaru od ogólnego do wybranego.
@@ -384,6 +390,7 @@ pl:
             select_participatory_process_type: Wybierz typ procesu
             select_process_group: Wybierz grupę procesów
             slug_help: 'URL slugi służą do generowania adresów URL kierujących bezpośrednio do tego procesu. Należy wpisać tylko to, co ma znaleźć się na końcu po znaku „/”, a nie pełen adres. Można użyć liter, cyfr i myślników. Musi zaczynać się od litery. Przykład: %{url}'
+            taxonomies: Taxonomie
             title: Informacje ogólne
             visbility: Widoczność
       content_blocks:

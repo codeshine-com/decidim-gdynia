@@ -1680,6 +1680,7 @@ pl:
         decidim_logo: Logo Decidim
         download_open_data: Pobierz pliki Open Data
         made_with_open_source: Strona internetowa powstała z użyciem <a target="_blank" href="https://github.com/decidim/decidim">free software</a>.
+        open_data: Open Data
         social_media: Social Media
       header:
         close_menu: Zamknij menu

@@ -5,7 +5,7 @@
 // https://docs.decidim.org/en/develop/customize/styles
 //
 
-const { inherit, current, transparent, white, neutral } = require("tailwindcss/colors")
+const { inherit, current, transparent, white } = require("tailwindcss/colors")
 
 const withOpacity =
   (variable) =>
@@ -18,7 +18,7 @@ module.exports = {
   // This content is generated automatically by decidim:webpacker:install task, it
   // should not be updated manually.
   // The array must contain all the decidim modules active in the application
-  content: ['/Users/przemad/.rbenv/versions/3.2.6/lib/ruby/gems/3.2.0/gems/decidim-core-0.29.7','/Users/przemad/.rbenv/versions/3.2.6/lib/ruby/gems/3.2.0/gems/decidim-comments-0.29.7','/Users/przemad/.rbenv/versions/3.2.6/lib/ruby/gems/3.2.0/gems/decidim-accountability-0.29.7','/Users/przemad/.rbenv/versions/3.2.6/lib/ruby/gems/3.2.0/gems/decidim-admin-0.29.7','/Users/przemad/.rbenv/versions/3.2.6/lib/ruby/gems/3.2.0/gems/decidim-api-0.29.7','/Users/przemad/.rbenv/versions/3.2.6/lib/ruby/gems/3.2.0/gems/decidim-assemblies-0.29.7','/Users/przemad/.rbenv/versions/3.2.6/lib/ruby/gems/3.2.0/gems/decidim-blogs-0.29.7','/Users/przemad/.rbenv/versions/3.2.6/lib/ruby/gems/3.2.0/gems/decidim-budgets-0.29.7','/Users/przemad/.rbenv/versions/3.2.6/lib/ruby/gems/3.2.0/gems/decidim-debates-0.29.7','/Users/przemad/.rbenv/versions/3.2.6/lib/ruby/gems/3.2.0/gems/decidim-forms-0.29.7','/Users/przemad/.rbenv/versions/3.2.6/lib/ruby/gems/3.2.0/gems/decidim-generators-0.29.7','/Users/przemad/.rbenv/versions/3.2.6/lib/ruby/gems/3.2.0/gems/decidim-meetings-0.29.7','/Users/przemad/.rbenv/versions/3.2.6/lib/ruby/gems/3.2.0/gems/decidim-pages-0.29.7','/Users/przemad/.rbenv/versions/3.2.6/lib/ruby/gems/3.2.0/gems/decidim-participatory_processes-0.29.7','/Users/przemad/.rbenv/versions/3.2.6/lib/ruby/gems/3.2.0/gems/decidim-proposals-0.29.7','/Users/przemad/.rbenv/versions/3.2.6/lib/ruby/gems/3.2.0/gems/decidim-sortitions-0.29.7','/Users/przemad/.rbenv/versions/3.2.6/lib/ruby/gems/3.2.0/gems/decidim-surveys-0.29.7','/Users/przemad/.rbenv/versions/3.2.6/lib/ruby/gems/3.2.0/gems/decidim-system-0.29.7','/Users/przemad/.rbenv/versions/3.2.6/lib/ruby/gems/3.2.0/gems/decidim-verifications-0.29.7','/Users/przemad/.rbenv/versions/3.2.6/lib/ruby/gems/3.2.0/gems/decidim-dev-0.29.7','.'].flatMap(directory => [
+  content: ['/Users/przemad/.rbenv/versions/3.3.4/lib/ruby/gems/3.3.0/gems/decidim-core-0.30.0','/Users/przemad/.rbenv/versions/3.3.4/lib/ruby/gems/3.3.0/gems/decidim-comments-0.30.0','/Users/przemad/.rbenv/versions/3.3.4/lib/ruby/gems/3.3.0/gems/decidim-accountability-0.30.0','/Users/przemad/.rbenv/versions/3.3.4/lib/ruby/gems/3.3.0/gems/decidim-admin-0.30.0','/Users/przemad/.rbenv/versions/3.3.4/lib/ruby/gems/3.3.0/gems/decidim-api-0.30.0','/Users/przemad/.rbenv/versions/3.3.4/lib/ruby/gems/3.3.0/gems/decidim-assemblies-0.30.0','/Users/przemad/.rbenv/versions/3.3.4/lib/ruby/gems/3.3.0/gems/decidim-blogs-0.30.0','/Users/przemad/.rbenv/versions/3.3.4/lib/ruby/gems/3.3.0/gems/decidim-budgets-0.30.0','/Users/przemad/.rbenv/versions/3.3.4/lib/ruby/gems/3.3.0/gems/decidim-debates-0.30.0','/Users/przemad/.rbenv/versions/3.3.4/lib/ruby/gems/3.3.0/gems/decidim-forms-0.30.0','/Users/przemad/.rbenv/versions/3.3.4/lib/ruby/gems/3.3.0/gems/decidim-generators-0.30.0','/Users/przemad/.rbenv/versions/3.3.4/lib/ruby/gems/3.3.0/gems/decidim-meetings-0.30.0','/Users/przemad/.rbenv/versions/3.3.4/lib/ruby/gems/3.3.0/gems/decidim-pages-0.30.0','/Users/przemad/.rbenv/versions/3.3.4/lib/ruby/gems/3.3.0/gems/decidim-participatory_processes-0.30.0','/Users/przemad/.rbenv/versions/3.3.4/lib/ruby/gems/3.3.0/gems/decidim-proposals-0.30.0','/Users/przemad/.rbenv/versions/3.3.4/lib/ruby/gems/3.3.0/gems/decidim-sortitions-0.30.0','/Users/przemad/.rbenv/versions/3.3.4/lib/ruby/gems/3.3.0/gems/decidim-surveys-0.30.0','/Users/przemad/.rbenv/versions/3.3.4/lib/ruby/gems/3.3.0/gems/decidim-system-0.30.0','/Users/przemad/.rbenv/versions/3.3.4/lib/ruby/gems/3.3.0/gems/decidim-verifications-0.30.0','/Users/przemad/.rbenv/versions/3.3.4/lib/ruby/gems/3.3.0/gems/decidim-dev-0.30.0','.'].flatMap(directory => [
     `${directory}/app/views/**/*.html.erb`,
     `${directory}/app/cells/**/*.{rb,erb}`,
     `${directory}/app/helpers/**/*.rb`,
@@ -33,7 +33,6 @@ module.exports = {
       current,
       transparent,
       white,
-      neutral,
       primary: withOpacity("--primary-rgb"),
       secondary: withOpacity("--secondary-rgb"),
       tertiary: withOpacity("--tertiary-rgb"),
@@ -52,7 +51,8 @@ module.exports = {
         DEFAULT: "#F3F4F7",
         2: "#FAFBFC",
         3: "#EFEFEF",
-        4: "#E4EEFF99" // 60% opacity
+        4: "#E4EEFF99", // 60% opacity
+        5: "#E9E9E9"
       }
     },
     container: {
