@@ -15,6 +15,13 @@ pl:
         phone: Telefon
       report:
         details: Dodatkowe uwagi
+      taxonomy:
+        name: Nazwa taksonomii
+      taxonomy_filter:
+        internal_name: Etykieta wewnętrzna
+        name: Etykieta
+        root_taxonomy_id: Z taksonomii
+        space_filter: Dostępne jako filtr dla
       user:
         about: O użytkowniku
         email: Twój email
@@ -46,6 +53,10 @@ pl:
         password_confirmation: Potwierdzenie hasła
         remember_me: Zapamiętaj mnie
     models:
+      decidim:
+        history:
+          one: Historia
+          other: Historia
       decidim/amendment:
         one: Poprawka
         few: Poprawki
@@ -174,6 +185,13 @@ pl:
         create: "%{user_name} stworzył(a) stronę statyczną %{resource_name}"
         delete: "%{user_name} usunął/usunęła stronę statyczną %{resource_name}"
         update: "%{user_name} zaktualizował(a) stronę statyczną %{resource_name}"
+      taxonomy_filter:
+        create: "%{user_name} utworzył(a) filtr %{resource_name}"
+        create_with_filter_info: '%{user_name} utworzył(a) filtr %{resource_name} na podstawie taksonomii "%{taxonomy_name}" z %{filter_items_count} elementami'
+        delete: "%{user_name} usunął/usunęła filtr %{resource_name}"
+        delete_with_filter_info: '%{user_name} usunął/usunęła filtr %{resource_name} na podstawie taksonomii "%{taxonomy_name}" z %{filter_items_count} elementami'
+        update: "%{user_name} zaktualizował(a) filtr %{resource_name}"
+        update_with_filter_info: '%{user_name} zaktualizował(a) filtr %{resource_name} na podstawie taksonomii "%{taxonomy_name}" z %{filter_items_count} elementami'
       user:
         invite: "%{user_name} zaprosił(a) użytkownika %{resource_name} z rolą: %{role}"
         officialize: "%{user_name} ustanowił(a) oficjalnym użytkownika %{resource_name}"
@@ -404,6 +422,8 @@ pl:
             dummy_step_attribute_1: Przykładowy atrybut etapu 1
             dummy_step_attribute_2: Przykładowy atrybut etapu 2
             dummy_step_translatable_text: Przykładowy tekst etapu do tłumaczenia
+      pagination:
+        page_title: "%{component_name} - Strona %{current_page} z %{total_pages}"
     contact: Kontakt
     content_blocks:
       footer_sub_hero:
@@ -434,6 +454,9 @@ pl:
       actions:
         login_before_access: Zaloguj się na swoje konto, żeby mieć dostęp
         unauthorized: Nie masz uprawnień do wykonania tej czynności
+      application_helper:
+        filter_taxonomy_values:
+          all: Wszystko
     data_portability:
       export:
         ready: Gotowy
@@ -491,6 +514,9 @@ pl:
           title: Powiadomienia newslettera
         omniauth_buttons:
           or: Lub
+    documents:
+      one: "%{count} dokument"
+      other: "%{count} dokumenty"
     doorkeeper:
       authorizations:
         new:
@@ -506,6 +532,11 @@ pl:
           this_application_will_not_be_able_to: 'Ta aplikacja nie będzie mogła:'
           update_profile: Zaktualizuj swój profil
           wants_to_use_your_account_html: "<strong>%{application_name}</strong> chce używać Twojego konta"
+    download_your_data:
+      show:
+        action: Akcja
+        download: Pobierz plik
+        download_data: Pobierz dane
     endorsable:
       endorsements: Rekomendacje
       endorsements_count: Liczba rekomendacji
@@ -1067,6 +1098,7 @@ pl:
         administrators: Administratorzy
         allow_public_contact: Każdy może wysłać mi prywatną wiadomość, nawet jeśli go nie obserwuję.
         allow_push_notifications: Otrzymuj powiadomienia push, aby dowiedzieć się, co się dzieje, gdy nie jesteś na platformie. Możesz je wyłączyć w dowolnym momencie.
+        assigned_to_proposal: Chcę otrzymywać e-mail, gdy ktoś przypisze mi propozycję do ocen
         direct_messages: Przyjmuj prywatne wiadomości od każdego
         email_on_moderations: Chcę otrzymywać e-mail za każdym razem, gdy coś lub ktoś zostanie zgłoszony do moderacji.
         email_on_notification: Chcę otrzymywać wiadomości e-mail za każdym razem gdy otrzymuję powiadomienie.
@@ -1087,6 +1119,7 @@ pl:
         receive_notifications_about: Chcę otrzymywać powiadomienia
         send_notifications_by_email: Wysyłaj powiadomienia pocztą e-mail
         update_notifications_settings: Zapisz zmiany
+        valuators: Oceniający
       update:
         error: Podczas aktualizowania ustawień powiadomień wystąpił błąd.
         success: Ustawienia powiadomień zostały zaktualizowane.
@@ -1095,6 +1128,9 @@ pl:
         message: Wygląda na to, że jesteś obecnie offline. Spróbuj ponownie później.
         retry: Ponów
     open_data:
+      index:
+        description: Witamy na stronie Otwartych danych %{organization_name}. Znajdziesz tu pliki danych, które są regularnie generowane na podstawie różnych procesów deliberacyjnych i zarządczych realizowanych w ramach %{organization_name}. Pliki te są udostępniane w celu wspierania przejrzystości, dostępności i współpracy. Poniżej znajdziesz szczegółowe informacje o tym, czym są te pliki, jak je otwierać i z nimi pracować, a także opis zawartości i struktury każdego pliku.
+        title: Otwarte dane
       not_available_yet: Pliki Open Data nie są jeszcze dostępne. Spróbuj ponownie za kilka minut.
     own_user_groups:
       index:
@@ -1235,6 +1271,8 @@ pl:
       create:
         error: Wystąpił błąd podczas tworzenia zgłoszenia. Proszę spróbować ponownie.
         success: Zgłoszenie zostało utworzone z powodzeniem i zostanie zweryfikowane przez administratora.
+    resource:
+      controls_label: Kontrolki zasobu
     resource_endorsements:
       create:
         error: Wystąpił błąd podczas udzielania rekomendacji.
@@ -1305,6 +1343,9 @@ pl:
         report: Zgłoś
         spam: Zawiera clickbaity, reklamy, oszustwa lub wrogie skrypty.
         title: Zgłoś nieodpowiednią zawartość
+      flag_user_modal:
+        description: Co jest niewłaściwego w zachowaniu tego uczestnika?
+        title: Zgłoś niewłaściwego uczestnika
       floating_help:
         close: Zamknij pomoc
         help: Pomoc
@@ -1335,6 +1376,8 @@ pl:
     tags:
       filter_results_for_category: 'Filtruj wyniki dla kategorii: %{resource}'
       filter_results_for_scope: 'Filtruj wyniki dla obszaru: %{resource}'
+    taxonomies:
+      prompt: Wybierz opcję
     translation_bar:
       help_text: "<strong>Uwaga:</strong> Zawartość może być tłumaczeniem automatycznym i może nie być w 100% dokładna."
       show_original: Pokaż oryginalny tekst
@@ -1563,7 +1606,7 @@ pl:
         resend_unlock_instructions: Wyślij ponownie instrukcje odblokowania
       send_instructions: Za kilka minut otrzymasz wiadomość e-mail z instrukcjami, jak odblokować konto.
       send_paranoid_instructions: Jeśli Twoje konto istnieje, w ciągu kilku minut otrzymasz e-mail z instrukcjami, jak je odblokować.
-      unlocked: Twoje konto zostało odblokowane pomyślnie. Zaloguj się, aby kontynuować.
+      unlocked: Twoje konto zostało odblokowane pomyślnie. Zaloguj się, aby kontynuować
   doorkeeper:
     scopes:
       public: Twoje informacje publiczne.

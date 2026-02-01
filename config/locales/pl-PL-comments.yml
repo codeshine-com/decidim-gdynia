@@ -20,6 +20,8 @@ pl:
         other: Głosy
   decidim:
     comments:
+      comment_thread:
+        accessibility_label: Wątek komentarzy rozpoczęty przez %{full_name} dnia %{date}
       comments: Komentarze
       comments_count: Liczba komentarzy
       last_activity:
@@ -31,6 +33,7 @@ pl:
     components:
       add_comment_form:
         account_message: <a href="%{sign_in_url}">Zaloguj się na swoje konto</a> lub <a href="%{sign_up_url}">zarejestruj się</a>, aby dodać komentarz.
+        add_comment: Dodaj komentarz
         form:
           body:
             label: Komentarz
@@ -66,6 +69,7 @@ pl:
           one: Pokaż odpowiedź
           other: Pokaż %{count} odpowiedzi
         single_comment_link_title: Pobierz link do pojedynczego komentarza
+        sort_by: 'Sortuj wg:'
       comment_order_selector:
         order:
           best_rated: Najlepiej oceniane

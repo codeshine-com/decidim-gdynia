@@ -97,6 +97,8 @@ pl:
               'true': Nadchodzące
           scope_id_eq:
             label: Zakres
+          taxonomies_part_of_contains:
+            label: Taksonomia
           with_any_origin:
             label: Źródło
             values:
@@ -129,10 +131,14 @@ pl:
             comments_max_length: Maksymalna długość komentarzy (Pozostaw 0 dla wartości domyślnej)
             creation_enabled_for_participants: Uczestnicy mogą tworzyć spotkania
             default_registration_terms: Domyślne warunki rejestracji
+            define_taxonomy_filters: Przed użyciem tego ustawienia zdefiniuj filtry dla tej przestrzeni partycypacyjnej.
             enable_pads_creation: Włącz tworzenie padów
+            no_taxonomy_filters_found: Nie znaleziono filtrów taksonomii.
             resources_permissions_enabled: Uprawnienia działań można ustawić dla każdego spotkania
             scope_id: Obszar
             scopes_enabled: Obszary włączone
+            taxonomy_filters: Wybierz filtry dla komponentu
+            taxonomy_filters_add: Dodaj filtr
           step:
             announcement: Ogłoszenie
             comments_blocked: Komentarze zablokowane
@@ -201,8 +207,10 @@ pl:
         attachment_collections: Folder
         attachments: Załączniki
         close: Zamknij
+        confirm_delete_meeting: Czy na pewno chcesz usunąć to spotkanie?
         confirm_destroy: Czy na pewno chcesz usunąć to spotkanie?
         destroy: Usuń
+        deleted_meetings_info: Usunięte spotkania można przywrócić z kosza.
         edit: Edytuj
         invalid_destroy:
           proposals_count:
@@ -215,6 +223,7 @@ pl:
         preview: Podgląd
         registrations: Rejestracje
         title: Działania
+        view_deleted_meetings: Zobacz usunięte spotkania
       admin:
         agenda:
           agenda_item:
@@ -304,6 +313,8 @@ pl:
             select_an_iframe_access_level: Wybierz poziom dostępu elementu iframe
           index:
             title: Spotkania
+          manage_trash:
+            title: Usunięte spotkania
           new:
             create: Utwórz
             title: Utwórz spotkanie
@@ -527,6 +538,7 @@ pl:
             map: Mapa
             official_meeting: Spotkanie oficjalne
             start_time: Data rozpoczęcia
+            taxonomies: Taksonomie
             title: Tytuł
       read_more: "(zobacz więcej)"
       registration_mailer:
