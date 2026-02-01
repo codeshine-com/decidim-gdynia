@@ -24,7 +24,17 @@ pl:
       admin:
         models:
           components:
+            allow_answers: Zezwól na odpowiedzi
+            allow_editing_answers: Zezwól zarejestrowanym użytkownikom na edytowanie własnych odpowiedzi w ankiecie
+            allow_unregistered: Zezwól niezarejestrowanym użytkownikom na wypełnienie ankiety
+            allow_unregistered_help: Jeśli ta opcja jest aktywna, do wypełnienia ankiety nie będzie wymagane logowanie. Może to prowadzić do danych niskiej jakości lub niewiarygodnych, a także zwiększa podatność na zautomatyzowane ataki. Używaj ostrożnie! Pamiętaj, że uczestnik może wypełnić tę samą ankietę wielokrotnie, korzystając z różnych przeglądarek lub trybu prywatnego przeglądania.
+            announcement: Ogłoszenie
+            clean_after_publish: Usuń odpowiedzi podczas publikowania ankiety
             description: Opis
+            ends_at: Odpowiedzi przyjmowane do
+            ends_at_help: Pozostaw puste, jeśli nie chcesz ustawiać konkretnej daty
+            starts_at: Odpowiedzi przyjmowane od
+            starts_at_help: Pozostaw puste, jeśli nie chcesz ustawiać konkretnej daty
             tos: Warunki uczestnictwa
         questionnaires:
           actions:

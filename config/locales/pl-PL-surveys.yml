@@ -54,15 +54,37 @@ pl:
         object: odpowiedzi na ankiety
         title: Odpowiedzi na ankiety
     surveys:
+      actions:
+        answers_alert: Opcja usuwania odpowiedzi podczas publikowania jest aktywna dla tej ankiety. Obecnie istnieje %{answers_count} odpowiedzi, które zostaną usunięte, jeśli będziesz kontynuować.
+        confirm_destroy: Czy na pewno chcesz to usunąć?
+        destroy: Usuń
+        edit: Edytuj
+        manage_questions: Zarządzaj pytaniami
+        new_survey: Nowa ankieta
+        preview: Podgląd
+        title: Akcje
       admin:
         exports:
           survey_user_answers: Odpowiedzi użytkowników na pytania z ankiety
         surveys:
+          edit:
+            title: Edycja ankiety
+          index:
+            title: Ankiety
           update:
             invalid: Podczas zapisywania ankiety wystąpił błąd.
             success: Ankieta została zapisana pomyślnie.
       last_activity:
         new_survey_at_html: "<span>Nowa ankieta %{link}</span>"
+      models:
+        survey:
+          fields:
+            questions: Pytania
+            status: Status
+            title: Tytuł
+          status:
+            closed: Zamknięta
+            open: Otwarta
       surveys:
         answer:
           invalid: Podczas wypełniania ankiety wystąpił błąd.

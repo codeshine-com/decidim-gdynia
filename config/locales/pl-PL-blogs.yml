@@ -14,9 +14,12 @@ pl:
       actions:
         confirm_destroy: Czy na pewno chcesz usunąć ten wpis?
         destroy: Usuń
+        confirm_delete_post: Czy na pewno chcesz usunąć ten wpis?
+        deleted_posts_info: Usunięte wpisy można przywrócić z kosza.
         edit: Edytuj
         new: Nowy wpis
         title: Działania
+        view_deleted_posts: Zobacz usunięte wpisy
       admin:
         models:
           components:
@@ -74,6 +77,7 @@ pl:
             announcement: Ogłoszenie
             comments_enabled: Komentarze włączone
             comments_max_length: Maksymalna długość komentarzy (Pozostaw 0 dla wartości domyślnej)
+            creation_enabled_for_participants: Uczestnicy mogą tworzyć wpisy
           step:
             announcement: Ogłoszenie
             comments_blocked: Komentarze zablokowane

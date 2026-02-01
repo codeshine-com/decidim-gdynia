@@ -24,8 +24,13 @@ pl:
         name: Wybory losowe
         settings:
           global:
+            clear_all: Wyczyść wszystko
             comments_enabled: Komentarze włączone
             comments_max_length: Maksymalna długość komentarzy (Pozostaw 0 dla wartości domyślnej)
+            define_taxonomy_filters: Zdefiniuj filtry dla tej przestrzeni partycypacyjnej, zanim użyjesz tego ustawienia.
+            no_taxonomy_filters_found: Nie znaleziono filtrów taksonomii.
+            taxonomy_filters: Wybierz filtry dla komponentu
+            taxonomy_filters_add: Dodaj filtr
     events:
       sortitions:
         sortition_created:

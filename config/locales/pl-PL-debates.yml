@@ -49,6 +49,8 @@ pl:
       actions:
         close: Zamknij
         confirm_destroy: Jesteś pewny?
+        confirm_delete_debate: Czy na pewno chcesz usunąć tę debatę?
+        deleted_debate_info: Usuniętą debatę można przywrócić z kosza.
         destroy: Usuń
         edit: Edytuj
         new: Nowa %{name}
@@ -78,11 +80,18 @@ pl:
         models:
           debate:
             name: Debata
+        exports:
+          debate_comments: Komentarze
+          debates: Debaty
       admin_log:
         debate:
           close: "%{user_name} zamknął/zamknęła debatę %{resource_name} w przestrzeni %{space_name}"
           create: "%{user_name} utworzył(a) debatę %{resource_name} w przestrzeni %{space_name}"
           update: "%{user_name} zaktualizował(a) debatę %{resource_name} w przestrzeni %{space_name}"
+      content_blocks:
+        highlighted_debates:
+          name: Debaty
+          see_all: Zobacz wszystkie debaty
       debate_m:
         commented_time_ago: Skomentowano %{time} temu
       debates:
@@ -175,6 +184,7 @@ pl:
             end_time: Data końcowa
             official_debate: Oficjalna debata
             start_time: Data rozpoczęcia
+            taxonomies: Taksonomie
             title: Tytuł
     events:
       debates:

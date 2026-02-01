@@ -110,6 +110,8 @@ pl:
             label: Stan
             values:
               'true': Bez odpowiedzi
+          taxonomies_part_of_contains:
+            label: Taksonomia
           valuator_role_ids_has:
             label: Przypisano do weryfikatora
         search_placeholder:
@@ -489,13 +491,16 @@ pl:
             select_a_meeting: Wybierz spotkanie
           index:
             actions: Działania
+            apply_answer_template: Zastosuj szablon odpowiedzi
             assign_to_valuator: Przypisz do weryfikatora
             assign_to_valuator_button: Przypisz
             cancel: Anuluj
+            change_taxonomies: Change taksonomię
             change_category: Zmień kategorię
             change_scope: Zmień obszar
             merge: Przyłącz do nowego
             merge_button: Przyłącz
+            no_templates_available: No templates available
             publish: Publikuj
             publish_answers: Publikuj odpowiedzi
             select_component: Wybierz komponent

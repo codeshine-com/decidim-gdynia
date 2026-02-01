@@ -84,6 +84,7 @@ pl:
       actions:
         activate: Aktywuj
         configure: Skonfiguruj
+        confirm_delete_process: Czy na pewno chcesz usunąć ten proces? Jeśli zmienisz zdanie, możesz go później przywrócić.
         confirm_destroy: Potwierdź usunięcie
         destroy: Usuń
         duplicate: Duplikuj
@@ -92,6 +93,8 @@ pl:
           all_processes: Pokaż wszystkie procesy
           process_groups: Grupy procesu
         import_process: Importuj
+        menu_hidden: Ukryj
+        moderate: Moderuj
         new_process: Nowy proces
         new_process_group: Nowa grupa procesu
         new_process_step: Nowy etap
@@ -277,6 +280,9 @@ pl:
         create:
           error: Podczas tworzenia nowej grupy procesu partycypacyjnego wystąpił błąd.
           success: Grupa procesu partycypacyjnego została utworzona.
+      taxonomy_filters:
+        space_filter_for:
+          participatory_processes: Wszystkie procesy partycypacyjne
       titles:
         participatory_process_groups: Grupy procesu partycypacyjnego
         participatory_process_types: Typy procesu partycypacyjnego
