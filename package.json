@@ -7,7 +7,8 @@
     "@decidim/webpacker": "^0.30.0",
     "@rails/activestorage": "^8.0.200",
     "core-js": "^3.48.0",
-    "graphql-ws": "^6.0.3",
+    "graphql": "^16",
+    "graphql-ws": "^5.16.2",
     "js-beautify": "^1.15.4"
   },
   "version": "0.1.0",
@@ -24,5 +25,18 @@
     "@decidim/eslint-config": "^0.30.0",
     "@decidim/prettier-config": "^0.30.0",
     "@decidim/stylelint-config": "^0.30.0"
+  },
+  "resolutions": {
+    "workbox-webpack-plugin": "6.6.1",
+    "workbox-build": "6.6.1",
+    "workbox-core": "6.6.1",
+    "workbox-precaching": "6.6.1",
+    "workbox-routing": "6.6.1",
+    "workbox-strategies": "6.6.1",
+
+    "uc.micro": "2.1.0"
+  },
+  "overrides": {
+    "uc.micro": "1.0.6"
   }
 }
