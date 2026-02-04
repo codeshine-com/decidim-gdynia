@@ -537,6 +537,13 @@ pl:
         action: Akcja
         download: Pobierz plik
         download_data: Pobierz dane
+        download_data_description_1: Tutaj znajdziesz wszystkie pliki do pobrania dostępne dla Twojego konta. Te pliki .zip będą dostępne przez dwa tygodnie, po czym zostaną usunięte.
+        download_data_description_2: Możesz poprosić o plik .zip zawierający Twoje zgłoszenia oraz dane osobowe.
+        explanation:
+          body_1: Te pliki to zbiory danych wyeksportowane z Twojej aktywności na tej platformie, takie jak propozycje czy komentarze. Zawierają surowe, ustrukturyzowane dane, które można wykorzystać do analizy, badań lub integracji z innymi narzędziami.
+          body_2: Te pliki są w formacie CSV (Comma-Separated Values), czyli powszechnie używanym formacie, który można otwierać i przetwarzać w wielu aplikacjach, w tym w arkuszach kalkulacyjnych, edytorach tekstu oraz narzędziach do analizy danych.
+          title: Czym są te pliki?
+        request_data: Poproś
     endorsable:
       endorsements: Rekomendacje
       endorsements_count: Liczba rekomendacji
@@ -1130,6 +1137,30 @@ pl:
     open_data:
       index:
         description: Witamy na stronie Otwartych danych %{organization_name}. Znajdziesz tu pliki danych, które są regularnie generowane na podstawie różnych procesów deliberacyjnych i zarządczych realizowanych w ramach %{organization_name}. Pliki te są udostępniane w celu wspierania przejrzystości, dostępności i współpracy. Poniżej znajdziesz szczegółowe informacje o tym, czym są te pliki, jak je otwierać i z nimi pracować, a także opis zawartości i struktury każdego pliku.
+        detailed:
+          body_1: 'Poniżej znajduje się opis każdego zbioru danych, w tym jego schemat (struktura) oraz rodzaj zawartych w nim informacji:'
+          title: Szczegółowy opis każdego pliku
+        how_to:
+          step_1:
+            body_html: Kliknij w linki podane poniżej, aby pobrać pliki CSV na swój komputer.
+            title: 1. Pobierz pliki
+          step_2:
+            body_html: |-
+              <ul>
+                <li><b>Aplikacje arkuszy kalkulacyjnych</b>: Pliki CSV możesz otwierać w aplikacjach takich jak Microsoft Excel, Google Sheets lub LibreOffice Calc. Wystarczy otworzyć aplikację, następnie wybrać „Otwórz” z menu Plik i wskazać pobrany plik CSV.</li>
+                <li><b>Edytory tekstu</b>: Pliki CSV można też otworzyć w dowolnym edytorze tekstu, np. Notatniku lub Sublime Text. Zobaczysz wtedy surowe dane, gdzie każda linia to wiersz, a wartości są oddzielone przecinkami.</li>
+                <li><b>Narzędzia do analizy danych</b>: Jeśli korzystasz z narzędzi do analizy danych, takich jak Python (z biblioteką pandas), R lub bazy danych SQL, możesz zaimportować te pliki CSV bezpośrednio do przetwarzania i analizy.</li>
+              </ul>
+            title: 2. Otwórz pliki
+          step_3:
+            body_html: |-
+              <ul>
+                <li><b>Filtrowanie i sortowanie</b>: W aplikacjach arkuszy kalkulacyjnych możesz filtrować i sortować dane, aby skupić się na wybranych podzbiorach informacji.</li>
+                <li><b>Analiza</b>: Wykorzystaj dane do różnych analiz, np. policzenia liczby propozycji, analizy trendów w komentarzach lub oceny udziału w spotkaniach.</li>
+                <li><b>Wizualizacja</b>: Możesz tworzyć wykresy, grafy i inne wizualizacje, aby łatwiej interpretować dane.</li>
+              </ul>
+            title: 3. Pracuj z danymi
+          title: Jak otworzyć te pliki i jak z nimi pracować
         title: Otwarte dane
       not_available_yet: Pliki Open Data nie są jeszcze dostępne. Spróbuj ponownie za kilka minut.
     own_user_groups:

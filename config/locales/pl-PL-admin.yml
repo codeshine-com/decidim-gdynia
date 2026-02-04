@@ -693,7 +693,9 @@ pl:
           success: Usunięto dostęp dla prywatnego użytkownika w tej przestrzeni partycypacyjnej.
         index:
           import_via_csv: Import z CSV
+          publish_all: Opublikuj wszystko
           title: Prywatny użytkownik przestrzeni partycypacyjnej
+          unpublish_all: Cofnij publikację wszystkiego
         new:
           create: Utwórz
           title: Nowy prywatny użytkownik przestrzeni partycypacyjnej.
