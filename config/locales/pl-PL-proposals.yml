@@ -386,7 +386,10 @@ pl:
         title: Działania
       admin:
         actions:
+          confirm_delete_proposal: Czy na pewno chcesz usunąć tę propozycję?
+          deleted_proposals_info: Usunięte propozycje można przywrócić z kosza.
           preview: Podgląd
+          view_deleted_proposals: Zobacz usunięte propozycje
         exports:
           comments: Komentarze
           proposals: Propozycje
