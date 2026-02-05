@@ -24,7 +24,6 @@ pl:
         report:
           reasons:
             parent_hidden: Zawartość nadrzędna została ukryta
-
     components:
       gdynia:
         name: Gdynia
