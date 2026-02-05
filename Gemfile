@@ -53,6 +53,8 @@ group :production, :staging do
   gem 'rack_password'
 end
 
+gem 'decidim-gdynia', path: 'decidim-module-gdynia'
+
 # WAITING FOR MIGRATION:
 # gem 'decidim-admin_extended', path: 'decidim-admin_extended'
 # gem 'decidim-core-extended', path: 'decidim-core-extended'
