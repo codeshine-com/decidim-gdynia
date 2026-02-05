@@ -543,6 +543,7 @@ pl:
           body_1: Te pliki to zbiory danych wyeksportowane z Twojej aktywności na tej platformie, takie jak propozycje czy komentarze. Zawierają surowe, ustrukturyzowane dane, które można wykorzystać do analizy, badań lub integracji z innymi narzędziami.
           body_2: Te pliki są w formacie CSV (Comma-Separated Values), czyli powszechnie używanym formacie, który można otwierać i przetwarzać w wielu aplikacjach, w tym w arkuszach kalkulacyjnych, edytorach tekstu oraz narzędziach do analizy danych.
           title: Czym są te pliki?
+        files_to_download: Pliki do pobrania
         request_data: Poproś
     endorsable:
       endorsements: Rekomendacje
@@ -696,6 +697,9 @@ pl:
           email_subject: "%{nickname} zaktualizował(a) swój profil"
           notification_title: Zaktualizowano <a href="%{resource_path}">stronę profilową</a> użytkownika %{name} (%{nickname}), którego obserwujesz.
     export_mailer:
+      download_your_data_export:
+        click_button_html: Kliknij poniższy link, aby pobrać swoje dane.<br/>Plik będzie dostępny do pobrania do %{date}.
+        download: Pobierz
       data_portability_export:
         click_button: 'Kliknij poniższy przycisk, aby pobrać swoje dane. <br/>Plik będzie dostępny do %{date}. <br/>Będziesz potrzebował <a href=''https://www.7-zip.org/''>7-Zip</a> do otwarcia pliku. Hasło: %{password}'
         download: Pobieranie

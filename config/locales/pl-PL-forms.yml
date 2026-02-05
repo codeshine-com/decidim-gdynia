@@ -39,6 +39,7 @@ pl:
         questionnaires:
           actions:
             back: Powrót do pytań
+            publish_answers: Opublikuj odpowiedzi
             show: Pokaż odpowiedzi
           answer_option:
             answer_option: Opcja odpowiedzi
@@ -81,6 +82,12 @@ pl:
           edit:
             save: Zapisz
             title: Edytuj formularz
+          edit_questions:
+            add_question: Dodaj pytanie
+            add_separator: Dodaj separator
+            add_title_and_description: Dodaj tytuł i opis
+            save: Zapisz
+            title: Pytania
           form:
             add_question: Dodaj pytanie
             add_separator: Dodaj separator
@@ -108,6 +115,13 @@ pl:
             remove: Usuń
             statement: Komunikat
             up: W górę
+          questions_form:
+            already_answered_warning: Ten formularz został już wypełniony przez niektórych użytkowników, więc nie możesz modyfikować jego pytań.
+            collapse: Zwiń wszystkie pytania
+            expand: Rozwiń wszystkie pytania
+            unpublished_warning: Formularz nie jest opublikowany. Możesz modyfikować jego pytania, ale spowoduje to usunięcie obecnych odpowiedzi.
+            update:
+              success: Pytania ankiety zostały pomyślnie zapisane.
           separator:
             down: Na dół
             remove: Usuń

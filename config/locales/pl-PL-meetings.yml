@@ -293,6 +293,8 @@ pl:
           close:
             invalid: Wystąpił błąd podczas zamykania tego spotkania
             success: Spotkanie zostało zakończone
+          component:
+            unlink: Odłącz
           create:
             invalid: Podczas tworzenia tego spotkania wystąpił błąd
             success: Spotkanie zostało pomyślnie utworzone
@@ -312,7 +314,20 @@ pl:
             location_hints_help: 'Wskazówki dotyczące lokalizacji: dodatkowe informacje. Przykład: piętro budynku'
             select_an_iframe_access_level: Wybierz poziom dostępu elementu iframe
           index:
+            linked_meeting_warning_html: To spotkanie należy edytować z poziomu <br><a href="%{href}">%{name}</a>
+            published: Opublikowane
             title: Spotkania
+            unpublished: Nieopublikowane
+          linked_spaces:
+            assign: Przypisz
+            link_a_space: Połącz przestrzeń
+            private_meeting_warning: Połączone przestrzenie nie zostaną zastosowane, jeśli spotkanie jest prywatne i nietransparentne.
+            private_space_warning: Połączone przestrzenie nie zostaną zastosowane, gdy spotkanie należy do prywatnej, nietransparentnej przestrzeni.
+            select: Wybierz przestrzeń
+            table:
+              actions: Działania
+              component: Połączone przestrzenie
+            title: Połączone przestrzenie
           manage_trash:
             title: Usunięte spotkania
           new:
@@ -354,6 +369,7 @@ pl:
           form:
             available_slots_help: Zostaw 0, jeśli dostępna jest nieograniczona liczba miejsc.
             invites: Zaproszenia
+            manage_questions: Zarządzaj pytaniami
             recommendation_message: Ze względu na ochronę prywatności zalecamy usunięcie tego formularza rejestracyjnego, gdy nie będzie już wymagany. Standardowo są to 3 miesiące od zakończenia spotkania.
             registration_form: Formularz rejestracyjny
             registrations_count:
@@ -537,6 +553,7 @@ pl:
             end_time: Data zakończenia
             map: Mapa
             official_meeting: Spotkanie oficjalne
+            published: Opublikowany
             start_time: Data rozpoczęcia
             taxonomies: Taksonomie
             title: Tytuł

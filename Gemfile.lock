@@ -1,3 +1,9 @@
+PATH
+  remote: decidim-module-gdynia
+  specs:
+    decidim-gdynia (0.30.5)
+      decidim-core (= 0.30.5)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -921,6 +927,7 @@ DEPENDENCIES
   byebug (~> 11.0)
   decidim (= 0.30.5)
   decidim-dev (= 0.30.5)
+  decidim-gdynia!
   dotenv-rails
   faker
   fog-aws

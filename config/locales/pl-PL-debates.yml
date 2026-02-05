@@ -55,6 +55,7 @@ pl:
         edit: Edytuj
         new: Nowa %{name}
         title: Działania
+        view_deleted_debates: Zobacz usunięte debaty
       admin:
         debate_closes:
           edit:

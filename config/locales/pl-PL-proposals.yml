@@ -167,6 +167,8 @@ pl:
             resources_permissions_enabled: Uprawnienia działań można ustawić dla każdej propozycji
             scope_id: Obszar
             scopes_enabled: Obszary włączone
+            taxonomy_filters: Wybierz filtry dla komponentu
+            taxonomy_filters_add: Dodaj filtr
             threshold_per_proposal: Próg poparcia dla propozycji
             vote_limit: Limit możliwych wsparć na użytkownika
           step:

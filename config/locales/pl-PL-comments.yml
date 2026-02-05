@@ -88,8 +88,14 @@ pl:
         single_comment_warning_title: Wyświetlasz teraz pojedynczy komentarz
         title: "%{count} komentarzy"
       down_vote_button:
+        label:
+          one: Przycisk „Nie lubię”. %{count} negatywna ocena
+          other: Przycisk „Nie lubię”. %{count} negatywne oceny
         text: Nie zgadzam się z tym komentarzem
       up_vote_button:
+        label:
+          one: Przycisk „Lubię to”. %{count} polubienie
+          other: Przycisk „Lubię to”. %{count} polubienia
         text: Zgadzam się z tym komentarzem
     events:
       comments:
