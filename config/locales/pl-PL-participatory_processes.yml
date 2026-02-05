@@ -266,6 +266,8 @@ pl:
           private: Prywatny
           public: Publiczny
           published: Opublikowany
+        manage_trash:
+          title: Usunięte procesy partycypacyjne
         new:
           create: Utwórz
           title: Nowy proces partycypacyjny
@@ -287,6 +289,7 @@ pl:
         participatory_process_groups: Grupy procesu partycypacyjnego
         participatory_process_types: Typy procesu partycypacyjnego
         participatory_processes: Procesy partycypacyjne
+        participatory_processes_deleted: Usunięte procesy partycypacyjne
       tooltips:
         deleted_processes_info: Tylko nie opublikowane procesy mogą zostać usunięte przez administratora.
       users:
