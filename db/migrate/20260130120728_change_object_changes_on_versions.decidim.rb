@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 # This migration comes from decidim (originally 20240722215500)
+# This file has been modified by `decidim upgrade:migrations` task on 2026-02-04 23:00:59 UTC
 class ChangeObjectChangesOnVersions < ActiveRecord::Migration[6.1]
   def up
     rename_column :versions, :object_changes, :old_object_changes
@@ -10,11 +11,7 @@ class ChangeObjectChangesOnVersions < ActiveRecord::Migration[6.1]
 
     PaperTrail::Version.where.not(old_object_changes: nil).find_each do |version|
       # we set a time interval to ensure that deployment has succeeded
-      if Rails.env.development?
-        Decidim::Migrate::PaperTrailJob.perform_now(version.id)
-      else
-        Decidim::Migrate::PaperTrailJob.set(wait: 10.minutes).perform_later(version.id)
-      end
+      Decidim::Migrate::PaperTrailJob.set(wait: 10.minutes).perform_later(version.id)
     end
   end
 

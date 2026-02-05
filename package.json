@@ -2,9 +2,9 @@
   "name": "app",
   "private": true,
   "dependencies": {
-    "@decidim/browserslist-config": "^0.30.0",
-    "@decidim/core": "^0.30.0",
-    "@decidim/webpacker": "^0.30.0",
+    "@decidim/browserslist-config": "^0.30.5",
+    "@decidim/core": "^0.30.5",
+    "@decidim/webpacker": "^0.30.5",
     "@rails/activestorage": "^8.0.200",
     "core-js": "^3.48.0",
     "graphql": "^16",
@@ -21,10 +21,10 @@
     "yarn": "~1.22.1"
   },
   "devDependencies": {
-    "@decidim/dev": "^0.30.0",
-    "@decidim/eslint-config": "^0.30.0",
-    "@decidim/prettier-config": "^0.30.0",
-    "@decidim/stylelint-config": "^0.30.0"
+    "@decidim/dev": "^0.30.5",
+    "@decidim/eslint-config": "^0.30.5",
+    "@decidim/prettier-config": "^0.30.5",
+    "@decidim/stylelint-config": "^0.30.5"
   },
   "resolutions": {
     "workbox-webpack-plugin": "6.6.1",
@@ -33,7 +33,6 @@
     "workbox-precaching": "6.6.1",
     "workbox-routing": "6.6.1",
     "workbox-strategies": "6.6.1",
-
     "uc.micro": "2.1.0"
   },
   "overrides": {
