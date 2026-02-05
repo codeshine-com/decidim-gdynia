@@ -64,6 +64,11 @@ pl:
         preview: Podgląd
         title: Akcje
       admin:
+        answers:
+          index:
+            title: "Łącznie odpowiedzi: %{total}"
+          show:
+            title: "Odpowiedź #%{number}"
         exports:
           survey_user_answers: Odpowiedzi użytkowników na pytania z ankiety
         surveys:

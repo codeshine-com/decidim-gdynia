@@ -36,7 +36,10 @@ pl:
             save: Aktualizuj
             title: Edytuj wpis
           index:
+            not_published_yet: Jeszcze nieopublikowane.
             title: Wpisy
+          manage_trash:
+            title: Usunięte wpisy
           new:
             create: Utwórz
             title: Utwórz wpis
@@ -47,6 +50,8 @@ pl:
         post:
           create: "%{user_name} utworzył(a) %{resource_name} wpis bloga w %{space_name}"
           delete: "%{user_name} usunął/usunęła %{resource_name} wpis bloga from %{space_name}"
+          restore: "%{user_name} przywrócił(a) wpis na blogu %{resource_name} w %{space_name}"
+          soft_delete: "%{user_name} przeniósł(-ęła) wpis na blogu %{resource_name} w %{space_name} do kosza"
           update: "%{user_name} zaktualizował(a) %{resource_name} wpis bloga w %{space_name}"
       last_activity:
         new_post_at_html: "<span>Nowy wpis na %{link}</span>"
