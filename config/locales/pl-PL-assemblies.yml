@@ -109,6 +109,8 @@ pl:
           private: Prywatny
           public: Publiczny
           published: Opublikowany
+        manage_trash:
+          title: Usunięte zespoły
         new:
           create: Utwórz
           title: Nowy zespół
@@ -245,6 +247,7 @@ pl:
           assemblies: Wszystkie zespoły
       titles:
         assemblies: Zespoły
+        assemblies_deleted: Usunięte zespoły
         assemblies_types: Typy zespołów
       tooltips:
         deleted_assemblies_info: Zgromadzenie można usunąć tylko wtedy, gdy ma status „Nieopublikowane”.
