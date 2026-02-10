@@ -1,6 +1,27 @@
 ---
 pl:
   decidim:
+    surveys:
+      surveys:
+        count:
+          surveys_count: Ankiety
+    debates:
+      admin:
+        debates:
+          form:
+            comments_visualization: Komentarze
+    statistics:
+      surveys_count: Ankiety
+    blogs:
+      posts:
+        index:
+          new_post: 'Nowy post'
+    admin:
+      moderations:
+        report:
+          reasons:
+            parent_hidden: Zawartość nadrzędna została ukryta
+
     components:
       gdynia:
         name: Gdynia
