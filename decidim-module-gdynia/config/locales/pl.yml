@@ -1,6 +1,17 @@
 ---
 pl:
+  activerecord:
+    models:
+      decidim:
+        meetings:
+          meeting:
+            text: "Spotkania"
   decidim:
+    download_your_data:
+      show:
+        type: Typ
+    endorsers_list:
+      others: Polubione przez
     surveys:
       surveys:
         count:
@@ -17,6 +28,9 @@ pl:
         index:
           new_post: 'Nowy post'
     admin:
+      newsletters:
+        select_recipients_to_deliver:
+          select_users_general: Wybierz użytkowników
       participatory_space_private_users:
         edit:
           title: Edytuj użytkownika
@@ -25,5 +39,9 @@ pl:
           reasons:
             parent_hidden: Zawartość nadrzędna została ukryta
     components:
+      debates:
+        settings:
+          global:
+            taxonomy_filters: Filtry dla taksonomii
       gdynia:
         name: Gdynia
