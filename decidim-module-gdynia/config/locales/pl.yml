@@ -2,6 +2,8 @@
 pl:
   activemodel:
     attributes:
+      participatory_space_private_user:
+        published: Opublikowany
       assembly:
         contact_address: Adres
         contact_email: Adres e-mail
@@ -36,27 +38,194 @@ pl:
           email: Adres email
           email_hint: Podaj adres email, na który zarejestrowana została Twoja Karta Mieszkańca
   decidim:
+    templates:
+      admin:
+        questionnaire_templates:
+          edit_questions:
+            add_title_and_description: Dodaj tytuł i opis
+            add_separator: Dodaj separtor
+            add_question: Dodaj pytanie
+          edit:
+            manage_questions: Zarządzaj pytaniami
     assemblies:
       assemblies:
         description:
           team_service: Obsługa zespołu
           contact: Kontakt
+          area_name: Obszar
+          closing_date: Data zamknięcia
+          created_by: Utworzone przez
+          creation_date: Data utworzenia
+          data: Dane zgromadzenia
+          developer_group: Inicjator
+          duration: Czas trwania
+          included_at: Załączono
+          indefinite_duration: Nieokreślony
+          local_area: Jednostka odpowiedzialna
+          meta_scope: Zakres
+          participatory_scope: Czego dotyczy proces
+          participatory_structure: Jak wziąć udział
+          target: Kto może wziąć udział
+          title: O tym zespole
     participatory_processes:
       participatory_processes:
         description:
+          team_service: Obsługa zespołu
           contact: Kontakt
+          area_name: Obszar
+          closing_date: Data zamknięcia
+          created_by: Utworzone przez
+          creation_date: Data utworzenia
+          data: Dane zgromadzenia
+          developer_group: Inicjator
+          duration: Czas trwania
+          included_at: Załączono
+          indefinite_duration: Nieokreślony
+          local_area: Jednostka odpowiedzialna
+          meta_scope: Zakres
+          participatory_scope: Czego dotyczy proces
+          participatory_structure: Jak wziąć udział
+          target: Kto może wziąć udział
+          title: O tym zespole
       admin:
         participatory_processes:
           form:
+            participatory_scope: Czego dotyczy proces
             hashtag_help: "Należy wpisać tylko jeden hashtag bez znaku # np. dialoggdynia"
     download_your_data:
+      help:
+        follows:
+          id: ID obserwowania
+          followable: Obserwowany zasób (typ i identyfikator)
+          created_at: Data utworzenia obserwowania
+          updated_at: Data ostatniej aktualizacji obserwowania
+        messaging_conversations:
+          id: ID rozmowy
+          messages: Wiadomości w rozmowie
+          created_at: Data utworzenia rozmowy
+          updated_at: Data ostatniej aktualizacji tej rozmowy
+        notifications:
+          id: ID powiadomienia
+          resource_type: Typ zasobu, którego dotyczy powiadomienie
+          event_name: Nazwa zdarzenia
+          event_class: Klasa zdarzenia (typ techniczny)
+          created_at: Data utworzenia powiadomienia
+          updated_at: Data ostatniej aktualizacji powiadomienia
+          extra: Dodatkowe dane powiadomienia
+        users:
+          id: ID użytkownika
+          email: Adres e-mail
+          name: Imię i nazwisko
+          nickname: Pseudonim
+          locale: Język (ustawienia użytkownika)
+          newsletter_notifications_at: Data i godzina subskrypcji tego uczestnika do newslettera
+          notifications_sending_frequency: Częstotliwość wysyłania powiadomień
+          admin: Administrator
+          personal_url: Prywatny adres URL
+          about: Opis profilu tego uczestnika
+          invitation_created_at: Data utworzenia zaproszenia
+          invitation_sent_at: Data wysłania zaproszenia
+          invitation_accepted_at: Data akceptacji zaproszenia
+          invited_by: Zaproszony przez (ID użytkownika)
+          invitations_count: Liczba zaproszeń
+          reset_password_sent_at: Data wysłania instrukcji resetu hasła
+          remember_created_at: Data utworzenia „zapamiętaj mnie"
+          sign_in_count: Liczba logowań
+          current_sign_in_at: Data i godzina bieżącego logowania
+          last_sign_in_at: Data i godzina poprzedniego logowania
+          current_sign_in_ip: Adres IP bieżącego logowania
+          last_sign_in_ip: Adres IP poprzedniego logowania
+          created_at: Data utworzenia konta
+          updated_at: Data ostatniej aktualizacji konta
+          confirmed_at: Data potwierdzenia adresu e-mail
+          confirmation_sent_at: Data wysłania instrukcji potwierdzenia
+          unconfirmed_email: Niepotwierdzony adres e-mail
+          managed: Konto zarządzane
+          officialized_at: Data nadania statusu oficjalnego
+          officialized_as: Nazwisko urzędnika (radca, burmistrz itd.)
+          roles: Role użytkownika
+          accepted_tos_version: Zaakceptowana wersja regulaminu
+          following_count: Liczba obserwowanych zasobów
+          followers_count: Liczba uczestników, którzy obserwują tego użytkownika
+          password_updated_at: Data ostatniej zmiany hasła
+        participatory_space_private_users:
+          id: ID
+          created_at: Data utworzenia
+          updated_at: Data ostatniej aktualizacji
+          role: Rola
+          privatable_to: Do której przestrzeni należy ten użytkownik
+          published: Opublikowany
+        proposals:
+          id: ID propozycji
+          taxonomies: Taksonomie (kategorie/etykiety)
+          participatory_space: Przestrzeń partycypacyjna
+          component: Komponent
+          title: Tytuł
+          body: Treść
+          address: Adres
+          latitude: Szerokość geograficzna
+          longitude: Długość geograficzna
+          state: Status
+          state_published_at: Data publikacji statusu
+          reference: Numer referencyjny
+          answer: Odpowiedź
+          answered_at: Data udzielenia odpowiedzi
+          votes: Głosy
+          endorsements: Rekomendacje
+          comments: Komentarze
+          attachments: Załączniki
+          follows_count: Liczba obserwujących
+          published_at: Data publikacji
+          url: Link (URL)
+          meeting_urls: Linki do spotkań
+          related_proposals: Powiązane propozycje
+          is_amend: Czy jest poprawką
+          original_proposal: Propozycja oryginalna
+          withdrawn: Wycofana
+          withdrawn_at: Data wycofania
+          created_at: Data utworzenia
+          updated_at: Data ostatniej aktualizacji
+          created_in_meeting: Utworzona podczas spotkania
+          coauthorships_count: Liczba współautorów
+          cost: Koszt
+          cost_report: Raport kosztów
+          execution_period: Okres realizacji
+        answers:
+          answer: Odpowiedz
+          id: ID propozycji
+          question: Pytanie w ankiecie do udzielonej odpowiedzi
+          questionnaire: Ankieta
+          user: Użytkownik
+        comments:
+          id: ID propozycji
+          created_at: Data utworzenia
+          body: Treść komentarza
+          locale: Wersja językowa
+          author: Autor
+          alignment: Opinia na temat komentarza - pozytywna, negatywna lub neutralna
+          commentable_id: UUID komentarza
+          commentable_type: Typ komentowanego źródła
+          depth: Miejsce (głębokość) komentarza
+          root_commentable_url: Adres url komentowanego zasobu
+          user_group: Nazwa grupy
+        comment_votes:
+          id: ID propozycji
+          weight: Waga komentarza
+          comment: Treść komentarza
+          created_at: Data utworzenia
+          updated_at: Data ostatniej aktualizacji
       show:
+        meetings: Spotkania
         expiration: Data ważności
         type: Typ
     endorsers_list:
       others: Polubione przez
     surveys:
       surveys:
+        show:
+          questions: Pytania
+          closed: Zamknięte
+          open: Otwarte
         count:
           surveys_count: Ankiety
     debates:
@@ -69,9 +238,15 @@ pl:
     blogs:
       posts:
         index:
-          new_post: 'Nowy post'
+          count: Ilość
+          new_post: "Nowy post"
     admin:
+      taxonomies:
+        table:
+          to_next_page: Następna strona
       newsletters:
+        confirm_recipients:
+          title: Potwierdź odbiorców
         select_recipients_to_deliver:
           select_users_general: Wybierz użytkowników
       participatory_space_private_users:
@@ -82,6 +257,8 @@ pl:
           reasons:
             parent_hidden: Zawartość nadrzędna została ukryta
     components:
+      comment:
+        answers: Odpowiedzi
       accountability:
         settings:
           global:
@@ -112,3 +289,6 @@ pl:
           show_default: Zarejestruj się klasycznie
           card_number_help: Podaj numer Karty Mieszkańca <b>zarejestrowany na email, który podałeś wyżej</b>.
           email_help: <b>Zakładając konto z Kartą Mieszkańca</b>, podaj email, na który jest ona zarejestrowana.
+    participatory_process_groups:
+      related_processes:
+        help: Wszystkie wybrane procesy zostaną przypisane do tej grupy, łącznie z tymi, które są już przypisane do innych grup.
