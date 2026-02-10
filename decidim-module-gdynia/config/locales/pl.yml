@@ -54,7 +54,7 @@ pl:
     blogs:
       posts:
         index:
-          new_post: 'Nowy post'
+          new_post: "Nowy post"
     admin:
       newsletters:
         select_recipients_to_deliver:
