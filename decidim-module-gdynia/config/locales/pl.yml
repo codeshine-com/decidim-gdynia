@@ -39,6 +39,12 @@ pl:
           reasons:
             parent_hidden: Zawartość nadrzędna została ukryta
     components:
+      accountability:
+        settings:
+          global:
+            taxonomy_filters_add: Dodaj filtr
+            geocoding_enabled: Geokodowanie wł/wył
+            taxonomy_filters: Filtry dla taksonomii
       debates:
         settings:
           global:
