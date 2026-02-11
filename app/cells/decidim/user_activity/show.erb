@@ -11,7 +11,7 @@
         <div class="show-for-mediumlarge filters__left-legend">
           <%= filter_form_for context[:filter] do |form| %>
             <div class="columns mediumlarge-6 large-5">
-              <%= form.custom_select :resources,
+              <%= form.select :resources,
                                      :resource_type,
                                      resource_types,
                                      legend_title: t("title", scope:"decidim.components.component_order_selector"),
