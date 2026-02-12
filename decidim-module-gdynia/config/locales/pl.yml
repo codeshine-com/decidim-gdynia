@@ -9,6 +9,7 @@ pl:
   decidim:
     download_your_data:
       show:
+        expiration: Data ważności
         type: Typ
     endorsers_list:
       others: Polubione przez
