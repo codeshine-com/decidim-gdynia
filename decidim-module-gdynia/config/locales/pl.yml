@@ -1,5 +1,12 @@
 ---
 pl:
+  activemodel:
+    attributes:
+      participatory_process:
+        contact_address: Adres
+        contact_email: Adres e-mail
+        contact_phone: Telefon
+        facebook_handler: Facebook
   activerecord:
     models:
       decidim:
@@ -7,6 +14,11 @@ pl:
           meeting:
             text: "Spotkania"
   decidim:
+    participatory_processes:
+      admin:
+        participatory_processes:
+          form:
+            hashtag_help: "Należy wpisać tylko jeden hashtag bez znaku # np. dialoggdynia"
     download_your_data:
       show:
         expiration: Data ważności
