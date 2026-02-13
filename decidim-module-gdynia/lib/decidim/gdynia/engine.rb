@@ -21,9 +21,10 @@ module Decidim
       # make decorators available to applications that use this Engine
       config.to_prepare do
         Dir.glob(Decidim::Gdynia::Engine.root + "app/decorators/**/*_decorator*.rb").each do |c|
-          require_dependency(c)
+          load c
         end
       end
+
 
       initializer "Gdynia.webpacker.assets_path" do
         Decidim.register_assets_path File.expand_path("app/packs", root)
