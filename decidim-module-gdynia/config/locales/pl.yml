@@ -1,5 +1,9 @@
 ---
 pl:
+  layouts:
+    decidim:
+      footer:
+        ue_logotypes: Logotypy Unii Europejskiej
   decidim:
     surveys:
       surveys:
@@ -15,7 +19,7 @@ pl:
     blogs:
       posts:
         index:
-          new_post: 'Nowy post'
+          new_post: "Nowy post"
     admin:
       participatory_space_private_users:
         edit:
