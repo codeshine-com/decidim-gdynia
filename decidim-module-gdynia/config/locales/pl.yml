@@ -2,6 +2,13 @@
 pl:
   activemodel:
     attributes:
+      assembly:
+        contact_address: Adres
+        contact_email: Adres e-mail
+        contact_phone: Telefon
+        duration_text: Data zakończenia - inne
+        next_meeting_date: Najbliższe posiedzenie
+        team_service: Obsługa zespołu
       participatory_process:
         contact_address: Adres
         contact_email: Adres e-mail
