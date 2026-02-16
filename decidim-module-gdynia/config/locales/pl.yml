@@ -20,6 +20,10 @@ pl:
         meetings:
           meeting:
             text: "Spotkania"
+  layouts:
+    decidim:
+      footer:
+        ue_logotypes: Logotypy Unii Europejskiej
   decidim:
     assemblies:
       assemblies:
