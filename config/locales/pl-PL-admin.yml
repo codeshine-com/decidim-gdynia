@@ -29,6 +29,7 @@ pl:
       newsletter:
         body: Treść
         subject: Temat
+        send_to_private_members: Wyślij do członków prywatnych przestrzeni
       organization:
         alert_color: Powiadomienie
         badges_enabled: Włącz odznaki
@@ -598,19 +599,30 @@ pl:
           all_spaces: Wszystkie
           all_users_help: Wysyła newsletter do wszystkich potwierdzonych użytkowników.
           confirm_deliver: Czy na pewno chcesz dostarczyć ten newsletter? Nie można cofnąć tej czynności.
+          confirm_recipients: Potwierdź odbiorców
           deliver: Dostarcz newsletter
           followers_help: Wysyła newsletter do wszystkich potwierdzonych użytkowników, którzy obserwują dowolne przestrzenie partycypacyjne z tej listy.
           none: Żaden
           participants_help: Wysyła newsletter do wszystkich potwierdzonych użytkowników, którzy uczestniczyli w którejkolwiek z przestrzeni partycypacyjnych z tej listy.
+          private_members_help: Wysyła newsletter do wszystkich potwierdzonych użytkowników, którzy zostali dodani do wybranych prywatnych przestrzeni partycypacyjnych.
           recipients_count: Ten newsletter zostanie wysłany do <strong id='recipients_count'>%{count}</strong> użytkowników.
+          select_assemblies: Wybierz zespoły
+          select_conferences: Wybierz konferencje
+          select_initiatives: Wybierz inicjatywy
+          select_participatory_processes: Wybierz procesy partycypacyjne
           scopes_help: Wysyła newsletter do użytkowników, którzy mają dowolny z wybranych obszarów ustawiony jako aktywny w zakładce konta „Moje zainteresowania”.
           select_scopes: Filtruj według użytkowników, którzy mają dowolny z wybranych obszarów ustawiony jako aktywny w zakładce konta „Moje zainteresowania”.
           select_spaces: Wybierz przestrzenie, aby podzielić newsletter
+          select_users_for_participatory_space: Wyślij newsletter do jednej lub więcej przestrzeni partycypacyjnych
+          select_users_general: Wyślij ogólny newsletter
           select_users: Wybierz użytkowników, do których chcesz wysyłać newsletter
+          select_verification_types: Wybierz metody weryfikacji
           send_to_all_users: Wyślij do wszystkich użytkowników
           send_to_followers: Wyślij do obserwujących
           send_to_participants: Wyślij do uczestników
+          send_to_verified_users: Wyślij do zweryfikowanych użytkowników
           title: Wybierz odbiorców
+          verified_users_help: Wysyła newsletter do wszystkich potwierdzonych i zweryfikowanych użytkowników za pomocą dowolnej wybranej metody weryfikacji.
           warning: "<strong>Uwaga:</strong> Ten newsletter zostanie wysyłany tylko do użytkowników, którzy w ustawieniach powiadomień aktywowali opcję <em>Chcę otrzymywać newsletter</em>."
         send:
           no_recipients: Brak odbiorców dla tego wyboru
