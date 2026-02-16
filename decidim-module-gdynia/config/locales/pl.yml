@@ -15,6 +15,9 @@ pl:
             text: "Spotkania"
   decidim:
     participatory_processes:
+      participatory_processes:
+        description:
+          contact: Kontakt
       admin:
         participatory_processes:
           form:
