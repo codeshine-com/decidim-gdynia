@@ -21,6 +21,11 @@ pl:
           meeting:
             text: "Spotkania"
   decidim:
+    assemblies:
+      assemblies:
+        description:
+          team_service: Obsługa zespołu
+          contact: Kontakt
     participatory_processes:
       participatory_processes:
         description:

@@ -30,6 +30,10 @@ module Decidim
         Cell::ViewModel.view_paths << File.expand_path("#{Decidim::Gdynia::Engine.root}/app/views") # for partials
       end
 
+      initializer "decidim_gdynia.register_icons" do
+        Decidim.icons.register(name: "facebook-line", icon: "facebook-line", category: "system", description: "", engine: :core)
+      end
+
 
       initializer "Gdynia.webpacker.assets_path" do
         Decidim.register_assets_path File.expand_path("app/packs", root)
