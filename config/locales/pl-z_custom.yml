@@ -155,6 +155,8 @@ pl:
       decidim_with_day_and_month_name: "%A %d %b %Y"
       decidim_with_month_name: "%d %B %Y"
       decidim_with_month_name_short: "%d %b"
+    # Don't forget the nil at the beginning; there's no such thing as a 0th month
+    month_names: [ ~, styczeń, luty, marzec, kwiecień, maj, czerwiec, lipiec, sierpień, wrzesień, październik, listopad, grudnia ]
   formats:
     day_of_month: "%b %d"
     day_of_week: "%a"
