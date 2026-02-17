@@ -1058,6 +1058,12 @@ pl:
         description: Liczba użytkowników w organizacji
         object: użytkownicy
         title: Użytkownicy
+      blocked_users:
+        description: Liczba zablokowanych uczestników
+      reported_users:
+        description: Liczba zgłoszonych uczestników
+      user_reports:
+        description: Liczba zgłoszeń dokonanych przez uczestników
     newsletter_mailer:
       newsletter:
         note: Otrzymujesz ten e-mail, ponieważ subskrybujesz newslettery %{organization_name}. Możesz zmienić swoje ustawienia na <a href="%{link}">stronie powiadomień</a>.
