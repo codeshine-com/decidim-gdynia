@@ -24,6 +24,11 @@ pl:
     decidim:
       footer:
         ue_logotypes: Logotypy Unii Europejskiej
+        terms_of_service: Regulamin
+        accessibility_declaration: Deklaracja dostępności
+        privacy_policy: Polityka prywatności
+        gdpr: RODO
+        contact: Kontakt
   decidim:
     assemblies:
       assemblies:
