@@ -22,12 +22,6 @@ module Decidim
                       position: 998,
                       active: :exact
           end
-          Decidim.menu :user_menu do |menu|
-            menu.item t("inhabitant_card_authorization", scope: "layouts.decidim.user_profile"),
-                      decidim_core_extended.inhabitant_cards_path,
-                      position: 1.05,
-                      active: :exact
-          end
         end
 
         routes do
