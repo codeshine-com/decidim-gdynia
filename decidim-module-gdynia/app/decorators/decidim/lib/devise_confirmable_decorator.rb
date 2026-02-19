@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 Devise::Models::Confirmable.module_eval do
-
+  # overwritten method
+  # add elimination condition resource_is_inhabitant?
   def send_confirmation_instructions
     return if resource_is_inhabitant?
 
@@ -14,6 +15,6 @@ Devise::Models::Confirmable.module_eval do
   end
 
   def resource_is_inhabitant?
-    self.class.name == "Decidim::User" && self.authorized_with_inhabitant_card?
+    self.instance_of?(Decidim::User) && self.authorized_with_inhabitant_card?
   end
 end

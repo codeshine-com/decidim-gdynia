@@ -130,6 +130,12 @@ pl:
         name: Twoja nazwa użytkownika
         nickname: Nazwa konta
         personal_url: Adres strony internetowej
+        card_number_possesion: Mam Kartę Mieszkańca
+        card_number: Numer Karty Mieszkańca
+        inhabitant_card_number: Numer Karty Mieszkańca
+        inhabitant_card_number_error: Dane nie zostaly potwierdzone przez platformę Karta Mieszkańca
+        inhabitant_officialization_badge: Użytkownik potwierdzony
+        inhabitant_card_taken_error: Zarejestrowano juz konto na ten numer Karty Mieszkańca
       validate_registration_code:
         code: Kod
 
@@ -374,6 +380,7 @@ pl:
           terms: regulamin korzystania
           tos_title: Warunki korzystania z Gdyńskiej Platformy Dialogu
           username_help: Nazwa użytkownika wyświetlana będzie przy Twoich wpisach na Platformie. Nazwa ta będzie przekierowywać do Twojego konta, kiedy inni użytkownicy będą chcieli z Tobą nawiązać kontakt czy też obserwować Twoją aktywność.
+          card_number_help: Podaj numer Karty Mieszkańca <b>zarejestrowany na email, który podałeś wyżej</b>.
     doorkeeper:
       authorizations:
         new:
@@ -599,6 +606,13 @@ pl:
         view_steps: Zobacz etapy procesu
       process_navigation:
         process_menu_item: O procesie
+      user_profile:
+        inhabitant_card_authorization_info: |-
+          Masz możliwość potwierdzenia swojego konta Kartą Mieszkańca. Dzięki temu na Twoim profilu i przy Twojej nazwie użytkownika będzie widniał specjalny status – %{img} Użytkownik potwierdzony.<br>
+          Docelowo Platforma będzie również zintegrowana z Kartą Mieszkańca funkcjonalnie, co ułatwi Ci korzystanie z Platformy i ułatwi uczestniczenie w ważnych procesach.
+        inhabitant_card_authorization: Potwierdzenie Kartą Mieszkańca
+        inhabitant_card_authorization_text: Twoje konto zostało zautoryzowane przy pomocy Karty Mieszkańca
+        inhabitant_card_authorization_success: Autoryzowano
 
   locale:
     name: "Polski"

@@ -1,9 +1,11 @@
 # frozen_string_literal: true
 
 Decidim::Devise::RegistrationsController.class_eval do
-
+  # overwritten method action
+  # swap user.active_for_authentication? with user.authorized_with_inhabitant_card?
+  # add user.confirm
   def create
-    @form = form(Decidim::RegistrationForm).from_params(params[:user].merge(current_locale: current_locale))
+    @form = form(Decidim::RegistrationForm).from_params(params[:user].merge(current_locale:))
 
     Decidim::CreateRegistration.call(@form) do
       on(:ok) do |user|
@@ -20,7 +22,7 @@ Decidim::Devise::RegistrationsController.class_eval do
       end
 
       on(:invalid) do
-        flash.now[:alert] = @form.errors[:base].join(", ") if @form.errors[:base].any?
+        flash.now[:alert] = t("error", scope: "decidim.devise.registrations.create")
         render :new
       end
     end

@@ -29,6 +29,12 @@ pl:
         privacy_policy: Polityka prywatności
         gdpr: RODO
         contact: Kontakt
+      shared:
+        layout_center:
+          authenticate_account: Potwierdź konto
+          card_number: Numer Karty Mieszkańca
+          email: Adres email
+          email_hint: Podaj adres email, na który zarejestrowana została Twoja Karta Mieszkańca
   decidim:
     assemblies:
       assemblies:
@@ -88,3 +94,21 @@ pl:
             taxonomy_filters: Filtry dla taksonomii
       gdynia:
         name: Gdynia
+    gdynia:
+      authorizations:
+        show:
+          authenticate_account: Potwierdź konto
+          card_number: Numer Karty Mieszkańca
+          email: Adres email
+          email_hint: Podaj adres email, na który zarejestrowana została Twoja Karta Mieszkańca
+    inhabitant_card_authorization:
+      authenticate:
+        success: Pomyślnie autoryzowano
+        invalid: Popraw błędy w formularzu
+    devise:
+      registrations:
+        new:
+          show_inhabitant: Zarejestruj się Kartą Mieszkańca
+          show_default: Zarejestruj się klasycznie
+          card_number_help: Podaj numer Karty Mieszkańca <b>zarejestrowany na email, który podałeś wyżej</b>.
+          email_help: <b>Zakładając konto z Kartą Mieszkańca</b>, podaj email, na który jest ona zarejestrowana.
