@@ -349,6 +349,9 @@ GEM
       devise (~> 4.7)
       devise-i18n (~> 1.2)
       devise_invitable (~> 2.0, >= 2.0.9)
+    decidim-templates (0.30.5)
+      decidim-core (= 0.30.5)
+      decidim-forms (= 0.30.5)
     decidim-verifications (0.30.5)
       decidim-core (= 0.30.5)
     declarative-builder (0.2.0)
@@ -917,6 +920,7 @@ GEM
 
 PLATFORMS
   arm64-darwin-24
+  arm64-darwin-25
   x86_64-linux
 
 DEPENDENCIES
@@ -928,6 +932,7 @@ DEPENDENCIES
   decidim (= 0.30.5)
   decidim-dev (= 0.30.5)
   decidim-gdynia!
+  decidim-templates (~> 0.30.5)
   dotenv-rails
   faker
   fog-aws
