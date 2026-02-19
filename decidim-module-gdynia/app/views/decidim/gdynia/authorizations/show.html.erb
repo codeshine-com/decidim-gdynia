@@ -26,7 +26,7 @@
       </div>
     <% else %>
       <div class="callout announcement secondary">
-        <p><%= t("layouts.decidim.user_profile.inhabitant_card_authorization_info", img: icon("verified-badge", class: "author__verified")).html_safe %></p>
+        <p><%= t("layouts.decidim.user_profile.inhabitant_card_authorization_info", img: icon("verified-badge-line", class: "author__verified")).html_safe %></p>
       </div>
       <%= decidim_form_for(@form, url: decidim_gdynia.inhabitant_cards_path, as: :inhabitant_card, html: { autocomplete: "off" }) do |f| %>
         <input autocomplete="off" name="hidden" type="password" style="display:none;">
