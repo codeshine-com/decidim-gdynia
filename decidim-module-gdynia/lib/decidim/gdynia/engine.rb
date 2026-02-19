@@ -51,7 +51,7 @@ module Decidim
       initializer "decidim_gdynia.register_icons" do
         Decidim.icons.register(name: "facebook-line", icon: "facebook-line", category: "system", description: "", engine: :core)
         Decidim.icons.register(name: "loop-right-fill", icon: "loop-right-fill", category: "system", description: "", engine: :core)
-        Decidim.icons.register(name: "verified-badge", icon: "verified-badge", category: "system", description: "", engine: :core)
+        Decidim.icons.register(name: "verified-badge-line", icon: "verified-badge-line", category: "system", description: "", engine: :core)
       end
 
 
