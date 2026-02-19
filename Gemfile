@@ -65,3 +65,5 @@ gem 'decidim-gdynia', path: 'decidim-module-gdynia'
 # gem 'decidim-pages_extended', path: 'decidim-pages_extended'
 # gem 'decidim-proposals_extended', path: 'decidim-proposals_extended'
 # gem 'decidim-surveys_extended', path: 'decidim-surveys_extended'
+
+gem "decidim-templates", "~> 0.30.5"
