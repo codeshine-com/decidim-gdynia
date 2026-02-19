@@ -28,3 +28,10 @@
   max-width: 600px;
   font-size: 0.9rem;
 }
+
+/************* user account *************/
+
+.flash.warning .flash__message .author__verified {
+  display: inline-block;
+  vertical-align: text-bottom;
+}

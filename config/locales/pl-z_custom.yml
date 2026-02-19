@@ -609,7 +609,7 @@ pl:
         process_menu_item: O procesie
       user_profile:
         inhabitant_card_authorization_info: |-
-          Masz możliwość potwierdzenia swojego konta Kartą Mieszkańca. Dzięki temu na Twoim profilu i przy Twojej nazwie użytkownika będzie widniał specjalny status – %{img} Użytkownik potwierdzony.<br>
+          Masz możliwość potwierdzenia swojego konta Kartą Mieszkańca. Dzięki temu na Twoim profilu i przy Twojej nazwie użytkownika będzie widniał specjalny status&nbsp;–&nbsp;<nobr>%{img}&nbsp;Użytkownik&nbsp;potwierdzony</nobr>.<br><br>
           Docelowo Platforma będzie również zintegrowana z Kartą Mieszkańca funkcjonalnie, co ułatwi Ci korzystanie z Platformy i ułatwi uczestniczenie w ważnych procesach.
         inhabitant_card_authorization: Potwierdzenie Kartą Mieszkańca
         inhabitant_card_authorization_text: Twoje konto zostało zautoryzowane przy pomocy Karty Mieszkańca
