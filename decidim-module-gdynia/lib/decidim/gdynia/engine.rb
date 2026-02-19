@@ -13,7 +13,25 @@ module Decidim
         # Add engine routes here
         # resources :gdynia
         # root to: "gdynia#index"
+
+        resource :inhabitant_cards, only: [:show, :create], controller: "authorizations"
       end
+
+      initializer "decidim_gdynia.append_routes", after: :load_config_initializers do |_app|
+        Rails.application.routes.append do
+          mount Decidim::Gdynia::Engine => "/"
+        end
+      end
+
+      initializer "decidim.user_menu" do
+        Decidim.menu :user_menu do |menu|
+          menu.item t("inhabitant_card_authorization", scope: "layouts.decidim.user_profile"),
+                    decidim_gdynia.inhabitant_cards_path,
+                    position: 1.05,
+                    active: :exact
+        end
+      end
+
       config.autoload_paths << File.join(
         Decidim::Gdynia::Engine.root, "app", "decorators", "{**}"
       )
@@ -32,6 +50,8 @@ module Decidim
 
       initializer "decidim_gdynia.register_icons" do
         Decidim.icons.register(name: "facebook-line", icon: "facebook-line", category: "system", description: "", engine: :core)
+        Decidim.icons.register(name: "loop-right-fill", icon: "loop-right-fill", category: "system", description: "", engine: :core)
+        Decidim.icons.register(name: "verified-badge", icon: "verified-badge", category: "system", description: "", engine: :core)
       end
 
 
