@@ -54,7 +54,7 @@ pl:
           meta_scope: Zakres
           participatory_scope: Czego dotyczy decyzja
           participatory_structure: Jak podejmowana jest decyzja
-          target: Kto może wziąść udział
+          target: Kto może wziąć udział
           title: O tym zgromadzeniu
     participatory_processes:
       participatory_processes:
@@ -74,7 +74,7 @@ pl:
           meta_scope: Zakres
           participatory_scope: Czego dotyczy decyzja
           participatory_structure: Jak podejmowana jest decyzja
-          target: Kto może wziąść udział
+          target: Kto może wziąć udział
           title: O tym zgromadzeniu
       admin:
         participatory_processes:
