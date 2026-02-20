@@ -1,5 +1,15 @@
 /* css for decidim_gdynia */
 
+/************* header - main bar *************/
+
+.main-bar__nav-item {
+  border-left: none !important;
+}
+
+.main-bar__login-button {
+  border-left: 2px solid rgb(225 229 239) !important;
+}
+
 /************* hero *************/
 
 .hero__container {
