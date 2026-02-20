@@ -59,7 +59,23 @@ pl:
     participatory_processes:
       participatory_processes:
         description:
+          team_service: Obsługa zespołu
           contact: Kontakt
+          area_name: Obszar
+          closing_date: Data zamknięcia
+          created_by: Utworzone przez
+          creation_date: Data utworzenia
+          data: Dane zgromadzenia
+          developer_group: Inicjator
+          duration: Czas trwania
+          included_at: Załączono
+          indefinite_duration: Nieokreślony
+          local_area: Jednostka odpowiedzialna
+          meta_scope: Zakres
+          participatory_scope: Czego dotyczy decyzja
+          participatory_structure: Jak podejmowana jest decyzja
+          target: Kto może wziąść udział
+          title: O tym zgromadzeniu
       admin:
         participatory_processes:
           form:
