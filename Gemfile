@@ -48,6 +48,7 @@ group :development do
   gem "listen", "~> 3.1"
   gem "web-console", "~> 4.2"
 end
+gem 'whenever', require: false
 
 group :production, :staging do
   gem 'rack_password'
