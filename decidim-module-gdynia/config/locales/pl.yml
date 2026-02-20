@@ -143,3 +143,6 @@ pl:
           show_default: Zarejestruj się klasycznie
           card_number_help: Podaj numer Karty Mieszkańca <b>zarejestrowany na email, który podałeś wyżej</b>.
           email_help: <b>Zakładając konto z Kartą Mieszkańca</b>, podaj email, na który jest ona zarejestrowana.
+    participatory_process_groups:
+      related_processes:
+        help: Wszystkie wybrane procesy zostaną przypisane do tej grupy, łącznie z tymi, które są już przypisane do innych grup.
