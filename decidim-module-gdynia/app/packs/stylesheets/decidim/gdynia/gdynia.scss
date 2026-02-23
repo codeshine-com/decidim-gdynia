@@ -45,3 +45,30 @@
   display: inline-block;
   vertical-align: text-bottom;
 }
+
+/************* ADMIN *************/
+
+/************* autocomplete sticky selection fix *************/
+
+.autoComplete_wrapper {
+  span.autocomplete__selected-item.sticky {
+    align-items: center;
+    padding: 0 2rem 0 0.5rem !important;
+    height: 40px;
+    line-height: 40px !important;
+    top: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: calc(100% - 2rem);
+  }
+
+  .clear-sticky-selection {
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    top: 0;
+    line-height: 40px !important;
+    right: 0.5rem;
+    z-index: 1;
+  }
+}
