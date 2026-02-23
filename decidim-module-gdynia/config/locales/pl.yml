@@ -82,12 +82,16 @@ pl:
             hashtag_help: "Należy wpisać tylko jeden hashtag bez znaku # np. dialoggdynia"
     download_your_data:
       show:
+        meetings: Spotkania
         expiration: Data ważności
         type: Typ
     endorsers_list:
       others: Polubione przez
     surveys:
       surveys:
+        show:
+          closed: Zamknięte
+          open: Otwarte
         count:
           surveys_count: Ankiety
     debates:
