@@ -55,7 +55,7 @@ pl:
           participatory_scope: Czego dotyczy decyzja
           participatory_structure: Jak podejmowana jest decyzja
           target: Kto może wziąć udział
-          title: O tym zgromadzeniu
+          title: O tym zespole
     participatory_processes:
       participatory_processes:
         description:
@@ -75,7 +75,7 @@ pl:
           participatory_scope: Czego dotyczy decyzja
           participatory_structure: Jak podejmowana jest decyzja
           target: Kto może wziąć udział
-          title: O tym zgromadzeniu
+          title: O tym zespole
       admin:
         participatory_processes:
           form:

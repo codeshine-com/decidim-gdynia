@@ -331,6 +331,11 @@ pl:
         new_import:
           accepted_types:
             json: JSON
+      assemblies:
+        description:
+          title: O tym zespole
+        show:
+          title: O tym zespole
       assembly_members:
         index:
           members: Członkowie
