@@ -33,9 +33,10 @@
     <div class="form__wrapper pb-12">
       <%= f.text_field :name, help_text: t("decidim.devise.registrations.new.username_help"), autocomplete: "name", placeholder: "John Doe" %>
 
-      <%= f.check_box :card_number_possesion %>
-
-      <%= f.number_field :card_number, help_text: t("decidim.devise.registrations.new.card_number_help").html_safe %>
+      <div>
+        <%= f.check_box :card_number_possesion %>
+        <%= f.number_field :card_number, help_text: t("decidim.devise.registrations.new.card_number_help").html_safe %>
+      </div>
 
       <%= f.email_field :email, autocomplete: "email", placeholder: t("placeholder_email", scope: "decidim.devise.shared") %>
 
