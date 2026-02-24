@@ -235,6 +235,7 @@ pl:
     blogs:
       posts:
         index:
+          count: Ilość
           new_post: "Nowy post"
     admin:
       taxonomies:
@@ -253,6 +254,8 @@ pl:
           reasons:
             parent_hidden: Zawartość nadrzędna została ukryta
     components:
+      comment:
+        answers: Odpowiedzi
       accountability:
         settings:
           global:
