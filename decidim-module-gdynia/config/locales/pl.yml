@@ -172,6 +172,24 @@ pl:
           cost: Koszt
           cost_report: Raport kosztów
           execution_period: Okres realizacji
+        answers:
+          answer: Odpowiedz
+          id: ID propozycji
+          question: Pytanie w ankiecie do udzielonej odpowiedzi
+          questionnaire: Ankieta
+          user: Użytkownik
+        comments:
+          id: ID propozycji
+          created_at: Data utworzenia
+          body: Treść komentarza
+          locale: Wersja językowa
+          author: Autor
+          alignment: Opinia na temat komentarza - Czy ten komentarz był przychylny, przeciwny czy neutralny
+          commentable_id: UUID komentarza
+          commentable_type: Typ komentowanego źródła
+          depth: Miejsce (głębokość) komentarza
+          root_commentable_url: Adres url komentowanego zasobu
+          user_group: Nazwa grupy
       show:
         meetings: Spotkania
         expiration: Data ważności
