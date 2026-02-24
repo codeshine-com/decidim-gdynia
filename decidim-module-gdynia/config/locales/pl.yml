@@ -39,6 +39,8 @@ pl:
     templates:
       admin:
         questionnaire_templates:
+          edit_questions:
+            add_question: Dodaj pytanie
           edit:
             manage_questions: Zarządzaj pytaniami
     assemblies:
