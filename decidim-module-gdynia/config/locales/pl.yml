@@ -136,7 +136,13 @@ pl:
           following_count: Liczba obserwowanych zasobów
           followers_count: Liczba uczestników, którzy obserwują tego użytkownika
           password_updated_at: Data ostatniej zmiany hasła
-
+        participatory_space_private_users:
+          id: ID
+          created_at: Data utworzenia
+          updated_at: Data ostatniej aktualizacji
+          role: Rola
+          privatable_to: Do której przestrzeni należy ten użytkownik
+          published: Opublikowany
         proposals:
           id: ID propozycji
           taxonomies: Taksonomie (kategorie/etykiety)
@@ -190,6 +196,12 @@ pl:
           depth: Miejsce (głębokość) komentarza
           root_commentable_url: Adres url komentowanego zasobu
           user_group: Nazwa grupy
+        comment_votes:
+          id: ID propozycji
+          weight: Waga komentarza
+          comment: Treść komentarza
+          created_at: Data utworzenia
+          updated_at: Data ostatniej aktualizacji
       show:
         meetings: Spotkania
         expiration: Data ważności
