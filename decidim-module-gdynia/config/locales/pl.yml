@@ -36,6 +36,11 @@ pl:
           email: Adres email
           email_hint: Podaj adres email, na który zarejestrowana została Twoja Karta Mieszkańca
   decidim:
+    templates:
+      admin:
+        questionnaire_templates:
+          edit:
+            manage_questions: Zarządzaj pytaniami
     assemblies:
       assemblies:
         description:
@@ -211,6 +216,7 @@ pl:
     surveys:
       surveys:
         show:
+          questions: Pytania
           closed: Zamknięte
           open: Otwarte
         count:
