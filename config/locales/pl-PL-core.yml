@@ -539,6 +539,7 @@ pl:
         download_data: Pobierz dane
         download_data_description_1: Tutaj znajdziesz wszystkie pliki do pobrania dostępne dla Twojego konta. Te pliki .zip będą dostępne przez dwa tygodnie, po czym zostaną usunięte.
         download_data_description_2: Możesz poprosić o plik .zip zawierający Twoje zgłoszenia oraz dane osobowe.
+        download_your_data: Dane osobowe
         explanation:
           body_1: Te pliki to zbiory danych wyeksportowane z Twojej aktywności na tej platformie, takie jak propozycje czy komentarze. Zawierają surowe, ustrukturyzowane dane, które można wykorzystać do analizy, badań lub integracji z innymi narzędziami.
           body_2: Te pliki są w formacie CSV (Comma-Separated Values), czyli powszechnie używanym formacie, który można otwierać i przetwarzać w wielu aplikacjach, w tym w arkuszach kalkulacyjnych, edytorach tekstu oraz narzędziach do analizy danych.
