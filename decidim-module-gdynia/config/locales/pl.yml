@@ -40,6 +40,8 @@ pl:
       admin:
         questionnaire_templates:
           edit_questions:
+            add_title_and_description: Dodaj tytuł i opis
+            add_separator: Dodaj separtor
             add_question: Dodaj pytanie
           edit:
             manage_questions: Zarządzaj pytaniami
