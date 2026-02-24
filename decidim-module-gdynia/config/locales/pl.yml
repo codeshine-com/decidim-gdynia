@@ -184,7 +184,7 @@ pl:
           body: Treść komentarza
           locale: Wersja językowa
           author: Autor
-          alignment: Opinia na temat komentarza - Czy ten komentarz był przychylny, przeciwny czy neutralny
+          alignment: Opinia na temat komentarza - pozytywna, negatywna lub neutralna
           commentable_id: UUID komentarza
           commentable_type: Typ komentowanego źródła
           depth: Miejsce (głębokość) komentarza
