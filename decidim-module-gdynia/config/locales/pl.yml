@@ -63,8 +63,8 @@ pl:
           indefinite_duration: Nieokreślony
           local_area: Jednostka odpowiedzialna
           meta_scope: Zakres
-          participatory_scope: Czego dotyczy decyzja
-          participatory_structure: Jak podejmowana jest decyzja
+          participatory_scope: Czego dotyczy proces
+          participatory_structure: Jak wziąć udział
           target: Kto może wziąć udział
           title: O tym zespole
     participatory_processes:
@@ -83,13 +83,14 @@ pl:
           indefinite_duration: Nieokreślony
           local_area: Jednostka odpowiedzialna
           meta_scope: Zakres
-          participatory_scope: Czego dotyczy decyzja
-          participatory_structure: Jak podejmowana jest decyzja
+          participatory_scope: Czego dotyczy proces
+          participatory_structure: Jak wziąć udział
           target: Kto może wziąć udział
           title: O tym zespole
       admin:
         participatory_processes:
           form:
+            participatory_scope: Czego dotyczy proces
             hashtag_help: "Należy wpisać tylko jeden hashtag bez znaku # np. dialoggdynia"
     download_your_data:
       help:
