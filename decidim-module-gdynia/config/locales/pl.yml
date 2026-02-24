@@ -231,6 +231,8 @@ pl:
         table:
           to_next_page: Następna strona
       newsletters:
+        confirm_recipients:
+          title: Potwierdź odbiorców
         select_recipients_to_deliver:
           select_users_general: Wybierz użytkowników
       participatory_space_private_users:
