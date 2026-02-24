@@ -2,6 +2,8 @@
 pl:
   activemodel:
     attributes:
+      participatory_space_private_user:
+        published: Opublikowany
       assembly:
         contact_address: Adres
         contact_email: Adres e-mail
