@@ -3,30 +3,15 @@
 
 <%= render layout: "layouts/decidim/shared/layout_user_profile" do %>
   <% if current_user.authorized_with_inhabitant_card? %>
-    <div class="card card--list">
-      <div class="card--list__item">
-        <div class="card--list__text">
-          <%= icon "circle-check", class: "card--list__icon", aria_label: t("inhabitant_card_authorization_success", scope: "layouts.decidim.user_profile"), role: "img" %>
-          <div>
-            <h5 class="card--list__heading">
-              <%= t("inhabitant_card_authorization", scope: "layouts.decidim.user_profile") %>
-            </h5>
-            <span class="text-small">
-              <%= t("inhabitant_card_authorization_text", scope: "layouts.decidim.user_profile") %>
-            </span>
-          </div>
-        </div>
-        <div class="card--list__data" aria-hidden="true">
-          <span class="card--list__data__icon">
-            <%= icon "circle-check", role: "img", "aria-hidden": true %>
-          </span>
-        </div>
+    <div class="flash warning" data-announcement>
+      <div class="flash__message block leading-relaxed">
+        <p><%= t("inhabitant_card_authorization_text", scope: "layouts.decidim.user_profile") %></p>
       </div>
     </div>
   <% else %>
     <div class="flash warning" data-announcement>
       <div class="flash__message block leading-relaxed">
-        <p><%= t("layouts.decidim.user_profile.inhabitant_card_authorization_info", img: icon("verified-badge-line", class: "author__verified")).html_safe %></p>
+        <p><%= t("layouts.decidim.user_profile.inhabitant_card_authorization_info", img: icon("verified-badge-line", class: "author__verified")).html_safe</p> %>
       </div>
     </div>
     <%= decidim_form_for(@form, url: decidim_gdynia.inhabitant_cards_path, as: :inhabitant_card, html: { autocomplete: "off", class: "form-defaults" }) do |f| %>
