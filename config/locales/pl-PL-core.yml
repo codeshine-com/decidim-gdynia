@@ -1111,6 +1111,8 @@ pl:
         subject: Czy chcesz nadal otrzymywać istotne informacje o %{organization_name}?
     notifications:
       no_notifications: Brak powiadomień.
+      show:
+        not_available: Ups, to powiadomienie dotyczy elementu, który nie jest już dostępny. Możesz je odrzucić.
     notifications_settings:
       show:
         administrators: Administratorzy
