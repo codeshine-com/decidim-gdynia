@@ -219,6 +219,7 @@ pl:
         expiration: Data ważności
         type: Typ
     endorsers_list:
+      you: Polubione przeze mnie
       others: Polubione przez
     surveys:
       surveys:
@@ -257,6 +258,14 @@ pl:
           reasons:
             parent_hidden: Zawartość nadrzędna została ukryta
     components:
+      proposals:
+        settings:
+          global:
+            edit_time: Autorzy mogą edytować propozycje przed upływem tego czasu
+            edit_time_units:
+              days: Dni
+              hours: Godzin
+              minutes: Minut
       comment:
         answers: Odpowiedzi
       accountability:

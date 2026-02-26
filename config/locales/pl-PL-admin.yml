@@ -132,6 +132,9 @@ pl:
         redirect_uri: Przekierowanie URI
         site: Strona internetowa
   decidim:
+    download_your_data:
+      show:
+        expired: Wygasło
     admin:
       actions:
         add: Dodaj
@@ -567,6 +570,8 @@ pl:
           preview: 'Podgląd szablonu: %{template_name}'
           use_template: Użyj tego szablonu
       newsletters:
+        confirm_recipients:
+          name: Potwierdź odbiorców
         create:
           error: Podczas tworzenia newslettera wystąpił błąd.
           success: Newsletter został pomyślnie utworzony. Prosimy o sprawdzenie go przed wysłaniem.
