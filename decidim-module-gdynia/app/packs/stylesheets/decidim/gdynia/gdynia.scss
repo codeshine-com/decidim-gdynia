@@ -118,6 +118,12 @@
   }
 }
 
+/************* general components *************/
+
+.button__secondary {
+  background-color: #f4bf55 !important;
+}
+
 /* Show password rules only on the registration form */
 #register-form .password-rules {
   display: block;
