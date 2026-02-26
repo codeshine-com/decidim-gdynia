@@ -11,7 +11,7 @@
   <% else %>
     <div class="flash warning" data-announcement>
       <div class="flash__message block leading-relaxed">
-        <p><%= t("layouts.decidim.user_profile.inhabitant_card_authorization_info", img: icon("verified-badge-line", class: "author__verified")).html_safe</p> %>
+        <p><%= t("layouts.decidim.user_profile.inhabitant_card_authorization_info", img: icon("verified-badge-line", class: "author__verified")).html_safe %> </p>
       </div>
     </div>
     <%= decidim_form_for(@form, url: decidim_gdynia.inhabitant_cards_path, as: :inhabitant_card, html: { autocomplete: "off", class: "form-defaults" }) do |f| %>
