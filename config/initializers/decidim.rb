@@ -400,10 +400,10 @@ Decidim.configure do |config|
   config.password_blacklist = Rails.application.secrets.decidim[:password_blacklist] if Rails.application.secrets.decidim[:password_blacklist].present?
   config.allow_open_redirects = Rails.application.secrets.decidim[:allow_open_redirects] if Rails.application.secrets.decidim[:allow_open_redirects].present?
 
-  config.content_security_policies_extra = {
-    script_src: %w('https://*.googletagmanager.com'),
-    frame_src: %w(https://www.youtube.com https://www.youtube-nocookie.com),
-  }
+  # config.content_security_policies_extra = {
+  #   script_src: %w('https://*.googletagmanager.com'),
+  #   frame_src: %w(https://www.youtube.com https://www.youtube-nocookie.com),
+  # }
 end
 
 if Decidim.module_installed? :api
