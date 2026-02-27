@@ -125,15 +125,16 @@ h1.hero__title {
   }
 }
 
+#register-form {
+  .password-rules {
+    display: block;
+  }
+}
+
 /************* general components *************/
 
 .button__secondary {
   background-color: #f4bf55 !important;
-}
-
-/* Show password rules only on the registration form */
-#register-form .password-rules {
-  display: block;
 }
 
 .participatory-space__metadata-grid {
