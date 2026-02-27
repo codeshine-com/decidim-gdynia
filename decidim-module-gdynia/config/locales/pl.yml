@@ -24,6 +24,8 @@ pl:
             text: "Spotkania"
   layouts:
     decidim:
+      participatory_process_navigation:
+        member_menu_item: Członkowie
       footer:
         ue_logotypes: Logotypy Unii Europejskiej
         terms_of_service: Regulamin
