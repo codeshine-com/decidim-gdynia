@@ -125,7 +125,6 @@ h1.hero__title {
   }
 }
 
-
 /************* general components *************/
 
 .button__secondary {
@@ -135,6 +134,10 @@ h1.hero__title {
 /* Show password rules only on the registration form */
 #register-form .password-rules {
   display: block;
+}
+
+.participatory-space__metadata-grid {
+  column-gap: 1rem;
 }
 
 /************* ADMIN *************/
