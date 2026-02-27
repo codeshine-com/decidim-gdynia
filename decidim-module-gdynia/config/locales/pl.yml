@@ -245,6 +245,9 @@ pl:
           new_post: "Nowy post"
     admin:
       taxonomies:
+        update:
+          success: Zaktualizowano
+          invalid: Popraw błędy w formularzu
         table:
           to_next_page: Następna strona
       newsletters:

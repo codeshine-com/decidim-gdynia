@@ -399,6 +399,11 @@ Decidim.configure do |config|
   config.maximum_conversation_message_length = Rails.application.secrets.decidim[:maximum_conversation_message_length].to_i
   config.password_blacklist = Rails.application.secrets.decidim[:password_blacklist] if Rails.application.secrets.decidim[:password_blacklist].present?
   config.allow_open_redirects = Rails.application.secrets.decidim[:allow_open_redirects] if Rails.application.secrets.decidim[:allow_open_redirects].present?
+
+  config.content_security_policies_extra = {
+    script_src: %w('https://*.googletagmanager.com'),
+    frame_src: %w(https://www.youtube.com https://www.youtube-nocookie.com),
+  }
 end
 
 if Decidim.module_installed? :api
@@ -488,6 +493,7 @@ if Decidim.module_installed? :elections
   Decidim::Votings::Census.configure do |config|
     config.census_access_codes_export_expiry_time = Rails.application.secrets.dig(:elections, :votings, :census, :access_codes_export_expiry_time).to_i.days
   end
+
 end
 
 Rails.application.config.i18n.available_locales = Decidim.available_locales
