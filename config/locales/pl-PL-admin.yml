@@ -1,6 +1,9 @@
 pl:
   activemodel:
     attributes:
+      taxonomy:
+        item_name: Nazwa
+        parent_id: Rodzic
       area:
         area_type: Typ kategorii
         name: Nazwa
@@ -872,6 +875,8 @@ pl:
           error: Podczas aktualizowania tej strony wystąpił błąd.
           success: Strona została zaktualizowana
       taxonomies:
+        breadcrumb:
+          edit: Edytuj taksonomie
         actions:
           actions: Akcje
           destroy: Usuń taksonomię i jej elementy
