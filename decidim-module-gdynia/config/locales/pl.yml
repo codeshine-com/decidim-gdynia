@@ -74,7 +74,7 @@ pl:
         description:
           team_service: Obsługa zespołu
           contact: Kontakt
-          area_name: Obszar
+          area_name: Kategoria
           closing_date: Data zamknięcia
           created_by: Utworzone przez
           creation_date: Data utworzenia
@@ -84,7 +84,7 @@ pl:
           included_at: Załączono
           indefinite_duration: Nieokreślony
           local_area: Jednostka odpowiedzialna
-          meta_scope: Zakres
+          meta_scope: Obszar
           participatory_scope: Czego dotyczy proces
           participatory_structure: Jak wziąć udział
           target: Kto może wziąć udział

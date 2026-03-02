@@ -1,6 +1,12 @@
 # frozen_string_literal: true
 
 Decidim::ParticipatoryProcesses::ParticipatoryProcessPresenter.class_eval do
+
+  def area_name
+    return if process.area.blank?
+
+    translated_attribute(process.area.name)
+  end
   private
 
   def contact
