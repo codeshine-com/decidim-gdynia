@@ -20,6 +20,17 @@ pl:
         questionnaire:
           request_invalid: Wystąpił błąd podczas przetwarzania żądania. Spróbuj ponownie
   decidim:
+    download_your_data:
+      help:
+        answers:
+          answer: Odpowiedź na pytanie
+          id: Unikalny identyfikator odpowiedzi
+          question: Pytanie, na które udzielono odpowiedzi
+          questionnaire: Ankieta, na którą udzielono odpowiedzi
+          user: Użytkownik, który odpowiedział na ankietę
+      show:
+        answers: Eksport odpowiedzi
+        survey_user_answers: Odpowiedzi użytkowników ankiety
     forms:
       admin:
         models:
@@ -50,6 +61,8 @@ pl:
             actions:
               back: Powrót do odpowiedzi
               export: Eksportuj
+              next: Dalej &rsaquo;
+              previous: "&lsaquo; Wstecz"
               show: Pokaż odpowiedzi
             empty: Brak odpowiedzi
             export:
