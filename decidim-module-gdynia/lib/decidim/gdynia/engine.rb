@@ -23,6 +23,8 @@ module Decidim
         end
       end
 
+      # Menu changes
+
       initializer "decidim.user_menu" do
         Decidim.menu :user_menu do |menu|
           menu.item t("inhabitant_card_authorization", scope: "layouts.decidim.user_profile"),
@@ -31,6 +33,16 @@ module Decidim
                     active: :exact
         end
       end
+
+      # Manifests changes
+
+      Decidim.find_component_manifest('surveys').settings(:global) do |settings|
+        settings.attribute :private_survey, type: :boolean, default: false
+        settings.attribute :transparent, type: :boolean, default: true
+        settings.attribute :automatic_question_numbering, type: :boolean, default: true
+      end
+
+      # Decorators
 
       config.autoload_paths << File.join(
         Decidim::Gdynia::Engine.root, "app", "decorators", "{**}"
