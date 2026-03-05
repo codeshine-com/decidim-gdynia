@@ -20,6 +20,7 @@
     <%= label_tag field_id, answer.label(cleaned_answer_idx), class: "questionnaire-question" %>
   <% end %>
 
+  <%# Dodany obrazek %>
   <% if answer.question.question_image.attached? %>
     <div class="questionnaires-image-field">
       <%= link_to main_app.url_for(answer.question.question_image), target: '_blank' do %>
