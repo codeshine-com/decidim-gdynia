@@ -76,12 +76,15 @@
               id: tabs_id_for_question(blank_question),
               editable: questionnaire.questions_editable? %>
       </script>
+
+      <!-- Dodane pytanie o metryczke -->
       <script type="text/template" class="decidim-metrics-question-template decidim-template" id="metrics-question-template">
         <%= render "decidim/forms/admin/questionnaires/metrics_question",
               form: question_form,
               id: tabs_id_for_question(blank_question),
               editable: questionnaire.questions_editable? %>
       </script>
+
       <%= render "decidim/forms/admin/questionnaires/answer_option_template", form: question_form, editable: questionnaire.questions_editable?, template_id: "answer-option-template-dummy" %>
       <%= render "decidim/forms/admin/questionnaires/display_condition_template", form: question_form, editable: questionnaire.questions_editable?, template_id: "display-condition-template-dummy" %>
       <%= render "decidim/forms/admin/questionnaires/matrix_row_template", form: question_form, editable: questionnaire.questions_editable?, template_id: "matrix-row-template-dummy" %>
@@ -105,6 +108,9 @@
                 form: question_form,
                 id: tabs_id_for_question(question),
                 editable: questionnaire.questions_editable? %>
+
+
+        <!-- Dodane pytanie o metryczke -->
         <% elsif question.metrics? %>
           <%= render "decidim/forms/admin/questionnaires/metrics_question",
                 form: question_form,
@@ -114,6 +120,8 @@
           <%= render "decidim/forms/admin/questionnaires/display_condition_template", form: question_form, editable: questionnaire.questions_editable?, template_id: "display-condition-template-#{index}" %>
           <%= render "decidim/forms/admin/questionnaires/answer_option_template", form: question_form, editable: questionnaire.questions_editable?, template_id: "answer-option-template-#{index}" %>
           <%= render "decidim/forms/admin/questionnaires/matrix_row_template", form: question_form, editable: questionnaire.questions_editable?, template_id: "matrix-row-template-#{index}" %>
+
+
         <% else %>
           <%= render "decidim/forms/admin/questionnaires/question",
                 form: question_form,
