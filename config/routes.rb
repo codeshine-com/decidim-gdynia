@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     mount LetterOpenerWeb::Engine, at: "/letter_opener"
   end
 
-  if Rails.env.staging?
+  if Rails.env.development? || Rails.env.staging?
     require 'sidekiq/web'
     authenticate :user, lambda { |u| u.admin? } do
       mount Sidekiq::Web => '/sidekiq'

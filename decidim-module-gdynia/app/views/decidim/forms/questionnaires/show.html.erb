@@ -1,0 +1,70 @@
+<% add_decidim_meta_tags({
+                           title: translated_attribute(questionnaire.title),
+                           description: translated_attribute(questionnaire.description)
+                         }) %>
+
+<%= append_stylesheet_pack_tag "decidim_forms" %>
+<%= append_javascript_pack_tag "decidim_forms" %>
+
+<%= render layout: "layouts/decidim/shared/layout_center" do %>
+
+  <div class="text-center py-10">
+    <% if questionnaire.title.present? %>
+      <h1 class="title-decorator inline-block text-left mb-12">
+        <%= translated_attribute questionnaire.title %>
+      </h1>
+    <% end %>
+
+    <% if questionnaire.description.present? %>
+      <div class="text-left editor-content">
+        <%= decidim_sanitize_editor_admin translated_attribute questionnaire.description %>
+      </div>
+    <% end %>
+  </div>
+
+  <%= render partial: "decidim/shared/component_announcement" if current_component.manifest_name == "surveys" %>
+
+  <% unless questionnaire_for.try(:component)&.try(:published?) %>
+    <%= cell("decidim/announcement", t("decidim.forms.questionnaires.show.questionnaire_not_published.body"), callout_class: "warning") %>
+  <% end %>
+
+  <section>
+    <%# Zeby admin mogl podgladac ankiety juz po jej wygasnieciu %>
+    <% if allow_answers? || current_user&.admin %>
+      <% if visitor_can_answer? %>
+        <% if visitor_already_answered? %>
+          <% if visitor_can_edit_answers? && current_component.manifest_name == "surveys" %>
+            <% body = t("decidim.forms.questionnaires.show.questionnaire_answered_edit.body",
+                        link: link_to(t("decidim.forms.questionnaires.show.questionnaire_answered_edit.edit"), edit_survey_path(questionnaire_for))
+            ) %>
+          <% else %>
+            <% body = t("decidim.forms.questionnaires.show.questionnaire_answered.body") %>
+          <% end %>
+          <%= cell("decidim/announcement", { title: t("decidim.forms.questionnaires.show.questionnaire_answered.title"), body: body }) %>
+        <% else %>
+          <% if @form.responses_by_step.flatten.empty? %>
+            <%= cell("decidim/announcement", t("decidim.forms.questionnaires.show.empty")) %>
+          <% else %>
+            <%= render partial: "decidim/forms/questionnaires/questionnaire" %>
+          <% end %>
+        <% end %>
+      <% else %>
+
+        <%# overwritten: Dodane dodatkowo opcjoalnie :visible_for_unregistered %>
+        <% if @questionnaire.questionnaire_for.try(:visible_for_unregistered) %>
+          <%= render partial: "decidim/forms/questionnaires/questionnaire_readonly" %>
+        <% else %>
+          <%= render partial: "decidim/devise/shared/login_boxes", locals: { scope: "decidim.forms.questionnaires.show.answer_questionnaire" } %>
+        <% end %>
+
+      <% end %>
+    <% else %>
+      <% if questionnaire_for.class.name == "Decidim::Surveys::Survey" && show_published_questions_answers? %>
+        <%= render partial: "decidim/surveys/surveys/published_questions_answers" %>
+      <% else %>
+        <%= cell("decidim/announcement", { title: t("decidim.forms.questionnaires.show.questionnaire_closed.title"), body: t("decidim.forms.questionnaires.show.questionnaire_closed.body") }, callout_class: "warning") %>
+      <% end %>
+    <% end %>
+  </section>
+
+<% end %>
