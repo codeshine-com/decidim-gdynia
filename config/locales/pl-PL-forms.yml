@@ -197,6 +197,8 @@ pl:
           saving: Zapisuję
       step_navigation:
         show:
+          are_you_sure_edit_guest: Jeśli chcesz mieć możliwość późniejszej edycji swoich odpowiedzi, musisz się zalogować lub utworzyć konto.
+          are_you_sure_no_edit: Tej czynności nie można cofnąć i nie będzie już możliwości edytowania odpowiedzi. Czy na pewno chcesz kontynuować?
           are_you_sure: Tego działania nie można cofnąć i nie będzie można edytować odpowiedzi. Jesteś pewny?
           back: Wróć
           continue: Dalej
