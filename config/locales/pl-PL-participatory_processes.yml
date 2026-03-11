@@ -496,6 +496,8 @@ pl:
           browse: Przeglądaj
           browse_resource: Przeglądaj grupę procesów %{resource_name}
           processes_count: 'Procesy:'
+      participatory_process_navigation:
+        member_menu_item: Członkowie
       participatory_process_widgets:
         show:
           active_step: Aktualny etap
