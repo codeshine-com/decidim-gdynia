@@ -1,0 +1,85 @@
+/* Custom email styles - overrides for decidim-core email.scss */
+
+table.body th.decidim-bar,
+table.body td.decidim-bar {
+  padding: 10px 0;
+  background-color: #f4bf55 !important;
+}
+
+table.body td.decidim-bar {
+  border-bottom: 3px solid #f4bf55;
+}
+
+table.body td.decidim-bar img {
+  max-height: 30px;
+}
+
+table.body .small-3.large-3.first.columns.decidim-bar {
+  width: 16px;
+}
+
+table.body {
+  background-color: #f3f3f3;
+  margin: 20px 0;
+}
+
+.decidim-logo {
+  margin-top: 16px;
+}
+
+.decidim-logo a {
+  display: inline-block;
+  height: 30px;
+}
+
+.cityhall-bar {
+  background-color: #f4bf55;
+}
+
+.cityhall-logo {
+  width: 150px;
+  margin-top: 16px;
+}
+
+.footnote,
+.headnote {
+  padding-top: 10px;
+  color: #666;
+  font-size: 12px;
+}
+
+table.container.main {
+  background: #fefefe;
+}
+
+.custom-button {
+  display: block;
+  text-align: center;
+  border-radius: 4px;
+  line-height: 1;
+  padding: 0.58em 1em;
+  background: red;
+}
+
+.button--sc {
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  &.large {
+    font-size: 1rem;
+  }
+}
+
+table.content.image img {
+  width: 100%;
+}
+
+th,
+td {
+  box-sizing: border-box;
+}
+
+.last.columns.decidim-bar img {
+  display: none;
+}

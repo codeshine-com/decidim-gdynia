@@ -6,9 +6,12 @@
 base_path = File.expand_path("..", __dir__)
 
 Decidim::Webpacker.register_path("#{base_path}/app/packs")
-# Decidim::Webpacker.register_entrypoints(
-#   decidim_barcelona_email: "#{base_path}/app/packs/entrypoints/decidim_barcelona_email.scss"
-# )
+
+# Override decidim-core's email entrypoint with our custom one that includes overrides
+gdynia_path = File.expand_path("decidim-module-gdynia", base_path)
+Decidim::Webpacker.register_entrypoints(
+  decidim_email: "#{gdynia_path}/app/packs/entrypoints/decidim_email.js"
+)
 
 # If you want to import some extra SCSS files in the Decidim main SCSS file
 # without adding any extra stylesheet inclusion tags, you can use the following

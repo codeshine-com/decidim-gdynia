@@ -21,7 +21,6 @@ Decidim::Webpacker.register_entrypoints(
   decidim_core_extended: "#{base_path}/app/packs/entrypoints/decidim_core_extended.js",
   registration_types_handler: "#{base_path}/app/packs/entrypoints/registration_types_handler.js",
 #   decidim_core_extended_admin: "#{base_path}/app/packs/entrypoints/decidim_core_extended_admin.js"
-  decidim_email: "#{base_path}/app/packs/entrypoints/decidim_email.scss"
 )
 
 # If you want to import some extra SCSS files in the Decidim main SCSS file
