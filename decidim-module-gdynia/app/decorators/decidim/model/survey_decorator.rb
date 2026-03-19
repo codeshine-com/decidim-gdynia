@@ -14,6 +14,10 @@ Decidim::Surveys::Survey.class_eval do
     component.settings.automatic_question_numbering
   end
 
+  # Ankiete moze zobaczyc:
+  # - admin lub admin procesu,
+  # - kazdy jesli ankieta nie jest prywatna, lub jest prywatna i jest transparentna
+  # - tylko uzytkownicy procesu jesli jest prywatna i nie jest transparentna
   def current_user_can_visit_survey?(user)
     return true if user&.admin
     return true if user && (component.participatory_space.user_roles(role_name = 'admin').pluck(:decidim_user_id).include? user.id)

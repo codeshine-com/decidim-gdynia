@@ -279,6 +279,8 @@ pl:
           default_step_settings: Domyślne ustawienia etapów
           global_settings: Ustawienia ogólne
           step_settings: Ustawienia etapu
+        hide:
+          success: Komponent został pomyślnie ukryty w menu.
         index:
           add: Dodaj komponent
           headers:

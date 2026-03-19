@@ -76,6 +76,12 @@ pl:
             title: Edycja ankiety
           index:
             title: Ankiety
+          publish:
+            invalid: Wystąpił problem podczas publikowania tej ankiety.
+            success: Ankieta została pomyślnie opublikowana.
+          unpublish:
+            invalid: Wystąpił problem podczas wycofywania publikacji tej ankiety.
+            success: Ankieta została pomyślnie wycofana z publikacji.
           update:
             invalid: Podczas zapisywania ankiety wystąpił błąd.
             success: Ankieta została zapisana pomyślnie.
@@ -99,9 +105,17 @@ pl:
           invalid: Podczas wypełniania ankiety wystąpił błąd.
           spam_detected: Wystąpił błąd podczas wypełniania formularza. Być może zostało to zrobione zbyt szybko, czy możesz spróbować ponownie?
           success: Twoja ankieta została wypełniona.
+        count:
+          surveys_count:
+            one: "%{count} ankieta"
+            other: "%{count} ankiety"
         filters:
           all: Wszystkie
           state_values:
             closed: Zamknięte
             open: Otwarte
         no_surveys_warning: Żadna ankieta nie spełnia kryteriów wyszukiwania lub nie ma obecnie otwartych ankiet.
+        show:
+          closed: Zamknięta
+          open: Otwarta
+          questions: pytania
