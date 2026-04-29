@@ -28,21 +28,16 @@ Decidim::Forms::Admin::UpdateQuestions.class_eval do
         update_nested_model(form_answer_option, answer_option_attributes, question.answer_options)
       end
 
-      form_question.display_conditions.each do |form_display_condition|
-        type = form_display_condition.condition_type
+      # FIX: Collect IDs of display_conditions to preserve
+      form_display_condition_ids = form_question.display_conditions
+                                                .reject { |dc| dc.deleted? && dc.id.blank? }
+                                                .map(&:id)
+                                                .compact
+      # FIX: Remove display_conditions no longer present in form
+      question.display_conditions.where.not(id: form_display_condition_ids).destroy_all if form_display_condition_ids.any?
 
-        display_condition_attributes = {
-          condition_question: form_display_condition.condition_question,
-          condition_type: form_display_condition.condition_type,
-          condition_value: type == "match" ? form_display_condition.condition_value : nil,
-          answer_option: %w(equal not_equal).include?(type) ? form_display_condition.answer_option : nil,
-          mandatory: form_display_condition.mandatory
-        }
-
-        next if form_display_condition.deleted? && form_display_condition.id.blank?
-
-        update_nested_model(form_display_condition, display_condition_attributes, question.display_conditions)
-      end
+      # FIX: Updated display_conditions handling
+      update_display_conditions(form_question, question)
 
       form_question.matrix_rows_by_position.each_with_index do |form_matrix_row, idx|
         matrix_row_attributes = {
@@ -52,6 +47,32 @@ Decidim::Forms::Admin::UpdateQuestions.class_eval do
 
         update_nested_model(form_matrix_row, matrix_row_attributes, question.matrix_rows)
       end
+    end
+  end
+
+  def update_display_conditions(form_question, question)
+    # Remove all existing conditions for this question to avoid association issues
+    question.display_conditions.destroy_all
+
+    # Recreate conditions from form data
+    form_question.display_conditions.each do |form_display_condition|
+      # Skip conditions marked for deletion
+      next if form_display_condition.deleted?
+
+      type = form_display_condition.condition_type
+
+      display_condition_attributes = {
+        condition_question: form_display_condition.condition_question,
+        condition_type: form_display_condition.condition_type,
+        condition_value: type == "match" ? form_display_condition.condition_value : nil,
+        answer_option: %w(equal not_equal).include?(type) ? form_display_condition.answer_option : nil,
+        mandatory: form_display_condition.mandatory
+      }
+
+      # Create new condition and associate it explicitly to the correct question to avoid that
+      # it goes to the question the condition was about
+      new_condition = question.display_conditions.build(display_condition_attributes)
+      new_condition.save!
     end
   end
 end
